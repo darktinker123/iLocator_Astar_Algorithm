@@ -1,0 +1,14 @@
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\bin\Debug\iLocator_UserInterface.exe.config
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.form_SelectUser.resources
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.form_WelcomePage.resources
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.Properties.Resources.resources
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.csproj.GenerateResource.Cache
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\bin\Debug\iLocator_UserInterface.exe
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\bin\Debug\iLocator_UserInterface.pdb
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.exe
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.pdb
+c:\users\darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.form_Main.resources
+C:\Users\Darktinker123\Documents\Visual Studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Darktinker123\Documents\Visual Studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.csprojResolveAssemblyReference.cache
+C:\Users\Darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.System_Message.resources
+C:\Users\Darktinker123\documents\visual studio 2015\Projects\iLocator_UserInterface\iLocator_UserInterface\obj\Debug\iLocator_UserInterface.System_Info.resources
