@@ -3,7 +3,6 @@ C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\bin\Debug\iLocatorAst
 C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\bin\Debug\iLocatorAstar.exe
 C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\bin\Debug\iLocatorAstar.pdb
 C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.csprojResolveAssemblyReference.cache
-C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.form_Main.resources
 C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.form_SelectUser.resources
 C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.form_WelcomePage.resources
 C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.Properties.Resources.resources
@@ -12,3 +11,5 @@ C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAst
 C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.csproj.GenerateResource.Cache
 C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.exe
 C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.pdb
+C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.form_Main.resources
+C:\Users\Darktinker123\Desktop\iLocatorAstar\iLocatorAstar\obj\Debug\iLocatorAstar.TestZone.resources

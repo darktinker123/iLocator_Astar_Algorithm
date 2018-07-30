@@ -31,9 +31,5 @@ namespace iLocatorAstar
         {
             this.Hide();
         }
-
-        private void System_Message_Load(object sender, EventArgs e)
-        { 
-        }
     }
 }
