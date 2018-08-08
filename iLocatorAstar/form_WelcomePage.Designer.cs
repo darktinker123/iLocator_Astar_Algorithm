@@ -94,7 +94,7 @@
             this.bunifuFadeTransition.SetDecoration(this.lbl_TimeToday, BunifuAnimatorNS.DecorationType.None);
             this.lbl_TimeToday.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TimeToday.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_TimeToday.Location = new System.Drawing.Point(274, 403);
+            this.lbl_TimeToday.Location = new System.Drawing.Point(257, 403);
             this.lbl_TimeToday.Name = "lbl_TimeToday";
             this.lbl_TimeToday.Size = new System.Drawing.Size(11, 17);
             this.lbl_TimeToday.TabIndex = 6;
@@ -222,28 +222,28 @@
             // panel_LogoTitle
             // 
             this.panel_LogoTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel_LogoTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_LogoTitle.Controls.Add(this.lbl_WelcomeDescription);
             this.panel_LogoTitle.Controls.Add(this.lbl_iLocatorWelcomePage);
             this.panel_LogoTitle.Controls.Add(this.pb_ACTIco);
             this.bunifuFadeTransition.SetDecoration(this.panel_LogoTitle, BunifuAnimatorNS.DecorationType.None);
             this.bunifuACTTransition.SetDecoration(this.panel_LogoTitle, BunifuAnimatorNS.DecorationType.None);
             this.panel_LogoTitle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_LogoTitle.Location = new System.Drawing.Point(54, 28);
+            this.panel_LogoTitle.Location = new System.Drawing.Point(12, 3);
             this.panel_LogoTitle.Name = "panel_LogoTitle";
-            this.panel_LogoTitle.Size = new System.Drawing.Size(536, 336);
+            this.panel_LogoTitle.Size = new System.Drawing.Size(612, 361);
             this.panel_LogoTitle.TabIndex = 0;
+            this.panel_LogoTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_LogoTitle_Paint);
             // 
             // lbl_WelcomeDescription
             // 
             this.lbl_WelcomeDescription.AutoSize = true;
             this.bunifuACTTransition.SetDecoration(this.lbl_WelcomeDescription, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_WelcomeDescription, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_WelcomeDescription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_WelcomeDescription.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_WelcomeDescription.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_WelcomeDescription.Location = new System.Drawing.Point(158, 253);
+            this.lbl_WelcomeDescription.Location = new System.Drawing.Point(142, 288);
             this.lbl_WelcomeDescription.Name = "lbl_WelcomeDescription";
-            this.lbl_WelcomeDescription.Size = new System.Drawing.Size(217, 21);
+            this.lbl_WelcomeDescription.Size = new System.Drawing.Size(332, 30);
             this.lbl_WelcomeDescription.TabIndex = 2;
             this.lbl_WelcomeDescription.Text = "Need help with directions?";
             this.lbl_WelcomeDescription.Visible = false;
@@ -254,10 +254,10 @@
             this.lbl_iLocatorWelcomePage.AutoSize = true;
             this.bunifuACTTransition.SetDecoration(this.lbl_iLocatorWelcomePage, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_iLocatorWelcomePage, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_iLocatorWelcomePage.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_iLocatorWelcomePage.Location = new System.Drawing.Point(82, 214);
+            this.lbl_iLocatorWelcomePage.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_iLocatorWelcomePage.Location = new System.Drawing.Point(71, 243);
             this.lbl_iLocatorWelcomePage.Name = "lbl_iLocatorWelcomePage";
-            this.lbl_iLocatorWelcomePage.Size = new System.Drawing.Size(380, 36);
+            this.lbl_iLocatorWelcomePage.Size = new System.Drawing.Size(474, 44);
             this.lbl_iLocatorWelcomePage.TabIndex = 1;
             this.lbl_iLocatorWelcomePage.Text = "Welcome to The iLocator!";
             this.lbl_iLocatorWelcomePage.Visible = false;
@@ -271,9 +271,9 @@
             this.pb_ACTIco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bunifuACTTransition.SetDecoration(this.pb_ACTIco, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.pb_ACTIco, BunifuAnimatorNS.DecorationType.None);
-            this.pb_ACTIco.Location = new System.Drawing.Point(104, 42);
+            this.pb_ACTIco.Location = new System.Drawing.Point(51, 31);
             this.pb_ACTIco.Name = "pb_ACTIco";
-            this.pb_ACTIco.Size = new System.Drawing.Size(334, 165);
+            this.pb_ACTIco.Size = new System.Drawing.Size(504, 209);
             this.pb_ACTIco.TabIndex = 0;
             this.pb_ACTIco.TabStop = false;
             this.pb_ACTIco.Visible = false;

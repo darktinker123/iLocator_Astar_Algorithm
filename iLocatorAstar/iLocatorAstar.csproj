@@ -67,7 +67,6 @@
     <Compile Include="form_WelcomePage.Designer.cs">
       <DependentUpon>form_WelcomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="iniFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="System_Info.cs">
@@ -167,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="setup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3rd Floor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3rd Floor1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

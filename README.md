@@ -2,6 +2,9 @@
 iLocator Using A star Algorithm
 
 
+Version 1.06.0 8/8/18
+
+
 Version 1.05 7/30/18
 - Fix User Interface Bug
 - Add More Effects & Transition

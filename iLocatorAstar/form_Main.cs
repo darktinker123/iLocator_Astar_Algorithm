@@ -122,6 +122,8 @@ namespace iLocatorAstar
 
         private void btn_3rd_Click(object sender, EventArgs e)
         {
+
+
             // Code for changing the Selected Button Color
             BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
 
@@ -145,6 +147,8 @@ namespace iLocatorAstar
                 bunifuTransSelectDestination.ShowSync(LayoutPanel_3rd);
                 bunifuTransLabels.ShowSync(pb_BackToHome);
                 bunifuTransLabels.ShowSync(lbl_GoHome);
+
+                //pb_3rdFlr.Dock = DockStyle.Fill;
             }
             else
             {
@@ -410,9 +414,54 @@ namespace iLocatorAstar
             //}
         }
 
-        private void TableLayoutPanel_Map_Paint(object sender, PaintEventArgs e)
+        private void panel_ContainerFloorSelector_Paint(object sender, PaintEventArgs e)
         {
+            ControlPaint.DrawBorder(e.Graphics, this.panel_ContainerFloorSelector.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+        }
 
+        private void panel_UniverseSelectDestination_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel_UniverseSelectDestination.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+        }
+
+        private void panel_TitleVirtualMap_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel_TitleVirtualMap.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+        }
+
+        private void panel_DetailsSelectedDestination_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel_DetailsSelectedDestination.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+        }
+
+        private void panel_TitleSelectFloor_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel_TitleSelectFloor.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+        }
+
+        private void panel_TitleSelectDestination_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel_TitleSelectDestination.ClientRectangle,
+            Color.LightGray, 0, ButtonBorderStyle.Solid,
+            Color.LightGray, 0, ButtonBorderStyle.Solid,
+            Color.LightGray, 0, ButtonBorderStyle.Solid,
+            Color.LightGray, 1, ButtonBorderStyle.Solid);
+        }
+
+        private void panel_UniverseVirtualMap_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel_UniverseVirtualMap.ClientRectangle,
+            Color.LightGray, 1, ButtonBorderStyle.Solid,
+            Color.LightGray, 0, ButtonBorderStyle.Solid,
+            Color.LightGray, 0, ButtonBorderStyle.Solid,
+            Color.LightGray, 0, ButtonBorderStyle.Solid);
+        }
+
+        private void pb_BackToHome_Click(object sender, EventArgs e)
+        {
+            form_WelcomePage _FormWelcomePage = new form_WelcomePage();
+            _FormWelcomePage.Show();
+            this.Hide();
         }
     }
 }

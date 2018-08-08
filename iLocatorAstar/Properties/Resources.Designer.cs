@@ -63,6 +63,26 @@ namespace iLocatorAstar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3rd_Floor {
+            get {
+                object obj = ResourceManager.GetObject("3rd Floor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3rd_Floor1 {
+            get {
+                object obj = ResourceManager.GetObject("3rd Floor1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ACTNEW2018LOGO {
             get {
                 object obj = ResourceManager.GetObject("ACTNEW2018LOGO", resourceCulture);

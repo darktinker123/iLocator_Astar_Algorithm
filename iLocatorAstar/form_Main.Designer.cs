@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main));
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_ControlBox = new System.Windows.Forms.Panel();
             this.pb_iLocatorLogo = new System.Windows.Forms.PictureBox();
@@ -55,9 +55,14 @@
             this.bunifuTransFloorButtons = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel_TitleVirtualMap = new System.Windows.Forms.Panel();
             this.lbl_VirtualMap = new System.Windows.Forms.Label();
+            this.panel_DetailsSelectedDestination = new System.Windows.Forms.Panel();
+            this.lbl_GoHome = new System.Windows.Forms.Label();
+            this.pb_BackToHome = new System.Windows.Forms.PictureBox();
+            this.lbl_EstimatedDistance = new System.Windows.Forms.Label();
+            this.lbl_EstimatedTime = new System.Windows.Forms.Label();
+            this.lbl_ShortestPath = new System.Windows.Forms.Label();
             this.panel_TitleSelectDestination = new System.Windows.Forms.Panel();
             this.lbl_SelectDestination = new System.Windows.Forms.Label();
-            this.panel_UniverseSelectDestination = new System.Windows.Forms.Panel();
             this.panel_ContainerSelectDestination = new System.Windows.Forms.Panel();
             this.LayoutPanel_9th = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -334,13 +339,9 @@
             this.lnkLabel_Room413 = new System.Windows.Forms.LinkLabel();
             this.lnkLabel_Room414 = new System.Windows.Forms.LinkLabel();
             this.lnkLabel_Room415 = new System.Windows.Forms.LinkLabel();
-            this.panel_DetailsSelectedDestination = new System.Windows.Forms.Panel();
-            this.lbl_GoHome = new System.Windows.Forms.Label();
-            this.pb_BackToHome = new System.Windows.Forms.PictureBox();
-            this.lbl_EstimatedDistance = new System.Windows.Forms.Label();
-            this.lbl_EstimatedTime = new System.Windows.Forms.Label();
-            this.lbl_ShortestPath = new System.Windows.Forms.Label();
-            this.TableLayoutPanel_Map = new System.Windows.Forms.TableLayoutPanel();
+            this.panel_UniverseSelectDestination = new System.Windows.Forms.Panel();
+            this.panel_UniverseVirtualMap = new System.Windows.Forms.Panel();
+            this.pb_UG = new System.Windows.Forms.PictureBox();
             this.bunifuTransLabels = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuTransSelectDestination = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -351,8 +352,9 @@
             this.tableLayoutPanel_FloorButtons.SuspendLayout();
             this.panel_TitleSelectFloor.SuspendLayout();
             this.panel_TitleVirtualMap.SuspendLayout();
+            this.panel_DetailsSelectedDestination.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_BackToHome)).BeginInit();
             this.panel_TitleSelectDestination.SuspendLayout();
-            this.panel_UniverseSelectDestination.SuspendLayout();
             this.panel_ContainerSelectDestination.SuspendLayout();
             this.LayoutPanel_9th.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
@@ -372,8 +374,9 @@
             this.LayoutPanel_5th.SuspendLayout();
             this.LayoutPanel_4th.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.panel_DetailsSelectedDestination.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_BackToHome)).BeginInit();
+            this.panel_UniverseSelectDestination.SuspendLayout();
+            this.panel_UniverseVirtualMap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_UG)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -430,6 +433,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Close.BackgroundImage = global::iLocatorAstar.Properties.Resources.close_window_32;
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransSelectDestination.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
@@ -442,7 +446,6 @@
             // 
             // panel_ContainerFloorSelector
             // 
-            this.panel_ContainerFloorSelector.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_ContainerFloorSelector.Controls.Add(this.tableLayoutPanel_FloorButtons);
             this.panel_ContainerFloorSelector.Controls.Add(this.panel_TitleSelectFloor);
             this.bunifuTransSelectDestination.SetDecoration(this.panel_ContainerFloorSelector, BunifuAnimatorNS.DecorationType.None);
@@ -453,6 +456,7 @@
             this.panel_ContainerFloorSelector.Name = "panel_ContainerFloorSelector";
             this.panel_ContainerFloorSelector.Size = new System.Drawing.Size(168, 635);
             this.panel_ContainerFloorSelector.TabIndex = 4;
+            this.panel_ContainerFloorSelector.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ContainerFloorSelector_Paint);
             // 
             // tableLayoutPanel_FloorButtons
             // 
@@ -488,7 +492,7 @@
             this.tableLayoutPanel_FloorButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel_FloorButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel_FloorButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel_FloorButtons.Size = new System.Drawing.Size(160, 575);
+            this.tableLayoutPanel_FloorButtons.Size = new System.Drawing.Size(160, 577);
             this.tableLayoutPanel_FloorButtons.TabIndex = 4;
             this.tableLayoutPanel_FloorButtons.Visible = false;
             // 
@@ -517,7 +521,7 @@
             this.btn_10th.IconVisible = true;
             this.btn_10th.IconZoom = 90D;
             this.btn_10th.IsTab = false;
-            this.btn_10th.Location = new System.Drawing.Point(18, 521);
+            this.btn_10th.Location = new System.Drawing.Point(18, 522);
             this.btn_10th.Name = "btn_10th";
             this.btn_10th.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
             this.btn_10th.OnHovercolor = System.Drawing.Color.Cyan;
@@ -885,7 +889,6 @@
             // 
             // panel_TitleSelectFloor
             // 
-            this.panel_TitleSelectFloor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_TitleSelectFloor.Controls.Add(this.lbl_SelectFloor);
             this.bunifuTransSelectDestination.SetDecoration(this.panel_TitleSelectFloor, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_TitleSelectFloor, BunifuAnimatorNS.DecorationType.None);
@@ -894,8 +897,9 @@
             this.panel_TitleSelectFloor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_TitleSelectFloor.Location = new System.Drawing.Point(0, 0);
             this.panel_TitleSelectFloor.Name = "panel_TitleSelectFloor";
-            this.panel_TitleSelectFloor.Size = new System.Drawing.Size(166, 49);
+            this.panel_TitleSelectFloor.Size = new System.Drawing.Size(168, 51);
             this.panel_TitleSelectFloor.TabIndex = 5;
+            this.panel_TitleSelectFloor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_TitleSelectFloor_Paint);
             // 
             // lbl_SelectFloor
             // 
@@ -906,7 +910,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_SelectFloor, BunifuAnimatorNS.DecorationType.None);
             this.lbl_SelectFloor.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SelectFloor.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_SelectFloor.Location = new System.Drawing.Point(27, 13);
+            this.lbl_SelectFloor.Location = new System.Drawing.Point(29, 15);
             this.lbl_SelectFloor.Name = "lbl_SelectFloor";
             this.lbl_SelectFloor.Size = new System.Drawing.Size(112, 22);
             this.lbl_SelectFloor.TabIndex = 4;
@@ -917,36 +921,36 @@
             // 
             this.bunifuTransFloorButtons.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransFloorButtons.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.bunifuTransFloorButtons.DefaultAnimation = animation4;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.bunifuTransFloorButtons.DefaultAnimation = animation6;
             // 
             // panel_TitleVirtualMap
             // 
             this.panel_TitleVirtualMap.BackColor = System.Drawing.SystemColors.Control;
-            this.panel_TitleVirtualMap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_TitleVirtualMap.Controls.Add(this.lbl_VirtualMap);
             this.bunifuTransSelectDestination.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.panel_TitleVirtualMap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_TitleVirtualMap.Location = new System.Drawing.Point(403, 34);
+            this.panel_TitleVirtualMap.Location = new System.Drawing.Point(411, 34);
             this.panel_TitleVirtualMap.Name = "panel_TitleVirtualMap";
-            this.panel_TitleVirtualMap.Size = new System.Drawing.Size(623, 51);
+            this.panel_TitleVirtualMap.Size = new System.Drawing.Size(615, 51);
             this.panel_TitleVirtualMap.TabIndex = 7;
+            this.panel_TitleVirtualMap.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_TitleVirtualMap_Paint);
             // 
             // lbl_VirtualMap
             // 
@@ -957,16 +961,108 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_VirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.lbl_VirtualMap.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_VirtualMap.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_VirtualMap.Location = new System.Drawing.Point(262, 14);
+            this.lbl_VirtualMap.Location = new System.Drawing.Point(259, 15);
             this.lbl_VirtualMap.Name = "lbl_VirtualMap";
             this.lbl_VirtualMap.Size = new System.Drawing.Size(117, 22);
             this.lbl_VirtualMap.TabIndex = 4;
             this.lbl_VirtualMap.Text = "Virtual Map";
             this.lbl_VirtualMap.Visible = false;
             // 
+            // panel_DetailsSelectedDestination
+            // 
+            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_GoHome);
+            this.panel_DetailsSelectedDestination.Controls.Add(this.pb_BackToHome);
+            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_EstimatedDistance);
+            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_EstimatedTime);
+            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_ShortestPath);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
+            this.panel_DetailsSelectedDestination.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_DetailsSelectedDestination.Location = new System.Drawing.Point(411, 552);
+            this.panel_DetailsSelectedDestination.Name = "panel_DetailsSelectedDestination";
+            this.panel_DetailsSelectedDestination.Size = new System.Drawing.Size(615, 117);
+            this.panel_DetailsSelectedDestination.TabIndex = 8;
+            this.panel_DetailsSelectedDestination.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_DetailsSelectedDestination_Paint);
+            // 
+            // lbl_GoHome
+            // 
+            this.lbl_GoHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_GoHome.AutoSize = true;
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_GoHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_GoHome.ForeColor = System.Drawing.Color.DimGray;
+            this.lbl_GoHome.Location = new System.Drawing.Point(537, 91);
+            this.lbl_GoHome.Name = "lbl_GoHome";
+            this.lbl_GoHome.Size = new System.Drawing.Size(56, 21);
+            this.lbl_GoHome.TabIndex = 8;
+            this.lbl_GoHome.Text = "Home";
+            this.lbl_GoHome.Visible = false;
+            // 
+            // pb_BackToHome
+            // 
+            this.pb_BackToHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_BackToHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_BackToHome.BackgroundImage")));
+            this.pb_BackToHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb_BackToHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransSelectDestination.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
+            this.pb_BackToHome.Location = new System.Drawing.Point(525, 10);
+            this.pb_BackToHome.Name = "pb_BackToHome";
+            this.pb_BackToHome.Size = new System.Drawing.Size(78, 78);
+            this.pb_BackToHome.TabIndex = 7;
+            this.pb_BackToHome.TabStop = false;
+            this.toolTip1.SetToolTip(this.pb_BackToHome, "Back to Home");
+            this.pb_BackToHome.Visible = false;
+            this.pb_BackToHome.Click += new System.EventHandler(this.pb_BackToHome_Click);
+            // 
+            // lbl_EstimatedDistance
+            // 
+            this.lbl_EstimatedDistance.AutoSize = true;
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_EstimatedDistance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EstimatedDistance.Location = new System.Drawing.Point(46, 76);
+            this.lbl_EstimatedDistance.Name = "lbl_EstimatedDistance";
+            this.lbl_EstimatedDistance.Size = new System.Drawing.Size(170, 21);
+            this.lbl_EstimatedDistance.TabIndex = 6;
+            this.lbl_EstimatedDistance.Text = "Estimated Distance: ";
+            this.lbl_EstimatedDistance.Visible = false;
+            // 
+            // lbl_EstimatedTime
+            // 
+            this.lbl_EstimatedTime.AutoSize = true;
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_EstimatedTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EstimatedTime.Location = new System.Drawing.Point(83, 50);
+            this.lbl_EstimatedTime.Name = "lbl_EstimatedTime";
+            this.lbl_EstimatedTime.Size = new System.Drawing.Size(133, 21);
+            this.lbl_EstimatedTime.TabIndex = 6;
+            this.lbl_EstimatedTime.Text = "Estimated Time:";
+            this.lbl_EstimatedTime.Visible = false;
+            // 
+            // lbl_ShortestPath
+            // 
+            this.lbl_ShortestPath.AutoSize = true;
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_ShortestPath.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ShortestPath.Location = new System.Drawing.Point(98, 23);
+            this.lbl_ShortestPath.Name = "lbl_ShortestPath";
+            this.lbl_ShortestPath.Size = new System.Drawing.Size(118, 21);
+            this.lbl_ShortestPath.TabIndex = 6;
+            this.lbl_ShortestPath.Text = "Shortest Path:";
+            this.lbl_ShortestPath.Visible = false;
+            // 
             // panel_TitleSelectDestination
             // 
-            this.panel_TitleSelectDestination.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_TitleSelectDestination.Controls.Add(this.lbl_SelectDestination);
             this.bunifuTransSelectDestination.SetDecoration(this.panel_TitleSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_TitleSelectDestination, BunifuAnimatorNS.DecorationType.None);
@@ -974,8 +1070,9 @@
             this.panel_TitleSelectDestination.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TitleSelectDestination.Location = new System.Drawing.Point(0, 0);
             this.panel_TitleSelectDestination.Name = "panel_TitleSelectDestination";
-            this.panel_TitleSelectDestination.Size = new System.Drawing.Size(233, 50);
+            this.panel_TitleSelectDestination.Size = new System.Drawing.Size(243, 51);
             this.panel_TitleSelectDestination.TabIndex = 1;
+            this.panel_TitleSelectDestination.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_TitleSelectDestination_Paint);
             // 
             // lbl_SelectDestination
             // 
@@ -986,26 +1083,12 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_SelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.lbl_SelectDestination.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SelectDestination.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_SelectDestination.Location = new System.Drawing.Point(37, 15);
+            this.lbl_SelectDestination.Location = new System.Drawing.Point(43, 16);
             this.lbl_SelectDestination.Name = "lbl_SelectDestination";
             this.lbl_SelectDestination.Size = new System.Drawing.Size(172, 22);
             this.lbl_SelectDestination.TabIndex = 4;
             this.lbl_SelectDestination.Text = "Select Destination";
             this.lbl_SelectDestination.Visible = false;
-            // 
-            // panel_UniverseSelectDestination
-            // 
-            this.panel_UniverseSelectDestination.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_UniverseSelectDestination.Controls.Add(this.panel_ContainerSelectDestination);
-            this.panel_UniverseSelectDestination.Controls.Add(this.panel_TitleSelectDestination);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransFloorButtons.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
-            this.panel_UniverseSelectDestination.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_UniverseSelectDestination.Location = new System.Drawing.Point(168, 34);
-            this.panel_UniverseSelectDestination.Name = "panel_UniverseSelectDestination";
-            this.panel_UniverseSelectDestination.Size = new System.Drawing.Size(235, 635);
-            this.panel_UniverseSelectDestination.TabIndex = 5;
             // 
             // panel_ContainerSelectDestination
             // 
@@ -1022,10 +1105,10 @@
             this.bunifuTransSelectDestination.SetDecoration(this.panel_ContainerSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_ContainerSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_ContainerSelectDestination, BunifuAnimatorNS.DecorationType.None);
-            this.panel_ContainerSelectDestination.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_ContainerSelectDestination.Location = new System.Drawing.Point(0, 50);
+            this.panel_ContainerSelectDestination.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_ContainerSelectDestination.Location = new System.Drawing.Point(0, 51);
             this.panel_ContainerSelectDestination.Name = "panel_ContainerSelectDestination";
-            this.panel_ContainerSelectDestination.Size = new System.Drawing.Size(233, 583);
+            this.panel_ContainerSelectDestination.Size = new System.Drawing.Size(243, 584);
             this.panel_ContainerSelectDestination.TabIndex = 2;
             // 
             // LayoutPanel_9th
@@ -6314,117 +6397,46 @@
             this.lnkLabel_Room415.TabStop = true;
             this.lnkLabel_Room415.Text = "Room 415";
             // 
-            // panel_DetailsSelectedDestination
+            // panel_UniverseSelectDestination
             // 
-            this.panel_DetailsSelectedDestination.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_GoHome);
-            this.panel_DetailsSelectedDestination.Controls.Add(this.pb_BackToHome);
-            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_EstimatedDistance);
-            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_EstimatedTime);
-            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_ShortestPath);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransFloorButtons.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
-            this.panel_DetailsSelectedDestination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_DetailsSelectedDestination.Location = new System.Drawing.Point(403, 496);
-            this.panel_DetailsSelectedDestination.Name = "panel_DetailsSelectedDestination";
-            this.panel_DetailsSelectedDestination.Size = new System.Drawing.Size(623, 173);
-            this.panel_DetailsSelectedDestination.TabIndex = 8;
+            this.panel_UniverseSelectDestination.Controls.Add(this.panel_ContainerSelectDestination);
+            this.panel_UniverseSelectDestination.Controls.Add(this.panel_TitleSelectDestination);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.panel_UniverseSelectDestination.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_UniverseSelectDestination.Location = new System.Drawing.Point(168, 34);
+            this.panel_UniverseSelectDestination.Name = "panel_UniverseSelectDestination";
+            this.panel_UniverseSelectDestination.Size = new System.Drawing.Size(243, 635);
+            this.panel_UniverseSelectDestination.TabIndex = 5;
+            this.panel_UniverseSelectDestination.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_UniverseSelectDestination_Paint);
             // 
-            // lbl_GoHome
+            // panel_UniverseVirtualMap
             // 
-            this.lbl_GoHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_GoHome.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_GoHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_GoHome.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_GoHome.Location = new System.Drawing.Point(507, 131);
-            this.lbl_GoHome.Name = "lbl_GoHome";
-            this.lbl_GoHome.Size = new System.Drawing.Size(56, 21);
-            this.lbl_GoHome.TabIndex = 8;
-            this.lbl_GoHome.Text = "Home";
-            this.lbl_GoHome.Visible = false;
+            this.panel_UniverseVirtualMap.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_UniverseVirtualMap.Controls.Add(this.pb_UG);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_UniverseVirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.panel_UniverseVirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.panel_UniverseVirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.panel_UniverseVirtualMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_UniverseVirtualMap.Location = new System.Drawing.Point(411, 85);
+            this.panel_UniverseVirtualMap.Name = "panel_UniverseVirtualMap";
+            this.panel_UniverseVirtualMap.Size = new System.Drawing.Size(615, 467);
+            this.panel_UniverseVirtualMap.TabIndex = 9;
+            this.panel_UniverseVirtualMap.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_UniverseVirtualMap_Paint);
             // 
-            // pb_BackToHome
+            // pb_UG
             // 
-            this.pb_BackToHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_BackToHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_BackToHome.BackgroundImage")));
-            this.pb_BackToHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb_BackToHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransSelectDestination.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransFloorButtons.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
-            this.pb_BackToHome.Location = new System.Drawing.Point(495, 50);
-            this.pb_BackToHome.Name = "pb_BackToHome";
-            this.pb_BackToHome.Size = new System.Drawing.Size(78, 78);
-            this.pb_BackToHome.TabIndex = 7;
-            this.pb_BackToHome.TabStop = false;
-            this.toolTip1.SetToolTip(this.pb_BackToHome, "Back to Home");
-            this.pb_BackToHome.Visible = false;
-            // 
-            // lbl_EstimatedDistance
-            // 
-            this.lbl_EstimatedDistance.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_EstimatedDistance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EstimatedDistance.Location = new System.Drawing.Point(50, 111);
-            this.lbl_EstimatedDistance.Name = "lbl_EstimatedDistance";
-            this.lbl_EstimatedDistance.Size = new System.Drawing.Size(170, 21);
-            this.lbl_EstimatedDistance.TabIndex = 6;
-            this.lbl_EstimatedDistance.Text = "Estimated Distance: ";
-            this.lbl_EstimatedDistance.Visible = false;
-            // 
-            // lbl_EstimatedTime
-            // 
-            this.lbl_EstimatedTime.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_EstimatedTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EstimatedTime.Location = new System.Drawing.Point(83, 72);
-            this.lbl_EstimatedTime.Name = "lbl_EstimatedTime";
-            this.lbl_EstimatedTime.Size = new System.Drawing.Size(133, 21);
-            this.lbl_EstimatedTime.TabIndex = 6;
-            this.lbl_EstimatedTime.Text = "Estimated Time:";
-            this.lbl_EstimatedTime.Visible = false;
-            // 
-            // lbl_ShortestPath
-            // 
-            this.lbl_ShortestPath.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_ShortestPath.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ShortestPath.Location = new System.Drawing.Point(98, 34);
-            this.lbl_ShortestPath.Name = "lbl_ShortestPath";
-            this.lbl_ShortestPath.Size = new System.Drawing.Size(118, 21);
-            this.lbl_ShortestPath.TabIndex = 6;
-            this.lbl_ShortestPath.Text = "Shortest Path:";
-            this.lbl_ShortestPath.Visible = false;
-            // 
-            // TableLayoutPanel_Map
-            // 
-            this.TableLayoutPanel_Map.ColumnCount = 3;
-            this.TableLayoutPanel_Map.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.TableLayoutPanel_Map.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.TableLayoutPanel_Map.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.bunifuTransSelectDestination.SetDecoration(this.TableLayoutPanel_Map, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransFloorButtons.SetDecoration(this.TableLayoutPanel_Map, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.TableLayoutPanel_Map, BunifuAnimatorNS.DecorationType.None);
-            this.TableLayoutPanel_Map.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TableLayoutPanel_Map.Location = new System.Drawing.Point(403, 85);
-            this.TableLayoutPanel_Map.Name = "TableLayoutPanel_Map";
-            this.TableLayoutPanel_Map.RowCount = 3;
-            this.TableLayoutPanel_Map.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.TableLayoutPanel_Map.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.TableLayoutPanel_Map.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.TableLayoutPanel_Map.Size = new System.Drawing.Size(623, 411);
-            this.TableLayoutPanel_Map.TabIndex = 8;
-            this.TableLayoutPanel_Map.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel_Map_Paint);
+            this.pb_UG.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bunifuTransSelectDestination.SetDecoration(this.pb_UG, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.pb_UG, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.pb_UG, BunifuAnimatorNS.DecorationType.None);
+            this.pb_UG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pb_UG.Location = new System.Drawing.Point(0, 0);
+            this.pb_UG.Name = "pb_UG";
+            this.pb_UG.Size = new System.Drawing.Size(615, 467);
+            this.pb_UG.TabIndex = 0;
+            this.pb_UG.TabStop = false;
             // 
             // bunifuTransLabels
             // 
@@ -6451,22 +6463,22 @@
             // 
             this.bunifuTransSelectDestination.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
             this.bunifuTransSelectDestination.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 1F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(0);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 0F;
-            this.bunifuTransSelectDestination.DefaultAnimation = animation6;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 1F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.bunifuTransSelectDestination.DefaultAnimation = animation4;
             this.bunifuTransSelectDestination.Interval = 20;
             // 
             // form_Main
@@ -6474,7 +6486,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 669);
-            this.Controls.Add(this.TableLayoutPanel_Map);
+            this.Controls.Add(this.panel_UniverseVirtualMap);
             this.Controls.Add(this.panel_DetailsSelectedDestination);
             this.Controls.Add(this.panel_TitleVirtualMap);
             this.Controls.Add(this.panel_UniverseSelectDestination);
@@ -6486,7 +6498,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "form_Main";
-            this.Text = "iLocator | Main";
+            this.Text = "z";
             this.Load += new System.EventHandler(this.form_MainTest_Load);
             this.panel_ControlBox.ResumeLayout(false);
             this.panel_ControlBox.PerformLayout();
@@ -6498,9 +6510,11 @@
             this.panel_TitleSelectFloor.PerformLayout();
             this.panel_TitleVirtualMap.ResumeLayout(false);
             this.panel_TitleVirtualMap.PerformLayout();
+            this.panel_DetailsSelectedDestination.ResumeLayout(false);
+            this.panel_DetailsSelectedDestination.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_BackToHome)).EndInit();
             this.panel_TitleSelectDestination.ResumeLayout(false);
             this.panel_TitleSelectDestination.PerformLayout();
-            this.panel_UniverseSelectDestination.ResumeLayout(false);
             this.panel_ContainerSelectDestination.ResumeLayout(false);
             this.LayoutPanel_9th.ResumeLayout(false);
             this.LayoutPanel_9th.PerformLayout();
@@ -6538,9 +6552,9 @@
             this.LayoutPanel_4th.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            this.panel_DetailsSelectedDestination.ResumeLayout(false);
-            this.panel_DetailsSelectedDestination.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_BackToHome)).EndInit();
+            this.panel_UniverseSelectDestination.ResumeLayout(false);
+            this.panel_UniverseVirtualMap.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_UG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6570,9 +6584,15 @@
         private System.Windows.Forms.Label lbl_VirtualMap;
         private BunifuAnimatorNS.BunifuTransition bunifuTransLabels;
         private BunifuAnimatorNS.BunifuTransition bunifuTransSelectDestination;
+        private System.Windows.Forms.Panel panel_DetailsSelectedDestination;
+        private System.Windows.Forms.Label lbl_EstimatedDistance;
+        private System.Windows.Forms.Label lbl_EstimatedTime;
+        private System.Windows.Forms.Label lbl_ShortestPath;
+        private System.Windows.Forms.PictureBox pb_iLocatorLogo;
+        private System.Windows.Forms.PictureBox pb_BackToHome;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lbl_GoHome;
         private System.Windows.Forms.Panel panel_UniverseSelectDestination;
-        private System.Windows.Forms.Panel panel_TitleSelectDestination;
-        private System.Windows.Forms.Label lbl_SelectDestination;
         private System.Windows.Forms.Panel panel_ContainerSelectDestination;
         private System.Windows.Forms.TableLayoutPanel LayoutPanel_9th;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
@@ -6849,14 +6869,9 @@
         private System.Windows.Forms.LinkLabel lnkLabel_Room413;
         private System.Windows.Forms.LinkLabel lnkLabel_Room414;
         private System.Windows.Forms.LinkLabel lnkLabel_Room415;
-        private System.Windows.Forms.Panel panel_DetailsSelectedDestination;
-        private System.Windows.Forms.Label lbl_EstimatedDistance;
-        private System.Windows.Forms.Label lbl_EstimatedTime;
-        private System.Windows.Forms.Label lbl_ShortestPath;
-        private System.Windows.Forms.TableLayoutPanel TableLayoutPanel_Map;
-        private System.Windows.Forms.PictureBox pb_iLocatorLogo;
-        private System.Windows.Forms.PictureBox pb_BackToHome;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label lbl_GoHome;
+        private System.Windows.Forms.Panel panel_TitleSelectDestination;
+        private System.Windows.Forms.Label lbl_SelectDestination;
+        private System.Windows.Forms.Panel panel_UniverseVirtualMap;
+        private System.Windows.Forms.PictureBox pb_UG;
     }
 }

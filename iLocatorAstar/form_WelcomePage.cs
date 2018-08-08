@@ -14,23 +14,38 @@ namespace iLocatorAstar
 {
     public partial class form_WelcomePage : Form
     {
+        
+        // Make some element round edges
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect, // x-coordinate of upper-left corner
+            int nTopRect, // y-coordinate of upper-left corner
+            int nRightRect, // x-coordinate of lower-right corner
+            int nBottomRect, // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+        );
 
         public form_WelcomePage()
         {
             InitializeComponent();
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Default Location of The System
+            var text = File.ReadLines(Environment.CurrentDirectory.ToString()+@"..\..\..\setup\config.ini");
 
-           var text = File.ReadLines(Environment.CurrentDirectory.ToString()+@"..\..\..\setup\config.ini");
-           
-            string result="";
+            string result = "";
+            string vertex = "";
             foreach (var item in text)
             {
                 result = item.ToString();
+                vertex = item.ToString();
+
             }
-            MessageBox.Show(result.ToString());
+            lbl_VarSysCurrentFloor.Text = result.ToString();
 
             // Make Application Fullscreen when Open
             WindowState = FormWindowState.Maximized;
@@ -114,5 +129,12 @@ namespace iLocatorAstar
         {
 
         }
+
+        private void panel_LogoTitle_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel_LogoTitle.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+        }
+
     }
 }
+

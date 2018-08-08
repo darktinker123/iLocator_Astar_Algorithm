@@ -118,26 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="message-2-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\message-2-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="info-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close-window-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close-window-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="google-plus-4-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\google-plus-4-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dummy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dummy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="twitter-4-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\twitter-4-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3rd Floor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3rd Floor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="facebook-4-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook-4-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="facebook-4-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\facebook-4-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dummy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dummy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="talk-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\talk-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ACTNEW2018LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ACTNEW2018LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,13 +142,22 @@
   <data name="visitor id1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\visitor id1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="talk-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\talk-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="visitor id" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\visitor id.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="message-2-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\message-2-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="twitter-4-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitter-4-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="google-plus-4-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\google-plus-4-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close-window-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close-window-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="facebook-4-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\facebook-4-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3rd Floor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3rd Floor1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
