@@ -58,3 +58,17 @@ C:\Users\Darktinker123\Desktop\iLocator_Astar (Windows 7 Edition)\iLocatorAstar\
 C:\Users\Darktinker123\Desktop\iLocator_Astar (Windows 7 Edition)\iLocatorAstar\obj\Debug\iLocatorAstar.System_Message.resources
 C:\Users\Darktinker123\Desktop\iLocator_Astar (Windows 7 Edition)\iLocatorAstar\obj\Debug\iLocatorAstar.TestZone.resources
 C:\Users\Darktinker123\Desktop\iLocator_Astar (Windows 7 Edition)\iLocatorAstar\obj\Debug\iLocatorAstar.csproj.GenerateResource.Cache
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\bin\Debug\iLocatorAstar.exe.config
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.exe
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.pdb
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_Main.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_SelectUser.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_WelcomePage.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.Properties.Resources.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.System_Info.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.System_Message.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.TestZone.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.csproj.GenerateResource.Cache
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\bin\Debug\iLocatorAstar.exe
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\bin\Debug\iLocatorAstar.pdb

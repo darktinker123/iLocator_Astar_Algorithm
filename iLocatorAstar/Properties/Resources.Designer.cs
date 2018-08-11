@@ -83,26 +83,6 @@ namespace iLocatorAstar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ACTNEW2018LOGO {
-            get {
-                object obj = ResourceManager.GetObject("ACTNEW2018LOGO", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap close_window_32 {
-            get {
-                object obj = ResourceManager.GetObject("close-window-32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap dummy {
             get {
                 object obj = ResourceManager.GetObject("dummy", resourceCulture);
@@ -113,69 +93,9 @@ namespace iLocatorAstar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap facebook_4_64 {
-            get {
-                object obj = ResourceManager.GetObject("facebook-4-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap facebook_4_641 {
-            get {
-                object obj = ResourceManager.GetObject("facebook-4-641", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap google_plus_4_64 {
-            get {
-                object obj = ResourceManager.GetObject("google-plus-4-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap info_64 {
-            get {
-                object obj = ResourceManager.GetObject("info-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap message_2_64 {
-            get {
-                object obj = ResourceManager.GetObject("message-2-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap talk_64 {
             get {
                 object obj = ResourceManager.GetObject("talk-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap twitter_4_64 {
-            get {
-                object obj = ResourceManager.GetObject("twitter-4-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
