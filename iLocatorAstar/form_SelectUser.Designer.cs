@@ -71,7 +71,6 @@
             this.panel_ContainerUniverse.Name = "panel_ContainerUniverse";
             this.panel_ContainerUniverse.Size = new System.Drawing.Size(996, 438);
             this.panel_ContainerUniverse.TabIndex = 2;
-            this.panel_ContainerUniverse.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ContainerSelectUser_Paint);
             // 
             // lbl_TimeToday
             // 

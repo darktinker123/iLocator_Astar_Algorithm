@@ -50,8 +50,6 @@
             this.btn_Close = new System.Windows.Forms.PictureBox();
             this.bunifuACTTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel_SystemStatus = new System.Windows.Forms.Panel();
-            this.lbl_SysStatus = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbl_VarSysCurrentFloor = new System.Windows.Forms.Label();
             this.lbl_SysCurrentFloor = new System.Windows.Forms.Label();
             this.bunifuFadeTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
@@ -360,44 +358,14 @@
             // panel_SystemStatus
             // 
             this.panel_SystemStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_SystemStatus.Controls.Add(this.lbl_SysStatus);
-            this.panel_SystemStatus.Controls.Add(this.label1);
             this.panel_SystemStatus.Controls.Add(this.lbl_VarSysCurrentFloor);
             this.panel_SystemStatus.Controls.Add(this.lbl_SysCurrentFloor);
             this.bunifuFadeTransition.SetDecoration(this.panel_SystemStatus, BunifuAnimatorNS.DecorationType.None);
             this.bunifuACTTransition.SetDecoration(this.panel_SystemStatus, BunifuAnimatorNS.DecorationType.None);
             this.panel_SystemStatus.Location = new System.Drawing.Point(503, 42);
             this.panel_SystemStatus.Name = "panel_SystemStatus";
-            this.panel_SystemStatus.Size = new System.Drawing.Size(157, 46);
+            this.panel_SystemStatus.Size = new System.Drawing.Size(157, 27);
             this.panel_SystemStatus.TabIndex = 7;
-            // 
-            // lbl_SysStatus
-            // 
-            this.lbl_SysStatus.AutoSize = true;
-            this.bunifuACTTransition.SetDecoration(this.lbl_SysStatus, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_SysStatus, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_SysStatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SysStatus.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbl_SysStatus.Location = new System.Drawing.Point(4, 20);
-            this.lbl_SysStatus.Name = "lbl_SysStatus";
-            this.lbl_SysStatus.Size = new System.Drawing.Size(96, 17);
-            this.lbl_SysStatus.TabIndex = 2;
-            this.lbl_SysStatus.Text = "System Status: ";
-            this.lbl_SysStatus.Click += new System.EventHandler(this.lbl_WelcomeDescription_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.bunifuACTTransition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(106, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "$";
-            this.label1.Click += new System.EventHandler(this.lbl_WelcomeDescription_Click);
             // 
             // lbl_VarSysCurrentFloor
             // 
@@ -512,9 +480,7 @@
         private System.Windows.Forms.Timer Time_Timer;
         private System.Windows.Forms.PictureBox pb_iLocatorLogo;
         private System.Windows.Forms.Panel panel_SystemStatus;
-        private System.Windows.Forms.Label lbl_SysStatus;
         private System.Windows.Forms.Label lbl_SysCurrentFloor;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_VarSysCurrentFloor;
     }
 }

@@ -94,7 +94,34 @@ namespace iLocatorAstar
             //button1.Tag = "T";
             //button2.Tag = "T";
         }
-        
-        
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            bunifuTransition1.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransition1.ShowSync(pb_VirtualMap);
+
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            bunifuTransition1.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\2nd-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransition1.ShowSync(pb_VirtualMap);
+            }
+        }
     }
 }

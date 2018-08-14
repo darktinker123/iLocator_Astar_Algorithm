@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.Framework.UI;
+using System.IO;
 
 namespace iLocatorAstar
 {
@@ -20,14 +21,6 @@ namespace iLocatorAstar
 
         private void form_MainTest_Load(object sender, EventArgs e)
         {
-            foreach (Control x in this.Controls)
-            {
-                if (x is LinkLabel)
-                {
-                    ((LinkLabel)x).LinkColor = Color.Pink;
-                }
-            }
-
             // Hide all Directories in Select Destition
             HidePanels();
 
@@ -65,6 +58,19 @@ namespace iLocatorAstar
                 selectedBtn.Normalcolor = Color.Cyan;
             }
 
+            // Show Virtual Map
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
             // Hide List of Directories in Select Destination
             HidePanels();
 
@@ -83,7 +89,7 @@ namespace iLocatorAstar
             else
             {
                 bunifuTransSelectDestination.HideSync(LayoutPanel_UG);
-            }
+            }      
         }
 
         private void btn_2nd_Click(object sender, EventArgs e)
@@ -100,6 +106,19 @@ namespace iLocatorAstar
                     BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
                 }
                 selectedBtn.Normalcolor = Color.Cyan;
+            }
+
+            // Show Virtual Maps
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\2nd-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
             }
 
             HidePanels();
@@ -137,6 +156,20 @@ namespace iLocatorAstar
                 }
                 selectedBtn.Normalcolor = Color.Cyan;
             }
+
+            // Show Virtual Maps
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\3rd-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
             HidePanels();
             LayoutPanel_3rd.Visible = true;
             LayoutPanel_3rd.Dock = DockStyle.Fill;
@@ -171,6 +204,20 @@ namespace iLocatorAstar
                 }
                 selectedBtn.Normalcolor = Color.Cyan;
             }
+
+            // Show Virtual Maps
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\4th-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
             HidePanels();
             LayoutPanel_4th.Visible = true;
             LayoutPanel_4th.Dock = DockStyle.Fill;
@@ -203,6 +250,20 @@ namespace iLocatorAstar
                 }
                 selectedBtn.Normalcolor = Color.Cyan;
             }
+
+            // Show Virtual Maps
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\5th-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
             HidePanels();
             LayoutPanel_5th.Visible = true;
             LayoutPanel_5th.Dock = DockStyle.Fill;
@@ -235,6 +296,20 @@ namespace iLocatorAstar
                 }
                 selectedBtn.Normalcolor = Color.Cyan;
             }
+
+            // Show Virtual Maps
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\6th-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
             HidePanels();
             LayoutPanel_6th.Visible = true;
             LayoutPanel_6th.Dock = DockStyle.Fill;
@@ -267,6 +342,20 @@ namespace iLocatorAstar
                 }
                 selectedBtn.Normalcolor = Color.Cyan;
             }
+
+            // Show Virtual Maps
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\7th-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
             HidePanels();
             LayoutPanel_7th.Visible = true;
             LayoutPanel_7th.Dock = DockStyle.Fill;
@@ -299,6 +388,20 @@ namespace iLocatorAstar
                 }
                 selectedBtn.Normalcolor = Color.Cyan;
             }
+
+            // Show Virtual Maps
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\8th-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
             HidePanels();
             LayoutPanel_8th.Visible = true;
             LayoutPanel_8th.Dock = DockStyle.Fill;
@@ -331,6 +434,20 @@ namespace iLocatorAstar
                 }
                 selectedBtn.Normalcolor = Color.Cyan;
             }
+
+            // Show Virtual Maps
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\9th-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
             HidePanels();
             LayoutPanel_9th.Visible = true;
             LayoutPanel_9th.Dock = DockStyle.Fill;
@@ -363,6 +480,20 @@ namespace iLocatorAstar
                 }
                 selectedBtn.Normalcolor = Color.Cyan;
             }
+
+            // Show Virtual Maps
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\10th-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
             HidePanels();
             LayoutPanel_10th.Visible = true;
             LayoutPanel_10th.Dock = DockStyle.Fill;

@@ -135,19 +135,7 @@
     <None Include="Resources\ACTNEW2018LOGO.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\visitor id.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\talk-64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\visitor id1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dummy.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\facebook-4-64.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\facebook-4-641.png" />
@@ -165,13 +153,7 @@
     <None Include="Resources\message-2-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="setup\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3rd Floor.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3rd Floor1.jpg" />
+    <Folder Include="Setup\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

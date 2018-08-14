@@ -34,6 +34,8 @@ namespace iLocatorAstar
         
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+
             // Default Location of The System
             var text = File.ReadLines(Environment.CurrentDirectory.ToString()+@"..\..\..\setup\config.ini");
 
@@ -69,7 +71,6 @@ namespace iLocatorAstar
                 bunifuFadeTransition.ShowSync(btn_Next);
                 bunifuFadeTransition.ShowSync(lbl_TimeToday);
             }
-
 
         }
 

@@ -12,26 +12,15 @@ namespace iLocatorAstar
 {
     public partial class form_SelectUser : Form
     {
-
-
+        
         public form_SelectUser()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel_ContainerSelectUser_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void form_SelectUser_Load(object sender, EventArgs e)
         {
-            
+           
             // Make Application Fullscreen when Open
             WindowState = FormWindowState.Maximized;
 
@@ -59,16 +48,6 @@ namespace iLocatorAstar
             // Close Application
             System_Message _MessegeSystem = new System_Message();
             _MessegeSystem.ShowDialog();
-
-            // Uncomment me if you wan't simple Application Exit Message
-            //if (MessageBox.Show("Are you sure?", "System Messege", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-            //{
-            //    Application.Exit();
-            //}
-            //else
-            //{
-            //    return;
-            //}
         }
 
         private void btn_Student_Click(object sender, EventArgs e)
@@ -77,7 +56,7 @@ namespace iLocatorAstar
             form_Main _Mainform = new form_Main();
             _Mainform.Show();
             this.Hide();
-           
+       
 
         }
 
