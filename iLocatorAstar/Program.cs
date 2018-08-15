@@ -16,7 +16,7 @@ namespace iLocatorAstar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new form_WelcomePage());
+            Application.Run(new form_SelectUser());
         }
     }
 }

@@ -161,7 +161,7 @@
             // 
             this.lbl_MsgSystem.AutoSize = true;
             this.lbl_MsgSystem.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MsgSystem.ForeColor = System.Drawing.Color.Black;
+            this.lbl_MsgSystem.ForeColor = System.Drawing.Color.White;
             this.lbl_MsgSystem.Location = new System.Drawing.Point(201, 65);
             this.lbl_MsgSystem.Name = "lbl_MsgSystem";
             this.lbl_MsgSystem.Size = new System.Drawing.Size(165, 33);

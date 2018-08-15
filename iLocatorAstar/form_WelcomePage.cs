@@ -47,8 +47,10 @@ namespace iLocatorAstar
             }
 
             lbl_VarSysCurrentFloor.Text = result.ToString();
+
             //MAKE FORM FULLSCREEN
             WindowState = FormWindowState.Maximized;
+
             //TRANSITION OF ACT LOGO
             if (pb_ACTIco.Visible == false)
             {
@@ -115,7 +117,11 @@ namespace iLocatorAstar
             ControlPaint.DrawBorder(e.Graphics, this.panel_LogoTitle.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
         }
 
-
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            System_Message msgForm = new System_Message();
+            msgForm.ShowDialog();
+        }
     }
 }
 
