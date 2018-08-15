@@ -74,3 +74,17 @@ C:\Users\ACT-STUDENT\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iL
 C:\Users\ACT-STUDENT\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.csproj.CopyComplete
 C:\Users\ACT-STUDENT\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.exe
 C:\Users\ACT-STUDENT\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.pdb
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\bin\Debug\iLocatorAstar.exe.config
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.exe
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.pdb
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\bin\Debug\iLocatorAstar.exe
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\bin\Debug\iLocatorAstar.pdb
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.csprojResolveAssemblyReference.cache
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_Main.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_SelectUser.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_WelcomePage.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.Properties.Resources.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.System_Info.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.System_Message.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.TestZone.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.csproj.GenerateResource.Cache
