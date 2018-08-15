@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_WelcomePage));
-            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panel_ContainerWelcome = new System.Windows.Forms.Panel();
             this.lbl_TimeToday = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_Next = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -244,11 +244,11 @@
             this.lbl_WelcomeDescription.AutoSize = true;
             this.bunifuACTTransition.SetDecoration(this.lbl_WelcomeDescription, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_WelcomeDescription, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_WelcomeDescription.Font = new System.Drawing.Font("Calibri", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_WelcomeDescription.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_WelcomeDescription.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_WelcomeDescription.Location = new System.Drawing.Point(126, 331);
+            this.lbl_WelcomeDescription.Location = new System.Drawing.Point(207, 325);
             this.lbl_WelcomeDescription.Name = "lbl_WelcomeDescription";
-            this.lbl_WelcomeDescription.Size = new System.Drawing.Size(437, 46);
+            this.lbl_WelcomeDescription.Size = new System.Drawing.Size(305, 33);
             this.lbl_WelcomeDescription.TabIndex = 2;
             this.lbl_WelcomeDescription.Text = "Need help with directions?";
             this.lbl_WelcomeDescription.Visible = false;
@@ -258,11 +258,11 @@
             this.lbl_iLocatorWelcomePage.AutoSize = true;
             this.bunifuACTTransition.SetDecoration(this.lbl_iLocatorWelcomePage, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_iLocatorWelcomePage, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_iLocatorWelcomePage.Font = new System.Drawing.Font("Century Gothic", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_iLocatorWelcomePage.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_iLocatorWelcomePage.ForeColor = System.Drawing.Color.Black;
-            this.lbl_iLocatorWelcomePage.Location = new System.Drawing.Point(23, 274);
+            this.lbl_iLocatorWelcomePage.Location = new System.Drawing.Point(126, 281);
             this.lbl_iLocatorWelcomePage.Name = "lbl_iLocatorWelcomePage";
-            this.lbl_iLocatorWelcomePage.Size = new System.Drawing.Size(605, 57);
+            this.lbl_iLocatorWelcomePage.Size = new System.Drawing.Size(470, 44);
             this.lbl_iLocatorWelcomePage.TabIndex = 1;
             this.lbl_iLocatorWelcomePage.Text = "Welcome to the iLocator!";
             this.lbl_iLocatorWelcomePage.Visible = false;
@@ -276,9 +276,9 @@
             this.pb_ACTIco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bunifuACTTransition.SetDecoration(this.pb_ACTIco, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.pb_ACTIco, BunifuAnimatorNS.DecorationType.None);
-            this.pb_ACTIco.Location = new System.Drawing.Point(73, 17);
+            this.pb_ACTIco.Location = new System.Drawing.Point(146, 67);
             this.pb_ACTIco.Name = "pb_ACTIco";
-            this.pb_ACTIco.Size = new System.Drawing.Size(506, 248);
+            this.pb_ACTIco.Size = new System.Drawing.Size(417, 204);
             this.pb_ACTIco.TabIndex = 0;
             this.pb_ACTIco.TabStop = false;
             this.pb_ACTIco.Visible = false;
@@ -343,22 +343,22 @@
             // 
             this.bunifuACTTransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
             this.bunifuACTTransition.Cursor = null;
-            animation7.AnimateOnlyDifferences = true;
-            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
-            animation7.LeafCoeff = 1F;
-            animation7.MaxTime = 1F;
-            animation7.MinTime = 0F;
-            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
-            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
-            animation7.MosaicSize = 0;
-            animation7.Padding = new System.Windows.Forms.Padding(0);
-            animation7.RotateCoeff = 0F;
-            animation7.RotateLimit = 0F;
-            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
-            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
-            animation7.TimeCoeff = 0F;
-            animation7.TransparencyCoeff = 0F;
-            this.bunifuACTTransition.DefaultAnimation = animation7;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuACTTransition.DefaultAnimation = animation1;
             this.bunifuACTTransition.Interval = 20;
             // 
             // panel_SystemStatus
@@ -403,22 +403,22 @@
             // 
             this.bunifuFadeTransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuFadeTransition.Cursor = null;
-            animation8.AnimateOnlyDifferences = true;
-            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
-            animation8.LeafCoeff = 0F;
-            animation8.MaxTime = 1F;
-            animation8.MinTime = 0F;
-            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
-            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
-            animation8.MosaicSize = 0;
-            animation8.Padding = new System.Windows.Forms.Padding(0);
-            animation8.RotateCoeff = 0F;
-            animation8.RotateLimit = 0F;
-            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
-            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
-            animation8.TimeCoeff = 0F;
-            animation8.TransparencyCoeff = 1F;
-            this.bunifuFadeTransition.DefaultAnimation = animation8;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.bunifuFadeTransition.DefaultAnimation = animation2;
             // 
             // Time_Timer
             // 

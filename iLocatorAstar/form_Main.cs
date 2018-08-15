@@ -261,7 +261,6 @@ namespace iLocatorAstar
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
 
                 bunifuTransMaps.ShowSync(pb_VirtualMap);
-
             }
 
             HidePanels();

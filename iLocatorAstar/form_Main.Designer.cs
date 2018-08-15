@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation20 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation18 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation17 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main));
+            BunifuAnimatorNS.Animation animation19 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_ControlBox = new System.Windows.Forms.Panel();
             this.pb_iLocatorLogo = new System.Windows.Forms.PictureBox();
@@ -340,10 +341,11 @@
             this.lnkLabel_Room415 = new System.Windows.Forms.LinkLabel();
             this.panel_UniverseSelectDestination = new System.Windows.Forms.Panel();
             this.panel_UniverseVirtualMap = new System.Windows.Forms.Panel();
-            this.pb_UG = new System.Windows.Forms.PictureBox();
+            this.pb_VirtualMap = new System.Windows.Forms.PictureBox();
             this.bunifuTransLabels = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuTransSelectDestination = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.bunifuTransMaps = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel_ControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).BeginInit();
             this.panel_ContainerFloorSelector.SuspendLayout();
@@ -374,7 +376,7 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.panel_UniverseSelectDestination.SuspendLayout();
             this.panel_UniverseVirtualMap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_UG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_VirtualMap)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -387,14 +389,15 @@
             this.panel_ControlBox.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel_ControlBox.Controls.Add(this.pb_iLocatorLogo);
             this.panel_ControlBox.Controls.Add(this.lbl_FormTitle);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
             this.panel_ControlBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_ControlBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_ControlBox.Location = new System.Drawing.Point(0, 0);
             this.panel_ControlBox.Name = "panel_ControlBox";
-            this.panel_ControlBox.Size = new System.Drawing.Size(1026, 34);
+            this.panel_ControlBox.Size = new System.Drawing.Size(1051, 34);
             this.panel_ControlBox.TabIndex = 3;
             // 
             // pb_iLocatorLogo
@@ -403,6 +406,7 @@
             this.pb_iLocatorLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_iLocatorLogo.BackgroundImage")));
             this.pb_iLocatorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bunifuTransSelectDestination.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
             this.pb_iLocatorLogo.Location = new System.Drawing.Point(9, 5);
@@ -414,9 +418,10 @@
             // lbl_FormTitle
             // 
             this.lbl_FormTitle.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
             this.lbl_FormTitle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_FormTitle.ForeColor = System.Drawing.Color.White;
             this.lbl_FormTitle.Location = new System.Drawing.Point(37, 8);
@@ -429,13 +434,14 @@
             // 
             this.panel_ContainerFloorSelector.Controls.Add(this.tableLayoutPanel_FloorButtons);
             this.panel_ContainerFloorSelector.Controls.Add(this.panel_TitleSelectFloor);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_ContainerFloorSelector, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.panel_ContainerFloorSelector, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_ContainerFloorSelector, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_ContainerFloorSelector, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_ContainerFloorSelector, BunifuAnimatorNS.DecorationType.None);
             this.panel_ContainerFloorSelector.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_ContainerFloorSelector.Location = new System.Drawing.Point(0, 34);
             this.panel_ContainerFloorSelector.Name = "panel_ContainerFloorSelector";
-            this.panel_ContainerFloorSelector.Size = new System.Drawing.Size(168, 635);
+            this.panel_ContainerFloorSelector.Size = new System.Drawing.Size(168, 630);
             this.panel_ContainerFloorSelector.TabIndex = 4;
             this.panel_ContainerFloorSelector.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ContainerFloorSelector_Paint);
             // 
@@ -458,6 +464,7 @@
             this.tableLayoutPanel_FloorButtons.Controls.Add(this.btn_2nd, 0, 1);
             this.tableLayoutPanel_FloorButtons.Controls.Add(this.btn_UG, 0, 0);
             this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel_FloorButtons, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.tableLayoutPanel_FloorButtons, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.tableLayoutPanel_FloorButtons, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.tableLayoutPanel_FloorButtons, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel_FloorButtons.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -474,7 +481,7 @@
             this.tableLayoutPanel_FloorButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel_FloorButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel_FloorButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel_FloorButtons.Size = new System.Drawing.Size(160, 577);
+            this.tableLayoutPanel_FloorButtons.Size = new System.Drawing.Size(160, 572);
             this.tableLayoutPanel_FloorButtons.TabIndex = 4;
             this.tableLayoutPanel_FloorButtons.Visible = false;
             // 
@@ -487,9 +494,10 @@
             this.btn_10th.BorderRadius = 5;
             this.btn_10th.ButtonText = "10th Floor";
             this.btn_10th.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_10th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_10th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_10th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_10th, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_10th, BunifuAnimatorNS.DecorationType.None);
             this.btn_10th.DisabledColor = System.Drawing.Color.Gray;
             this.btn_10th.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_10th.Iconcolor = System.Drawing.Color.Transparent;
@@ -504,7 +512,7 @@
             this.btn_10th.IconVisible = true;
             this.btn_10th.IconZoom = 90D;
             this.btn_10th.IsTab = false;
-            this.btn_10th.Location = new System.Drawing.Point(18, 522);
+            this.btn_10th.Location = new System.Drawing.Point(18, 520);
             this.btn_10th.Name = "btn_10th";
             this.btn_10th.Normalcolor = System.Drawing.Color.RoyalBlue;
             this.btn_10th.OnHovercolor = System.Drawing.Color.SkyBlue;
@@ -527,9 +535,10 @@
             this.btn_9th.BorderRadius = 5;
             this.btn_9th.ButtonText = "9th Floor";
             this.btn_9th.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_9th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_9th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_9th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_9th, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_9th, BunifuAnimatorNS.DecorationType.None);
             this.btn_9th.DisabledColor = System.Drawing.Color.Gray;
             this.btn_9th.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_9th.Iconcolor = System.Drawing.Color.Transparent;
@@ -567,9 +576,10 @@
             this.btn_8th.BorderRadius = 5;
             this.btn_8th.ButtonText = "8th Floor";
             this.btn_8th.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_8th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_8th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_8th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_8th, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_8th, BunifuAnimatorNS.DecorationType.None);
             this.btn_8th.DisabledColor = System.Drawing.Color.Gray;
             this.btn_8th.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_8th.Iconcolor = System.Drawing.Color.Transparent;
@@ -607,9 +617,10 @@
             this.btn_7th.BorderRadius = 5;
             this.btn_7th.ButtonText = "7th Floor";
             this.btn_7th.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_7th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_7th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_7th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_7th, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_7th, BunifuAnimatorNS.DecorationType.None);
             this.btn_7th.DisabledColor = System.Drawing.Color.Gray;
             this.btn_7th.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_7th.Iconcolor = System.Drawing.Color.Transparent;
@@ -647,9 +658,10 @@
             this.btn_6th.BorderRadius = 5;
             this.btn_6th.ButtonText = "6th Floor";
             this.btn_6th.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_6th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_6th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_6th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_6th, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_6th, BunifuAnimatorNS.DecorationType.None);
             this.btn_6th.DisabledColor = System.Drawing.Color.Gray;
             this.btn_6th.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_6th.Iconcolor = System.Drawing.Color.Transparent;
@@ -687,9 +699,10 @@
             this.btn_5th.BorderRadius = 5;
             this.btn_5th.ButtonText = "5th Floor";
             this.btn_5th.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_5th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_5th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_5th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_5th, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_5th, BunifuAnimatorNS.DecorationType.None);
             this.btn_5th.DisabledColor = System.Drawing.Color.Gray;
             this.btn_5th.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_5th.Iconcolor = System.Drawing.Color.Transparent;
@@ -727,9 +740,10 @@
             this.btn_4th.BorderRadius = 5;
             this.btn_4th.ButtonText = "4th Floor";
             this.btn_4th.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_4th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_4th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_4th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_4th, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_4th, BunifuAnimatorNS.DecorationType.None);
             this.btn_4th.DisabledColor = System.Drawing.Color.Gray;
             this.btn_4th.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_4th.Iconcolor = System.Drawing.Color.Transparent;
@@ -767,9 +781,10 @@
             this.btn_3rd.BorderRadius = 5;
             this.btn_3rd.ButtonText = "3rd Floor";
             this.btn_3rd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_3rd, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_3rd, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_3rd, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_3rd, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_3rd, BunifuAnimatorNS.DecorationType.None);
             this.btn_3rd.DisabledColor = System.Drawing.Color.Gray;
             this.btn_3rd.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_3rd.Iconcolor = System.Drawing.Color.Transparent;
@@ -807,9 +822,10 @@
             this.btn_2nd.BorderRadius = 5;
             this.btn_2nd.ButtonText = "2nd Floor";
             this.btn_2nd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_2nd, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_2nd, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_2nd, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_2nd, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_2nd, BunifuAnimatorNS.DecorationType.None);
             this.btn_2nd.DisabledColor = System.Drawing.Color.Gray;
             this.btn_2nd.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_2nd.Iconcolor = System.Drawing.Color.Transparent;
@@ -847,9 +863,10 @@
             this.btn_UG.BorderRadius = 5;
             this.btn_UG.ButtonText = "UG";
             this.btn_UG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransLabels.SetDecoration(this.btn_UG, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.btn_UG, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.btn_UG, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.btn_UG, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.btn_UG, BunifuAnimatorNS.DecorationType.None);
             this.btn_UG.DisabledColor = System.Drawing.Color.Gray;
             this.btn_UG.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_UG.Iconcolor = System.Drawing.Color.Transparent;
@@ -882,9 +899,10 @@
             // panel_TitleSelectFloor
             // 
             this.panel_TitleSelectFloor.Controls.Add(this.lbl_SelectFloor);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_TitleSelectFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.panel_TitleSelectFloor, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_TitleSelectFloor, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_TitleSelectFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_TitleSelectFloor, BunifuAnimatorNS.DecorationType.None);
             this.panel_TitleSelectFloor.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TitleSelectFloor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_TitleSelectFloor.Location = new System.Drawing.Point(0, 0);
@@ -897,9 +915,10 @@
             // 
             this.lbl_SelectFloor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_SelectFloor.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_SelectFloor, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_SelectFloor, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_SelectFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_SelectFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lbl_SelectFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_SelectFloor, BunifuAnimatorNS.DecorationType.None);
             this.lbl_SelectFloor.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SelectFloor.ForeColor = System.Drawing.Color.DimGray;
             this.lbl_SelectFloor.Location = new System.Drawing.Point(15, 11);
@@ -913,34 +932,35 @@
             // 
             this.bunifuTransFloorButtons.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransFloorButtons.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransFloorButtons.DefaultAnimation = animation3;
+            animation20.AnimateOnlyDifferences = true;
+            animation20.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation20.BlindCoeff")));
+            animation20.LeafCoeff = 0F;
+            animation20.MaxTime = 1F;
+            animation20.MinTime = 0F;
+            animation20.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation20.MosaicCoeff")));
+            animation20.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation20.MosaicShift")));
+            animation20.MosaicSize = 0;
+            animation20.Padding = new System.Windows.Forms.Padding(0);
+            animation20.RotateCoeff = 0F;
+            animation20.RotateLimit = 0F;
+            animation20.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation20.ScaleCoeff")));
+            animation20.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation20.SlideCoeff")));
+            animation20.TimeCoeff = 0F;
+            animation20.TransparencyCoeff = 0F;
+            this.bunifuTransFloorButtons.DefaultAnimation = animation20;
             // 
             // panel_TitleVirtualMap
             // 
             this.panel_TitleVirtualMap.BackColor = System.Drawing.SystemColors.Control;
             this.panel_TitleVirtualMap.Controls.Add(this.lbl_VirtualMap);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.panel_TitleVirtualMap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_TitleVirtualMap.Location = new System.Drawing.Point(411, 34);
+            this.panel_TitleVirtualMap.Location = new System.Drawing.Point(474, 34);
             this.panel_TitleVirtualMap.Name = "panel_TitleVirtualMap";
-            this.panel_TitleVirtualMap.Size = new System.Drawing.Size(615, 51);
+            this.panel_TitleVirtualMap.Size = new System.Drawing.Size(577, 51);
             this.panel_TitleVirtualMap.TabIndex = 7;
             this.panel_TitleVirtualMap.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_TitleVirtualMap_Paint);
             // 
@@ -948,12 +968,13 @@
             // 
             this.lbl_VirtualMap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_VirtualMap.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_VirtualMap, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_VirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_VirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_VirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lbl_VirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_VirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.lbl_VirtualMap.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_VirtualMap.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_VirtualMap.Location = new System.Drawing.Point(259, 10);
+            this.lbl_VirtualMap.Location = new System.Drawing.Point(240, 10);
             this.lbl_VirtualMap.Name = "lbl_VirtualMap";
             this.lbl_VirtualMap.Size = new System.Drawing.Size(145, 33);
             this.lbl_VirtualMap.TabIndex = 4;
@@ -967,13 +988,14 @@
             this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_EstimatedDistance);
             this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_EstimatedTime);
             this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_ShortestPath);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
             this.panel_DetailsSelectedDestination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_DetailsSelectedDestination.Location = new System.Drawing.Point(411, 552);
+            this.panel_DetailsSelectedDestination.Location = new System.Drawing.Point(474, 547);
             this.panel_DetailsSelectedDestination.Name = "panel_DetailsSelectedDestination";
-            this.panel_DetailsSelectedDestination.Size = new System.Drawing.Size(615, 117);
+            this.panel_DetailsSelectedDestination.Size = new System.Drawing.Size(577, 117);
             this.panel_DetailsSelectedDestination.TabIndex = 8;
             this.panel_DetailsSelectedDestination.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_DetailsSelectedDestination_Paint);
             // 
@@ -981,12 +1003,13 @@
             // 
             this.lbl_GoHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_GoHome.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_GoHome, BunifuAnimatorNS.DecorationType.None);
             this.lbl_GoHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_GoHome.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_GoHome.Location = new System.Drawing.Point(537, 91);
+            this.lbl_GoHome.Location = new System.Drawing.Point(499, 91);
             this.lbl_GoHome.Name = "lbl_GoHome";
             this.lbl_GoHome.Size = new System.Drawing.Size(56, 21);
             this.lbl_GoHome.TabIndex = 8;
@@ -1000,9 +1023,10 @@
             this.pb_BackToHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_BackToHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransSelectDestination.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.pb_BackToHome, BunifuAnimatorNS.DecorationType.None);
-            this.pb_BackToHome.Location = new System.Drawing.Point(525, 10);
+            this.pb_BackToHome.Location = new System.Drawing.Point(487, 10);
             this.pb_BackToHome.Name = "pb_BackToHome";
             this.pb_BackToHome.Size = new System.Drawing.Size(78, 78);
             this.pb_BackToHome.TabIndex = 7;
@@ -1014,11 +1038,12 @@
             // lbl_EstimatedDistance
             // 
             this.lbl_EstimatedDistance.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
             this.lbl_EstimatedDistance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EstimatedDistance.Location = new System.Drawing.Point(25, 76);
+            this.lbl_EstimatedDistance.Location = new System.Drawing.Point(27, 75);
             this.lbl_EstimatedDistance.Name = "lbl_EstimatedDistance";
             this.lbl_EstimatedDistance.Size = new System.Drawing.Size(179, 24);
             this.lbl_EstimatedDistance.TabIndex = 6;
@@ -1028,11 +1053,12 @@
             // lbl_EstimatedTime
             // 
             this.lbl_EstimatedTime.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
             this.lbl_EstimatedTime.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EstimatedTime.Location = new System.Drawing.Point(56, 50);
+            this.lbl_EstimatedTime.Location = new System.Drawing.Point(57, 50);
             this.lbl_EstimatedTime.Name = "lbl_EstimatedTime";
             this.lbl_EstimatedTime.Size = new System.Drawing.Size(144, 24);
             this.lbl_EstimatedTime.TabIndex = 6;
@@ -1042,11 +1068,12 @@
             // lbl_ShortestPath
             // 
             this.lbl_ShortestPath.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
             this.lbl_ShortestPath.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ShortestPath.Location = new System.Drawing.Point(69, 23);
+            this.lbl_ShortestPath.Location = new System.Drawing.Point(72, 25);
             this.lbl_ShortestPath.Name = "lbl_ShortestPath";
             this.lbl_ShortestPath.Size = new System.Drawing.Size(128, 24);
             this.lbl_ShortestPath.TabIndex = 6;
@@ -1056,13 +1083,14 @@
             // panel_TitleSelectDestination
             // 
             this.panel_TitleSelectDestination.Controls.Add(this.lbl_SelectDestination);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_TitleSelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.panel_TitleSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_TitleSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_TitleSelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_TitleSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.panel_TitleSelectDestination.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TitleSelectDestination.Location = new System.Drawing.Point(0, 0);
             this.panel_TitleSelectDestination.Name = "panel_TitleSelectDestination";
-            this.panel_TitleSelectDestination.Size = new System.Drawing.Size(243, 51);
+            this.panel_TitleSelectDestination.Size = new System.Drawing.Size(306, 51);
             this.panel_TitleSelectDestination.TabIndex = 1;
             this.panel_TitleSelectDestination.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_TitleSelectDestination_Paint);
             // 
@@ -1070,12 +1098,13 @@
             // 
             this.lbl_SelectDestination.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_SelectDestination.AutoSize = true;
-            this.bunifuTransFloorButtons.SetDecoration(this.lbl_SelectDestination, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.lbl_SelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this.lbl_SelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_SelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lbl_SelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_SelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.lbl_SelectDestination.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SelectDestination.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_SelectDestination.Location = new System.Drawing.Point(17, 11);
+            this.lbl_SelectDestination.Location = new System.Drawing.Point(49, 11);
             this.lbl_SelectDestination.Name = "lbl_SelectDestination";
             this.lbl_SelectDestination.Size = new System.Drawing.Size(212, 33);
             this.lbl_SelectDestination.TabIndex = 4;
@@ -1094,13 +1123,14 @@
             this.panel_ContainerSelectDestination.Controls.Add(this.LayoutPanel_3rd);
             this.panel_ContainerSelectDestination.Controls.Add(this.LayoutPanel_5th);
             this.panel_ContainerSelectDestination.Controls.Add(this.LayoutPanel_4th);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_ContainerSelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.panel_ContainerSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_ContainerSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_ContainerSelectDestination, BunifuAnimatorNS.DecorationType.None);
-            this.panel_ContainerSelectDestination.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_ContainerSelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.panel_ContainerSelectDestination.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_ContainerSelectDestination.Location = new System.Drawing.Point(0, 51);
             this.panel_ContainerSelectDestination.Name = "panel_ContainerSelectDestination";
-            this.panel_ContainerSelectDestination.Size = new System.Drawing.Size(243, 584);
+            this.panel_ContainerSelectDestination.Size = new System.Drawing.Size(306, 579);
             this.panel_ContainerSelectDestination.TabIndex = 2;
             // 
             // LayoutPanel_9th
@@ -1128,6 +1158,7 @@
             this.LayoutPanel_9th.Controls.Add(this.lnkLabel_Room906, 1, 7);
             this.LayoutPanel_9th.Controls.Add(this.lnkLabel_Room905, 1, 6);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_9th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_9th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_9th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_9th, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_9th.Location = new System.Drawing.Point(1, 370);
@@ -1179,9 +1210,10 @@
             this.tableLayoutPanel8.Controls.Add(this.linkLabel114, 1, 3);
             this.tableLayoutPanel8.Controls.Add(this.linkLabel115, 1, 2);
             this.tableLayoutPanel8.Controls.Add(this.linkLabel116, 1, 1);
+            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel8, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.tableLayoutPanel8, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.tableLayoutPanel8, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.tableLayoutPanel8, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -1219,6 +1251,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel101, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel101, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel101, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel101, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel101.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel101.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel101.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1236,6 +1269,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel102, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel102, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel102, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel102, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel102.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel102.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel102.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1253,6 +1287,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel103, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel103, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel103, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel103, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel103.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel103.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel103.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1270,6 +1305,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel104, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel104, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel104, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel104, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel104.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel104.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel104.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1287,6 +1323,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel105, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel105, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel105, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel105, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel105.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel105.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel105.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1304,6 +1341,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel106, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel106, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel106, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel106, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel106.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel106.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel106.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1321,6 +1359,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel107, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel107, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel107, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel107, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel107.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel107.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel107.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1338,6 +1377,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel108, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel108, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel108, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel108, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel108.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel108.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel108.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1355,6 +1395,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel109, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel109, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel109, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel109, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel109.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel109.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel109.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1372,6 +1413,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel110, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel110, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel110, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel110, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel110.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel110.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel110.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1389,6 +1431,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel111, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel111, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel111, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel111, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel111.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel111.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel111.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1406,6 +1449,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel112, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel112, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel112, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel112, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel112.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel112.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel112.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1423,6 +1467,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel113, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel113, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel113, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel113, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel113.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel113.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel113.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1440,6 +1485,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel114, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel114, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel114, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel114, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel114.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel114.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel114.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1457,6 +1503,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel115, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel115, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel115, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel115, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel115.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel115.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel115.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1474,6 +1521,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel116, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel116, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel116, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel116, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel116.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.linkLabel116.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel116.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1491,6 +1539,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room904, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room904, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room904, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room904, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room904.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room904.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room904.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1508,6 +1557,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room903, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room903, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room903, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room903, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room903.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room903.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room903.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1525,6 +1575,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room902, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room902, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room902, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room902, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room902.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room902.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room902.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1542,6 +1593,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room901, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room901, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room901, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room901, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room901.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room901.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room901.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1559,6 +1611,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_9thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_9thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_9thEERoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_9thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_9thEERoom.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_9thEERoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_9thEERoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1576,6 +1629,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_SeniorHighFaculty, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_SeniorHighFaculty, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_SeniorHighFaculty, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_SeniorHighFaculty, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_SeniorHighFaculty.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_SeniorHighFaculty.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_SeniorHighFaculty.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1593,6 +1647,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room915, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room915, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room915, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room915, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room915.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room915.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room915.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1610,6 +1665,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room914, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room914, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room914, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room914, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room914.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room914.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room914.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1627,6 +1683,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room913, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room913, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room913, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room913, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room913.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room913.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room913.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1644,6 +1701,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room912, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room912, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room912, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room912, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room912.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room912.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room912.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1661,6 +1719,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room911, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room911, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room911, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room911, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room911.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room911.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room911.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1678,6 +1737,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room910, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room910, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room910, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room910, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room910.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room910.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room910.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1695,6 +1755,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room909, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room909, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room909, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room909, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room909.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room909.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room909.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1712,6 +1773,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room908, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room908, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room908, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room908, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room908.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room908.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room908.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1729,6 +1791,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room907, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room907, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room907, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room907, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room907.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room907.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room907.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1746,6 +1809,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room906, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room906, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room906, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room906, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room906.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room906.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room906.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1763,6 +1827,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room905, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room905, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room905, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room905, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room905.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room905.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room905.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1789,6 +1854,7 @@
             this.LayoutPanel_10th.Controls.Add(this.lnkLabel_Stage, 1, 7);
             this.LayoutPanel_10th.Controls.Add(this.lnkLabel_ReceivingRoom, 1, 6);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_10th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_10th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_10th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_10th, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_10th.Location = new System.Drawing.Point(1, 411);
@@ -1833,9 +1899,10 @@
             this.tableLayoutPanel9.Controls.Add(this.linkLabel130, 1, 3);
             this.tableLayoutPanel9.Controls.Add(this.linkLabel131, 1, 2);
             this.tableLayoutPanel9.Controls.Add(this.linkLabel132, 1, 1);
+            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel9, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.tableLayoutPanel9, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.tableLayoutPanel9, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel9, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.tableLayoutPanel9, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -1873,6 +1940,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel117, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel117, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel117, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel117, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel117.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel117.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel117.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1890,6 +1958,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel118, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel118, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel118, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel118, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel118.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel118.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel118.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1907,6 +1976,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel119, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel119, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel119, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel119, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel119.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel119.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel119.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1924,6 +1994,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel120, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel120, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel120, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel120, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel120.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel120.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel120.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1941,6 +2012,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel121, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel121, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel121, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel121, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel121.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel121.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel121.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1958,6 +2030,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel122, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel122, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel122, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel122, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel122.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel122.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel122.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1975,6 +2048,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel123, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel123, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel123, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel123, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel123.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel123.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel123.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -1992,6 +2066,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel124, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel124, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel124, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel124, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel124.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel124.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel124.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2009,6 +2084,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel125, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel125, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel125, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel125, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel125.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel125.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel125.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2026,6 +2102,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel126, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel126, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel126, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel126, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel126.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel126.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel126.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2043,6 +2120,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel127, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel127, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel127, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel127, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel127.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel127.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel127.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2060,6 +2138,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel128, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel128, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel128, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel128, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel128.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel128.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel128.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2077,6 +2156,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel129, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel129, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel129, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel129, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel129.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel129.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel129.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2094,6 +2174,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel130, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel130, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel130, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel130, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel130.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel130.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel130.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2111,6 +2192,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel131, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel131, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel131, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel131, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel131.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel131.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel131.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2128,6 +2210,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel132, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel132, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel132, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel132, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel132.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.linkLabel132.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel132.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2145,6 +2228,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_PENSTPOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_PENSTPOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_PENSTPOffice, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_PENSTPOffice, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_PENSTPOffice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_PENSTPOffice.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_PENSTPOffice.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2162,6 +2246,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_10thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_10thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_10thEERoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_10thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_10thEERoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_10thEERoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_10thEERoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2179,6 +2264,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_10thCRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_10thCRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_10thCRMale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_10thCRMale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_10thCRMale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_10thCRMale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_10thCRMale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2196,6 +2282,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_10thCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_10thCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_10thCRFemale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_10thCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_10thCRFemale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_10thCRFemale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_10thCRFemale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2213,6 +2300,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_BasketBallCourt, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_BasketBallCourt, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_BasketBallCourt, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_BasketBallCourt, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_BasketBallCourt.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_BasketBallCourt.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_BasketBallCourt.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2230,6 +2318,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_TechnicalArea, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_TechnicalArea, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_TechnicalArea, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_TechnicalArea, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_TechnicalArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_TechnicalArea.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_TechnicalArea.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2247,6 +2336,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Stage, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Stage, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Stage, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Stage, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Stage.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Stage.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Stage.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2264,6 +2354,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ReceivingRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ReceivingRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ReceivingRoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ReceivingRoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ReceivingRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ReceivingRoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ReceivingRoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2299,6 +2390,7 @@
             this.LayoutPanel_8th.Controls.Add(this.lnkLabel_Room805, 1, 7);
             this.LayoutPanel_8th.Controls.Add(this.lnkLabel_Room804, 1, 6);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_8th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_8th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_8th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_8th, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_8th.Location = new System.Drawing.Point(2, 309);
@@ -2349,9 +2441,10 @@
             this.tableLayoutPanel7.Controls.Add(this.linkLabel98, 1, 3);
             this.tableLayoutPanel7.Controls.Add(this.linkLabel99, 1, 2);
             this.tableLayoutPanel7.Controls.Add(this.linkLabel100, 1, 1);
+            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel7, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.tableLayoutPanel7, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.tableLayoutPanel7, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.tableLayoutPanel7, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -2389,6 +2482,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel85, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel85, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel85, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel85, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel85.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel85.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel85.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2406,6 +2500,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel86, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel86, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel86, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel86, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel86.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel86.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel86.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2423,6 +2518,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel87, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel87, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel87, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel87, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel87.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel87.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel87.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2440,6 +2536,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel88, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel88, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel88, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel88, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel88.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel88.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel88.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2457,6 +2554,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel89, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel89, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel89, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel89, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel89.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel89.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel89.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2474,6 +2572,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel90, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel90, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel90, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel90, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel90.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel90.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel90.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2491,6 +2590,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel91, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel91, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel91, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel91, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel91.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel91.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel91.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2508,6 +2608,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel92, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel92, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel92, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel92, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel92.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel92.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel92.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2525,6 +2626,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel93, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel93, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel93, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel93, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel93.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel93.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel93.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2542,6 +2644,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel94, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel94, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel94, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel94, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel94.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel94.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel94.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2559,6 +2662,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel95, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel95, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel95, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel95, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel95.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel95.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel95.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2576,6 +2680,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel96, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel96, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel96, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel96, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel96.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel96.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel96.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2593,6 +2698,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel97, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel97, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel97, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel97, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel97.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel97.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel97.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2610,6 +2716,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel98, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel98, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel98, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel98, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel98.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel98.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel98.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2627,6 +2734,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel99, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel99, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel99, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel99, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel99.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel99.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel99.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2644,6 +2752,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel100, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel100, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel100, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel100, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel100.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.linkLabel100.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel100.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2661,6 +2770,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room803, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room803, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room803, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room803, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room803.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room803.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room803.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2678,6 +2788,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room802, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room802, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room802, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room802, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room802.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room802.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room802.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2695,6 +2806,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room801, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room801, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room801, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room801, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room801.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room801.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room801.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2712,6 +2824,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_8thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_8thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_8thEERoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_8thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_8thEERoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_8thEERoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_8thEERoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2729,6 +2842,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_CASPFaculty, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_CASPFaculty, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_CASPFaculty, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_CASPFaculty, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_CASPFaculty.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_CASPFaculty.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_CASPFaculty.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2746,6 +2860,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room815, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room815, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room815, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room815, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room815.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room815.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room815.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2763,6 +2878,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room814, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room814, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room814, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room814, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room814.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room814.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room814.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2780,6 +2896,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room813, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room813, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room813, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room813, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room813.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room813.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room813.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2797,6 +2914,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room812, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room812, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room812, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room812, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room812.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room812.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room812.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2814,6 +2932,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room811, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room811, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room811, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room811, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room811.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room811.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room811.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2831,6 +2950,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room810, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room810, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room810, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room810, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room810.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room810.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room810.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2848,6 +2968,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room809, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room809, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room809, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room809, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room809.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room809.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room809.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2865,6 +2986,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room808, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room808, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room808, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room808, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room808.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room808.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room808.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2882,6 +3004,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room807, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room807, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room807, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room807, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room807.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room807.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room807.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2899,6 +3022,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room806, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room806, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room806, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room806, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room806.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room806.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room806.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2916,6 +3040,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room805, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room805, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room805, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room805, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room805.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room805.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room805.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2933,6 +3058,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room804, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room804, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room804, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room804, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room804.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room804.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room804.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -2969,9 +3095,10 @@
             this.LayoutPanel_UG.Controls.Add(this.lnkLabel_InformationDesk, 1, 7);
             this.LayoutPanel_UG.Controls.Add(this.lnkLabel_EERoom, 1, 6);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_UG, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_UG, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_UG, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_UG, BunifuAnimatorNS.DecorationType.None);
-            this.LayoutPanel_UG.Location = new System.Drawing.Point(5, 4);
+            this.LayoutPanel_UG.Location = new System.Drawing.Point(4, 3);
             this.LayoutPanel_UG.Name = "LayoutPanel_UG";
             this.LayoutPanel_UG.RowCount = 20;
             this.LayoutPanel_UG.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
@@ -3024,9 +3151,10 @@
             this.LayoutPanel_2ndFloor.Controls.Add(this.linkLabel14, 1, 3);
             this.LayoutPanel_2ndFloor.Controls.Add(this.linkLabel15, 1, 2);
             this.LayoutPanel_2ndFloor.Controls.Add(this.linkLabel16, 1, 1);
+            this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_2ndFloor, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_2ndFloor, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_2ndFloor, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_2ndFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_2ndFloor, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_2ndFloor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LayoutPanel_2ndFloor.Location = new System.Drawing.Point(3, 3);
             this.LayoutPanel_2ndFloor.Name = "LayoutPanel_2ndFloor";
@@ -3064,6 +3192,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel1, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3081,6 +3210,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel2, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3098,6 +3228,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel3, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3115,6 +3246,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel4, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel4, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel4, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel4, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel4.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3132,6 +3264,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel5, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel5, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel5.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel5.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3149,6 +3282,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel6, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel6, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel6, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel6, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel6.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel6.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3166,6 +3300,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel7, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel7, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel7, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel7.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel7.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3183,6 +3318,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel8, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel8, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel8, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel8.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel8.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3200,6 +3336,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel9, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel9, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel9, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel9, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel9.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel9.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3217,6 +3354,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel10, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel10, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel10, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel10, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel10.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel10.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3234,6 +3372,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel11, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel11, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel11, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel11, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel11.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel11.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3251,6 +3390,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel12, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel12, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel12, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel12, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel12.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel12.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3268,6 +3408,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel13, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel13, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel13, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel13, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel13.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3285,6 +3426,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel14, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel14, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel14, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel14, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel14.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel14.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3302,6 +3444,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel15, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel15, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel15, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel15, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel15.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel15.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3319,6 +3462,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel16, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel16, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel16, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel16, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel16.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.linkLabel16.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel16.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3336,6 +3480,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ComfortRoomMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ComfortRoomMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ComfortRoomMale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ComfortRoomMale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ComfortRoomMale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ComfortRoomMale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ComfortRoomMale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3353,6 +3498,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ComfortRoomFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ComfortRoomFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ComfortRoomFemale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ComfortRoomFemale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ComfortRoomFemale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ComfortRoomFemale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ComfortRoomFemale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3370,6 +3516,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_AthenaeumCanteen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_AthenaeumCanteen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_AthenaeumCanteen, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_AthenaeumCanteen, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_AthenaeumCanteen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_AthenaeumCanteen.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_AthenaeumCanteen.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3387,6 +3534,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_AnimationLaboratory, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_AnimationLaboratory, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_AnimationLaboratory, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_AnimationLaboratory, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_AnimationLaboratory.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_AnimationLaboratory.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_AnimationLaboratory.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3404,6 +3552,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_AlumniOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_AlumniOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_AlumniOffice, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_AlumniOffice, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_AlumniOffice.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_AlumniOffice.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_AlumniOffice.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3421,6 +3570,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_SWS, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_SWS, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_SWS, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_SWS, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_SWS.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_SWS.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_SWS.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3438,6 +3588,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_SDO, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_SDO, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_SDO, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_SDO, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_SDO.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_SDO.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_SDO.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3455,6 +3606,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_SchoolClinic, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_SchoolClinic, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_SchoolClinic, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_SchoolClinic, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_SchoolClinic.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_SchoolClinic.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_SchoolClinic.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3472,6 +3624,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room104, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room104, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room104, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room104, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room104.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room104.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room104.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3489,6 +3642,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room103, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room103, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room103, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room103, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room103.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room103.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room103.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3506,6 +3660,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room102, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room102, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room102, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room102, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room102.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room102.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room102.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3523,6 +3678,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room101, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room101, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room101, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room101, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room101.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room101.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room101.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3540,6 +3696,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ResearchOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ResearchOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ResearchOffice, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ResearchOffice, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ResearchOffice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ResearchOffice.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ResearchOffice.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3557,6 +3714,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_RecordsRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_RecordsRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_RecordsRoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_RecordsRoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_RecordsRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_RecordsRoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_RecordsRoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3574,6 +3732,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Penbank, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Penbank, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Penbank, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Penbank, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Penbank.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Penbank.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Penbank.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3591,6 +3750,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_MacintoshLaboratory, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_MacintoshLaboratory, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_MacintoshLaboratory, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_MacintoshLaboratory, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_MacintoshLaboratory.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_MacintoshLaboratory.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_MacintoshLaboratory.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3608,6 +3768,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_InformationDesk, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_InformationDesk, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_InformationDesk, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_InformationDesk, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_InformationDesk.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_InformationDesk.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_InformationDesk.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3625,6 +3786,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_EERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_EERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_EERoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_EERoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_EERoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_EERoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_EERoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3654,6 +3816,7 @@
             this.LayoutPanel_7th.Controls.Add(this.lnkLabel_ScholarshipOffice, 1, 10);
             this.LayoutPanel_7th.Controls.Add(this.lnkLabel_SpeechLab, 1, 11);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_7th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_7th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_7th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_7th, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_7th.Location = new System.Drawing.Point(2, 267);
@@ -3704,9 +3867,10 @@
             this.tableLayoutPanel6.Controls.Add(this.linkLabel82, 1, 3);
             this.tableLayoutPanel6.Controls.Add(this.linkLabel83, 1, 2);
             this.tableLayoutPanel6.Controls.Add(this.linkLabel84, 1, 1);
+            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel6, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.tableLayoutPanel6, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.tableLayoutPanel6, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel6, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.tableLayoutPanel6, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -3744,6 +3908,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel69, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel69, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel69, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel69, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel69.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel69.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel69.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3761,6 +3926,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel70, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel70, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel70, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel70, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel70.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel70.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel70.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3778,6 +3944,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel71, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel71, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel71, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel71, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel71.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel71.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel71.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3795,6 +3962,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel72, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel72, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel72, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel72, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel72.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel72.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel72.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3812,6 +3980,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel73, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel73, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel73, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel73, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel73.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel73.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel73.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3829,6 +3998,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel74, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel74, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel74, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel74, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel74.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel74.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel74.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3846,6 +4016,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel75, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel75, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel75, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel75, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel75.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel75.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel75.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3863,6 +4034,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel76, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel76, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel76, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel76, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel76.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel76.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel76.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3880,6 +4052,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel77, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel77, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel77, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel77, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel77.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel77.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel77.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3897,6 +4070,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel78, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel78, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel78, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel78, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel78.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel78.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel78.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3914,6 +4088,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel79, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel79, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel79, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel79, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel79.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel79.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel79.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3931,6 +4106,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel80, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel80, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel80, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel80, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel80.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel80.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel80.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3948,6 +4124,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel81, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel81, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel81, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel81, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel81.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel81.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel81.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3965,6 +4142,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel82, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel82, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel82, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel82, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel82.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel82.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel82.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3982,6 +4160,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel83, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel83, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel83, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel83, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel83.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel83.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel83.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -3999,6 +4178,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel84, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel84, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel84, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel84, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel84.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.linkLabel84.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel84.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4016,6 +4196,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_7thCRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_7thCRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_7thCRMale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_7thCRMale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_7thCRMale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_7thCRMale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_7thCRMale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4033,6 +4214,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_7thCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_7thCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_7thCRFemale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_7thCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_7thCRFemale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_7thCRFemale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_7thCRFemale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4050,6 +4232,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Cashier, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Cashier, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Cashier, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Cashier, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Cashier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Cashier.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Cashier.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4067,6 +4250,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_7thCanteen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_7thCanteen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_7thCanteen, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_7thCanteen, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_7thCanteen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_7thCanteen.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_7thCanteen.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4084,6 +4268,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_AdminOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_AdminOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_AdminOffice, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_AdminOffice, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_AdminOffice.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_AdminOffice.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_AdminOffice.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4101,6 +4286,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_7thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_7thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_7thEERoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_7thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_7thEERoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_7thEERoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_7thEERoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4118,6 +4304,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_GuidanceOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_GuidanceOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_GuidanceOffice, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_GuidanceOffice, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_GuidanceOffice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_GuidanceOffice.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_GuidanceOffice.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4135,6 +4322,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_PrayerArea, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_PrayerArea, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_PrayerArea, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_PrayerArea, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_PrayerArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_PrayerArea.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_PrayerArea.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4152,6 +4340,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ReceptionArea, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ReceptionArea, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ReceptionArea, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ReceptionArea, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ReceptionArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ReceptionArea.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ReceptionArea.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4169,6 +4358,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ScholarshipOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ScholarshipOffice, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ScholarshipOffice, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ScholarshipOffice, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ScholarshipOffice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ScholarshipOffice.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ScholarshipOffice.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4186,6 +4376,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_SpeechLab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_SpeechLab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_SpeechLab, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_SpeechLab, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_SpeechLab.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_SpeechLab.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_SpeechLab.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4214,9 +4405,10 @@
             this.LayoutPanel_2nd.Controls.Add(this.lnkLabel_CRFemale, 1, 5);
             this.LayoutPanel_2nd.Controls.Add(this.lnkLabel_ComeptitionKitchen, 1, 4);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_2nd, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_2nd, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_2nd, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_2nd, BunifuAnimatorNS.DecorationType.None);
-            this.LayoutPanel_2nd.Location = new System.Drawing.Point(3, 43);
+            this.LayoutPanel_2nd.Location = new System.Drawing.Point(3, 45);
             this.LayoutPanel_2nd.Name = "LayoutPanel_2nd";
             this.LayoutPanel_2nd.RowCount = 12;
             this.LayoutPanel_2nd.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
@@ -4262,9 +4454,10 @@
             this.LayoutPanel_2ndFlr.Controls.Add(this.linkLabel30, 1, 3);
             this.LayoutPanel_2ndFlr.Controls.Add(this.linkLabel31, 1, 2);
             this.LayoutPanel_2ndFlr.Controls.Add(this.linkLabel32, 1, 1);
+            this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_2ndFlr, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_2ndFlr, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_2ndFlr, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_2ndFlr, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_2ndFlr, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_2ndFlr.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LayoutPanel_2ndFlr.Location = new System.Drawing.Point(3, 3);
             this.LayoutPanel_2ndFlr.Name = "LayoutPanel_2ndFlr";
@@ -4302,6 +4495,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel17, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel17, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel17, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel17, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel17.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel17.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4319,6 +4513,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel18, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel18, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel18, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel18, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel18.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel18.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel18.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4336,6 +4531,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel19, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel19, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel19, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel19, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel19.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel19.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel19.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4353,6 +4549,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel20, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel20, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel20, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel20, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel20.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel20.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel20.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4370,6 +4567,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel21, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel21, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel21, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel21, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel21.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel21.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel21.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4387,6 +4585,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel22, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel22, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel22, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel22, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel22.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel22.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4404,6 +4603,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel23, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel23, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel23, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel23, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel23.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel23.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4421,6 +4621,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel24, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel24, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel24, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel24, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel24.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel24.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4438,6 +4639,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel25, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel25, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel25, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel25, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel25.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel25.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel25.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4455,6 +4657,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel26, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel26, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel26, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel26, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel26.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel26.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel26.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4472,6 +4675,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel27, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel27, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel27, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel27, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel27.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel27.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4489,6 +4693,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel28, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel28, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel28, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel28, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel28.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel28.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4506,6 +4711,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel29, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel29, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel29, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel29, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel29.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel29.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel29.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4523,6 +4729,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel30, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel30, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel30, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel30, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel30.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel30.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel30.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4540,6 +4747,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel31, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel31, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel31, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel31, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel31.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel31.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel31.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4557,6 +4765,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel32, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel32, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel32, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel32, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel32.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.linkLabel32.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel32.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4574,6 +4783,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ChocolateRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ChocolateRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ChocolateRoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ChocolateRoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ChocolateRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ChocolateRoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ChocolateRoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4591,6 +4801,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Bakery, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Bakery, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Bakery, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Bakery, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Bakery.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Bakery.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Bakery.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4607,6 +4818,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_AICHI, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_AICHI, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_AICHI, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_AICHI, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_AICHI.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lnkLabel_AICHI.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_AICHI.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
@@ -4625,6 +4837,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_TrainingRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_TrainingRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_TrainingRoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_TrainingRoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_TrainingRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_TrainingRoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_TrainingRoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4642,6 +4855,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_PasteryRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_PasteryRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_PasteryRoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_PasteryRoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_PasteryRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_PasteryRoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_PasteryRoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4659,6 +4873,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_FabRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_FabRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_FabRoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_FabRoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_FabRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_FabRoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_FabRoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4676,6 +4891,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_DemoRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_DemoRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_DemoRoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_DemoRoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_DemoRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_DemoRoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_DemoRoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4693,6 +4909,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_CRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_CRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_CRMale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_CRMale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_CRMale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_CRMale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_CRMale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4710,6 +4927,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_CRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_CRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_CRFemale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_CRFemale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_CRFemale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_CRFemale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_CRFemale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4727,6 +4945,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ComeptitionKitchen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ComeptitionKitchen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ComeptitionKitchen, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ComeptitionKitchen, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ComeptitionKitchen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ComeptitionKitchen.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ComeptitionKitchen.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4756,6 +4975,7 @@
             this.LayoutPanel_6th.Controls.Add(this.lnkLabel_SimulatedHospital, 1, 11);
             this.LayoutPanel_6th.Controls.Add(this.lnkLabel_PracticalAreaHK, 1, 12);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_6th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_6th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_6th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_6th, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_6th.Location = new System.Drawing.Point(1, 198);
@@ -4785,6 +5005,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_LearningResource1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_LearningResource1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_LearningResource1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_LearningResource1, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_LearningResource1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_LearningResource1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_LearningResource1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4802,6 +5023,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Kitchen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Kitchen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Kitchen, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Kitchen, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Kitchen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Kitchen.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Kitchen.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4819,6 +5041,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_HomeManageLab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_HomeManageLab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_HomeManageLab, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_HomeManageLab, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_HomeManageLab.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_HomeManageLab.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_HomeManageLab.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4836,6 +5059,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_6thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_6thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_6thEERoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_6thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_6thEERoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_6thEERoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_6thEERoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4853,6 +5077,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_CBMFaculty, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_CBMFaculty, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_CBMFaculty, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_CBMFaculty, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_CBMFaculty.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_CBMFaculty.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_CBMFaculty.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4870,6 +5095,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_LearningResource2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_LearningResource2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_LearningResource2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_LearningResource2, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_LearningResource2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_LearningResource2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_LearningResource2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4887,6 +5113,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_LearningResource3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_LearningResource3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_LearningResource3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_LearningResource3, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_LearningResource3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_LearningResource3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_LearningResource3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4904,6 +5131,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room601, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room601, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room601, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room601, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room601.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room601.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room601.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4921,6 +5149,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room602, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room602, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room602, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room602, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room602.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room602.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room602.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4938,6 +5167,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room603, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room603, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room603, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room603, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room603.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room603.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room603.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4955,6 +5185,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_SimulatedHospital, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_SimulatedHospital, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_SimulatedHospital, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_SimulatedHospital, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_SimulatedHospital.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_SimulatedHospital.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_SimulatedHospital.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -4972,6 +5203,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_PracticalAreaHK, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_PracticalAreaHK, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_PracticalAreaHK, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_PracticalAreaHK, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_PracticalAreaHK.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_PracticalAreaHK.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_PracticalAreaHK.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5004,6 +5236,7 @@
             this.LayoutPanel_3rd.Controls.Add(this.linkLabel58, 1, 13);
             this.LayoutPanel_3rd.Controls.Add(this.linkLabel57, 1, 14);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_3rd, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_3rd, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_3rd, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_3rd, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_3rd.Location = new System.Drawing.Point(3, 80);
@@ -5054,9 +5287,10 @@
             this.tableLayoutPanel4.Controls.Add(this.linkLabel46, 1, 3);
             this.tableLayoutPanel4.Controls.Add(this.linkLabel47, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.linkLabel48, 1, 1);
+            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel4, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.tableLayoutPanel4, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.tableLayoutPanel4, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel4, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.tableLayoutPanel4, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -5094,6 +5328,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel33, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel33, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel33, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel33, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel33.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel33.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel33.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5111,6 +5346,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel34, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel34, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel34, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel34, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel34.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel34.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel34.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5128,6 +5364,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel35, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel35, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel35, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel35, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel35.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel35.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel35.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5145,6 +5382,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel36, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel36, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel36, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel36, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel36.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel36.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel36.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5162,6 +5400,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel37, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel37, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel37, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel37, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel37.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel37.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel37.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5179,6 +5418,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel38, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel38, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel38, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel38, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel38.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel38.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel38.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5196,6 +5436,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel39, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel39, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel39, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel39, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel39.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel39.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel39.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5213,6 +5454,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel40, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel40, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel40, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel40, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel40.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel40.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel40.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5230,6 +5472,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel41, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel41, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel41, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel41, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel41.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel41.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel41.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5247,6 +5490,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel42, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel42, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel42, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel42, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel42.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel42.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel42.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5264,6 +5508,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel43, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel43, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel43, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel43, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel43.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel43.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel43.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5281,6 +5526,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel44, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel44, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel44, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel44, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel44.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel44.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel44.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5298,6 +5544,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel45, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel45, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel45, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel45, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel45.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel45.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel45.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5315,6 +5562,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel46, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel46, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel46, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel46, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel46.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel46.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel46.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5332,6 +5580,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel47, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel47, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel47, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel47, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel47.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel47.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5349,6 +5598,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel48, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel48, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel48, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel48, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel48.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.linkLabel48.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel48.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5366,6 +5616,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_3rdCRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_3rdCRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_3rdCRMale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_3rdCRMale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_3rdCRMale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_3rdCRMale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_3rdCRMale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5383,6 +5634,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_3rdCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_3rdCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_3rdCRFemale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_3rdCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_3rdCRFemale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_3rdCRFemale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_3rdCRFemale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5400,6 +5652,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_CCSFaulty, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_CCSFaulty, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_CCSFaulty, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_CCSFaulty, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_CCSFaulty.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_CCSFaulty.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_CCSFaulty.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5417,6 +5670,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_CCNALab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_CCNALab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_CCNALab, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_CCNALab, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_CCNALab.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_CCNALab.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_CCNALab.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5434,6 +5688,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_3DAnimLab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_3DAnimLab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_3DAnimLab, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_3DAnimLab, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_3DAnimLab.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_3DAnimLab.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_3DAnimLab.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5451,6 +5706,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_DNTS, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_DNTS, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_DNTS, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_DNTS, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_DNTS.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_DNTS.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_DNTS.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5468,6 +5724,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_DataCenter, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_DataCenter, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_DataCenter, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_DataCenter, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_DataCenter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_DataCenter.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_DataCenter.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5485,6 +5742,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ComputerLab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ComputerLab, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ComputerLab, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ComputerLab, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ComputerLab.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ComputerLab.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ComputerLab.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5502,6 +5760,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_ComputerHardwareServicing, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_ComputerHardwareServicing, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_ComputerHardwareServicing, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_ComputerHardwareServicing, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_ComputerHardwareServicing.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_ComputerHardwareServicing.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_ComputerHardwareServicing.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5519,6 +5778,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_3rdEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_3rdEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_3rdEERoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_3rdEERoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_3rdEERoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_3rdEERoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_3rdEERoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5536,6 +5796,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel60, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel60, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel60, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel60, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel60.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel60.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel60.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5553,6 +5814,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel59, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel59, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel59, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel59, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel59.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel59.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel59.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5570,6 +5832,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel58, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel58, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel58, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel58, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel58.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel58.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel58.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5587,6 +5850,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel57, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel57, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel57, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel57, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel57.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel57.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel57.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5609,6 +5873,7 @@
             this.LayoutPanel_5th.Controls.Add(this.lnkLabel_5thCRMale, 1, 2);
             this.LayoutPanel_5th.Controls.Add(this.lnkLabel_5thCRFemale, 1, 1);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_5th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_5th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_5th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_5th, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_5th.Location = new System.Drawing.Point(1, 157);
@@ -5643,6 +5908,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Library, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Library, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Library, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Library, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Library.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Library.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Library.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5660,6 +5926,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_KaizenCenter, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_KaizenCenter, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_KaizenCenter, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_KaizenCenter, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_KaizenCenter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_KaizenCenter.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_KaizenCenter.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5677,6 +5944,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_InnoventionCenter, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_InnoventionCenter, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_InnoventionCenter, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_InnoventionCenter, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_InnoventionCenter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_InnoventionCenter.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_InnoventionCenter.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5694,6 +5962,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_5thCRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_5thCRMale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_5thCRMale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_5thCRMale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_5thCRMale.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_5thCRMale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_5thCRMale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5711,6 +5980,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_5thCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_5thCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_5thCRFemale, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_5thCRFemale, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_5thCRFemale.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_5thCRFemale.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_5thCRFemale.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5746,6 +6016,7 @@
             this.LayoutPanel_4th.Controls.Add(this.lnkLabel_Room414, 1, 16);
             this.LayoutPanel_4th.Controls.Add(this.lnkLabel_Room415, 1, 17);
             this.bunifuTransSelectDestination.SetDecoration(this.LayoutPanel_4th, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.LayoutPanel_4th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.LayoutPanel_4th, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.LayoutPanel_4th, BunifuAnimatorNS.DecorationType.None);
             this.LayoutPanel_4th.Location = new System.Drawing.Point(2, 117);
@@ -5795,9 +6066,10 @@
             this.tableLayoutPanel5.Controls.Add(this.linkLabel66, 1, 3);
             this.tableLayoutPanel5.Controls.Add(this.linkLabel67, 1, 2);
             this.tableLayoutPanel5.Controls.Add(this.linkLabel68, 1, 1);
+            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.tableLayoutPanel5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.tableLayoutPanel5, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransSelectDestination.SetDecoration(this.tableLayoutPanel5, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.tableLayoutPanel5, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -5835,6 +6107,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel49, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel49, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel49, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel49, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel49.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel49.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel49.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5852,6 +6125,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel50, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel50, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel50, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel50, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel50.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel50.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel50.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5869,6 +6143,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel51, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel51, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel51, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel51, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel51.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel51.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel51.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5886,6 +6161,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel52, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel52, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel52, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel52, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel52.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel52.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel52.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5903,6 +6179,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel53, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel53, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel53, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel53, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel53.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel53.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel53.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5920,6 +6197,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel54, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel54, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel54, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel54, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel54.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel54.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel54.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5937,6 +6215,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel55, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel55, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel55, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel55, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel55.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel55.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel55.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5954,6 +6233,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel56, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel56, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel56, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel56, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel56.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel56.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel56.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5971,6 +6251,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel61, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel61, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel61, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel61, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel61.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel61.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel61.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -5988,6 +6269,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel62, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel62, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel62, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel62, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel62.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel62.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel62.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6005,6 +6287,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel63, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel63, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel63, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel63, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel63.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel63.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel63.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6022,6 +6305,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel64, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel64, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel64, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel64, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel64.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel64.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel64.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6039,6 +6323,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel65, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel65, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel65, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel65, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel65.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel65.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel65.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6056,6 +6341,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel66, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel66, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel66, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel66, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel66.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel66.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel66.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6073,6 +6359,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel67, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel67, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel67, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel67, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel67.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel67.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel67.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6090,6 +6377,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.linkLabel68, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.linkLabel68, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.linkLabel68, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.linkLabel68, BunifuAnimatorNS.DecorationType.None);
             this.linkLabel68.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.linkLabel68.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel68.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6107,6 +6395,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room402, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room402, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room402, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room402, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room402.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room402.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room402.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6124,6 +6413,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room401, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room401, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room401, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room401, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room401.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room401.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room401.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6141,6 +6431,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_4thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_4thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_4thEERoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_4thEERoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_4thEERoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_4thEERoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_4thEERoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6158,6 +6449,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_DigitalDraftingRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_DigitalDraftingRoom, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_DigitalDraftingRoom, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_DigitalDraftingRoom, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_DigitalDraftingRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_DigitalDraftingRoom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_DigitalDraftingRoom.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6175,6 +6467,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Canteen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Canteen, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Canteen, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Canteen, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Canteen.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lnkLabel_Canteen.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Canteen.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6192,6 +6485,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room406, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room406, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room406, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room406, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room406.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room406.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room406.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6209,6 +6503,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room405, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room405, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room405, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room405, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room405.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room405.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room405.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6226,6 +6521,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room404, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room404, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room404, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room404, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room404.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room404.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room404.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6243,6 +6539,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room403, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room403, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room403, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room403, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room403.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room403.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room403.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6260,6 +6557,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room407, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room407, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room407, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room407, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room407.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room407.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room407.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6277,6 +6575,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room408, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room408, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room408, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room408, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room408.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room408.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room408.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6294,6 +6593,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room410, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room410, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room410, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room410, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room410.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room410.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room410.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6311,6 +6611,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room411, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room411, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room411, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room411, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room411.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room411.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room411.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6328,6 +6629,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room412, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room412, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room412, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room412, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room412.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room412.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room412.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6345,6 +6647,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room413, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room413, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room413, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room413, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room413.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room413.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room413.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6362,6 +6665,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room414, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room414, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room414, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room414, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room414.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room414.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room414.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6379,6 +6683,7 @@
             this.bunifuTransSelectDestination.SetDecoration(this.lnkLabel_Room415, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lnkLabel_Room415, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.lnkLabel_Room415, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.lnkLabel_Room415, BunifuAnimatorNS.DecorationType.None);
             this.lnkLabel_Room415.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLabel_Room415.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLabel_Room415.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
@@ -6393,91 +6698,116 @@
             // 
             this.panel_UniverseSelectDestination.Controls.Add(this.panel_ContainerSelectDestination);
             this.panel_UniverseSelectDestination.Controls.Add(this.panel_TitleSelectDestination);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_UniverseSelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.panel_UniverseSelectDestination.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_UniverseSelectDestination.Location = new System.Drawing.Point(168, 34);
             this.panel_UniverseSelectDestination.Name = "panel_UniverseSelectDestination";
-            this.panel_UniverseSelectDestination.Size = new System.Drawing.Size(243, 635);
+            this.panel_UniverseSelectDestination.Size = new System.Drawing.Size(306, 630);
             this.panel_UniverseSelectDestination.TabIndex = 5;
             this.panel_UniverseSelectDestination.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_UniverseSelectDestination_Paint);
             // 
             // panel_UniverseVirtualMap
             // 
             this.panel_UniverseVirtualMap.BackColor = System.Drawing.SystemColors.Control;
-            this.panel_UniverseVirtualMap.Controls.Add(this.pb_UG);
-            this.bunifuTransSelectDestination.SetDecoration(this.panel_UniverseVirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.panel_UniverseVirtualMap.Controls.Add(this.pb_VirtualMap);
+            this.bunifuTransMaps.SetDecoration(this.panel_UniverseVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.panel_UniverseVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransLabels.SetDecoration(this.panel_UniverseVirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.panel_UniverseVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.panel_UniverseVirtualMap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_UniverseVirtualMap.Location = new System.Drawing.Point(411, 85);
+            this.panel_UniverseVirtualMap.Location = new System.Drawing.Point(474, 85);
             this.panel_UniverseVirtualMap.Name = "panel_UniverseVirtualMap";
-            this.panel_UniverseVirtualMap.Size = new System.Drawing.Size(615, 467);
+            this.panel_UniverseVirtualMap.Size = new System.Drawing.Size(577, 462);
             this.panel_UniverseVirtualMap.TabIndex = 9;
             this.panel_UniverseVirtualMap.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_UniverseVirtualMap_Paint);
             // 
-            // pb_UG
+            // pb_VirtualMap
             // 
-            this.pb_UG.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bunifuTransSelectDestination.SetDecoration(this.pb_UG, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransLabels.SetDecoration(this.pb_UG, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransFloorButtons.SetDecoration(this.pb_UG, BunifuAnimatorNS.DecorationType.None);
-            this.pb_UG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pb_UG.Location = new System.Drawing.Point(0, 0);
-            this.pb_UG.Name = "pb_UG";
-            this.pb_UG.Size = new System.Drawing.Size(615, 467);
-            this.pb_UG.TabIndex = 0;
-            this.pb_UG.TabStop = false;
+            this.pb_VirtualMap.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuTransSelectDestination.SetDecoration(this.pb_VirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this.pb_VirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.pb_VirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.pb_VirtualMap, BunifuAnimatorNS.DecorationType.None);
+            this.pb_VirtualMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pb_VirtualMap.Location = new System.Drawing.Point(0, 0);
+            this.pb_VirtualMap.Name = "pb_VirtualMap";
+            this.pb_VirtualMap.Size = new System.Drawing.Size(577, 462);
+            this.pb_VirtualMap.TabIndex = 0;
+            this.pb_VirtualMap.TabStop = false;
             // 
             // bunifuTransLabels
             // 
             this.bunifuTransLabels.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransLabels.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.bunifuTransLabels.DefaultAnimation = animation2;
+            animation18.AnimateOnlyDifferences = true;
+            animation18.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation18.BlindCoeff")));
+            animation18.LeafCoeff = 0F;
+            animation18.MaxTime = 1F;
+            animation18.MinTime = 0F;
+            animation18.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation18.MosaicCoeff")));
+            animation18.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation18.MosaicShift")));
+            animation18.MosaicSize = 0;
+            animation18.Padding = new System.Windows.Forms.Padding(0);
+            animation18.RotateCoeff = 0F;
+            animation18.RotateLimit = 0F;
+            animation18.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation18.ScaleCoeff")));
+            animation18.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation18.SlideCoeff")));
+            animation18.TimeCoeff = 0F;
+            animation18.TransparencyCoeff = 1F;
+            this.bunifuTransLabels.DefaultAnimation = animation18;
             // 
             // bunifuTransSelectDestination
             // 
             this.bunifuTransSelectDestination.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
             this.bunifuTransSelectDestination.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 1F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransSelectDestination.DefaultAnimation = animation1;
+            animation17.AnimateOnlyDifferences = true;
+            animation17.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation17.BlindCoeff")));
+            animation17.LeafCoeff = 1F;
+            animation17.MaxTime = 1F;
+            animation17.MinTime = 0F;
+            animation17.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation17.MosaicCoeff")));
+            animation17.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation17.MosaicShift")));
+            animation17.MosaicSize = 0;
+            animation17.Padding = new System.Windows.Forms.Padding(0);
+            animation17.RotateCoeff = 0F;
+            animation17.RotateLimit = 0F;
+            animation17.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation17.ScaleCoeff")));
+            animation17.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation17.SlideCoeff")));
+            animation17.TimeCoeff = 0F;
+            animation17.TransparencyCoeff = 0F;
+            this.bunifuTransSelectDestination.DefaultAnimation = animation17;
             this.bunifuTransSelectDestination.Interval = 20;
+            // 
+            // bunifuTransMaps
+            // 
+            this.bunifuTransMaps.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
+            this.bunifuTransMaps.Cursor = null;
+            animation19.AnimateOnlyDifferences = true;
+            animation19.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation19.BlindCoeff")));
+            animation19.LeafCoeff = 1F;
+            animation19.MaxTime = 1F;
+            animation19.MinTime = 0F;
+            animation19.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation19.MosaicCoeff")));
+            animation19.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation19.MosaicShift")));
+            animation19.MosaicSize = 0;
+            animation19.Padding = new System.Windows.Forms.Padding(0);
+            animation19.RotateCoeff = 0F;
+            animation19.RotateLimit = 0F;
+            animation19.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation19.ScaleCoeff")));
+            animation19.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation19.SlideCoeff")));
+            animation19.TimeCoeff = 0F;
+            animation19.TransparencyCoeff = 0F;
+            this.bunifuTransMaps.DefaultAnimation = animation19;
+            this.bunifuTransMaps.MaxAnimationTime = 700;
             // 
             // form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 669);
+            this.ClientSize = new System.Drawing.Size(1054, 669);
             this.Controls.Add(this.panel_UniverseVirtualMap);
             this.Controls.Add(this.panel_DetailsSelectedDestination);
             this.Controls.Add(this.panel_TitleVirtualMap);
@@ -6486,10 +6816,12 @@
             this.Controls.Add(this.panel_ControlBox);
             this.bunifuTransLabels.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransMaps.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransSelectDestination.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "form_Main";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 3, 5);
             this.Text = "z";
             this.Load += new System.EventHandler(this.form_MainTest_Load);
             this.panel_ControlBox.ResumeLayout(false);
@@ -6545,7 +6877,7 @@
             this.tableLayoutPanel5.PerformLayout();
             this.panel_UniverseSelectDestination.ResumeLayout(false);
             this.panel_UniverseVirtualMap.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_UG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_VirtualMap)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6860,8 +7192,9 @@
         private System.Windows.Forms.Panel panel_TitleSelectDestination;
         private System.Windows.Forms.Label lbl_SelectDestination;
         private System.Windows.Forms.Panel panel_UniverseVirtualMap;
-        private System.Windows.Forms.PictureBox pb_UG;
+        private System.Windows.Forms.PictureBox pb_VirtualMap;
         private System.Windows.Forms.Label lbl_GoHome;
         private System.Windows.Forms.PictureBox pb_BackToHome;
+        private BunifuAnimatorNS.BunifuTransition bunifuTransMaps;
     }
 }

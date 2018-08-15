@@ -63,59 +63,9 @@ namespace iLocatorAstar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _3rd_Floor {
-            get {
-                object obj = ResourceManager.GetObject("3rd Floor", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _3rd_Floor1 {
-            get {
-                object obj = ResourceManager.GetObject("3rd Floor1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dummy {
-            get {
-                object obj = ResourceManager.GetObject("dummy", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap talk_64 {
             get {
                 object obj = ResourceManager.GetObject("talk-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap visitor_id {
-            get {
-                object obj = ResourceManager.GetObject("visitor id", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap visitor_id1 {
-            get {
-                object obj = ResourceManager.GetObject("visitor id1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
