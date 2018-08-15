@@ -73,7 +73,6 @@
             // 
             this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = global::iLocatorAstar.Properties.Resources.close_window_32;
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.Location = new System.Drawing.Point(498, 4);
             this.btn_Close.Name = "btn_Close";

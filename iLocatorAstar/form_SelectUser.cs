@@ -12,16 +12,17 @@ namespace iLocatorAstar
 {
     public partial class form_SelectUser : Form
     {
-        
+
+
         public form_SelectUser()
         {
             InitializeComponent();
         }
 
+        //FORM LOAD
         private void form_SelectUser_Load(object sender, EventArgs e)
         {
-           
-            // Make Application Fullscreen when Open
+            //FULLSCREEN UPON LOAD
             WindowState = FormWindowState.Maximized;
 
             if (tableLayoutPanel_SelectUser.Visible == false || lbl_Description.Visible == false || lbl_TimeToday.Visible == false)
@@ -36,58 +37,32 @@ namespace iLocatorAstar
                 bunifuTransition1.HideSync(tableLayoutPanel_SelectUser);
             }
 
-            // If User is Idle for 1 minute, back to the Welcome Page
+            //IF USER IDLE FOR 1MIN, AUTOMATICALLY GOES BACK TO WELCOME PAGE
             idleTime.Tick += new EventHandler(idleTime_Tick);
             idleTime.Stop();
             idleTime.Start();
-
         }
 
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            // Close Application
-            System_Message _MessegeSystem = new System_Message();
-            _MessegeSystem.ShowDialog();
-        }
-
-        private void btn_Student_Click(object sender, EventArgs e)
+        //EVENT BUTTON CLICK
+        Button btn = new Button();
+        private void btnClick(object sender, EventArgs e)
         {
             idleTime.Stop();
             form_Main _Mainform = new form_Main();
             _Mainform.Show();
-            this.Hide();
-       
-
+            this.Hide(); 
         }
 
-        private void btn_Guest_Click(object sender, EventArgs e)
+        private void btn_Back_Click(object sender, EventArgs e)
         {
             idleTime.Stop();
-            form_Main _Mainform = new form_Main();
-            _Mainform.Show();
-            this.Hide();
-
-        }
-
-        private void btn_Alumni_Click(object sender, EventArgs e)
-        {
-            idleTime.Stop();
-            form_Main _Mainform = new form_Main();
-            _Mainform.Show();
-            this.Hide();
-        }
-
-        private void btn_Parents_Click(object sender, EventArgs e)
-        {
-            idleTime.Stop();
-            form_Main _Mainform = new form_Main();
-            _Mainform.Show();
+            form_WelcomePage wp = new form_WelcomePage();
+            wp.Show();
             this.Hide();
         }
 
         private void btn_Student_MouseHover(object sender, EventArgs e)
         {
-
             bunifuTransition1.ShowSync(btn_Student);
         }
 
@@ -99,16 +74,7 @@ namespace iLocatorAstar
             this.Hide();
         }
 
-        private void btn_Back_Click(object sender, EventArgs e)
-        {
-            idleTime.Stop();
-            form_WelcomePage _Welcomepage = new form_WelcomePage();
-            _Welcomepage.Show();
-            this.Hide();
-
-        }
-
-        private void time_Timer_Tick(object sender, EventArgs e)
+        private void timerTick(object sender, EventArgs e)
         {
             this.lbl_TimeToday.Text = DateTime.Now.ToString();
         }
