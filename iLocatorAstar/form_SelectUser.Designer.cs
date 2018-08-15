@@ -97,7 +97,6 @@
             this.panel_ContainerSelectUser.Name = "panel_ContainerSelectUser";
             this.panel_ContainerSelectUser.Size = new System.Drawing.Size(970, 431);
             this.panel_ContainerSelectUser.TabIndex = 5;
-            this.panel_ContainerSelectUser.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ContainerSelectUser_Paint_1);
             // 
             // lbl_Description
             // 

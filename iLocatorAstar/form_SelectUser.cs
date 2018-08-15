@@ -79,9 +79,9 @@ namespace iLocatorAstar
             this.lbl_TimeToday.Text = DateTime.Now.ToString();
         }
 
-        private void panel_ContainerSelectUser_Paint_1(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, this.panel_ContainerSelectUser.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
-        }
+        //private void panel_ContainerSelectUser_Paint_1(object sender, PaintEventArgs e)
+        //{
+        //    ControlPaint.DrawBorder(e.Graphics, this.panel_ContainerSelectUser.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+        //}
     }
 }

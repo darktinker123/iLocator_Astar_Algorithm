@@ -53,9 +53,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Map
@@ -65,7 +65,7 @@ namespace iLocatorAstar
             {
                 Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev.jpg");
                 pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 bunifuTransMaps.ShowSync(pb_VirtualMap);
 
@@ -103,9 +103,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Maps
@@ -152,9 +152,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Maps
@@ -200,9 +200,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Maps
@@ -246,9 +246,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Maps
@@ -291,9 +291,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Maps
@@ -337,9 +337,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Maps
@@ -383,9 +383,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Maps
@@ -429,9 +429,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Maps
@@ -475,9 +475,9 @@ namespace iLocatorAstar
 
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.FromArgb(66, 192, 251);
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.Cyan;
+                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
             }
 
             // Show Virtual Maps
@@ -533,15 +533,15 @@ namespace iLocatorAstar
 
         private void LayoutPanel_UG_MouseEnter(object sender, EventArgs e)
         {
-            //foreach (Control c in LayoutPanel_UG.Controls)
-            //{
-            //    LinkLabel lnkLabel = c as LinkLabel;
+            foreach (Control c in LayoutPanel_UG.Controls)
+            {
+                LinkLabel lnkLabel = c as LinkLabel;
 
-            //    if (c is LinkLabel)
-            //    {
-            //        lnkLabel.LinkColor = Color.Pink;
-            //    }
-            //}
+                if (c is LinkLabel)
+                {
+                    lnkLabel.LinkColor = Color.Pink;
+                }
+            }
         }
 
         private void panel_ContainerFloorSelector_Paint(object sender, PaintEventArgs e)
