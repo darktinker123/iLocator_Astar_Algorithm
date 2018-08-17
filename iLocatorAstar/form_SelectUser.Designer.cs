@@ -145,7 +145,7 @@
             // 
             this.btn_Parents.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Parents.color = System.Drawing.Color.RoyalBlue;
-            this.btn_Parents.colorActive = System.Drawing.Color.SkyBlue;
+            this.btn_Parents.colorActive = System.Drawing.Color.Blue;
             this.btn_Parents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFadeTransition.SetDecoration(this.btn_Parents, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.btn_Parents, BunifuAnimatorNS.DecorationType.None);
@@ -168,7 +168,7 @@
             // 
             this.btn_Alumni.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Alumni.color = System.Drawing.Color.RoyalBlue;
-            this.btn_Alumni.colorActive = System.Drawing.Color.SkyBlue;
+            this.btn_Alumni.colorActive = System.Drawing.Color.Blue;
             this.btn_Alumni.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFadeTransition.SetDecoration(this.btn_Alumni, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.btn_Alumni, BunifuAnimatorNS.DecorationType.None);
@@ -191,7 +191,7 @@
             // 
             this.btn_Guest.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Guest.color = System.Drawing.Color.RoyalBlue;
-            this.btn_Guest.colorActive = System.Drawing.Color.SkyBlue;
+            this.btn_Guest.colorActive = System.Drawing.Color.Blue;
             this.btn_Guest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFadeTransition.SetDecoration(this.btn_Guest, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.btn_Guest, BunifuAnimatorNS.DecorationType.None);
@@ -214,7 +214,7 @@
             // 
             this.btn_Student.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Student.color = System.Drawing.Color.RoyalBlue;
-            this.btn_Student.colorActive = System.Drawing.Color.SkyBlue;
+            this.btn_Student.colorActive = System.Drawing.Color.Blue;
             this.btn_Student.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFadeTransition.SetDecoration(this.btn_Student, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.btn_Student, BunifuAnimatorNS.DecorationType.None);
@@ -273,7 +273,7 @@
             // 
             // pb_iLocatorLogo
             // 
-            this.pb_iLocatorLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
+            this.pb_iLocatorLogo.BackColor = System.Drawing.Color.Transparent;
             this.pb_iLocatorLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_iLocatorLogo.BackgroundImage")));
             this.pb_iLocatorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bunifuTransition1.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
@@ -289,11 +289,11 @@
             this.lbl_FormTitle.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_FormTitle.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FormTitle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_FormTitle.ForeColor = System.Drawing.Color.White;
-            this.lbl_FormTitle.Location = new System.Drawing.Point(37, 7);
+            this.lbl_FormTitle.Location = new System.Drawing.Point(37, 10);
             this.lbl_FormTitle.Name = "lbl_FormTitle";
-            this.lbl_FormTitle.Size = new System.Drawing.Size(186, 22);
+            this.lbl_FormTitle.Size = new System.Drawing.Size(159, 16);
             this.lbl_FormTitle.TabIndex = 2;
             this.lbl_FormTitle.Text = "iLocator | Select Profile";
             // 

@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(System_Info));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_ControlBox = new System.Windows.Forms.Panel();
-            this.btn_Close = new System.Windows.Forms.PictureBox();
             this.pb_SystemInfoIco = new System.Windows.Forms.PictureBox();
             this.lbl_TitleSystemInfo = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -45,11 +44,12 @@
             this.lbl_SystemInfoTitle = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pb_SystemIcon = new System.Windows.Forms.PictureBox();
             this.panel_ContainerSystemInfo = new System.Windows.Forms.Panel();
+            this.btn_Close = new System.Windows.Forms.PictureBox();
             this.panel_ControlBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SystemInfoIco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SystemIcon)).BeginInit();
             this.panel_ContainerSystemInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -59,7 +59,7 @@
             // 
             // panel_ControlBox
             // 
-            this.panel_ControlBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
+            this.panel_ControlBox.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel_ControlBox.Controls.Add(this.btn_Close);
             this.panel_ControlBox.Controls.Add(this.pb_SystemInfoIco);
             this.panel_ControlBox.Controls.Add(this.lbl_TitleSystemInfo);
@@ -69,20 +69,9 @@
             this.panel_ControlBox.Size = new System.Drawing.Size(531, 37);
             this.panel_ControlBox.TabIndex = 4;
             // 
-            // btn_Close
-            // 
-            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Close.Location = new System.Drawing.Point(498, 4);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(19, 27);
-            this.btn_Close.TabIndex = 3;
-            this.btn_Close.TabStop = false;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
             // pb_SystemInfoIco
             // 
+            this.pb_SystemInfoIco.BackColor = System.Drawing.Color.Transparent;
             this.pb_SystemInfoIco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_SystemInfoIco.BackgroundImage")));
             this.pb_SystemInfoIco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_SystemInfoIco.Location = new System.Drawing.Point(11, 4);
@@ -213,6 +202,20 @@
             this.panel_ContainerSystemInfo.Size = new System.Drawing.Size(531, 269);
             this.panel_ContainerSystemInfo.TabIndex = 7;
             // 
+            // btn_Close
+            // 
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Close.BackgroundImage")));
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Close.Location = new System.Drawing.Point(500, 4);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(19, 27);
+            this.btn_Close.TabIndex = 3;
+            this.btn_Close.TabStop = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click_1);
+            // 
             // System_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,11 +232,11 @@
             this.Text = "System_Info";
             this.panel_ControlBox.ResumeLayout(false);
             this.panel_ControlBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SystemInfoIco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SystemIcon)).EndInit();
             this.panel_ContainerSystemInfo.ResumeLayout(false);
             this.panel_ContainerSystemInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,7 +245,6 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel_ControlBox;
-        private System.Windows.Forms.PictureBox btn_Close;
         private System.Windows.Forms.PictureBox pb_SystemInfoIco;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_TitleSystemInfo;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
@@ -255,5 +257,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_Admin1;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_Admin2;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_Admin4;
+        private System.Windows.Forms.PictureBox btn_Close;
     }
 }

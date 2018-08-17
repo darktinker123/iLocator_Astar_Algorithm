@@ -25,6 +25,13 @@ namespace iLocatorAstar
             //FULLSCREEN UPON LOAD
             WindowState = FormWindowState.Maximized;
 
+            ////Make sure Welcome Page Form is Hide
+            //Form fc = Application.OpenForms["form_WelcomePage"];
+            //if (fc != null)
+            //{
+            //    fc.Hide();
+            //}
+
             if (tableLayoutPanel_SelectUser.Visible == false || lbl_Description.Visible == false || lbl_TimeToday.Visible == false)
             {
                 bunifuTransition1.ShowSync(tableLayoutPanel_SelectUser);

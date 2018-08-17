@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_WelcomePage));
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panel_ContainerWelcome = new System.Windows.Forms.Panel();
             this.lbl_TimeToday = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_Next = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -40,6 +40,7 @@
             this.pb_TwitterIco = new System.Windows.Forms.PictureBox();
             this.pb_gPlusIco = new System.Windows.Forms.PictureBox();
             this.pb_FacebookIco = new System.Windows.Forms.PictureBox();
+            this.pb_Settings = new System.Windows.Forms.PictureBox();
             this.panel_LogoTitle = new System.Windows.Forms.Panel();
             this.lbl_WelcomeDescription = new System.Windows.Forms.Label();
             this.lbl_iLocatorWelcomePage = new System.Windows.Forms.Label();
@@ -54,20 +55,19 @@
             this.lbl_SysCurrentFloor = new System.Windows.Forms.Label();
             this.bunifuFadeTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.Time_Timer = new System.Windows.Forms.Timer(this.components);
-            this.pb_Settings = new System.Windows.Forms.PictureBox();
             this.panel_ContainerWelcome.SuspendLayout();
             this.tableLayoutPanel_SocialMedia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_InfoIco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_TwitterIco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_gPlusIco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_FacebookIco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Settings)).BeginInit();
             this.panel_LogoTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ACTIco)).BeginInit();
             this.panel_ControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
             this.panel_SystemStatus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Settings)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_ContainerWelcome
@@ -131,8 +131,8 @@
             this.btn_Next.Margin = new System.Windows.Forms.Padding(1);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_Next.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_Next.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Next.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_Next.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Next.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Next.selected = false;
             this.btn_Next.Size = new System.Drawing.Size(167, 53);
@@ -148,10 +148,10 @@
             // 
             this.tableLayoutPanel_SocialMedia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel_SocialMedia.ColumnCount = 5;
-            this.tableLayoutPanel_SocialMedia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel_SocialMedia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel_SocialMedia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel_SocialMedia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_SocialMedia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.0212F));
+            this.tableLayoutPanel_SocialMedia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.14134F));
+            this.tableLayoutPanel_SocialMedia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.08127F));
+            this.tableLayoutPanel_SocialMedia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.90813F));
             this.tableLayoutPanel_SocialMedia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel_SocialMedia.Controls.Add(this.pb_InfoIco, 3, 0);
             this.tableLayoutPanel_SocialMedia.Controls.Add(this.pb_TwitterIco, 2, 0);
@@ -164,7 +164,7 @@
             this.tableLayoutPanel_SocialMedia.Name = "tableLayoutPanel_SocialMedia";
             this.tableLayoutPanel_SocialMedia.RowCount = 1;
             this.tableLayoutPanel_SocialMedia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel_SocialMedia.Size = new System.Drawing.Size(325, 42);
+            this.tableLayoutPanel_SocialMedia.Size = new System.Drawing.Size(283, 42);
             this.tableLayoutPanel_SocialMedia.TabIndex = 2;
             this.tableLayoutPanel_SocialMedia.Visible = false;
             // 
@@ -175,7 +175,7 @@
             this.pb_InfoIco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuACTTransition.SetDecoration(this.pb_InfoIco, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.pb_InfoIco, BunifuAnimatorNS.DecorationType.None);
-            this.pb_InfoIco.Location = new System.Drawing.Point(198, 3);
+            this.pb_InfoIco.Location = new System.Drawing.Point(165, 3);
             this.pb_InfoIco.Name = "pb_InfoIco";
             this.pb_InfoIco.Size = new System.Drawing.Size(44, 36);
             this.pb_InfoIco.TabIndex = 3;
@@ -189,7 +189,7 @@
             this.pb_TwitterIco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuACTTransition.SetDecoration(this.pb_TwitterIco, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.pb_TwitterIco, BunifuAnimatorNS.DecorationType.None);
-            this.pb_TwitterIco.Location = new System.Drawing.Point(133, 3);
+            this.pb_TwitterIco.Location = new System.Drawing.Point(111, 3);
             this.pb_TwitterIco.Name = "pb_TwitterIco";
             this.pb_TwitterIco.Size = new System.Drawing.Size(35, 36);
             this.pb_TwitterIco.TabIndex = 3;
@@ -203,7 +203,7 @@
             this.bunifuACTTransition.SetDecoration(this.pb_gPlusIco, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.pb_gPlusIco, BunifuAnimatorNS.DecorationType.None);
             this.pb_gPlusIco.Image = ((System.Drawing.Image)(resources.GetObject("pb_gPlusIco.Image")));
-            this.pb_gPlusIco.Location = new System.Drawing.Point(68, 3);
+            this.pb_gPlusIco.Location = new System.Drawing.Point(54, 3);
             this.pb_gPlusIco.Name = "pb_gPlusIco";
             this.pb_gPlusIco.Size = new System.Drawing.Size(35, 36);
             this.pb_gPlusIco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,6 +225,20 @@
             this.pb_FacebookIco.TabIndex = 3;
             this.pb_FacebookIco.TabStop = false;
             this.pb_FacebookIco.Click += new System.EventHandler(this.pbMouseClick);
+            // 
+            // pb_Settings
+            // 
+            this.pb_Settings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Settings.BackgroundImage")));
+            this.pb_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb_Settings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuACTTransition.SetDecoration(this.pb_Settings, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFadeTransition.SetDecoration(this.pb_Settings, BunifuAnimatorNS.DecorationType.None);
+            this.pb_Settings.Location = new System.Drawing.Point(227, 3);
+            this.pb_Settings.Name = "pb_Settings";
+            this.pb_Settings.Size = new System.Drawing.Size(53, 36);
+            this.pb_Settings.TabIndex = 4;
+            this.pb_Settings.TabStop = false;
+            this.pb_Settings.Click += new System.EventHandler(this.pb_Settings_Click);
             // 
             // panel_LogoTitle
             // 
@@ -302,7 +316,7 @@
             // 
             // pb_iLocatorLogo
             // 
-            this.pb_iLocatorLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
+            this.pb_iLocatorLogo.BackColor = System.Drawing.Color.Transparent;
             this.pb_iLocatorLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_iLocatorLogo.BackgroundImage")));
             this.pb_iLocatorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bunifuACTTransition.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
@@ -346,22 +360,22 @@
             // 
             this.bunifuACTTransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
             this.bunifuACTTransition.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 1F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuACTTransition.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuACTTransition.DefaultAnimation = animation1;
             this.bunifuACTTransition.Interval = 20;
             // 
             // panel_SystemStatus
@@ -406,41 +420,28 @@
             // 
             this.bunifuFadeTransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuFadeTransition.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 1F;
-            this.bunifuFadeTransition.DefaultAnimation = animation4;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.bunifuFadeTransition.DefaultAnimation = animation2;
             // 
             // Time_Timer
             // 
             this.Time_Timer.Enabled = true;
             this.Time_Timer.Interval = 1000;
             this.Time_Timer.Tick += new System.EventHandler(this.timerTick);
-            // 
-            // pb_Settings
-            // 
-            this.pb_Settings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Settings.BackgroundImage")));
-            this.pb_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuACTTransition.SetDecoration(this.pb_Settings, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.pb_Settings, BunifuAnimatorNS.DecorationType.None);
-            this.pb_Settings.Location = new System.Drawing.Point(263, 3);
-            this.pb_Settings.Name = "pb_Settings";
-            this.pb_Settings.Size = new System.Drawing.Size(59, 36);
-            this.pb_Settings.TabIndex = 4;
-            this.pb_Settings.TabStop = false;
-            this.pb_Settings.Click += new System.EventHandler(this.pb_Settings_Click);
             // 
             // form_WelcomePage
             // 
@@ -465,6 +466,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_TwitterIco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_gPlusIco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_FacebookIco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Settings)).EndInit();
             this.panel_LogoTitle.ResumeLayout(false);
             this.panel_LogoTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ACTIco)).EndInit();
@@ -474,7 +476,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
             this.panel_SystemStatus.ResumeLayout(false);
             this.panel_SystemStatus.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Settings)).EndInit();
             this.ResumeLayout(false);
 
         }

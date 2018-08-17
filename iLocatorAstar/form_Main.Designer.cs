@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main));
-            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_ControlBox = new System.Windows.Forms.Panel();
             this.pb_iLocatorLogo = new System.Windows.Forms.PictureBox();
@@ -402,7 +402,7 @@
             // 
             // pb_iLocatorLogo
             // 
-            this.pb_iLocatorLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(192)))), ((int)(((byte)(251)))));
+            this.pb_iLocatorLogo.BackColor = System.Drawing.Color.Transparent;
             this.pb_iLocatorLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_iLocatorLogo.BackgroundImage")));
             this.pb_iLocatorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bunifuTransSelectDestination.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
@@ -422,11 +422,11 @@
             this.bunifuTransLabels.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransMaps.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransFloorButtons.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_FormTitle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FormTitle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_FormTitle.ForeColor = System.Drawing.Color.White;
-            this.lbl_FormTitle.Location = new System.Drawing.Point(37, 8);
+            this.lbl_FormTitle.Location = new System.Drawing.Point(37, 10);
             this.lbl_FormTitle.Name = "lbl_FormTitle";
-            this.lbl_FormTitle.Size = new System.Drawing.Size(116, 19);
+            this.lbl_FormTitle.Size = new System.Drawing.Size(97, 16);
             this.lbl_FormTitle.TabIndex = 2;
             this.lbl_FormTitle.Text = "iLocator | Main";
             // 
@@ -487,7 +487,7 @@
             // 
             // btn_10th
             // 
-            this.btn_10th.Activecolor = System.Drawing.Color.SkyBlue;
+            this.btn_10th.Activecolor = System.Drawing.Color.SteelBlue;
             this.btn_10th.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_10th.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_10th.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -515,8 +515,8 @@
             this.btn_10th.Location = new System.Drawing.Point(18, 520);
             this.btn_10th.Name = "btn_10th";
             this.btn_10th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_10th.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_10th.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_10th.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_10th.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_10th.selected = false;
             this.btn_10th.Size = new System.Drawing.Size(123, 45);
             this.btn_10th.TabIndex = 8;
@@ -528,7 +528,7 @@
             // 
             // btn_9th
             // 
-            this.btn_9th.Activecolor = System.Drawing.Color.SkyBlue;
+            this.btn_9th.Activecolor = System.Drawing.Color.SteelBlue;
             this.btn_9th.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_9th.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_9th.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -556,8 +556,8 @@
             this.btn_9th.Location = new System.Drawing.Point(18, 462);
             this.btn_9th.Name = "btn_9th";
             this.btn_9th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_9th.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_9th.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_9th.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_9th.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_9th.selected = false;
             this.btn_9th.Size = new System.Drawing.Size(123, 45);
             this.btn_9th.TabIndex = 8;
@@ -569,7 +569,7 @@
             // 
             // btn_8th
             // 
-            this.btn_8th.Activecolor = System.Drawing.Color.SkyBlue;
+            this.btn_8th.Activecolor = System.Drawing.Color.SteelBlue;
             this.btn_8th.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_8th.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_8th.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -597,8 +597,8 @@
             this.btn_8th.Location = new System.Drawing.Point(18, 405);
             this.btn_8th.Name = "btn_8th";
             this.btn_8th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_8th.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_8th.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_8th.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_8th.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_8th.selected = false;
             this.btn_8th.Size = new System.Drawing.Size(123, 45);
             this.btn_8th.TabIndex = 8;
@@ -638,7 +638,7 @@
             this.btn_7th.Location = new System.Drawing.Point(18, 348);
             this.btn_7th.Name = "btn_7th";
             this.btn_7th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_7th.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_7th.OnHovercolor = System.Drawing.Color.Blue;
             this.btn_7th.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_7th.selected = false;
             this.btn_7th.Size = new System.Drawing.Size(123, 45);
@@ -651,7 +651,7 @@
             // 
             // btn_6th
             // 
-            this.btn_6th.Activecolor = System.Drawing.Color.SkyBlue;
+            this.btn_6th.Activecolor = System.Drawing.Color.SteelBlue;
             this.btn_6th.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_6th.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_6th.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -679,8 +679,8 @@
             this.btn_6th.Location = new System.Drawing.Point(18, 291);
             this.btn_6th.Name = "btn_6th";
             this.btn_6th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_6th.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_6th.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_6th.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_6th.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_6th.selected = false;
             this.btn_6th.Size = new System.Drawing.Size(123, 45);
             this.btn_6th.TabIndex = 8;
@@ -692,7 +692,7 @@
             // 
             // btn_5th
             // 
-            this.btn_5th.Activecolor = System.Drawing.Color.SkyBlue;
+            this.btn_5th.Activecolor = System.Drawing.Color.SteelBlue;
             this.btn_5th.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_5th.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_5th.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -720,8 +720,8 @@
             this.btn_5th.Location = new System.Drawing.Point(18, 234);
             this.btn_5th.Name = "btn_5th";
             this.btn_5th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_5th.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_5th.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_5th.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_5th.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_5th.selected = false;
             this.btn_5th.Size = new System.Drawing.Size(123, 45);
             this.btn_5th.TabIndex = 8;
@@ -733,7 +733,7 @@
             // 
             // btn_4th
             // 
-            this.btn_4th.Activecolor = System.Drawing.Color.SkyBlue;
+            this.btn_4th.Activecolor = System.Drawing.Color.SteelBlue;
             this.btn_4th.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_4th.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_4th.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -761,8 +761,8 @@
             this.btn_4th.Location = new System.Drawing.Point(18, 177);
             this.btn_4th.Name = "btn_4th";
             this.btn_4th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_4th.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_4th.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_4th.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_4th.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_4th.selected = false;
             this.btn_4th.Size = new System.Drawing.Size(123, 45);
             this.btn_4th.TabIndex = 8;
@@ -774,7 +774,7 @@
             // 
             // btn_3rd
             // 
-            this.btn_3rd.Activecolor = System.Drawing.Color.SkyBlue;
+            this.btn_3rd.Activecolor = System.Drawing.Color.SteelBlue;
             this.btn_3rd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_3rd.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_3rd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -802,8 +802,8 @@
             this.btn_3rd.Location = new System.Drawing.Point(18, 120);
             this.btn_3rd.Name = "btn_3rd";
             this.btn_3rd.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_3rd.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_3rd.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_3rd.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_3rd.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_3rd.selected = false;
             this.btn_3rd.Size = new System.Drawing.Size(123, 45);
             this.btn_3rd.TabIndex = 8;
@@ -815,7 +815,7 @@
             // 
             // btn_2nd
             // 
-            this.btn_2nd.Activecolor = System.Drawing.Color.SkyBlue;
+            this.btn_2nd.Activecolor = System.Drawing.Color.SteelBlue;
             this.btn_2nd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_2nd.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_2nd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -843,8 +843,8 @@
             this.btn_2nd.Location = new System.Drawing.Point(18, 63);
             this.btn_2nd.Name = "btn_2nd";
             this.btn_2nd.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_2nd.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_2nd.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_2nd.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_2nd.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_2nd.selected = false;
             this.btn_2nd.Size = new System.Drawing.Size(123, 45);
             this.btn_2nd.TabIndex = 8;
@@ -856,7 +856,7 @@
             // 
             // btn_UG
             // 
-            this.btn_UG.Activecolor = System.Drawing.Color.SkyBlue;
+            this.btn_UG.Activecolor = System.Drawing.Color.SteelBlue;
             this.btn_UG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_UG.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_UG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -884,8 +884,8 @@
             this.btn_UG.Location = new System.Drawing.Point(18, 6);
             this.btn_UG.Name = "btn_UG";
             this.btn_UG.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.btn_UG.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_UG.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn_UG.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_UG.selected = false;
             this.btn_UG.Size = new System.Drawing.Size(123, 45);
             this.btn_UG.TabIndex = 8;
@@ -6738,27 +6738,28 @@
             this.pb_VirtualMap.Size = new System.Drawing.Size(577, 462);
             this.pb_VirtualMap.TabIndex = 0;
             this.pb_VirtualMap.TabStop = false;
+            this.pb_VirtualMap.Paint += new System.Windows.Forms.PaintEventHandler(this.pb_VirtualMap_Paint);
             // 
             // bunifuTransLabels
             // 
             this.bunifuTransLabels.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransLabels.Cursor = null;
-            animation7.AnimateOnlyDifferences = true;
-            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
-            animation7.LeafCoeff = 0F;
-            animation7.MaxTime = 1F;
-            animation7.MinTime = 0F;
-            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
-            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
-            animation7.MosaicSize = 0;
-            animation7.Padding = new System.Windows.Forms.Padding(0);
-            animation7.RotateCoeff = 0F;
-            animation7.RotateLimit = 0F;
-            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
-            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
-            animation7.TimeCoeff = 0F;
-            animation7.TransparencyCoeff = 1F;
-            this.bunifuTransLabels.DefaultAnimation = animation7;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 1F;
+            this.bunifuTransLabels.DefaultAnimation = animation6;
             // 
             // bunifuTransSelectDestination
             // 
@@ -6786,22 +6787,22 @@
             // 
             this.bunifuTransMaps.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
             this.bunifuTransMaps.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 1F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(0);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 0F;
-            this.bunifuTransMaps.DefaultAnimation = animation6;
+            animation7.AnimateOnlyDifferences = true;
+            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
+            animation7.LeafCoeff = 1F;
+            animation7.MaxTime = 1F;
+            animation7.MinTime = 0F;
+            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
+            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
+            animation7.MosaicSize = 0;
+            animation7.Padding = new System.Windows.Forms.Padding(0);
+            animation7.RotateCoeff = 0F;
+            animation7.RotateLimit = 0F;
+            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
+            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
+            animation7.TimeCoeff = 0F;
+            animation7.TransparencyCoeff = 0F;
+            this.bunifuTransMaps.DefaultAnimation = animation7;
             this.bunifuTransMaps.MaxAnimationTime = 700;
             // 
             // form_Main
@@ -6823,7 +6824,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "form_Main";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 3, 5);
-            this.Text = "z";
+            this.Text = "iLocator | Main";
             this.Load += new System.EventHandler(this.form_MainTest_Load);
             this.panel_ControlBox.ResumeLayout(false);
             this.panel_ControlBox.PerformLayout();

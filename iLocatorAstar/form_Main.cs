@@ -27,6 +27,14 @@ namespace iLocatorAstar
             // Maximized Windows when Open
             WindowState = FormWindowState.Maximized;
 
+
+            //// Make sure Select User Form is Hide
+            //Form fc = Application.OpenForms["form_SelectUser"];
+            //if (fc != null)
+            //{
+            //    fc.Hide();
+            //}
+
             if (tableLayoutPanel_FloorButtons.Visible == false)
             {
                 bunifuTransFloorButtons.ShowSync(tableLayoutPanel_FloorButtons);
@@ -42,6 +50,23 @@ namespace iLocatorAstar
             }
 
         }
+        //public void SelectedButton()
+        //{
+        //    // Code for changing the Selected Button Color
+        //    BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
+
+        //    foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
+        //    {
+        //        BunifuFlatButton BtnSelected = c as BunifuFlatButton;
+
+        //        if (c is BunifuFlatButton)
+        //        {
+        //            BtnSelected.Normalcolor = Color.RoyalBlue;
+        //        }
+        //        selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
+        //    }
+        //}
+
         private void btn_UG_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
@@ -55,7 +80,7 @@ namespace iLocatorAstar
                 {
                     BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
+                selectedBtn.Normalcolor = Color.Blue;
             }
 
             // Show Virtual Map
@@ -105,7 +130,7 @@ namespace iLocatorAstar
                 {
                     BtnSelected.Normalcolor = Color.RoyalBlue;
                 }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
+                selectedBtn.Normalcolor = Color.SteelBlue;
             }
 
             // Show Virtual Maps
@@ -420,19 +445,7 @@ namespace iLocatorAstar
 
         private void btn_9th_Click(object sender, EventArgs e)
         {
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
 
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-            {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
-            }
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -525,6 +538,8 @@ namespace iLocatorAstar
             LayoutPanel_10th.Visible = false;
         }
 
+
+
         private void btn_Close_Click(object sender, EventArgs e)
         {
             System_Message _MessegeSystem = new System_Message();
@@ -592,6 +607,15 @@ namespace iLocatorAstar
             form_WelcomePage _FormWelcomePage = new form_WelcomePage();
             _FormWelcomePage.Show();
             this.Hide();
+        }
+
+        private void pb_VirtualMap_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.pb_VirtualMap.ClientRectangle,
+            Color.LightGray, 1, ButtonBorderStyle.Solid,
+            Color.LightGray, 0, ButtonBorderStyle.Solid,
+            Color.LightGray, 0, ButtonBorderStyle.Solid,
+            Color.LightGray, 0, ButtonBorderStyle.Solid);
         }
     }
 }

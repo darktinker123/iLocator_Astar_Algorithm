@@ -125,7 +125,9 @@ namespace iLocatorAstar
 
         private void pb_Settings_Click(object sender, EventArgs e)
         {
-
+            form_Login loginForm = new form_Login();
+            loginForm.ShowDialog();
+            loginForm.Hide();
         }
     }
 }

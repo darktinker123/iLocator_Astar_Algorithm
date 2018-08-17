@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="form_AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_AdminDashboard.Designer.cs">
+      <DependentUpon>form_AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Login.Designer.cs">
+      <DependentUpon>form_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     <Compile Include="TestZone.Designer.cs">
       <DependentUpon>TestZone.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="form_AdminDashboard.resx">
+      <DependentUpon>form_AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Login.resx">
+      <DependentUpon>form_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form_Main.resx">
       <DependentUpon>form_Main.cs</DependentUpon>
     </EmbeddedResource>

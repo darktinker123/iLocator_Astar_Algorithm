@@ -86,3 +86,5 @@ C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\o
 C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.System_Message.resources
 C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.TestZone.resources
 C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.csproj.GenerateResource.Cache
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_Login.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_AdminDashboard.resources
