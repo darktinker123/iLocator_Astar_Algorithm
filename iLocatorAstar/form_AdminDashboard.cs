@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace iLocatorAstar
 {
@@ -26,13 +27,6 @@ namespace iLocatorAstar
         private void form_AdminDashboard_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-
-            // Hide Welcome Page Form
-            Form fc = Application.OpenForms["form_WelcomePage"];
-            if (fc != null)
-            {
-                fc.Hide();
-            }
         }
 
         private void pb_SideMenu_Click(object sender, EventArgs e)
@@ -149,12 +143,22 @@ namespace iLocatorAstar
             WelcomePageForm.Show();
             this.Hide();
         }
-
+        public string fname;
         private void btn_OpenNodes_Click(object sender, EventArgs e)
         {
+           
+            OpenFileDialog op = new OpenFileDialog();
+            if (op.ShowDialog() == DialogResult.OK)
+            {
+                richTxtBox_Nodes.Text = File.ReadAllText(op.FileName);
+            }
+            fname = op.FileName;
+        }
+
+        private void btn_SaveNodes_Click(object sender, EventArgs e)
+        {
+            File.WriteAllLines(fname, richTxtBox_Nodes.Lines);
             
-            OpenFileDialog _OpenFileDialog = new OpenFileDialog();
-            _OpenFileDialog.ShowDialog();
         }
     }
 }

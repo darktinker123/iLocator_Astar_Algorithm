@@ -27,13 +27,12 @@ namespace iLocatorAstar
             // Maximized Windows when Open
             WindowState = FormWindowState.Maximized;
 
-
-            //// Make sure Select User Form is Hide
-            //Form fc = Application.OpenForms["form_SelectUser"];
-            //if (fc != null)
-            //{
-            //    fc.Hide();
-            //}
+            // Make sure Select User Form is Hide
+            Form fc = Application.OpenForms["form_SelectUser"];
+            if (fc != null)
+            {
+                fc.Hide();
+            }
 
             if (tableLayoutPanel_FloorButtons.Visible == false)
             {
@@ -47,6 +46,19 @@ namespace iLocatorAstar
                 bunifuTransLabels.ShowSync(lbl_ShortestPath);
                 bunifuTransLabels.ShowSync(lbl_EstimatedTime);
                 bunifuTransLabels.ShowSync(lbl_EstimatedDistance);
+            }
+
+            var text = File.ReadLines(Environment.CurrentDirectory.ToString() + @"..\..\..\setup\config.ini");
+            string SystemFloor = "";
+            foreach (var item in text)
+            {
+                SystemFloor = item.ToString();
+            }
+
+            if (SystemFloor.ToString() == "UG")
+            {
+                ButtonSeleted();
+
             }
 
         }
@@ -66,7 +78,53 @@ namespace iLocatorAstar
         //        selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
         //    }
         //}
+        private void ButtonSeleted()
+        {
+            // Code for changing the Selected Button Color
 
+            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
+            {
+                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
+
+                if (c is BunifuFlatButton)
+                {
+                    BtnSelected.Normalcolor = Color.RoyalBlue;
+                }
+            }
+
+            // Show Virtual Map
+            bunifuTransMaps.HideSync(pb_VirtualMap);
+
+            if (pb_VirtualMap.Visible == false)
+            {
+                Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev.jpg");
+                pb_VirtualMap.Image = img;
+                pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                bunifuTransMaps.ShowSync(pb_VirtualMap);
+
+            }
+
+            // Hide List of Directories in Select Destination
+            HidePanels();
+
+            // Make the Selected Layout Visible then Fill it in panel. Then hide it for Transition purposes.
+            LayoutPanel_UG.Visible = true;
+            LayoutPanel_UG.Dock = DockStyle.Fill;
+            LayoutPanel_UG.Visible = false;
+
+            // Transition Code
+            if (LayoutPanel_UG.Visible == false)
+            {
+                bunifuTransSelectDestination.ShowSync(LayoutPanel_UG);
+                bunifuTransLabels.ShowSync(pb_BackToHome);
+                bunifuTransLabels.ShowSync(lbl_GoHome);
+            }
+            else
+            {
+                bunifuTransSelectDestination.HideSync(LayoutPanel_UG);
+            }
+        }
         private void btn_UG_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color

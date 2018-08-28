@@ -76,9 +76,11 @@ namespace iLocatorAstar
         //EVENT FOR NEXT BUTTON
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            form_SelectUser user = new form_SelectUser();
-            user.Show();
+            
+            form_SelectUser SelectUserForm = new form_SelectUser();
+            SelectUserForm.Show();
             this.Hide();
+
         }
 
         //EVENT FOR CLICKING OF ICONS

@@ -60,12 +60,20 @@ namespace iLocatorAstar
         {
             if (bunifuTxtBox_Username.Text == "admin" || bunifuTxtBox_Password.Text == "admin123")
             {
+                // Hide Welcome Page Form
+                Form fc = Application.OpenForms["form_WelcomePage"];
+                if (fc != null)
+                {
+                    fc.Hide();
+                }
+
                 this.Hide();
 
                 form_AdminDashboard AdminDashBoardForm = new form_AdminDashboard();
                 AdminDashBoardForm.Show();
 
 
+          
             }
             else
             {
