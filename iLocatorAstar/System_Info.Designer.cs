@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(System_Info));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_ControlBox = new System.Windows.Forms.Panel();
+            this.btn_Close = new System.Windows.Forms.PictureBox();
             this.pb_SystemInfoIco = new System.Windows.Forms.PictureBox();
             this.lbl_TitleSystemInfo = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -44,12 +45,11 @@
             this.lbl_SystemInfoTitle = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pb_SystemIcon = new System.Windows.Forms.PictureBox();
             this.panel_ContainerSystemInfo = new System.Windows.Forms.Panel();
-            this.btn_Close = new System.Windows.Forms.PictureBox();
             this.panel_ControlBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SystemInfoIco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SystemIcon)).BeginInit();
             this.panel_ContainerSystemInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -68,6 +68,20 @@
             this.panel_ControlBox.Name = "panel_ControlBox";
             this.panel_ControlBox.Size = new System.Drawing.Size(531, 37);
             this.panel_ControlBox.TabIndex = 4;
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Close.BackgroundImage")));
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Close.Location = new System.Drawing.Point(500, 4);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(19, 27);
+            this.btn_Close.TabIndex = 3;
+            this.btn_Close.TabStop = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click_1);
             // 
             // pb_SystemInfoIco
             // 
@@ -102,7 +116,7 @@
             // 
             this.lbl_Admin4.AutoSize = true;
             this.lbl_Admin4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Admin4.ForeColor = System.Drawing.Color.White;
+            this.lbl_Admin4.ForeColor = System.Drawing.Color.Black;
             this.lbl_Admin4.Location = new System.Drawing.Point(324, 138);
             this.lbl_Admin4.Name = "lbl_Admin4";
             this.lbl_Admin4.Size = new System.Drawing.Size(155, 21);
@@ -113,7 +127,7 @@
             // 
             this.lbl_Admin2.AutoSize = true;
             this.lbl_Admin2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Admin2.ForeColor = System.Drawing.Color.White;
+            this.lbl_Admin2.ForeColor = System.Drawing.Color.Black;
             this.lbl_Admin2.Location = new System.Drawing.Point(163, 138);
             this.lbl_Admin2.Name = "lbl_Admin2";
             this.lbl_Admin2.Size = new System.Drawing.Size(155, 21);
@@ -124,7 +138,7 @@
             // 
             this.lbl_Admin1.AutoSize = true;
             this.lbl_Admin1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Admin1.ForeColor = System.Drawing.Color.White;
+            this.lbl_Admin1.ForeColor = System.Drawing.Color.Black;
             this.lbl_Admin1.Location = new System.Drawing.Point(163, 104);
             this.lbl_Admin1.Name = "lbl_Admin1";
             this.lbl_Admin1.Size = new System.Drawing.Size(155, 21);
@@ -135,7 +149,7 @@
             // 
             this.lbl_Admin3.AutoSize = true;
             this.lbl_Admin3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Admin3.ForeColor = System.Drawing.Color.White;
+            this.lbl_Admin3.ForeColor = System.Drawing.Color.Black;
             this.lbl_Admin3.Location = new System.Drawing.Point(326, 104);
             this.lbl_Admin3.Name = "lbl_Admin3";
             this.lbl_Admin3.Size = new System.Drawing.Size(155, 21);
@@ -146,7 +160,7 @@
             // 
             this.lbl_SystemInfoVersion.AutoSize = true;
             this.lbl_SystemInfoVersion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SystemInfoVersion.ForeColor = System.Drawing.Color.White;
+            this.lbl_SystemInfoVersion.ForeColor = System.Drawing.Color.Black;
             this.lbl_SystemInfoVersion.Location = new System.Drawing.Point(422, 225);
             this.lbl_SystemInfoVersion.Name = "lbl_SystemInfoVersion";
             this.lbl_SystemInfoVersion.Size = new System.Drawing.Size(79, 17);
@@ -157,7 +171,7 @@
             // 
             this.lbl_SystemInfoCopyright.AutoSize = true;
             this.lbl_SystemInfoCopyright.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SystemInfoCopyright.ForeColor = System.Drawing.Color.White;
+            this.lbl_SystemInfoCopyright.ForeColor = System.Drawing.Color.Black;
             this.lbl_SystemInfoCopyright.Location = new System.Drawing.Point(14, 225);
             this.lbl_SystemInfoCopyright.Name = "lbl_SystemInfoCopyright";
             this.lbl_SystemInfoCopyright.Size = new System.Drawing.Size(97, 17);
@@ -168,7 +182,7 @@
             // 
             this.lbl_SystemInfoTitle.AutoSize = true;
             this.lbl_SystemInfoTitle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SystemInfoTitle.ForeColor = System.Drawing.Color.White;
+            this.lbl_SystemInfoTitle.ForeColor = System.Drawing.Color.Black;
             this.lbl_SystemInfoTitle.Location = new System.Drawing.Point(190, 63);
             this.lbl_SystemInfoTitle.Name = "lbl_SystemInfoTitle";
             this.lbl_SystemInfoTitle.Size = new System.Drawing.Size(259, 23);
@@ -187,7 +201,7 @@
             // 
             // panel_ContainerSystemInfo
             // 
-            this.panel_ContainerSystemInfo.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel_ContainerSystemInfo.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel_ContainerSystemInfo.Controls.Add(this.pb_SystemIcon);
             this.panel_ContainerSystemInfo.Controls.Add(this.lbl_SystemInfoTitle);
             this.panel_ContainerSystemInfo.Controls.Add(this.lbl_SystemInfoCopyright);
@@ -201,20 +215,6 @@
             this.panel_ContainerSystemInfo.Name = "panel_ContainerSystemInfo";
             this.panel_ContainerSystemInfo.Size = new System.Drawing.Size(531, 269);
             this.panel_ContainerSystemInfo.TabIndex = 7;
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Close.BackgroundImage")));
-            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Close.Location = new System.Drawing.Point(500, 4);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(19, 27);
-            this.btn_Close.TabIndex = 3;
-            this.btn_Close.TabStop = false;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click_1);
             // 
             // System_Info
             // 
@@ -232,11 +232,11 @@
             this.Text = "System_Info";
             this.panel_ControlBox.ResumeLayout(false);
             this.panel_ControlBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SystemInfoIco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SystemIcon)).EndInit();
             this.panel_ContainerSystemInfo.ResumeLayout(false);
             this.panel_ContainerSystemInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -27,7 +27,7 @@ namespace iLocatorAstar
             // Maximized Windows when Open
             WindowState = FormWindowState.Maximized;
 
-            // Make sure Select User Form is Hide
+            // Make sure Select User Form is hidden
             Form fc = Application.OpenForms["form_SelectUser"];
             if (fc != null)
             {
@@ -57,41 +57,28 @@ namespace iLocatorAstar
 
             if (SystemFloor.ToString() == "UG")
             {
-                ButtonSeleted();
+                SelectedButton(this, e);
 
             }
 
         }
-        //public void SelectedButton()
-        //{
-        //    // Code for changing the Selected Button Color
-        //    BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
 
-        //    foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-        //    {
-        //        BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-        //        if (c is BunifuFlatButton)
-        //        {
-        //            BtnSelected.Normalcolor = Color.RoyalBlue;
-        //        }
-        //        selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
-        //    }
-        //}
-        private void ButtonSeleted()
+        private void SelectedButton(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
 
+            BunifuFlatButton selectedbtn=new BunifuFlatButton();
+
             foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
             {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
+                BunifuFlatButton btn = c as BunifuFlatButton;
                 if (c is BunifuFlatButton)
                 {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
+                    btn.Normalcolor = Color.RoyalBlue;
                 }
+                selectedbtn = c as BunifuFlatButton;
             }
-
+            
             // Show Virtual Map
             bunifuTransMaps.HideSync(pb_VirtualMap);
 
@@ -100,487 +87,65 @@ namespace iLocatorAstar
                 Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev.jpg");
                 pb_VirtualMap.Image = img;
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-
                 bunifuTransMaps.ShowSync(pb_VirtualMap);
-
             }
 
             // Hide List of Directories in Select Destination
             HidePanels();
 
-            // Make the Selected Layout Visible then Fill it in panel. Then hide it for Transition purposes.
-            LayoutPanel_UG.Visible = true;
-            LayoutPanel_UG.Dock = DockStyle.Fill;
-            LayoutPanel_UG.Visible = false;
-
-            // Transition Code
-            if (LayoutPanel_UG.Visible == false)
+            switch(selectedbtn.Name)
             {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_UG);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_UG);
+                case "btn_UG":
+                    FormTransition(LayoutPanel_UG);
+                    break;
+                case "btn_2nd":
+                    FormTransition(LayoutPanel_2nd);
+                    break;
+                case "btn_3rd":
+                    FormTransition(LayoutPanel_3rd);
+                    break;
+                case "btn_4th":
+                    FormTransition(LayoutPanel_4th);
+                    break;
+                case "btn_5th":
+                    FormTransition(LayoutPanel_5th);
+                    break;
+                case "btn_6th":
+                    FormTransition(LayoutPanel_6th);
+                    break;
+                case "btn_7th":
+                    FormTransition(LayoutPanel_7th);
+                    break;
+                case "btn_8th":
+                    FormTransition(LayoutPanel_8th);
+                    break;
+                case "btn_9th":
+                    FormTransition(LayoutPanel_9th);
+                    break;
+                default:
+                    FormTransition(LayoutPanel_10th);
+                    break;
             }
         }
-        private void btn_UG_Click(object sender, EventArgs e)
+
+        private void FormTransition(TableLayoutPanel floor)
         {
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
+            floor.Visible = true;
+            floor.Dock = DockStyle.Fill;
+            floor.Visible = false;
 
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
+            if (floor.Visible == false)
             {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.Blue;
-            }
-
-            // Show Virtual Map
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-
-            }
-
-            // Hide List of Directories in Select Destination
-            HidePanels();
-
-            // Make the Selected Layout Visible then Fill it in panel. Then hide it for Transition purposes.
-            LayoutPanel_UG.Visible = true;
-            LayoutPanel_UG.Dock = DockStyle.Fill;
-            LayoutPanel_UG.Visible = false;
-
-            // Transition Code
-            if (LayoutPanel_UG.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_UG);
+                bunifuTransSelectDestination.ShowSync(floor);
                 bunifuTransLabels.ShowSync(pb_BackToHome);
                 bunifuTransLabels.ShowSync(lbl_GoHome);
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_UG);
-            }      
-        }
-
-        private void btn_2nd_Click(object sender, EventArgs e)
-        {
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
-
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-            {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.SteelBlue;
-            }
-
-            // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\2nd-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-
-            }
-
-            HidePanels();
-            LayoutPanel_2nd.Visible = true;
-            LayoutPanel_2nd.Dock = DockStyle.Fill;
-            LayoutPanel_2nd.Visible = false;
-
-            if (LayoutPanel_2nd.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_2nd);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_2nd);
-            }
-
-        }
-
-        private void btn_3rd_Click(object sender, EventArgs e)
-        {
-
-
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
-
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-            {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
-            }
-
-            // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\3rd-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-
-            }
-
-            HidePanels();
-            LayoutPanel_3rd.Visible = true;
-            LayoutPanel_3rd.Dock = DockStyle.Fill;
-            LayoutPanel_3rd.Visible = false;
-
-            if (LayoutPanel_3rd.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_3rd);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-
-                //pb_3rdFlr.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_3rd);
+                bunifuTransSelectDestination.HideSync(floor);
             }
         }
-
-        private void btn_4th_Click(object sender, EventArgs e)
-        {
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
-
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-            {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
-            }
-
-            // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\4th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-
-            }
-
-            HidePanels();
-            LayoutPanel_4th.Visible = true;
-            LayoutPanel_4th.Dock = DockStyle.Fill;
-            LayoutPanel_4th.Visible = false;
-
-            if (LayoutPanel_4th.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_4th);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_4th);
-            }
-        }
-
-        private void btn_5th_Click(object sender, EventArgs e)
-        {
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
-
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-            {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
-            }
-
-            // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\5th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-            }
-
-            HidePanels();
-            LayoutPanel_5th.Visible = true;
-            LayoutPanel_5th.Dock = DockStyle.Fill;
-            LayoutPanel_5th.Visible = false;
-
-            if (LayoutPanel_4th.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_5th);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_5th);
-            }
-        }
-
-        private void btn_6th_Click(object sender, EventArgs e)
-        {
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
-
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-            {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
-            }
-
-            // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\6th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-
-            }
-
-            HidePanels();
-            LayoutPanel_6th.Visible = true;
-            LayoutPanel_6th.Dock = DockStyle.Fill;
-            LayoutPanel_6th.Visible = false;
-
-            if (LayoutPanel_6th.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_6th);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_6th);
-            }
-        }
-
-        private void btn_7th_Click(object sender, EventArgs e)
-        {
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
-
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-            {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
-            }
-
-            // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\7th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-
-            }
-
-            HidePanels();
-            LayoutPanel_7th.Visible = true;
-            LayoutPanel_7th.Dock = DockStyle.Fill;
-            LayoutPanel_7th.Visible = false;
-
-            if (LayoutPanel_7th.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_7th);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_7th);
-            }
-        }
-
-        private void btn_8th_Click(object sender, EventArgs e)
-        {
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
-
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-            {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
-            }
-
-            // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\8th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-
-            }
-
-            HidePanels();
-            LayoutPanel_8th.Visible = true;
-            LayoutPanel_8th.Dock = DockStyle.Fill;
-            LayoutPanel_8th.Visible = false;
-
-            if (LayoutPanel_8th.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_8th);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_8th);
-            }
-        }
-
-        private void btn_9th_Click(object sender, EventArgs e)
-        {
-
-
-            // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\9th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-
-            }
-
-            HidePanels();
-            LayoutPanel_9th.Visible = true;
-            LayoutPanel_9th.Dock = DockStyle.Fill;
-            LayoutPanel_9th.Visible = false;
-
-            if (LayoutPanel_9th.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_9th);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_9th);
-            }
-        }
-
-        private void btn_10th_Click(object sender, EventArgs e)
-        {
-            // Code for changing the Selected Button Color
-            BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
-
-            foreach (Control c in tableLayoutPanel_FloorButtons.Controls)
-            {
-                BunifuFlatButton BtnSelected = c as BunifuFlatButton;
-
-                if (c is BunifuFlatButton)
-                {
-                    BtnSelected.Normalcolor = Color.RoyalBlue;
-                }
-                selectedBtn.Normalcolor = Color.FromArgb(66, 192, 251);
-            }
-
-            // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
-
-            if (pb_VirtualMap.Visible == false)
-            {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\10th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
-
-            }
-
-            HidePanels();
-            LayoutPanel_10th.Visible = true;
-            LayoutPanel_10th.Dock = DockStyle.Fill;
-            LayoutPanel_10th.Visible = false;
-
-            if (LayoutPanel_10th.Visible == false)
-            {
-                bunifuTransSelectDestination.ShowSync(LayoutPanel_10th);
-                bunifuTransLabels.ShowSync(pb_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
-            }
-            else
-            {
-                bunifuTransSelectDestination.HideSync(LayoutPanel_10th);
-            }
-        }
-
+        
         public void HidePanels()
         {
             //Hide all Panel in Select Destinatoin

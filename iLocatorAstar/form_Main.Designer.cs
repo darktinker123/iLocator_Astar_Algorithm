@@ -515,8 +515,8 @@
             this.btn_10th.Location = new System.Drawing.Point(18, 520);
             this.btn_10th.Name = "btn_10th";
             this.btn_10th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_10th.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_10th.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_10th.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_10th.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_10th.selected = false;
             this.btn_10th.Size = new System.Drawing.Size(123, 45);
             this.btn_10th.TabIndex = 8;
@@ -524,7 +524,7 @@
             this.btn_10th.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_10th.Textcolor = System.Drawing.Color.White;
             this.btn_10th.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_10th.Click += new System.EventHandler(this.btn_10th_Click);
+            this.btn_10th.Click += new System.EventHandler(this.SelectedButton);
             // 
             // btn_9th
             // 
@@ -556,8 +556,8 @@
             this.btn_9th.Location = new System.Drawing.Point(18, 462);
             this.btn_9th.Name = "btn_9th";
             this.btn_9th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_9th.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_9th.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_9th.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_9th.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_9th.selected = false;
             this.btn_9th.Size = new System.Drawing.Size(123, 45);
             this.btn_9th.TabIndex = 8;
@@ -565,7 +565,7 @@
             this.btn_9th.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_9th.Textcolor = System.Drawing.Color.White;
             this.btn_9th.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_9th.Click += new System.EventHandler(this.btn_9th_Click);
+            this.btn_9th.Click += new System.EventHandler(this.SelectedButton);
             // 
             // btn_8th
             // 
@@ -597,8 +597,8 @@
             this.btn_8th.Location = new System.Drawing.Point(18, 405);
             this.btn_8th.Name = "btn_8th";
             this.btn_8th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_8th.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_8th.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_8th.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_8th.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_8th.selected = false;
             this.btn_8th.Size = new System.Drawing.Size(123, 45);
             this.btn_8th.TabIndex = 8;
@@ -606,7 +606,7 @@
             this.btn_8th.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_8th.Textcolor = System.Drawing.Color.White;
             this.btn_8th.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_8th.Click += new System.EventHandler(this.btn_8th_Click);
+            this.btn_8th.Click += new System.EventHandler(this.SelectedButton);
             // 
             // btn_7th
             // 
@@ -638,8 +638,8 @@
             this.btn_7th.Location = new System.Drawing.Point(18, 348);
             this.btn_7th.Name = "btn_7th";
             this.btn_7th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_7th.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_7th.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_7th.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_7th.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_7th.selected = false;
             this.btn_7th.Size = new System.Drawing.Size(123, 45);
             this.btn_7th.TabIndex = 8;
@@ -647,7 +647,7 @@
             this.btn_7th.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_7th.Textcolor = System.Drawing.Color.White;
             this.btn_7th.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_7th.Click += new System.EventHandler(this.btn_7th_Click);
+            this.btn_7th.Click += new System.EventHandler(this.SelectedButton);
             // 
             // btn_6th
             // 
@@ -679,8 +679,8 @@
             this.btn_6th.Location = new System.Drawing.Point(18, 291);
             this.btn_6th.Name = "btn_6th";
             this.btn_6th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_6th.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_6th.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_6th.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_6th.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_6th.selected = false;
             this.btn_6th.Size = new System.Drawing.Size(123, 45);
             this.btn_6th.TabIndex = 8;
@@ -688,7 +688,7 @@
             this.btn_6th.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_6th.Textcolor = System.Drawing.Color.White;
             this.btn_6th.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_6th.Click += new System.EventHandler(this.btn_6th_Click);
+            this.btn_6th.Click += new System.EventHandler(this.SelectedButton);
             // 
             // btn_5th
             // 
@@ -720,8 +720,8 @@
             this.btn_5th.Location = new System.Drawing.Point(18, 234);
             this.btn_5th.Name = "btn_5th";
             this.btn_5th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_5th.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_5th.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_5th.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_5th.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_5th.selected = false;
             this.btn_5th.Size = new System.Drawing.Size(123, 45);
             this.btn_5th.TabIndex = 8;
@@ -729,7 +729,7 @@
             this.btn_5th.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_5th.Textcolor = System.Drawing.Color.White;
             this.btn_5th.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_5th.Click += new System.EventHandler(this.btn_5th_Click);
+            this.btn_5th.Click += new System.EventHandler(this.SelectedButton);
             // 
             // btn_4th
             // 
@@ -761,8 +761,8 @@
             this.btn_4th.Location = new System.Drawing.Point(18, 177);
             this.btn_4th.Name = "btn_4th";
             this.btn_4th.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_4th.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_4th.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_4th.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_4th.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_4th.selected = false;
             this.btn_4th.Size = new System.Drawing.Size(123, 45);
             this.btn_4th.TabIndex = 8;
@@ -770,7 +770,7 @@
             this.btn_4th.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_4th.Textcolor = System.Drawing.Color.White;
             this.btn_4th.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_4th.Click += new System.EventHandler(this.btn_4th_Click);
+            this.btn_4th.Click += new System.EventHandler(this.SelectedButton);
             // 
             // btn_3rd
             // 
@@ -802,8 +802,8 @@
             this.btn_3rd.Location = new System.Drawing.Point(18, 120);
             this.btn_3rd.Name = "btn_3rd";
             this.btn_3rd.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_3rd.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_3rd.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_3rd.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_3rd.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_3rd.selected = false;
             this.btn_3rd.Size = new System.Drawing.Size(123, 45);
             this.btn_3rd.TabIndex = 8;
@@ -811,7 +811,7 @@
             this.btn_3rd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_3rd.Textcolor = System.Drawing.Color.White;
             this.btn_3rd.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_3rd.Click += new System.EventHandler(this.btn_3rd_Click);
+            this.btn_3rd.Click += new System.EventHandler(this.SelectedButton);
             // 
             // btn_2nd
             // 
@@ -843,8 +843,8 @@
             this.btn_2nd.Location = new System.Drawing.Point(18, 63);
             this.btn_2nd.Name = "btn_2nd";
             this.btn_2nd.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_2nd.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_2nd.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_2nd.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_2nd.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_2nd.selected = false;
             this.btn_2nd.Size = new System.Drawing.Size(123, 45);
             this.btn_2nd.TabIndex = 8;
@@ -852,7 +852,7 @@
             this.btn_2nd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_2nd.Textcolor = System.Drawing.Color.White;
             this.btn_2nd.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_2nd.Click += new System.EventHandler(this.btn_2nd_Click);
+            this.btn_2nd.Click += new System.EventHandler(this.SelectedButton);
             // 
             // btn_UG
             // 
@@ -884,8 +884,8 @@
             this.btn_UG.Location = new System.Drawing.Point(18, 6);
             this.btn_UG.Name = "btn_UG";
             this.btn_UG.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG.OnHovercolor = System.Drawing.Color.Blue;
-            this.btn_UG.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_UG.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btn_UG.OnHoverTextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_UG.selected = false;
             this.btn_UG.Size = new System.Drawing.Size(123, 45);
             this.btn_UG.TabIndex = 8;
@@ -894,7 +894,7 @@
             this.btn_UG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_UG.Textcolor = System.Drawing.Color.White;
             this.btn_UG.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UG.Click += new System.EventHandler(this.btn_UG_Click);
+            this.btn_UG.Click += new System.EventHandler(this.SelectedButton);
             // 
             // panel_TitleSelectFloor
             // 

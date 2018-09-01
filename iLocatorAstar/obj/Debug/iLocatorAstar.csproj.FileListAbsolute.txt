@@ -90,3 +90,7 @@ C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\o
 C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_AdminDashboard.resources
 C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.Form1.resources
 C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.Form2.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.Form1.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.Form2.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_AdminDashboard.resources
+C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.form_Login.resources
