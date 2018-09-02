@@ -74,6 +74,7 @@ namespace iLocatorAstar
                     c.BackColor = Color.FromArgb(66, 192, 251);
                 }
                 btnSelected.BackColor = Color.Cyan;
+
             }
         }
 
@@ -122,6 +123,11 @@ namespace iLocatorAstar
 
                 bunifuTransition1.ShowSync(pb_VirtualMap);
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
