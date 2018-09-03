@@ -113,8 +113,10 @@ namespace iLocatorAstar
                 if (c is BunifuFlatButton)
                 {
                     BtnSelected.Normalcolor = Color.RoyalBlue;
+                    BtnSelected.Textcolor = Color.White;
                 }
-                selectedBtn.Normalcolor = Color.Blue;
+                selectedBtn.Normalcolor = Color.Gold;
+                selectedBtn.Textcolor = Color.Black;
                 selectedBtn.Font = new Font(selectedBtn.Font.Name, selectedBtn.Font.Size, FontStyle.Bold);
             }
         }
@@ -731,16 +733,16 @@ namespace iLocatorAstar
             Brush blue;
             if (isTracingGoal)
             {
-                blue = Brushes.Black;
+                blue = Brushes.Blue;
             }
             else
             {
-                blue = Brushes.LightGreen;
+                blue = Brushes.MediumSlateBlue;
             }
 
             Font myFont = new Font("Arial", 8, FontStyle.Bold);
             g.FillEllipse(blue, posx - 10, posy - 10, 20, 20);
-            g.DrawString(label, myFont, Brushes.LightGreen, new Point(posx - 7, posy - 6));
+            g.DrawString(label, myFont, Brushes.Yellow, new Point(posx - 7, posy - 6));
         }
 
         public void ConnectVertex(Point p1, Point p2, string label1, string label2)
@@ -756,7 +758,7 @@ namespace iLocatorAstar
             }
             else
             {
-                pen = new Pen(Brushes.DarkBlue, 2);
+                pen = new Pen(Brushes.Purple, 2);
             }
 
             g.DrawLine(pen, p1, p2);
