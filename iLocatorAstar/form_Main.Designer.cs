@@ -5057,7 +5057,7 @@
             this.Name = "form_Main";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 3, 5);
             this.Text = "iLocator | Main";
-            this.Load += new System.EventHandler(this.form_MainTest_Load);
+            this.Load += new System.EventHandler(this.form_Main_Load);
             this.panel_ControlBox.ResumeLayout(false);
             this.panel_ControlBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).EndInit();
