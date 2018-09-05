@@ -56,6 +56,7 @@ namespace iLocatorAstar
                 bunifuTransLabels.ShowSync(lbl_EstimatedTime);
                 bunifuTransLabels.ShowSync(lbl_EstimatedDistance);
             }
+
             SelectedFloor();
         }
 
