@@ -97,10 +97,5 @@ namespace iLocatorAstar
             btn_Parents.Enabled = true;
             btn_Alumni.Enabled = true;
         }
-
-        //private void panel_ContainerSelectUser_Paint_1(object sender, PaintEventArgs e)
-        //{
-        //    ControlPaint.DrawBorder(e.Graphics, this.panel_ContainerSelectUser.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
-        //}
     }
 }

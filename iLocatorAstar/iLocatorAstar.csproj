@@ -50,18 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AStar.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="form_AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,12 +107,6 @@
     <Compile Include="TestZone.Designer.cs">
       <DependentUpon>TestZone.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="form_AdminDashboard.resx">
       <DependentUpon>form_AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>

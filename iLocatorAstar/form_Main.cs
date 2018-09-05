@@ -1045,7 +1045,7 @@ namespace iLocatorAstar
 
         private void btn_UG_3DLab_Click(object sender, EventArgs e)
         {
-            performAStar(1, 17);
+            performAStar(1, 24);
         }
     }
 }

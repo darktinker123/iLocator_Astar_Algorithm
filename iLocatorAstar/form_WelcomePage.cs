@@ -114,11 +114,6 @@ namespace iLocatorAstar
             this.lbl_TimeToday.Text = DateTime.Now.ToString();
         }
 
-        //private void panel_LogoTitle_Paint(object sender, PaintEventArgs e)
-        //{
-        //    ControlPaint.DrawBorder(e.Graphics, this.panel_LogoTitle.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
-        //}
-
         private void btn_Close_Click(object sender, EventArgs e)
         {
             System_Message msgForm = new System_Message();
