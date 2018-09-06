@@ -93,6 +93,7 @@
             this.bunifuThinButton22.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton22.TabIndex = 0;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton224
             // 
@@ -118,6 +119,7 @@
             this.bunifuThinButton224.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton224.TabIndex = 0;
             this.bunifuThinButton224.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton224.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton223
             // 
@@ -143,6 +145,7 @@
             this.bunifuThinButton223.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton223.TabIndex = 0;
             this.bunifuThinButton223.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton223.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton23
             // 
@@ -168,6 +171,7 @@
             this.bunifuThinButton23.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton23.TabIndex = 0;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton24
             // 
@@ -193,6 +197,7 @@
             this.bunifuThinButton24.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton24.TabIndex = 0;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton24.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton25
             // 
@@ -218,6 +223,7 @@
             this.bunifuThinButton25.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton25.TabIndex = 0;
             this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton25.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton26
             // 
@@ -243,6 +249,7 @@
             this.bunifuThinButton26.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton26.TabIndex = 0;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton26.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton217
             // 
@@ -268,6 +275,7 @@
             this.bunifuThinButton217.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton217.TabIndex = 0;
             this.bunifuThinButton217.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton217.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton218
             // 
@@ -293,6 +301,7 @@
             this.bunifuThinButton218.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton218.TabIndex = 0;
             this.bunifuThinButton218.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton218.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton219
             // 
@@ -318,6 +327,7 @@
             this.bunifuThinButton219.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton219.TabIndex = 0;
             this.bunifuThinButton219.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton219.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton220
             // 
@@ -343,6 +353,7 @@
             this.bunifuThinButton220.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton220.TabIndex = 0;
             this.bunifuThinButton220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton220.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton221
             // 
@@ -368,6 +379,7 @@
             this.bunifuThinButton221.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton221.TabIndex = 0;
             this.bunifuThinButton221.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton221.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton222
             // 
@@ -393,6 +405,7 @@
             this.bunifuThinButton222.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton222.TabIndex = 0;
             this.bunifuThinButton222.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton222.Click += new System.EventHandler(this.ButtonClick);
             // 
             // UC_3rd
             // 

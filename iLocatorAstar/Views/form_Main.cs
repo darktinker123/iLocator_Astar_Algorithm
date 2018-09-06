@@ -25,9 +25,10 @@ namespace iLocatorAstar
         ////////////////// SYSTEM UI CODES /////////////////////////////
         //////////////////// START HERE ////////////////////////////////
         ////////////////////////////////////////////////////////////////
-        private void form_MainTest_Load(object sender, EventArgs e)
+        private void form_Main_Load(object sender, EventArgs e)
         {
             loadNodes();
+            initializeDictionary();
 
             // Hide all Directories in Select Destition
             HidePanels();
@@ -58,7 +59,9 @@ namespace iLocatorAstar
             }
 
             SelectedFloor();
+            LoadConfigFile();
         }
+
 
         public void SelectedFloor()
         {
@@ -103,7 +106,47 @@ namespace iLocatorAstar
                     break;
             }
         }
-        private void ButtonSeleted(object sender)
+
+        private void LoadConfigFile()
+        {
+            string[] configInput = File.ReadAllLines(Environment.CurrentDirectory.ToString() + @"\config\config.txt");
+            for (int x = 0; x < configInput.Length; x++)
+            {
+                if (configInput[x] == "[Starting Point]")
+                {
+                    x++;
+
+                    string[] values = configInput[x].Split('=');
+
+                    int temp;
+
+                    if (int.TryParse(values[1], out temp))
+                    {
+                        if (int.Parse(values[1]) < ballList.Count ||
+                            int.Parse(values[1]) == ballList.Count &&
+                             int.Parse(values[1]) > 0)
+                        {
+                            startingNode = int.Parse(values[1]);
+                            break;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Starting Point invalid! Please check the system's configuration file.");
+                            startingNode = 0;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Starting Point invalid! Please check the system's configuration file.");
+                        startingNode = 0;
+                        break;
+                    }
+
+                }
+            }
+        }
+
+        private void ButtonSelected(object sender)
         {
             BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
 
@@ -121,11 +164,12 @@ namespace iLocatorAstar
                 selectedBtn.Font = new Font(selectedBtn.Font.Name, selectedBtn.Font.Size, FontStyle.Bold);
             }
         }
+
         private void btn_UG_Click(object sender, EventArgs e)
         {
    
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
 
             // Show Virtual Map
@@ -161,12 +205,13 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(0, 33);
         }
 
         private void btn_2nd_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -192,12 +237,13 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(32, 41);
         }
 
         private void btn_3rd_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -230,12 +276,13 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(40, 68);
         }
 
         private void btn_4th_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -260,12 +307,13 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(67, 101);
         }
 
         private void btn_5th_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -290,12 +338,13 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(100, 118);
         }
 
         private void btn_6th_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -321,12 +370,13 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(117, 144);
         }
 
         private void btn_7th_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -360,12 +410,13 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(143, 174);
         }
 
         private void btn_8th_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -391,12 +442,13 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(173, 206);
         }
 
         private void btn_9th_Click(object sender, EventArgs e)
         {            
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -421,12 +473,13 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(205, 238);
         }
 
         private void btn_10th_Click(object sender, EventArgs e)
         {
             // Code for changing the Selected Button Color
-            this.ButtonSeleted(sender);
+            this.ButtonSelected(sender);
 
             // Show Virtual Maps
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -451,6 +504,7 @@ namespace iLocatorAstar
             {
                 bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
+            showNodes(237, 259);
         }
 
         //Hide all Panel in Select Destinatoin
@@ -480,22 +534,27 @@ namespace iLocatorAstar
         {
             ControlPaint.DrawBorder(e.Graphics, this.panel_ContainerFloorSelector.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
         } 
+
         private void panel_UniverseSelectDestination_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.panel_UniverseSelectDestination.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
         }
+
         private void panel_TitleVirtualMap_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.panel_TitleVirtualMap.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
         }
+
         private void panel_DetailsSelectedDestination_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.panel_DetailsSelectedDestination.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
         }
+
         private void panel_TitleSelectFloor_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.panel_TitleSelectFloor.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
         }
+
         private void panel_TitleSelectDestination_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.panel_TitleSelectDestination.ClientRectangle,
@@ -504,6 +563,7 @@ namespace iLocatorAstar
             Color.LightGray, 0, ButtonBorderStyle.Solid,
             Color.LightGray, 1, ButtonBorderStyle.Solid);
         }
+
         private void panel_UniverseVirtualMap_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.panel_UniverseVirtualMap.ClientRectangle,
@@ -530,6 +590,19 @@ namespace iLocatorAstar
             Color.LightGray, 0, ButtonBorderStyle.Solid,
             Color.LightGray, 0, ButtonBorderStyle.Solid);
         }
+        
+        //SHOWING OF NODES UPON FORM LOAD
+        public void showNodes(int min, int max)
+        {
+            for (int x = 1; x < ballList.Count; x++)
+            {
+                if (x > min && x < max && destinations.ContainsKey(x))
+                {
+                    drawVertex(ballList[x - 1].X, ballList[x - 1].Y, (x).ToString());
+                }
+            }
+        }
+
         ////////////////// SYSTEM ALGORITHM CODE //////////////////////////////////////
         ////////////////////// START HERE //////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////////////
@@ -544,8 +617,10 @@ namespace iLocatorAstar
         bool onNinth = false;
         bool onTenth = false;
 
+        public int startingNode;
+
         int[] stairs = { 14, 39, 37, 60, 62, 77, 79, 112, 114, 124, 126, 150, 152, 212, 214, 244, 180, 182 };
-        Dictionary<int, string> destinations = new Dictionary<int, string>();
+        public Dictionary<int, string> destinations = new Dictionary<int, string>();
 
         List<Point> ballList = new List<Point>();
         List<Point> text = new List<Point>();
@@ -708,16 +783,16 @@ namespace iLocatorAstar
             Brush blue;
             if (isTracingGoal)
             {
-                blue = Brushes.Blue;
+                blue = Brushes.DeepSkyBlue;
             }
             else
             {
-                blue = Brushes.MediumSlateBlue;
+                blue = Brushes.MediumSeaGreen;
             }
 
             Font myFont = new Font("Arial", 8, FontStyle.Bold);
             g.FillEllipse(blue, posx - 10, posy - 10, 20, 20);
-            g.DrawString(label, myFont, Brushes.Yellow, new Point(posx - 7, posy - 6));
+            g.DrawString(label, myFont, Brushes.Black, new Point(posx - 7, posy - 6));
         }
 
         public void ConnectVertex(Point p1, Point p2, string label1, string label2)
@@ -729,7 +804,7 @@ namespace iLocatorAstar
             Pen pen;
             if (isTracingGoal)
             {
-                pen = new Pen(Brushes.Red, 2);
+                pen = new Pen(Brushes.DeepPink, 2);
             }
             else
             {
@@ -1019,14 +1094,27 @@ namespace iLocatorAstar
             }
         }
 
-        private void btn_UG_3DLab_Click(object sender, EventArgs e)
+        //METHOD FOR SELECTING LOCATIONS (CLICKING OF THIN BUTTONS)
+        public void thinButtonClick(BunifuThinButton2 btn)
         {
-            performAStar(1, 10);
+            string btnName = btn.ButtonText;
+
+            string nodenumber = "";
+            for (int x = 1; x < btnName.Length; x++)
+            {
+                if (btnName[x] != ')')
+                {
+                    nodenumber += btnName[x].ToString();
+                }
+
+                else
+                {
+                    break;
+                }
+            }
+
+            performAStar(startingNode, int.Parse(nodenumber));     
         }
 
-        private void grpBox_UG_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

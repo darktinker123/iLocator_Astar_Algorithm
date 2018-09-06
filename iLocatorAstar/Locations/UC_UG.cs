@@ -23,9 +23,11 @@ namespace iLocatorAstar
 
         form_Main MainForm;
         
-        private void btn_UG_3DLab_Click(object sender, EventArgs e)
+        private void buttonClick(object sender, EventArgs e)
         {
-            MainForm.performAStar(1, 10);
+            BunifuThinButton2 btn=(BunifuThinButton2)sender;
+            MainForm.thinButtonClick(btn);
         }
+
     }
 }

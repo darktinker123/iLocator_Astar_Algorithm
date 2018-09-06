@@ -158,6 +158,7 @@
             this.btn_AdminLogin.ButtonText = "LOGIN";
             this.btn_AdminLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AdminLogin.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_AdminLogin.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AdminLogin.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_AdminLogin.Iconimage = null;
             this.btn_AdminLogin.Iconimage_right = null;
@@ -200,11 +201,11 @@
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(195, 122);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(171, 122);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(107, 21);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(179, 39);
             this.bunifuCustomLabel1.TabIndex = 6;
             this.bunifuCustomLabel1.Text = "Admin Login";
             // 
@@ -222,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(576, 549);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
