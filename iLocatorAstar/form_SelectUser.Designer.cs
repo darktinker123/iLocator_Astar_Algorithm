@@ -36,19 +36,19 @@
             this.pb_iLocatorLogo = new System.Windows.Forms.PictureBox();
             this.lbl_FormTitle = new System.Windows.Forms.Label();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.time_Timer = new System.Windows.Forms.Timer(this.components);
-            this.bunifuFadeTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.Loading_Form = new System.Windows.Forms.Timer(this.components);
             this.lbl_Description = new System.Windows.Forms.Label();
             this.tableLayoutPanel_SelectUser = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Back = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btn_Student = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btn_Guest = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btn_Alumni = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Parents = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_Alumni = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_Guest = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_Student = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_Back = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel_ContainerSelectUser = new System.Windows.Forms.Panel();
             this.lbl_TimeToday = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel_ContainerUniverse = new System.Windows.Forms.Panel();
+            this.time_Timer = new System.Windows.Forms.Timer(this.components);
+            this.bunifuFadeTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.Loading_Form = new System.Windows.Forms.Timer(this.components);
             this.panel_ControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).BeginInit();
             this.tableLayoutPanel_SelectUser.SuspendLayout();
@@ -117,38 +117,6 @@
             this.bunifuTransition1.DefaultAnimation = animation1;
             this.bunifuTransition1.Interval = 20;
             // 
-            // time_Timer
-            // 
-            this.time_Timer.Enabled = true;
-            this.time_Timer.Interval = 1000;
-            this.time_Timer.Tick += new System.EventHandler(this.timerTick);
-            // 
-            // bunifuFadeTransition
-            // 
-            this.bunifuFadeTransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
-            this.bunifuFadeTransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.bunifuFadeTransition.DefaultAnimation = animation2;
-            // 
-            // Loading_Form
-            // 
-            this.Loading_Form.Interval = 2000;
-            this.Loading_Form.Tick += new System.EventHandler(this.Loading_Form_Tick);
-            // 
             // lbl_Description
             // 
             this.lbl_Description.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -192,39 +160,86 @@
             this.tableLayoutPanel_SelectUser.TabIndex = 4;
             this.tableLayoutPanel_SelectUser.Visible = false;
             // 
-            // btn_Back
+            // btn_Parents
             // 
-            this.btn_Back.BackColor = System.Drawing.Color.Khaki;
-            this.btn_Back.color = System.Drawing.Color.Khaki;
-            this.btn_Back.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(193)))), ((int)(((byte)(0)))));
-            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btn_Back, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.btn_Back, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Back.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Back.Enabled = false;
-            this.btn_Back.Font = new System.Drawing.Font("Calibri", 20F);
-            this.btn_Back.ForeColor = System.Drawing.Color.Olive;
-            this.btn_Back.Image = ((System.Drawing.Image)(resources.GetObject("btn_Back.Image")));
-            this.btn_Back.ImagePosition = 28;
-            this.btn_Back.ImageZoom = 50;
-            this.btn_Back.LabelPosition = 56;
-            this.btn_Back.LabelText = "Back";
-            this.btn_Back.Location = new System.Drawing.Point(6, 7);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(161, 289);
-            this.btn_Back.TabIndex = 2;
-            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
-            this.btn_Back.MouseHover += new System.EventHandler(this.btn_Student_MouseHover);
+            this.btn_Parents.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Parents.color = System.Drawing.Color.RoyalBlue;
+            this.btn_Parents.colorActive = System.Drawing.Color.SkyBlue;
+            this.btn_Parents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFadeTransition.SetDecoration(this.btn_Parents, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.btn_Parents, BunifuAnimatorNS.DecorationType.None);
+            this.btn_Parents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Parents.Enabled = false;
+            this.btn_Parents.Font = new System.Drawing.Font("Calibri", 20F);
+            this.btn_Parents.ForeColor = System.Drawing.Color.White;
+            this.btn_Parents.Image = ((System.Drawing.Image)(resources.GetObject("btn_Parents.Image")));
+            this.btn_Parents.ImagePosition = 28;
+            this.btn_Parents.ImageZoom = 50;
+            this.btn_Parents.LabelPosition = 56;
+            this.btn_Parents.LabelText = "Parent/s";
+            this.btn_Parents.Location = new System.Drawing.Point(766, 7);
+            this.btn_Parents.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btn_Parents.Name = "btn_Parents";
+            this.btn_Parents.Size = new System.Drawing.Size(166, 289);
+            this.btn_Parents.TabIndex = 2;
+            this.btn_Parents.Click += new System.EventHandler(this.btnClick);
+            // 
+            // btn_Alumni
+            // 
+            this.btn_Alumni.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Alumni.color = System.Drawing.Color.RoyalBlue;
+            this.btn_Alumni.colorActive = System.Drawing.Color.SkyBlue;
+            this.btn_Alumni.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFadeTransition.SetDecoration(this.btn_Alumni, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.btn_Alumni, BunifuAnimatorNS.DecorationType.None);
+            this.btn_Alumni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Alumni.Enabled = false;
+            this.btn_Alumni.Font = new System.Drawing.Font("Calibri", 20F);
+            this.btn_Alumni.ForeColor = System.Drawing.Color.White;
+            this.btn_Alumni.Image = ((System.Drawing.Image)(resources.GetObject("btn_Alumni.Image")));
+            this.btn_Alumni.ImagePosition = 28;
+            this.btn_Alumni.ImageZoom = 50;
+            this.btn_Alumni.LabelPosition = 56;
+            this.btn_Alumni.LabelText = "Alumni";
+            this.btn_Alumni.Location = new System.Drawing.Point(576, 7);
+            this.btn_Alumni.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btn_Alumni.Name = "btn_Alumni";
+            this.btn_Alumni.Size = new System.Drawing.Size(161, 289);
+            this.btn_Alumni.TabIndex = 2;
+            this.btn_Alumni.Click += new System.EventHandler(this.btnClick);
+            // 
+            // btn_Guest
+            // 
+            this.btn_Guest.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Guest.color = System.Drawing.Color.RoyalBlue;
+            this.btn_Guest.colorActive = System.Drawing.Color.SkyBlue;
+            this.btn_Guest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFadeTransition.SetDecoration(this.btn_Guest, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.btn_Guest, BunifuAnimatorNS.DecorationType.None);
+            this.btn_Guest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Guest.Enabled = false;
+            this.btn_Guest.Font = new System.Drawing.Font("Calibri", 20F);
+            this.btn_Guest.ForeColor = System.Drawing.Color.White;
+            this.btn_Guest.Image = ((System.Drawing.Image)(resources.GetObject("btn_Guest.Image")));
+            this.btn_Guest.ImagePosition = 28;
+            this.btn_Guest.ImageZoom = 50;
+            this.btn_Guest.LabelPosition = 56;
+            this.btn_Guest.LabelText = "Guest";
+            this.btn_Guest.Location = new System.Drawing.Point(386, 7);
+            this.btn_Guest.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btn_Guest.Name = "btn_Guest";
+            this.btn_Guest.Size = new System.Drawing.Size(161, 289);
+            this.btn_Guest.TabIndex = 2;
+            this.btn_Guest.Click += new System.EventHandler(this.btnClick);
             // 
             // btn_Student
             // 
             this.btn_Student.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Student.color = System.Drawing.Color.RoyalBlue;
-            this.btn_Student.colorActive = System.Drawing.Color.Blue;
+            this.btn_Student.colorActive = System.Drawing.Color.SkyBlue;
             this.btn_Student.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btn_Student, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.btn_Student, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.btn_Student, BunifuAnimatorNS.DecorationType.None);
             this.btn_Student.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Student.Enabled = false;
             this.btn_Student.Font = new System.Drawing.Font("Calibri", 20F);
@@ -242,77 +257,30 @@
             this.btn_Student.Click += new System.EventHandler(this.btnClick);
             this.btn_Student.MouseHover += new System.EventHandler(this.btn_Student_MouseHover);
             // 
-            // btn_Guest
+            // btn_Back
             // 
-            this.btn_Guest.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_Guest.color = System.Drawing.Color.RoyalBlue;
-            this.btn_Guest.colorActive = System.Drawing.Color.Blue;
-            this.btn_Guest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btn_Guest, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.btn_Guest, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Guest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Guest.Enabled = false;
-            this.btn_Guest.Font = new System.Drawing.Font("Calibri", 20F);
-            this.btn_Guest.ForeColor = System.Drawing.Color.White;
-            this.btn_Guest.Image = ((System.Drawing.Image)(resources.GetObject("btn_Guest.Image")));
-            this.btn_Guest.ImagePosition = 28;
-            this.btn_Guest.ImageZoom = 50;
-            this.btn_Guest.LabelPosition = 56;
-            this.btn_Guest.LabelText = "Guest";
-            this.btn_Guest.Location = new System.Drawing.Point(386, 7);
-            this.btn_Guest.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btn_Guest.Name = "btn_Guest";
-            this.btn_Guest.Size = new System.Drawing.Size(161, 289);
-            this.btn_Guest.TabIndex = 2;
-            this.btn_Guest.Click += new System.EventHandler(this.btnClick);
-            // 
-            // btn_Alumni
-            // 
-            this.btn_Alumni.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_Alumni.color = System.Drawing.Color.RoyalBlue;
-            this.btn_Alumni.colorActive = System.Drawing.Color.Blue;
-            this.btn_Alumni.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btn_Alumni, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.btn_Alumni, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Alumni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Alumni.Enabled = false;
-            this.btn_Alumni.Font = new System.Drawing.Font("Calibri", 20F);
-            this.btn_Alumni.ForeColor = System.Drawing.Color.White;
-            this.btn_Alumni.Image = ((System.Drawing.Image)(resources.GetObject("btn_Alumni.Image")));
-            this.btn_Alumni.ImagePosition = 28;
-            this.btn_Alumni.ImageZoom = 50;
-            this.btn_Alumni.LabelPosition = 56;
-            this.btn_Alumni.LabelText = "Alumni";
-            this.btn_Alumni.Location = new System.Drawing.Point(576, 7);
-            this.btn_Alumni.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btn_Alumni.Name = "btn_Alumni";
-            this.btn_Alumni.Size = new System.Drawing.Size(161, 289);
-            this.btn_Alumni.TabIndex = 2;
-            this.btn_Alumni.Click += new System.EventHandler(this.btnClick);
-            // 
-            // btn_Parents
-            // 
-            this.btn_Parents.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_Parents.color = System.Drawing.Color.RoyalBlue;
-            this.btn_Parents.colorActive = System.Drawing.Color.Blue;
-            this.btn_Parents.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btn_Parents, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.btn_Parents, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Parents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Parents.Enabled = false;
-            this.btn_Parents.Font = new System.Drawing.Font("Calibri", 20F);
-            this.btn_Parents.ForeColor = System.Drawing.Color.White;
-            this.btn_Parents.Image = ((System.Drawing.Image)(resources.GetObject("btn_Parents.Image")));
-            this.btn_Parents.ImagePosition = 28;
-            this.btn_Parents.ImageZoom = 50;
-            this.btn_Parents.LabelPosition = 56;
-            this.btn_Parents.LabelText = "Parent/s";
-            this.btn_Parents.Location = new System.Drawing.Point(766, 7);
-            this.btn_Parents.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btn_Parents.Name = "btn_Parents";
-            this.btn_Parents.Size = new System.Drawing.Size(166, 289);
-            this.btn_Parents.TabIndex = 2;
-            this.btn_Parents.Click += new System.EventHandler(this.btnClick);
+            this.btn_Back.BackColor = System.Drawing.Color.Khaki;
+            this.btn_Back.color = System.Drawing.Color.Khaki;
+            this.btn_Back.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(193)))), ((int)(((byte)(0)))));
+            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFadeTransition.SetDecoration(this.btn_Back, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.btn_Back, BunifuAnimatorNS.DecorationType.None);
+            this.btn_Back.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Back.Enabled = false;
+            this.btn_Back.Font = new System.Drawing.Font("Calibri", 20F);
+            this.btn_Back.ForeColor = System.Drawing.Color.Olive;
+            this.btn_Back.Image = ((System.Drawing.Image)(resources.GetObject("btn_Back.Image")));
+            this.btn_Back.ImagePosition = 28;
+            this.btn_Back.ImageZoom = 50;
+            this.btn_Back.LabelPosition = 56;
+            this.btn_Back.LabelText = "Back";
+            this.btn_Back.Location = new System.Drawing.Point(6, 7);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(161, 289);
+            this.btn_Back.TabIndex = 2;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            this.btn_Back.MouseHover += new System.EventHandler(this.btn_Student_MouseHover);
             // 
             // panel_ContainerSelectUser
             // 
@@ -355,6 +323,38 @@
             this.panel_ContainerUniverse.Name = "panel_ContainerUniverse";
             this.panel_ContainerUniverse.Size = new System.Drawing.Size(996, 438);
             this.panel_ContainerUniverse.TabIndex = 2;
+            // 
+            // time_Timer
+            // 
+            this.time_Timer.Enabled = true;
+            this.time_Timer.Interval = 1000;
+            this.time_Timer.Tick += new System.EventHandler(this.timerTick);
+            // 
+            // bunifuFadeTransition
+            // 
+            this.bunifuFadeTransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuFadeTransition.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.bunifuFadeTransition.DefaultAnimation = animation2;
+            // 
+            // Loading_Form
+            // 
+            this.Loading_Form.Interval = 2000;
+            this.Loading_Form.Tick += new System.EventHandler(this.Loading_Form_Tick);
             // 
             // form_SelectUser
             // 

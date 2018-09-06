@@ -31,7 +31,7 @@ namespace iLocatorAstar
 
             // Hide all Directories in Select Destition
             HidePanels();
-
+            
             // Maximized Windows when Open
             WindowState = FormWindowState.Maximized;
 
@@ -114,15 +114,19 @@ namespace iLocatorAstar
                 if (c is BunifuFlatButton)
                 {
                     BtnSelected.Normalcolor = Color.RoyalBlue;
+                    BtnSelected.Textcolor = Color.White;
                 }
-                selectedBtn.Normalcolor = Color.Blue;
+                selectedBtn.Normalcolor = Color.Yellow;
+                selectedBtn.Textcolor = Color.Black;
                 selectedBtn.Font = new Font(selectedBtn.Font.Name, selectedBtn.Font.Size, FontStyle.Bold);
             }
         }
         private void btn_UG_Click(object sender, EventArgs e)
         {
+   
             // Code for changing the Selected Button Color
             this.ButtonSeleted(sender);
+
 
             // Show Virtual Map
             bunifuTransMaps.HideSync(pb_VirtualMap);
@@ -131,7 +135,7 @@ namespace iLocatorAstar
             {
                 if (SystemFloor.ToString() == "UG")
                 {
-                       Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev-here.jpg");
+                    Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev-here.jpg");
                     pb_VirtualMap.Image = img;
                 }
                 else
@@ -146,21 +150,16 @@ namespace iLocatorAstar
             // Hide List of Directories in Select Destination
             HidePanels();
 
-            // Make the Selected Layout Visible then Fill it in panel. Then hide it for Transition purposes.
-            grpBox_UG.Visible = true;
-            grpBox_UG.Dock = DockStyle.Fill;
-            grpBox_UG.Visible = false;
-
-            // Transition Code
-            if (grpBox_UG.Visible == false)
+            UC_UG UserControl = new UC_UG(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_UG);
-                bunifuTransLabels.ShowSync(btn_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_UG);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
@@ -181,18 +180,17 @@ namespace iLocatorAstar
 
             }
             HidePanels();
-            grpBox_2ndFloor.Visible = true;
-            grpBox_2ndFloor.Dock = DockStyle.Fill;
-            grpBox_2ndFloor.Visible = false;
-            if (grpBox_2ndFloor.Visible == false)
+
+            UC_2nd UserControl = new UC_2nd(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_2ndFloor);
-                bunifuTransLabels.ShowSync(btn_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_2ndFloor);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
@@ -220,19 +218,17 @@ namespace iLocatorAstar
                 bunifuTransMaps.ShowSync(pb_VirtualMap);
             }
             HidePanels();
-            grpBox_3rdFloor.Visible = true;
-            grpBox_3rdFloor.Dock = DockStyle.Fill;
-            grpBox_3rdFloor.Visible = false;
 
-            if (grpBox_3rdFloor.Visible == false)
+            UC_3rd UserControl = new UC_3rd(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_3rdFloor);
-                bunifuTransLabels.ShowSync(btn_BackToHome); 
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_3rdFloor);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
@@ -253,19 +249,16 @@ namespace iLocatorAstar
             }
 
             HidePanels();
-            grpBox_5thFloor.Visible = true;
-            grpBox_5thFloor.Dock = DockStyle.Fill;
-            grpBox_5thFloor.Visible = false;
-
-            if (grpBox_5thFloor.Visible == false)
+            UC_4th UserControl = new UC_4th(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_5thFloor);
-                bunifuTransLabels.ShowSync(btn_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_5thFloor);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
@@ -286,19 +279,16 @@ namespace iLocatorAstar
             }
 
             HidePanels();
-            grpBox_5thFloor.Visible = true;
-            grpBox_5thFloor.Dock = DockStyle.Fill;
-            grpBox_5thFloor.Visible = false;
-
-            if (grpBox_5thFloor.Visible == false)
+            UC_5th UserControl = new UC_5th(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_5thFloor);
-                bunifuTransLabels.ShowSync(btn_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_5thFloor);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
@@ -320,19 +310,16 @@ namespace iLocatorAstar
 
             }
             HidePanels();
-            grpBox_7thFloor.Visible = true;
-            grpBox_7thFloor.Dock = DockStyle.Fill;
-            grpBox_7thFloor.Visible = false;
-
-            if (grpBox_7thFloor.Visible == false)
+            UC_6th UserControl = new UC_6th(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_7thFloor);
-                bunifuTransLabels.ShowSync(btn_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_7thFloor);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
@@ -362,19 +349,16 @@ namespace iLocatorAstar
             }
 
             HidePanels();
-            grpBox_7thFloor.Visible = true;
-            grpBox_7thFloor.Dock = DockStyle.Fill;
-            grpBox_7thFloor.Visible = false;
-
-            if (grpBox_7thFloor.Visible == false)
+            UC_7th UserControl = new UC_7th(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_7thFloor);
-                bunifuTransLabels.ShowSync(btn_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_7thFloor);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
@@ -396,18 +380,16 @@ namespace iLocatorAstar
             }
 
             HidePanels();
-            grpBox_8thFloor.Visible = true;
-            grpBox_8thFloor.Dock = DockStyle.Fill;
-            grpBox_8thFloor.Visible = false;
-            if (grpBox_8thFloor.Visible == false)
+            UC_8th UserControl = new UC_8th(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_8thFloor);
-                bunifuTransLabels.ShowSync(btn_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_8thFloor);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
@@ -428,19 +410,16 @@ namespace iLocatorAstar
             }
 
             HidePanels();
-            grpBox_9thFloor.Visible = true;
-            grpBox_9thFloor.Dock = DockStyle.Fill;
-            grpBox_9thFloor.Visible = false;
-
-            if (grpBox_9thFloor.Visible == false)
+            UC_9th UserControl = new UC_9th(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_9thFloor);
-                bunifuTransLabels.ShowSync(btn_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_9thFloor);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
@@ -461,35 +440,32 @@ namespace iLocatorAstar
             }
 
             HidePanels();
-            grpBox_10thFloor.Visible = true;
-            grpBox_10thFloor.Dock = DockStyle.Fill;
-            grpBox_10thFloor.Visible = false;
-
-            if (grpBox_10thFloor.Visible == false)
+            UC_10th UserControl = new UC_10th(this);
+            if (panel_ContainerSelectDestination.Visible == false)
             {
-                bunifuTransSelectDestination.ShowSync(grpBox_10thFloor);
-                bunifuTransLabels.ShowSync(btn_BackToHome);
-                bunifuTransLabels.ShowSync(lbl_GoHome);
+                panel_ContainerSelectDestination.Controls.Add(UserControl);
+                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
             }
             else
             {
-                bunifuTransSelectDestination.HideSync(grpBox_10thFloor);
+                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
             }
         }
 
         //Hide all Panel in Select Destinatoin
         public void HidePanels()
         {
-            grpBox_UG.Visible = false;
-            grpBox_2ndFloor.Visible = false;
-            grpBox_3rdFloor.Visible = false;
-            grpBox_4thFloor.Visible = false;
-            grpBox_5thFloor.Visible = false;
-            grpBox_6thFloor.Visible = false;
-            grpBox_7thFloor.Visible = false;
-            grpBox_8thFloor.Visible = false;
-            grpBox_9thFloor.Visible = false;
-            grpBox_10thFloor.Visible = false;
+            panel_ContainerSelectDestination.Visible = false;
+            panel_ContainerSelectDestination.Controls.Clear();
+        }
+
+        public void ShowAddonButtons()
+        {
+            bunifuTransLabels.ShowSync(btn_BackToHome);
+            bunifuTransLabels.ShowSync(lbl_GoHome);
+            bunifuTransLabels.ShowSync(btn_Replay);
+            bunifuTransLabels.ShowSync(lbl_Replay);
         }
 
         //Code for Close Application
@@ -732,16 +708,16 @@ namespace iLocatorAstar
             Brush blue;
             if (isTracingGoal)
             {
-                blue = Brushes.Black;
+                blue = Brushes.Blue;
             }
             else
             {
-                blue = Brushes.LightGreen;
+                blue = Brushes.MediumSlateBlue;
             }
 
             Font myFont = new Font("Arial", 8, FontStyle.Bold);
             g.FillEllipse(blue, posx - 10, posy - 10, 20, 20);
-            g.DrawString(label, myFont, Brushes.LightGreen, new Point(posx - 7, posy - 6));
+            g.DrawString(label, myFont, Brushes.Yellow, new Point(posx - 7, posy - 6));
         }
 
         public void ConnectVertex(Point p1, Point p2, string label1, string label2)
@@ -757,7 +733,7 @@ namespace iLocatorAstar
             }
             else
             {
-                pen = new Pen(Brushes.DarkBlue, 2);
+                pen = new Pen(Brushes.Purple, 2);
             }
 
             g.DrawLine(pen, p1, p2);
@@ -1045,7 +1021,12 @@ namespace iLocatorAstar
 
         private void btn_UG_3DLab_Click(object sender, EventArgs e)
         {
-            performAStar(1, 24);
+            performAStar(1, 10);
+        }
+
+        private void grpBox_UG_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
