@@ -18,8 +18,8 @@ namespace iLocatorAstar
             foreach (var edge in edges)
                 AddEdge(edge);
         }
-        public Dictionary<T, HashSet<T>> AdjacencyList { get; } = new Dictionary<T, HashSet<T>>();
-        public Dictionary<Tuple<T, T>, int> withCost { get; } = new Dictionary<Tuple<T, T>, int>();
+        public Dictionary<T, HashSet<T>> AdjacencyList  = new Dictionary<T, HashSet<T>>();
+        public Dictionary<Tuple<T, T>, int> withCost = new Dictionary<Tuple<T, T>, int>();
         public Dictionary<T, Point> location = new Dictionary<T, Point>();
         public void AddVertex(T vertex)
         {

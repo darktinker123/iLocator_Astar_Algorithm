@@ -49,39 +49,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AStar.cs" />
-    <Compile Include="form_AdminDashboard.cs">
+    <Compile Include="Models\AStar.cs" />
+    <Compile Include="Views\form_AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_AdminDashboard.Designer.cs">
+    <Compile Include="Views\form_AdminDashboard.Designer.cs">
       <DependentUpon>form_AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_Login.cs">
+    <Compile Include="Views\form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_Login.Designer.cs">
+    <Compile Include="Views\form_Login.Designer.cs">
       <DependentUpon>form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_Main.cs">
+    <Compile Include="Views\form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_Main.Designer.cs">
+    <Compile Include="Views\form_Main.Designer.cs">
       <DependentUpon>form_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_SelectUser.cs">
+    <Compile Include="Views\form_SelectUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_SelectUser.Designer.cs">
+    <Compile Include="Views\form_SelectUser.Designer.cs">
       <DependentUpon>form_SelectUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_WelcomePage.cs">
+    <Compile Include="Views\form_WelcomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_WelcomePage.Designer.cs">
+    <Compile Include="Views\form_WelcomePage.Designer.cs">
       <DependentUpon>form_WelcomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Graph.cs" />
-    <Compile Include="GraphAlgorithms.cs" />
+    <Compile Include="Models\Graph.cs" />
+    <Compile Include="Models\GraphAlgorithms.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -89,124 +89,124 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="System_Info.cs">
+    <Compile Include="Views\System_Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="System_Info.Designer.cs">
+    <Compile Include="Views\System_Info.Designer.cs">
       <DependentUpon>System_Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="System_Message.cs">
+    <Compile Include="Views\System_Message.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="System_Message.Designer.cs">
+    <Compile Include="Views\System_Message.Designer.cs">
       <DependentUpon>System_Message.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestZone.cs">
+    <Compile Include="Views\TestZone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestZone.Designer.cs">
+    <Compile Include="Views\TestZone.Designer.cs">
       <DependentUpon>TestZone.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_10th.cs">
+    <Compile Include="Locations\UC_10th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_10th.Designer.cs">
+    <Compile Include="Locations\UC_10th.Designer.cs">
       <DependentUpon>UC_10th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_2nd.cs">
+    <Compile Include="Locations\UC_2nd.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_2nd.Designer.cs">
+    <Compile Include="Locations\UC_2nd.Designer.cs">
       <DependentUpon>UC_2nd.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_3rd.cs">
+    <Compile Include="Locations\UC_3rd.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_3rd.Designer.cs">
+    <Compile Include="Locations\UC_3rd.Designer.cs">
       <DependentUpon>UC_3rd.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_4th.cs">
+    <Compile Include="Locations\UC_4th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_4th.Designer.cs">
+    <Compile Include="Locations\UC_4th.Designer.cs">
       <DependentUpon>UC_4th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_5th.cs">
+    <Compile Include="Locations\UC_5th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_5th.Designer.cs">
+    <Compile Include="Locations\UC_5th.Designer.cs">
       <DependentUpon>UC_5th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_6th.cs">
+    <Compile Include="Locations\UC_6th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_6th.Designer.cs">
+    <Compile Include="Locations\UC_6th.Designer.cs">
       <DependentUpon>UC_6th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_7th.cs">
+    <Compile Include="Locations\UC_7th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_7th.Designer.cs">
+    <Compile Include="Locations\UC_7th.Designer.cs">
       <DependentUpon>UC_7th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_8th.cs">
+    <Compile Include="Locations\UC_8th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_8th.Designer.cs">
+    <Compile Include="Locations\UC_8th.Designer.cs">
       <DependentUpon>UC_8th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_9th.cs">
+    <Compile Include="Locations\UC_9th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_9th.Designer.cs">
+    <Compile Include="Locations\UC_9th.Designer.cs">
       <DependentUpon>UC_9th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_UG.cs">
+    <Compile Include="Locations\UC_UG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_UG.Designer.cs">
+    <Compile Include="Locations\UC_UG.Designer.cs">
       <DependentUpon>UC_UG.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UC_10th.resx">
+    <EmbeddedResource Include="Locations\UC_10th.resx">
       <DependentUpon>UC_10th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_2nd.resx">
+    <EmbeddedResource Include="Locations\UC_2nd.resx">
       <DependentUpon>UC_2nd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_3rd.resx">
+    <EmbeddedResource Include="Locations\UC_3rd.resx">
       <DependentUpon>UC_3rd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_4th.resx">
+    <EmbeddedResource Include="Locations\UC_4th.resx">
       <DependentUpon>UC_4th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_5th.resx">
+    <EmbeddedResource Include="Locations\UC_5th.resx">
       <DependentUpon>UC_5th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_6th.resx">
+    <EmbeddedResource Include="Locations\UC_6th.resx">
       <DependentUpon>UC_6th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_7th.resx">
+    <EmbeddedResource Include="Locations\UC_7th.resx">
       <DependentUpon>UC_7th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_8th.resx">
+    <EmbeddedResource Include="Locations\UC_8th.resx">
       <DependentUpon>UC_8th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_9th.resx">
+    <EmbeddedResource Include="Locations\UC_9th.resx">
       <DependentUpon>UC_9th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_AdminDashboard.resx">
+    <EmbeddedResource Include="Views\form_AdminDashboard.resx">
       <DependentUpon>form_AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_Login.resx">
+    <EmbeddedResource Include="Views\form_Login.resx">
       <DependentUpon>form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_Main.resx">
+    <EmbeddedResource Include="Views\form_Main.resx">
       <DependentUpon>form_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_SelectUser.resx">
+    <EmbeddedResource Include="Views\form_SelectUser.resx">
       <DependentUpon>form_SelectUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_WelcomePage.resx">
+    <EmbeddedResource Include="Views\form_WelcomePage.resx">
       <DependentUpon>form_WelcomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -214,18 +214,19 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="System_Info.resx">
+    <EmbeddedResource Include="Views\System_Info.resx">
       <DependentUpon>System_Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="System_Message.resx">
+    <EmbeddedResource Include="Views\System_Message.resx">
       <DependentUpon>System_Message.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestZone.resx">
+    <EmbeddedResource Include="Views\TestZone.resx">
       <DependentUpon>TestZone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_UG.resx">
+    <EmbeddedResource Include="Locations\UC_UG.resx">
       <DependentUpon>UC_UG.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -264,7 +265,6 @@
     <None Include="Resources\message-2-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Directions\" />
     <Folder Include="Setup\" />
   </ItemGroup>
   <ItemGroup>
