@@ -385,9 +385,10 @@
             this.panel_SystemStatus.Controls.Add(this.lbl_SysCurrentFloor);
             this.bunifuFadeTransition.SetDecoration(this.panel_SystemStatus, BunifuAnimatorNS.DecorationType.None);
             this.bunifuACTTransition.SetDecoration(this.panel_SystemStatus, BunifuAnimatorNS.DecorationType.None);
-            this.panel_SystemStatus.Location = new System.Drawing.Point(674, 42);
+            this.panel_SystemStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_SystemStatus.Location = new System.Drawing.Point(613, 42);
             this.panel_SystemStatus.Name = "panel_SystemStatus";
-            this.panel_SystemStatus.Size = new System.Drawing.Size(157, 29);
+            this.panel_SystemStatus.Size = new System.Drawing.Size(218, 61);
             this.panel_SystemStatus.TabIndex = 7;
             // 
             // lbl_VarSysCurrentFloor
@@ -395,11 +396,11 @@
             this.lbl_VarSysCurrentFloor.AutoSize = true;
             this.bunifuACTTransition.SetDecoration(this.lbl_VarSysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_VarSysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_VarSysCurrentFloor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_VarSysCurrentFloor.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbl_VarSysCurrentFloor.Location = new System.Drawing.Point(106, 3);
+            this.lbl_VarSysCurrentFloor.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_VarSysCurrentFloor.ForeColor = System.Drawing.Color.Black;
+            this.lbl_VarSysCurrentFloor.Location = new System.Drawing.Point(14, 28);
             this.lbl_VarSysCurrentFloor.Name = "lbl_VarSysCurrentFloor";
-            this.lbl_VarSysCurrentFloor.Size = new System.Drawing.Size(15, 17);
+            this.lbl_VarSysCurrentFloor.Size = new System.Drawing.Size(21, 22);
             this.lbl_VarSysCurrentFloor.TabIndex = 2;
             this.lbl_VarSysCurrentFloor.Text = "$";
             // 
@@ -408,11 +409,11 @@
             this.lbl_SysCurrentFloor.AutoSize = true;
             this.bunifuACTTransition.SetDecoration(this.lbl_SysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_SysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_SysCurrentFloor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SysCurrentFloor.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SysCurrentFloor.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbl_SysCurrentFloor.Location = new System.Drawing.Point(13, 3);
+            this.lbl_SysCurrentFloor.Location = new System.Drawing.Point(14, 3);
             this.lbl_SysCurrentFloor.Name = "lbl_SysCurrentFloor";
-            this.lbl_SysCurrentFloor.Size = new System.Drawing.Size(87, 17);
+            this.lbl_SysCurrentFloor.Size = new System.Drawing.Size(133, 22);
             this.lbl_SysCurrentFloor.TabIndex = 2;
             this.lbl_SysCurrentFloor.Text = "Current Floor:";
             // 

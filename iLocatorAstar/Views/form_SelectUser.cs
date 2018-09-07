@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Bunifu.Framework.UI;
 
 namespace iLocatorAstar
 {
@@ -20,7 +21,7 @@ namespace iLocatorAstar
         {
             InitializeComponent();
         }
-
+      
         //FORM LOAD
         private void form_SelectUser_Load(object sender, EventArgs e)
         {
@@ -51,23 +52,29 @@ namespace iLocatorAstar
             //IF USER IDLE FOR 1MIN, AUTOMATICALLY GOES BACK TO WELCOME PAGE
 
             this.Animation = true;
+
         }
+
+        public string currentFloor;
 
         //EVENT BUTTON CLICK
-        Button btn = new Button();
-
         private void btnClick(object sender, EventArgs e)
-        {
-                form_Main _Mainform = new form_Main();
-                _Mainform.Show();
-        }
-
-        private void btn_Back_Click(object sender, EventArgs e)
-        {
-            form_WelcomePage WelcomePageForm = new form_WelcomePage();
-            WelcomePageForm.Show();
-
-            this.Hide();
+        {                
+            BunifuTileButton btn = (BunifuTileButton) sender;
+            switch (btn.Name)
+            {
+                case "btn_Back":
+                    form_WelcomePage WelcomePageForm = new form_WelcomePage();
+                    WelcomePageForm.Show();
+                    this.Hide();
+                    break;
+                default:
+                    form_Main _Mainform = new form_Main();
+                    _Mainform.currentFloor = this.currentFloor;
+                    _Mainform.Show();
+                    _Mainform.usertype = btn.LabelText;
+                    break; 
+            }
         }
 
         private void btn_Student_MouseHover(object sender, EventArgs e)

@@ -62,7 +62,7 @@
             this.bunifuThinButton244.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton244.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton244.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton244.BackgroundImage")));
-            this.bunifuThinButton244.ButtonText = "Female Comfort Room";
+            this.bunifuThinButton244.ButtonText = "Female CR (5th Floor)";
             this.bunifuThinButton244.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton244.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton244.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -77,6 +77,7 @@
             this.bunifuThinButton244.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton244.TabIndex = 0;
             this.bunifuThinButton244.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton244.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton253
             // 
@@ -102,6 +103,7 @@
             this.bunifuThinButton253.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton253.TabIndex = 0;
             this.bunifuThinButton253.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton253.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton254
             // 
@@ -127,6 +129,7 @@
             this.bunifuThinButton254.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton254.TabIndex = 0;
             this.bunifuThinButton254.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton254.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton255
             // 
@@ -152,6 +155,7 @@
             this.bunifuThinButton255.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton255.TabIndex = 0;
             this.bunifuThinButton255.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton255.Click += new System.EventHandler(this.ButtonClick);
             // 
             // bunifuThinButton256
             // 
@@ -162,7 +166,7 @@
             this.bunifuThinButton256.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton256.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton256.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton256.BackgroundImage")));
-            this.bunifuThinButton256.ButtonText = "Male Comfort Room";
+            this.bunifuThinButton256.ButtonText = "Male CR (5th Floor)";
             this.bunifuThinButton256.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton256.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton256.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -177,6 +181,7 @@
             this.bunifuThinButton256.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton256.TabIndex = 0;
             this.bunifuThinButton256.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton256.Click += new System.EventHandler(this.ButtonClick);
             // 
             // UC_5th
             // 

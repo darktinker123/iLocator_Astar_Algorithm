@@ -27,6 +27,9 @@ namespace iLocatorAstar
             int nHeightEllipse // width of ellipse
         );
 
+        //Global Current Floor Variable
+        public string currentFloor;
+
         public form_WelcomePage()
         {
             InitializeComponent();
@@ -36,17 +39,24 @@ namespace iLocatorAstar
         private void form_WelcomePage_Load(object sender, EventArgs e)
         {
             //DEFAULT LOCATION FROM CONFIG FILE
-            var text = File.ReadLines(Environment.CurrentDirectory.ToString() + @"..\..\..\setup\config.ini");
-            string result = "";
-            string vertex = "";
-            foreach (var item in text)
-            {
-                result = item.ToString();
-                vertex = item.ToString();
+            /*            string[] configInput = File.ReadAllLines(Environment.CurrentDirectory.ToString() + @"\config\config.txt");
+                        for (int x = 0; x < configInput.Length; x++)
+                        {
+                            if (configInput[x] == "[Starting Point]")
+                            {
+                                x++;
 
-            }
+                                string[] values = configInput[x].Split('=');
 
-            lbl_VarSysCurrentFloor.Text = result.ToString();
+                                switch (values[1])
+                                {
+                                    case 
+                                    default:
+                                        break;
+                                }
+
+                            }
+                        }*/
 
             //MAKE FORM FULLSCREEN
             WindowState = FormWindowState.Maximized;
@@ -71,6 +81,38 @@ namespace iLocatorAstar
                 bunifuFadeTransition.ShowSync(lbl_TimeToday);
             }
 
+            Dictionary<int, string> startingFloors = new Dictionary<int, string>();
+
+            startingFloors.Add(1, "UG");
+            startingFloors.Add(42, "3rd Floor");
+            startingFloors.Add(106, "5th Floor");
+            startingFloors.Add(145, "7th Floor");
+            startingFloors.Add(207, "9th Floor");
+
+            string[] configInput = File.ReadAllLines(Environment.CurrentDirectory.ToString() + @"\config\config.txt");
+
+            for (int x = 0; x < configInput.Length; x++)
+            {
+                if (configInput[x] == "[Starting Point]")
+                {
+                    x++;
+
+                    string[] values = configInput[x].Split('=');
+
+                    int temp;
+
+                    if (int.TryParse(values[1], out temp))
+                    {
+                        currentFloor = startingFloors.FirstOrDefault(y => y.Key == int.Parse(values[1])).Value;
+
+                        lbl_VarSysCurrentFloor.Text = currentFloor;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Starting Point invalid! Please check the system's configuration file.");
+                    }
+                }
+            }
         }
         
         //EVENT FOR NEXT BUTTON
@@ -78,8 +120,11 @@ namespace iLocatorAstar
         {
             
             form_SelectUser SelectUserForm = new form_SelectUser();
+            SelectUserForm.currentFloor = currentFloor;
             SelectUserForm.Show();
             this.Hide();
+
+
 
         }
 
@@ -124,7 +169,12 @@ namespace iLocatorAstar
         {
             form_Login loginForm = new form_Login();
             loginForm.ShowDialog();
-            loginForm.Hide();
+            this.Hide();
+
+            if (true)
+            {
+
+            }
         }
     }
 }

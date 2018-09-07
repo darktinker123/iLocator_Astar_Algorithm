@@ -25,6 +25,7 @@ namespace iLocatorAstar
         ////////////////// SYSTEM UI CODES /////////////////////////////
         //////////////////// START HERE ////////////////////////////////
         ////////////////////////////////////////////////////////////////
+        public string currentFloor;
         private void form_Main_Load(object sender, EventArgs e)
         {
             loadNodes();
@@ -32,7 +33,7 @@ namespace iLocatorAstar
 
             // Hide all Directories in Select Destition
             HidePanels();
-            
+
             // Maximized Windows when Open
             WindowState = FormWindowState.Maximized;
 
@@ -58,7 +59,6 @@ namespace iLocatorAstar
                 bunifuTransLabels.ShowSync(lbl_EstimatedDistance);
             }
 
-            SelectedFloor();
             LoadConfigFile();
         }
 
@@ -110,6 +110,7 @@ namespace iLocatorAstar
         private void LoadConfigFile()
         {
             string[] configInput = File.ReadAllLines(Environment.CurrentDirectory.ToString() + @"\config\config.txt");
+           
             for (int x = 0; x < configInput.Length; x++)
             {
                 if (configInput[x] == "[Starting Point]")
@@ -167,7 +168,7 @@ namespace iLocatorAstar
 
         private void btn_UG_Click(object sender, EventArgs e)
         {
-   
+
             // Code for changing the Selected Button Color
             this.ButtonSelected(sender);
 
@@ -195,6 +196,7 @@ namespace iLocatorAstar
             HidePanels();
 
             UC_UG UserControl = new UC_UG(this);
+
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
@@ -446,7 +448,7 @@ namespace iLocatorAstar
         }
 
         private void btn_9th_Click(object sender, EventArgs e)
-        {            
+        {
             // Code for changing the Selected Button Color
             this.ButtonSelected(sender);
 
@@ -533,7 +535,7 @@ namespace iLocatorAstar
         private void panel_ContainerFloorSelector_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.panel_ContainerFloorSelector.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
-        } 
+        }
 
         private void panel_UniverseSelectDestination_Paint(object sender, PaintEventArgs e)
         {
@@ -590,7 +592,7 @@ namespace iLocatorAstar
             Color.LightGray, 0, ButtonBorderStyle.Solid,
             Color.LightGray, 0, ButtonBorderStyle.Solid);
         }
-        
+
         //SHOWING OF NODES UPON FORM LOAD
         public void showNodes(int min, int max)
         {
@@ -656,7 +658,7 @@ namespace iLocatorAstar
             destinations.Add(18, "Acer IOT Laboratory");
             destinations.Add(16, "Information Desk");
             //3rd Floor
-            destinations.Add(47, "CNNA Laboratory & 3D Animation Laboratory");
+            destinations.Add(47, "CNNA Lab and 3D Animation Lab");
             destinations.Add(67, "Computer Laboratory");
             destinations.Add(52, "College of Computer Studies");
             destinations.Add(51, "Room 301");
@@ -684,9 +686,10 @@ namespace iLocatorAstar
             destinations.Add(95, "Room 411");
             destinations.Add(96, "Room 412");
             destinations.Add(97, "Room 413");
-            destinations.Add(98, "Canteen");
+            destinations.Add(98, "Canteen (4th Floor)");
             destinations.Add(82, "Room 414");
             destinations.Add(83, "Room 415");
+            //5th Floor
             destinations.Add(107, "Library");
             destinations.Add(110, "Innovention Center");
             destinations.Add(111, "Kaizen Center");
@@ -706,7 +709,7 @@ namespace iLocatorAstar
             destinations.Add(137, "Simulated Hospital Condition");
             //7th Floor
             destinations.Add(165, "Reception Area");
-            destinations.Add(164, "Canteen");
+            destinations.Add(164, "Canteen (7th Floor)");
             destinations.Add(160, "Speech Lab");
             destinations.Add(159, "Guidance Office Counciling and Testing Room");
             destinations.Add(158, "Guidance Office");
@@ -773,7 +776,7 @@ namespace iLocatorAstar
             end = new int[500];
             ctr = 0;
             edgeCount = 0;
-            pb_VirtualMap.Refresh(); 
+            pb_VirtualMap.Refresh();
         }
 
         public void drawVertex(int posx, int posy, string label)
@@ -862,9 +865,13 @@ namespace iLocatorAstar
             }
         }
 
+        int cummulativeDistance;
+        string shortestPath;
         public void retrace(List<int> result, int destinationNode)
         {
             bool isStairs = false;
+            lbl_ShortestPath.Text = "Shortest Path:";
+            cummulativeDistance = 0;
             pb_VirtualMap.Refresh();
             isTracingGoal = true;
             for (int i = 0; i < result.Count - 1; i++)
@@ -1042,11 +1049,58 @@ namespace iLocatorAstar
                 //}
                 Thread.Sleep(800);
                 isStairs = false;
+
+                cummulativeDistance = cummulativeDistance + Distance(ballList[result[i] - 1], ballList[result[i + 1] - 1]);
             }
             drawVertex(vertex[destinationNode].X, vertex[destinationNode].Y, destinationNode.ToString());
             isTracingGoal = false;
+
+            //NEW
+            //Distance formula and display
+            //For every 50 computed distance = 2 meters
+            //You can change the formula
+            //Average walking speed is 1.4 meters per second
+            double estimatedDistance = (cummulativeDistance / 50) * 3;
+            double estimatedTime = estimatedDistance / 1.4;
+
+            TimeSpan ts = TimeSpan.FromSeconds(estimatedTime);
+            int tsMinutes = ts.Minutes;
+            int tsSeconds = ts.Seconds;
+
+            lbl_EstimatedDistance.Text = "Estimated Distance: " + estimatedDistance + " Meters";
+            lbl_EstimatedTime.Text = "Estimated Time: " + tsMinutes + " Minutes and " + tsSeconds + " Seconds";
+
+            shortestPath = lbl_ShortestPath.Text;
+
+            for (int i = 0; i < result.Count; i++)
+            {
+                shortestPath = shortestPath + " " +result[i];
+                if (i+1 != result.Count)
+                {
+                    shortestPath = shortestPath + " -";
+                }
+            }
+
+            lbl_ShortestPath.Text = shortestPath;
+
+            resetFloorsBool();
         }
 
+        public void resetFloorsBool()
+        {
+            onFirst = false;
+            onSecond = false;
+            onThird = false;
+            onFourth = false;
+            onFifth = false;
+            onSixth = false;
+            onSeventh = false;
+            onEighth = false;
+            onNinth = false;
+            onTenth = false;
+        }
+
+        List<int> NodesResult;
         public void performAStar(int startingNode, int endingNode)
         {
             showHeuristic(endingNode);
@@ -1081,6 +1135,7 @@ namespace iLocatorAstar
             {
                 result.Add(item);
             }
+            NodesResult = result;
             retrace(result, endingNode);
         }
 
@@ -1095,26 +1150,42 @@ namespace iLocatorAstar
         }
 
         //METHOD FOR SELECTING LOCATIONS (CLICKING OF THIN BUTTONS)
+        /* public void thinButtonClick(BunifuThinButton2 btn)
+         {
+             string btnName = btn.ButtonText;
+
+             string nodenumber = "";
+             for (int x = 1; x < btnName.Length; x++)
+             {
+                 if (btnName[x] != ')')
+                 {
+                     nodenumber += btnName[x].ToString();
+                 }
+
+                 else
+                 {
+                     break;
+                 }
+             }
+
+             performAStar(startingNode, int.Parse(nodenumber));
+         }*/
+        public string usertype = "";
+        DataClasses1DataContext db = new DataClasses1DataContext();
         public void thinButtonClick(BunifuThinButton2 btn)
         {
             string btnName = btn.ButtonText;
-
-            string nodenumber = "";
-            for (int x = 1; x < btnName.Length; x++)
-            {
-                if (btnName[x] != ')')
-                {
-                    nodenumber += btnName[x].ToString();
-                }
-
-                else
-                {
-                    break;
-                }
-            }
-
-            performAStar(startingNode, int.Parse(nodenumber));     
+            int nodeNumber = destinations.FirstOrDefault(x => x.Value == btnName).Key;
+            endingNode = nodeNumber;        
+            performAStar(startingNode, nodeNumber);
+            form_WelcomePage frmwelcome = new form_WelcomePage();
+            db.sp_AddUserLogs(usertype,currentFloor, btnName, DateTime.Now);
         }
 
+        int endingNode;
+        private void btn_Replay_Click(object sender, EventArgs e)
+        {
+            retrace(NodesResult,endingNode);
+        }
     }
 }

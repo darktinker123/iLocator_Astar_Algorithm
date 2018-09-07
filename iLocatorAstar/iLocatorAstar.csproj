@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,7 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\AStar.cs" />
+    <Compile Include="UC_Admin_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Admin_Dashboard.Designer.cs">
+      <DependentUpon>UC_Admin_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_UserLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_UserLogs.Designer.cs">
+      <DependentUpon>UC_UserLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\form_AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +185,9 @@
     <Compile Include="Locations\UC_UG.Designer.cs">
       <DependentUpon>UC_UG.cs</DependentUpon>
     </Compile>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="Locations\UC_10th.resx">
       <DependentUpon>UC_10th.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +214,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Locations\UC_9th.resx">
       <DependentUpon>UC_9th.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Admin_Dashboard.resx">
+      <DependentUpon>UC_Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_UserLogs.resx">
+      <DependentUpon>UC_UserLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\form_AdminDashboard.resx">
       <DependentUpon>form_AdminDashboard.cs</DependentUpon>
@@ -227,6 +254,11 @@
       <DependentUpon>UC_UG.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -269,6 +301,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\alert-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

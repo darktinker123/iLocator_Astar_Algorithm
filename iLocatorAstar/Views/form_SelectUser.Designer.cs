@@ -279,7 +279,7 @@
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(161, 289);
             this.btn_Back.TabIndex = 2;
-            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            this.btn_Back.Click += new System.EventHandler(this.btnClick);
             this.btn_Back.MouseHover += new System.EventHandler(this.btn_Student_MouseHover);
             // 
             // panel_ContainerSelectUser

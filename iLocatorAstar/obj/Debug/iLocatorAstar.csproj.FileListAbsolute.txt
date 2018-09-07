@@ -49,3 +49,6 @@ C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorA
 C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.csproj.GenerateResource.Cache
 C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\bin\Debug\iLocatorAstar.exe
 C:\Users\Asus\Desktop\iLocator_Astar_Algorithm\iLocatorAstar\bin\Debug\iLocatorAstar.pdb
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.csprojResolveAssemblyReference.cache
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.UC_Admin_Dashboard.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.UC_UserLogs.resources

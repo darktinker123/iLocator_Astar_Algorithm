@@ -19,6 +19,8 @@ namespace iLocatorAstar
 
         private void form_Login_Load(object sender, EventArgs e)
         {
+
+
             bunifuTxtBox_Username.Text = "Username";
             bunifuTxtBox_Password.Text = "Password";
         }
@@ -60,12 +62,6 @@ namespace iLocatorAstar
         {
             if (bunifuTxtBox_Username.Text == "admin" || bunifuTxtBox_Password.Text == "admin123")
             {
-                // Hide Welcome Page Form
-                Form fc = Application.OpenForms["form_WelcomePage"];
-                if (fc != null)
-                {
-                    fc.Hide();
-                }
 
                 this.Hide();
 

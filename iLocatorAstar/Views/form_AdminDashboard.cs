@@ -27,6 +27,13 @@ namespace iLocatorAstar
         private void form_AdminDashboard_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
+
+            //Form fc = Application.OpenForms["form_Main"];
+
+            //if (fc == null)
+            //{
+            //    fc.Hide();
+            //}
         }
 
         private void pb_SideMenu_Click(object sender, EventArgs e)
@@ -66,99 +73,32 @@ namespace iLocatorAstar
                 bunifuTransition2.ShowSync(panel_SideNav);
             }
         }
-
-        private void btn_UG_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_2nd_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\2nd-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_3rd_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\3rd-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_4th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\4th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_5th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\5th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_6th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\6th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_7th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\7th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_8th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\8th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_9th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\9th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_10th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\10th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
+     
         private void btn_SideNav_Logout_Click(object sender, EventArgs e)
         {
             form_WelcomePage WelcomePageForm = new form_WelcomePage();
             WelcomePageForm.Show();
             this.Hide();
         }
-        public string fname;
-        private void btn_OpenNodes_Click(object sender, EventArgs e)
+
+
+        private void btn_SideNav_Logs_Click(object sender, EventArgs e)
         {
-           
-            OpenFileDialog op = new OpenFileDialog();
-            if (op.ShowDialog() == DialogResult.OK)
-            {
-                richTxtBox_Nodes.Text = File.ReadAllText(op.FileName);
-            }
-            fname = op.FileName;
+            panel_UniverseAdmin.Controls.Clear();
+
+            UC_UserLogs frm_UserLogs = new UC_UserLogs();        
+            panel_UniverseAdmin.Controls.Add(frm_UserLogs);
+            frm_UserLogs.Dock = DockStyle.Fill;
         }
 
-        private void btn_SaveNodes_Click(object sender, EventArgs e)
+        private void btn_SideNav_Home_Click(object sender, EventArgs e)
         {
-            File.WriteAllLines(fname, richTxtBox_Nodes.Lines);
-            
+            panel_UniverseAdmin.Controls.Clear();
+
+            UC_Admin_Dashboard frm_AdminDashboard = new UC_Admin_Dashboard();
+            panel_UniverseAdmin.Controls.Add(frm_AdminDashboard);
+            frm_AdminDashboard.Dock = DockStyle.Fill;
         }
+
     }
 }

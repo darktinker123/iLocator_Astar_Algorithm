@@ -21,8 +21,8 @@ namespace iLocatorAstar
             MainForm = frm;
         }
 
-        form_Main MainForm;
-        
+        public form_Main MainForm;
+
         private void buttonClick(object sender, EventArgs e)
         {
             BunifuThinButton2 btn=(BunifuThinButton2)sender;

@@ -73,6 +73,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuTransMaps = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuTransFloorButtons = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.lbl_shortestPathDisplay = new System.Windows.Forms.Label();
             this.panel_ControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).BeginInit();
             this.panel_ContainerFloorSelector.SuspendLayout();
@@ -672,6 +673,7 @@
             // 
             // panel_DetailsSelectedDestination
             // 
+            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_shortestPathDisplay);
             this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_Replay);
             this.panel_DetailsSelectedDestination.Controls.Add(this.btn_Replay);
             this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_GoHome);
@@ -723,6 +725,7 @@
             this.btn_Replay.TabIndex = 7;
             this.btn_Replay.TabStop = false;
             this.btn_Replay.Visible = false;
+            this.btn_Replay.Click += new System.EventHandler(this.btn_Replay_Click);
             // 
             // lbl_GoHome
             // 
@@ -898,7 +901,7 @@
             // 
             // bunifuTransLabels
             // 
-            this.bunifuTransLabels.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuTransLabels.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.bunifuTransLabels.Cursor = null;
             animation4.AnimateOnlyDifferences = true;
             animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
@@ -914,7 +917,7 @@
             animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
             animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
             animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 1F;
+            animation4.TransparencyCoeff = 0F;
             this.bunifuTransLabels.DefaultAnimation = animation4;
             // 
             // bunifuTransSelectDestination
@@ -981,6 +984,20 @@
             animation2.TimeCoeff = 0F;
             animation2.TransparencyCoeff = 0F;
             this.bunifuTransFloorButtons.DefaultAnimation = animation2;
+            // 
+            // lbl_shortestPathDisplay
+            // 
+            this.lbl_shortestPathDisplay.AutoSize = true;
+            this.bunifuTransMaps.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransSelectDestination.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransFloorButtons.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransLabels.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_shortestPathDisplay.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_shortestPathDisplay.Location = new System.Drawing.Point(206, 25);
+            this.lbl_shortestPathDisplay.Name = "lbl_shortestPathDisplay";
+            this.lbl_shortestPathDisplay.Size = new System.Drawing.Size(0, 24);
+            this.lbl_shortestPathDisplay.TabIndex = 9;
+            this.lbl_shortestPathDisplay.Visible = false;
             // 
             // form_Main
             // 
@@ -1066,5 +1083,6 @@
         private System.Windows.Forms.Label lbl_Replay;
         private System.Windows.Forms.PictureBox btn_Replay;
         private BunifuAnimatorNS.BunifuTransition bunifuTransFloorButtons;
+        private System.Windows.Forms.Label lbl_shortestPathDisplay;
     }
 }
