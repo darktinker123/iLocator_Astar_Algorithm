@@ -158,7 +158,6 @@
             this.tableLayoutPanel_SelectUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel_SelectUser.Size = new System.Drawing.Size(938, 303);
             this.tableLayoutPanel_SelectUser.TabIndex = 4;
-            this.tableLayoutPanel_SelectUser.Visible = false;
             // 
             // btn_Parents
             // 
@@ -255,7 +254,6 @@
             this.btn_Student.Size = new System.Drawing.Size(161, 289);
             this.btn_Student.TabIndex = 2;
             this.btn_Student.Click += new System.EventHandler(this.btnClick);
-            this.btn_Student.MouseHover += new System.EventHandler(this.btn_Student_MouseHover);
             // 
             // btn_Back
             // 
@@ -280,7 +278,6 @@
             this.btn_Back.Size = new System.Drawing.Size(161, 289);
             this.btn_Back.TabIndex = 2;
             this.btn_Back.Click += new System.EventHandler(this.btnClick);
-            this.btn_Back.MouseHover += new System.EventHandler(this.btn_Student_MouseHover);
             // 
             // panel_ContainerSelectUser
             // 

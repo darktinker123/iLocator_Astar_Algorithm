@@ -37,16 +37,14 @@ namespace iLocatorAstar
             }
 
 
-            if (tableLayoutPanel_SelectUser.Visible == false || lbl_Description.Visible == false || lbl_TimeToday.Visible == false)
+            if (lbl_Description.Visible == false || lbl_TimeToday.Visible == false)
             {
-                bunifuTransition1.ShowSync(tableLayoutPanel_SelectUser);
                 bunifuTransition1.ShowSync(lbl_Description);
                 bunifuFadeTransition.ShowSync(lbl_TimeToday);            
             }
             else
             {
                 bunifuTransition1.HideSync(lbl_Description);
-                bunifuTransition1.HideSync(tableLayoutPanel_SelectUser);
             }
 
             //IF USER IDLE FOR 1MIN, AUTOMATICALLY GOES BACK TO WELCOME PAGE

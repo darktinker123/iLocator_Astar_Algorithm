@@ -100,7 +100,7 @@
             // 
             this.bunifuTxtBox_Username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTxtBox_Username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTxtBox_Username.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTxtBox_Username.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTxtBox_Username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuTxtBox_Username.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuTxtBox_Username.HintText = "";
@@ -130,7 +130,7 @@
             // 
             this.bunifuTxtBox_Password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTxtBox_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTxtBox_Password.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTxtBox_Password.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTxtBox_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuTxtBox_Password.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuTxtBox_Password.HintText = "";
@@ -172,6 +172,7 @@
             this.btn_AdminLogin.IconZoom = 90D;
             this.btn_AdminLogin.IsTab = false;
             this.btn_AdminLogin.Location = new System.Drawing.Point(160, 396);
+            this.btn_AdminLogin.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btn_AdminLogin.Name = "btn_AdminLogin";
             this.btn_AdminLogin.Normalcolor = System.Drawing.Color.RoyalBlue;
             this.btn_AdminLogin.OnHovercolor = System.Drawing.Color.Blue;
@@ -223,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(576, 549);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);

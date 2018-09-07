@@ -64,7 +64,7 @@
             this.bunifuThinButton2104.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton2104.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton2104.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton2104.BackgroundImage")));
-            this.bunifuThinButton2104.ButtonText = "(253) Basketball Court";
+            this.bunifuThinButton2104.ButtonText = "Basketball Court";
             this.bunifuThinButton2104.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton2104.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton2104.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -90,7 +90,7 @@
             this.bunifuThinButton2109.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton2109.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton2109.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton2109.BackgroundImage")));
-            this.bunifuThinButton2109.ButtonText = "(256) Technical Area";
+            this.bunifuThinButton2109.ButtonText = "Technical Area";
             this.bunifuThinButton2109.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton2109.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton2109.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -116,7 +116,7 @@
             this.bunifuThinButton2105.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton2105.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton2105.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton2105.BackgroundImage")));
-            this.bunifuThinButton2105.ButtonText = "(258) Receiving Area";
+            this.bunifuThinButton2105.ButtonText = "Receiving Area";
             this.bunifuThinButton2105.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton2105.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton2105.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -142,7 +142,7 @@
             this.bunifuThinButton2106.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton2106.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton2106.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton2106.BackgroundImage")));
-            this.bunifuThinButton2106.ButtonText = "(254) P.E & NSTP Office";
+            this.bunifuThinButton2106.ButtonText = "P.E & NSTP Office";
             this.bunifuThinButton2106.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton2106.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton2106.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -168,7 +168,7 @@
             this.bunifuThinButton2107.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton2107.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton2107.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton2107.BackgroundImage")));
-            this.bunifuThinButton2107.ButtonText = "(249) Male Comfort Room";
+            this.bunifuThinButton2107.ButtonText = "Male Comfort Room";
             this.bunifuThinButton2107.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton2107.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton2107.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -194,7 +194,7 @@
             this.bunifuThinButton2108.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton2108.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton2108.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton2108.BackgroundImage")));
-            this.bunifuThinButton2108.ButtonText = "(250) Female Comfort Room";
+            this.bunifuThinButton2108.ButtonText = "Female Comfort Room";
             this.bunifuThinButton2108.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton2108.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton2108.ForeColor = System.Drawing.Color.RoyalBlue;

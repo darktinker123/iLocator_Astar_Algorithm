@@ -19,7 +19,14 @@ namespace iLocatorAstar
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void UC_UserLogs_Load(object sender, EventArgs e)
         {
-            dataGrid_UserLogs.DataSource = db.sp_ViewUserLogs();
+            dgvUserlogs.DataSource = db.v_userlogs;
+            dgvUserlogs.ClearSelection();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            dgvUserlogs.DataSource= db.sp_SearchUserLogs(txtSearch.Text);
+            dgvUserlogs.ClearSelection();
         }
     }
 }

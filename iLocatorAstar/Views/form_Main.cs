@@ -49,14 +49,11 @@ namespace iLocatorAstar
             {
                 bunifuTransFloorButtons.ShowSync(tableLayoutPanel_FloorButtons);
             }
-            if (lbl_SelectFloor.Visible == false || lbl_SelectDestination.Visible == false || lbl_VirtualMap.Visible == false || lbl_ShortestPath.Visible == false || lbl_EstimatedTime.Visible == false || lbl_EstimatedDistance.Visible == false)
+            if (lbl_SelectFloor.Visible == false || lbl_SelectDestination.Visible == false || lbl_VirtualMap.Visible == false)
             {
                 bunifuTransLabels.ShowSync(lbl_SelectFloor);
                 bunifuTransLabels.ShowSync(lbl_SelectDestination);
                 bunifuTransLabels.ShowSync(lbl_VirtualMap);
-                bunifuTransLabels.ShowSync(lbl_ShortestPath);
-                bunifuTransLabels.ShowSync(lbl_EstimatedTime);
-                bunifuTransLabels.ShowSync(lbl_EstimatedDistance);
             }
 
             LoadConfigFile();
@@ -171,8 +168,7 @@ namespace iLocatorAstar
 
             // Code for changing the Selected Button Color
             this.ButtonSelected(sender);
-
-
+            
             // Show Virtual Map
             bunifuTransMaps.HideSync(pb_VirtualMap);
 

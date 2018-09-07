@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbiLocatorDataSet" targetNamespace="http://tempuri.org/dbiLocatorDataSet.xsd" xmlns:mstns="http://tempuri.org/dbiLocatorDataSet.xsd" xmlns="http://tempuri.org/dbiLocatorDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbiLocatorConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbiLocatorConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.iLocatorAstar.Properties.Settings.GlobalReference.Default.dbiLocatorConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_userlogsTableAdapter" GeneratorDataComponentClassName="v_userlogsTableAdapter" Name="v_userlogs" UserDataComponentName="v_userlogsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbiLocatorConnectionString (Settings)" DbObjectName="dbiLocator.dbo.v_userlogs" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT userLogID, usertype, currentLocation, destination, userLogTime FROM dbo.v_userlogs</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="userLogID" DataSetColumn="userLogID" />
+              <Mapping SourceColumn="usertype" DataSetColumn="usertype" />
+              <Mapping SourceColumn="currentLocation" DataSetColumn="currentLocation" />
+              <Mapping SourceColumn="destination" DataSetColumn="destination" />
+              <Mapping SourceColumn="userLogTime" DataSetColumn="userLogTime" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbiLocatorDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbiLocatorDataSet" msprop:Generator_UserDSName="dbiLocatorDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_userlogs" msprop:Generator_TableClassName="v_userlogsDataTable" msprop:Generator_TableVarName="tablev_userlogs" msprop:Generator_TablePropName="v_userlogs" msprop:Generator_RowDeletingName="v_userlogsRowDeleting" msprop:Generator_RowChangingName="v_userlogsRowChanging" msprop:Generator_RowEvHandlerName="v_userlogsRowChangeEventHandler" msprop:Generator_RowDeletedName="v_userlogsRowDeleted" msprop:Generator_UserTableName="v_userlogs" msprop:Generator_RowChangedName="v_userlogsRowChanged" msprop:Generator_RowEvArgName="v_userlogsRowChangeEvent" msprop:Generator_RowClassName="v_userlogsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="userLogID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnuserLogID" msprop:Generator_ColumnPropNameInRow="userLogID" msprop:Generator_ColumnPropNameInTable="userLogIDColumn" msprop:Generator_UserColumnName="userLogID" type="xs:int" />
+              <xs:element name="usertype" msprop:Generator_ColumnVarNameInTable="columnusertype" msprop:Generator_ColumnPropNameInRow="usertype" msprop:Generator_ColumnPropNameInTable="usertypeColumn" msprop:Generator_UserColumnName="usertype" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="currentLocation" msprop:Generator_ColumnVarNameInTable="columncurrentLocation" msprop:Generator_ColumnPropNameInRow="currentLocation" msprop:Generator_ColumnPropNameInTable="currentLocationColumn" msprop:Generator_UserColumnName="currentLocation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="destination" msprop:Generator_ColumnVarNameInTable="columndestination" msprop:Generator_ColumnPropNameInRow="destination" msprop:Generator_ColumnPropNameInTable="destinationColumn" msprop:Generator_UserColumnName="destination" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="userLogTime" msprop:Generator_ColumnVarNameInTable="columnuserLogTime" msprop:Generator_ColumnPropNameInRow="userLogTime" msprop:Generator_ColumnPropNameInTable="userLogTimeColumn" msprop:Generator_UserColumnName="userLogTime" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -21,10 +21,12 @@ BEGIN
 	VALUES (@utype, @start, @dest, @logTime)
 END
 GO
+CREATE PROC sp_SearchUserLogs
+	@searchkey VARCHAR(100)
 
-CREATE PROCEDURE sp_ViewUserLogs
 AS
-SELECT * FROM tblUserLogs
-
-
-SELECT * FROM tblUserLogs
+	SELECT * FROM tblUserLogs 
+	WHERE userLogID LIKE '%'+@searchkey+'%' OR usertype LIKE '%'+@searchkey+'%' 
+	OR currentLocation LIKE '%'+@searchkey+'%' OR destination LIKE '%'+@searchkey+'%' OR
+	userLogTime LIKE '%'+@searchkey+'%'
+GO
