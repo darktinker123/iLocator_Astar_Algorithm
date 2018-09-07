@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace iLocatorAstar
 {
-    public partial class UC_10th : UserControl
+    public partial class UC_7th : UserControl
     {
-        public UC_10th(form_Main frm)
+        public UC_7th(form_Main frm)
         {
             InitializeComponent();
+            MainForm = frm;
         }
+        form_Main MainForm;
     }
 }

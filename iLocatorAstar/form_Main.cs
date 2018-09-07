@@ -57,17 +57,32 @@ namespace iLocatorAstar
                 bunifuTransLabels.ShowSync(lbl_EstimatedDistance);
             }
 
-            SelectedFloor();
+            string[] text = File.ReadAllLines(Environment.CurrentDirectory.ToString() + @"\config\config.txt");
+
+            for (int i = 0; i < text.Count(); i++)
+            {
+                if (text[0] == "[Starting Point]")
+                {
+                    i++;
+                    int temp;
+
+                    string[] values = text[i].Split('=');
+
+                    if (values[0] == "startingNode" && int.TryParse(values[1], out temp))
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid starting point!");
+                    }
+                }
+            }
         }
 
         public void SelectedFloor()
         {
-            var text = File.ReadLines(Environment.CurrentDirectory.ToString() + @"..\..\..\setup\config.ini");
 
-            foreach (var item in text)
-            {
-                SystemFloor = item.ToString();
-            }
 
             switch (SystemFloor.ToString())
             {
@@ -547,12 +562,14 @@ namespace iLocatorAstar
         int[] stairs = { 14, 39, 37, 60, 62, 77, 79, 112, 114, 124, 126, 150, 152, 212, 214, 244, 180, 182 };
         Dictionary<int, string> destinations = new Dictionary<int, string>();
 
+        int cummulativeDistance;
         List<Point> ballList = new List<Point>();
         List<Point> text = new List<Point>();
         Dictionary<int, Point> vertex = new Dictionary<int, Point>();
         List<Tuple<int, int>> edge = new List<Tuple<int, int>>();
         int[] heuristics;
 
+        int startingNode;
         int[] vertices;
         int[] start = new int[500];
         int[] end = new int[500];
@@ -612,6 +629,7 @@ namespace iLocatorAstar
             destinations.Add(98, "Canteen");
             destinations.Add(82, "Room 414");
             destinations.Add(83, "Room 415");
+            //5th Floor
             destinations.Add(107, "Library");
             destinations.Add(110, "Innovention Center");
             destinations.Add(111, "Kaizen Center");
@@ -790,6 +808,7 @@ namespace iLocatorAstar
         public void retrace(List<int> result, int destinationNode)
         {
             bool isStairs = false;
+            cummulativeDistance = 0;
             pb_VirtualMap.Refresh();
             isTracingGoal = true;
             for (int i = 0; i < result.Count - 1; i++)
@@ -967,9 +986,25 @@ namespace iLocatorAstar
                 //}
                 Thread.Sleep(800);
                 isStairs = false;
+
+                cummulativeDistance = cummulativeDistance + Distance(ballList[result[i] - 1], ballList[result[i + 1] - 1]);
             }
             drawVertex(vertex[destinationNode].X, vertex[destinationNode].Y, destinationNode.ToString());
             isTracingGoal = false;
+
+            //Distance formula and display
+            //For every 50 computed distance = 2 meters
+            //You can change the formula
+            //Average walking speed is 1.4 meters per second
+            double estimatedDistance = (cummulativeDistance / 50) * 2;
+            double estimatedTime = estimatedDistance / 1.4;
+
+            TimeSpan ts = TimeSpan.FromSeconds(estimatedTime);
+            int tsMinutes = ts.Minutes;
+            int tsSeconds = ts.Seconds;
+
+            lbl_EstimatedDistance.Text = "Estimated Distance: " + estimatedDistance + " Meters";
+            lbl_EstimatedTime.Text = "Estimated Time: " + tsMinutes + " Minutes and " + tsSeconds + " Seconds";
         }
 
         public void performAStar(int startingNode, int endingNode)

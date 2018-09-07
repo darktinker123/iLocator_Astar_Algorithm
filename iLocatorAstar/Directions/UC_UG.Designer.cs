@@ -99,6 +99,7 @@
             this.btn_UG_SWS.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_SWS.TabIndex = 2;
             this.btn_UG_SWS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_SWS.Click += new System.EventHandler(this.btn_UG_SWS_Click);
             // 
             // btn_UG_SDO
             // 
@@ -124,6 +125,7 @@
             this.btn_UG_SDO.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_SDO.TabIndex = 3;
             this.btn_UG_SDO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_SDO.Click += new System.EventHandler(this.btn_UG_SDO_Click);
             // 
             // btn_UG_SchoolClinic
             // 
@@ -149,6 +151,7 @@
             this.btn_UG_SchoolClinic.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_SchoolClinic.TabIndex = 4;
             this.btn_UG_SchoolClinic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_SchoolClinic.Click += new System.EventHandler(this.btn_UG_SchoolClinic_Click);
             // 
             // btn_UG_Rm104
             // 
@@ -174,6 +177,7 @@
             this.btn_UG_Rm104.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_Rm104.TabIndex = 5;
             this.btn_UG_Rm104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_Rm104.Click += new System.EventHandler(this.btn_UG_Rm104_Click);
             // 
             // btn_UG_Rm103
             // 
@@ -199,6 +203,7 @@
             this.btn_UG_Rm103.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_Rm103.TabIndex = 6;
             this.btn_UG_Rm103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_Rm103.Click += new System.EventHandler(this.btn_UG_Rm103_Click);
             // 
             // btn_UG_Rm102
             // 
@@ -224,6 +229,7 @@
             this.btn_UG_Rm102.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_Rm102.TabIndex = 7;
             this.btn_UG_Rm102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_Rm102.Click += new System.EventHandler(this.btn_UG_Rm102_Click);
             // 
             // btn_UG_Rm101
             // 
@@ -249,6 +255,7 @@
             this.btn_UG_Rm101.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_Rm101.TabIndex = 8;
             this.btn_UG_Rm101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_Rm101.Click += new System.EventHandler(this.btn_UG_Rm101_Click);
             // 
             // btn_UG_RecordsRoom
             // 
@@ -274,6 +281,7 @@
             this.btn_UG_RecordsRoom.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_RecordsRoom.TabIndex = 9;
             this.btn_UG_RecordsRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_RecordsRoom.Click += new System.EventHandler(this.btn_UG_RecordsRoom_Click);
             // 
             // btn_UG_Penbank
             // 
@@ -299,6 +307,7 @@
             this.btn_UG_Penbank.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_Penbank.TabIndex = 10;
             this.btn_UG_Penbank.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_Penbank.Click += new System.EventHandler(this.btn_UG_Penbank_Click);
             // 
             // btn_UG_MacLab
             // 
@@ -324,6 +333,7 @@
             this.btn_UG_MacLab.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_MacLab.TabIndex = 11;
             this.btn_UG_MacLab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_MacLab.Click += new System.EventHandler(this.btn_UG_MacLab_Click);
             // 
             // btn_UG_MaleCR
             // 
@@ -349,6 +359,7 @@
             this.btn_UG_MaleCR.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_MaleCR.TabIndex = 12;
             this.btn_UG_MaleCR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_MaleCR.Click += new System.EventHandler(this.btn_UG_MaleCR_Click);
             // 
             // btn_UG_FemaleCR
             // 
@@ -374,6 +385,7 @@
             this.btn_UG_FemaleCR.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_FemaleCR.TabIndex = 13;
             this.btn_UG_FemaleCR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_FemaleCR.Click += new System.EventHandler(this.btn_UG_FemaleCR_Click);
             // 
             // btn_UG_EERoom
             // 
@@ -399,6 +411,7 @@
             this.btn_UG_EERoom.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_EERoom.TabIndex = 14;
             this.btn_UG_EERoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_EERoom.Click += new System.EventHandler(this.btn_UG_EERoom_Click);
             // 
             // btn_UG_Canteen
             // 
@@ -424,6 +437,7 @@
             this.btn_UG_Canteen.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_Canteen.TabIndex = 15;
             this.btn_UG_Canteen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_Canteen.Click += new System.EventHandler(this.btn_UG_Canteen_Click);
             // 
             // btn_UG_AcerLab
             // 
@@ -449,6 +463,7 @@
             this.btn_UG_AcerLab.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_AcerLab.TabIndex = 16;
             this.btn_UG_AcerLab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_AcerLab.Click += new System.EventHandler(this.btn_UG_AcerLab_Click);
             // 
             // groupBox1
             // 

@@ -23,3 +23,5 @@ C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\o
 C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.UC_8th.resources
 C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.UC_9th.resources
 C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.UC_2nd.resources
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.csprojResolveAssemblyReference.cache
+C:\Users\Darktinker123\Documents\GitHub\iLocator_Astar_Algorithm\iLocatorAstar\obj\Debug\iLocatorAstar.Form_ChangeSystemFloor.resources

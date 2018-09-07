@@ -56,6 +56,12 @@
     <Compile Include="form_AdminDashboard.Designer.cs">
       <DependentUpon>form_AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ChangeSystemFloor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChangeSystemFloor.Designer.cs">
+      <DependentUpon>Form_ChangeSystemFloor.cs</DependentUpon>
+    </Compile>
     <Compile Include="form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,95 +113,98 @@
     <Compile Include="TestZone.Designer.cs">
       <DependentUpon>TestZone.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_10th.cs">
+    <Compile Include="Directions\UC_10th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_10th.Designer.cs">
+    <Compile Include="Directions\UC_10th.Designer.cs">
       <DependentUpon>UC_10th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_2nd.cs">
+    <Compile Include="Directions\UC_2nd.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_2nd.Designer.cs">
+    <Compile Include="Directions\UC_2nd.Designer.cs">
       <DependentUpon>UC_2nd.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_3rd.cs">
+    <Compile Include="Directions\UC_3rd.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_3rd.Designer.cs">
+    <Compile Include="Directions\UC_3rd.Designer.cs">
       <DependentUpon>UC_3rd.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_4th.cs">
+    <Compile Include="Directions\UC_4th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_4th.Designer.cs">
+    <Compile Include="Directions\UC_4th.Designer.cs">
       <DependentUpon>UC_4th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_5th.cs">
+    <Compile Include="Directions\UC_5th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_5th.Designer.cs">
+    <Compile Include="Directions\UC_5th.Designer.cs">
       <DependentUpon>UC_5th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_6th.cs">
+    <Compile Include="Directions\UC_6th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_6th.Designer.cs">
+    <Compile Include="Directions\UC_6th.Designer.cs">
       <DependentUpon>UC_6th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_7th.cs">
+    <Compile Include="Directions\UC_7th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_7th.Designer.cs">
+    <Compile Include="Directions\UC_7th.Designer.cs">
       <DependentUpon>UC_7th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_8th.cs">
+    <Compile Include="Directions\UC_8th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_8th.Designer.cs">
+    <Compile Include="Directions\UC_8th.Designer.cs">
       <DependentUpon>UC_8th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_9th.cs">
+    <Compile Include="Directions\UC_9th.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_9th.Designer.cs">
+    <Compile Include="Directions\UC_9th.Designer.cs">
       <DependentUpon>UC_9th.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_UG.cs">
+    <Compile Include="Directions\UC_UG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_UG.Designer.cs">
+    <Compile Include="Directions\UC_UG.Designer.cs">
       <DependentUpon>UC_UG.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UC_10th.resx">
+    <EmbeddedResource Include="Directions\UC_10th.resx">
       <DependentUpon>UC_10th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_2nd.resx">
+    <EmbeddedResource Include="Directions\UC_2nd.resx">
       <DependentUpon>UC_2nd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_3rd.resx">
+    <EmbeddedResource Include="Directions\UC_3rd.resx">
       <DependentUpon>UC_3rd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_4th.resx">
+    <EmbeddedResource Include="Directions\UC_4th.resx">
       <DependentUpon>UC_4th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_5th.resx">
+    <EmbeddedResource Include="Directions\UC_5th.resx">
       <DependentUpon>UC_5th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_6th.resx">
+    <EmbeddedResource Include="Directions\UC_6th.resx">
       <DependentUpon>UC_6th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_7th.resx">
+    <EmbeddedResource Include="Directions\UC_7th.resx">
       <DependentUpon>UC_7th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_8th.resx">
+    <EmbeddedResource Include="Directions\UC_8th.resx">
       <DependentUpon>UC_8th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_9th.resx">
+    <EmbeddedResource Include="Directions\UC_9th.resx">
       <DependentUpon>UC_9th.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_AdminDashboard.resx">
       <DependentUpon>form_AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ChangeSystemFloor.resx">
+      <DependentUpon>Form_ChangeSystemFloor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_Login.resx">
       <DependentUpon>form_Login.cs</DependentUpon>
@@ -223,7 +232,7 @@
     <EmbeddedResource Include="TestZone.resx">
       <DependentUpon>TestZone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_UG.resx">
+    <EmbeddedResource Include="Directions\UC_UG.resx">
       <DependentUpon>UC_UG.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -264,7 +273,6 @@
     <None Include="Resources\message-2-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Directions\" />
     <Folder Include="Setup\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace iLocatorAstar
 {
-    public partial class UC_5th : UserControl
+    public partial class Form_ChangeSystemFloor : Form
     {
-        public UC_5th(form_Main frm)
+        public Form_ChangeSystemFloor()
         {
             InitializeComponent();
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

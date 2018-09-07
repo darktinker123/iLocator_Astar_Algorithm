@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_AdminDashboard));
             BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            this.pb_iLocatorLogo = new System.Windows.Forms.PictureBox();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_AdminDashboard));
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             this.lbl_FormTitle = new System.Windows.Forms.Label();
             this.panel_ControlBox = new System.Windows.Forms.Panel();
+            this.pb_iLocatorLogo = new System.Windows.Forms.PictureBox();
             this.btn_Close = new System.Windows.Forms.PictureBox();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.pb_SideMenu = new System.Windows.Forms.PictureBox();
-            this.btn_SideNav_Logout = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_SideNav_Logs = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_SideNav_Nodes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_SideNav = new System.Windows.Forms.Panel();
             this.separator_SideNav = new Bunifu.Framework.UI.BunifuSeparator();
+            this.pb_SideMenu = new System.Windows.Forms.PictureBox();
             this.pb_Admin = new System.Windows.Forms.PictureBox();
             this.lbl_Admin = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btn_SideNav_Nodes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_SideNav_Logs = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_SideNav_SystemFloor = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_SideNav_Logout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.richTxtBox_Nodes = new System.Windows.Forms.RichTextBox();
             this.btn_OpenNodes = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_RestoreDefault = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_setStartingFloor = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_SaveNodes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_UG = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_2nd = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -65,32 +65,18 @@
             this.btn_OpenMap = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_SaveMap = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pb_VirtualMap = new System.Windows.Forms.PictureBox();
+            this.cmb_floorSelection = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuTransition3 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuTransition4 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).BeginInit();
             this.panel_ControlBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_SideMenu)).BeginInit();
             this.panel_SideNav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_SideMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Admin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_VirtualMap)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pb_iLocatorLogo
-            // 
-            this.pb_iLocatorLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pb_iLocatorLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_iLocatorLogo.BackgroundImage")));
-            this.pb_iLocatorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuTransition3.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
-            this.pb_iLocatorLogo.Location = new System.Drawing.Point(9, 5);
-            this.pb_iLocatorLogo.Name = "pb_iLocatorLogo";
-            this.pb_iLocatorLogo.Size = new System.Drawing.Size(25, 25);
-            this.pb_iLocatorLogo.TabIndex = 3;
-            this.pb_iLocatorLogo.TabStop = false;
             // 
             // lbl_FormTitle
             // 
@@ -122,6 +108,21 @@
             this.panel_ControlBox.Name = "panel_ControlBox";
             this.panel_ControlBox.Size = new System.Drawing.Size(1038, 34);
             this.panel_ControlBox.TabIndex = 2;
+            // 
+            // pb_iLocatorLogo
+            // 
+            this.pb_iLocatorLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pb_iLocatorLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_iLocatorLogo.BackgroundImage")));
+            this.pb_iLocatorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuTransition3.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
+            this.pb_iLocatorLogo.Location = new System.Drawing.Point(9, 5);
+            this.pb_iLocatorLogo.Name = "pb_iLocatorLogo";
+            this.pb_iLocatorLogo.Size = new System.Drawing.Size(25, 25);
+            this.pb_iLocatorLogo.TabIndex = 3;
+            this.pb_iLocatorLogo.TabStop = false;
             // 
             // btn_Close
             // 
@@ -163,6 +164,44 @@
             this.bunifuTransition1.DefaultAnimation = animation4;
             this.bunifuTransition1.MaxAnimationTime = 1000;
             // 
+            // panel_SideNav
+            // 
+            this.panel_SideNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.panel_SideNav.Controls.Add(this.separator_SideNav);
+            this.panel_SideNav.Controls.Add(this.pb_SideMenu);
+            this.panel_SideNav.Controls.Add(this.pb_Admin);
+            this.panel_SideNav.Controls.Add(this.lbl_Admin);
+            this.panel_SideNav.Controls.Add(this.btn_SideNav_Nodes);
+            this.panel_SideNav.Controls.Add(this.btn_SideNav_Logs);
+            this.panel_SideNav.Controls.Add(this.btn_SideNav_SystemFloor);
+            this.panel_SideNav.Controls.Add(this.btn_SideNav_Logout);
+            this.bunifuTransition4.SetDecoration(this.panel_SideNav, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.panel_SideNav, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.panel_SideNav, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.panel_SideNav, BunifuAnimatorNS.DecorationType.None);
+            this.panel_SideNav.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_SideNav.Location = new System.Drawing.Point(0, 34);
+            this.panel_SideNav.Name = "panel_SideNav";
+            this.panel_SideNav.Size = new System.Drawing.Size(60, 596);
+            this.panel_SideNav.TabIndex = 4;
+            // 
+            // separator_SideNav
+            // 
+            this.separator_SideNav.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition4.SetDecoration(this.separator_SideNav, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.separator_SideNav, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.separator_SideNav, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.separator_SideNav, BunifuAnimatorNS.DecorationType.None);
+            this.separator_SideNav.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.separator_SideNav.LineThickness = 1;
+            this.separator_SideNav.Location = new System.Drawing.Point(12, 153);
+            this.separator_SideNav.Name = "separator_SideNav";
+            this.separator_SideNav.Size = new System.Drawing.Size(231, 35);
+            this.separator_SideNav.TabIndex = 7;
+            this.separator_SideNav.Transparency = 255;
+            this.separator_SideNav.Vertical = false;
+            this.separator_SideNav.Visible = false;
+            // 
             // pb_SideMenu
             // 
             this.pb_SideMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -180,82 +219,35 @@
             this.pb_SideMenu.TabStop = false;
             this.pb_SideMenu.Click += new System.EventHandler(this.pb_SideMenu_Click);
             // 
-            // btn_SideNav_Logout
+            // pb_Admin
             // 
-            this.btn_SideNav_Logout.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btn_SideNav_Logout.BackColor = System.Drawing.Color.Transparent;
-            this.btn_SideNav_Logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_SideNav_Logout.BorderRadius = 0;
-            this.btn_SideNav_Logout.ButtonText = "            Logout";
-            this.btn_SideNav_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition4.SetDecoration(this.btn_SideNav_Logout, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.btn_SideNav_Logout, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.btn_SideNav_Logout, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.btn_SideNav_Logout, BunifuAnimatorNS.DecorationType.None);
-            this.btn_SideNav_Logout.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_SideNav_Logout.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_SideNav_Logout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_SideNav_Logout.Iconimage")));
-            this.btn_SideNav_Logout.Iconimage_right = null;
-            this.btn_SideNav_Logout.Iconimage_right_Selected = null;
-            this.btn_SideNav_Logout.Iconimage_Selected = null;
-            this.btn_SideNav_Logout.IconMarginLeft = 0;
-            this.btn_SideNav_Logout.IconMarginRight = 0;
-            this.btn_SideNav_Logout.IconRightVisible = true;
-            this.btn_SideNav_Logout.IconRightZoom = 0D;
-            this.btn_SideNav_Logout.IconVisible = true;
-            this.btn_SideNav_Logout.IconZoom = 45D;
-            this.btn_SideNav_Logout.IsTab = false;
-            this.btn_SideNav_Logout.Location = new System.Drawing.Point(0, 373);
-            this.btn_SideNav_Logout.Name = "btn_SideNav_Logout";
-            this.btn_SideNav_Logout.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_SideNav_Logout.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btn_SideNav_Logout.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_SideNav_Logout.selected = false;
-            this.btn_SideNav_Logout.Size = new System.Drawing.Size(257, 60);
-            this.btn_SideNav_Logout.TabIndex = 4;
-            this.btn_SideNav_Logout.Text = "            Logout";
-            this.btn_SideNav_Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SideNav_Logout.Textcolor = System.Drawing.Color.White;
-            this.btn_SideNav_Logout.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SideNav_Logout.Click += new System.EventHandler(this.btn_SideNav_Logout_Click);
+            this.pb_Admin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Admin.BackgroundImage")));
+            this.pb_Admin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuTransition3.SetDecoration(this.pb_Admin, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.pb_Admin, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pb_Admin, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pb_Admin, BunifuAnimatorNS.DecorationType.None);
+            this.pb_Admin.Location = new System.Drawing.Point(77, 31);
+            this.pb_Admin.Name = "pb_Admin";
+            this.pb_Admin.Size = new System.Drawing.Size(93, 93);
+            this.pb_Admin.TabIndex = 6;
+            this.pb_Admin.TabStop = false;
+            this.pb_Admin.Visible = false;
             // 
-            // btn_SideNav_Logs
+            // lbl_Admin
             // 
-            this.btn_SideNav_Logs.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btn_SideNav_Logs.BackColor = System.Drawing.Color.Transparent;
-            this.btn_SideNav_Logs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_SideNav_Logs.BorderRadius = 0;
-            this.btn_SideNav_Logs.ButtonText = "            Logs";
-            this.btn_SideNav_Logs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition4.SetDecoration(this.btn_SideNav_Logs, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.btn_SideNav_Logs, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.btn_SideNav_Logs, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.btn_SideNav_Logs, BunifuAnimatorNS.DecorationType.None);
-            this.btn_SideNav_Logs.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_SideNav_Logs.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_SideNav_Logs.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_SideNav_Logs.Iconimage")));
-            this.btn_SideNav_Logs.Iconimage_right = null;
-            this.btn_SideNav_Logs.Iconimage_right_Selected = null;
-            this.btn_SideNav_Logs.Iconimage_Selected = null;
-            this.btn_SideNav_Logs.IconMarginLeft = 0;
-            this.btn_SideNav_Logs.IconMarginRight = 0;
-            this.btn_SideNav_Logs.IconRightVisible = true;
-            this.btn_SideNav_Logs.IconRightZoom = 0D;
-            this.btn_SideNav_Logs.IconVisible = true;
-            this.btn_SideNav_Logs.IconZoom = 50D;
-            this.btn_SideNav_Logs.IsTab = false;
-            this.btn_SideNav_Logs.Location = new System.Drawing.Point(0, 255);
-            this.btn_SideNav_Logs.Name = "btn_SideNav_Logs";
-            this.btn_SideNav_Logs.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_SideNav_Logs.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btn_SideNav_Logs.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_SideNav_Logs.selected = false;
-            this.btn_SideNav_Logs.Size = new System.Drawing.Size(257, 60);
-            this.btn_SideNav_Logs.TabIndex = 4;
-            this.btn_SideNav_Logs.Text = "            Logs";
-            this.btn_SideNav_Logs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SideNav_Logs.Textcolor = System.Drawing.Color.White;
-            this.btn_SideNav_Logs.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Admin.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.lbl_Admin, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lbl_Admin, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.lbl_Admin, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lbl_Admin, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_Admin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Admin.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_Admin.Location = new System.Drawing.Point(77, 133);
+            this.lbl_Admin.Name = "lbl_Admin";
+            this.lbl_Admin.Size = new System.Drawing.Size(98, 16);
+            this.lbl_Admin.TabIndex = 5;
+            this.lbl_Admin.Text = "Lequin, Jerico";
             // 
             // btn_SideNav_Nodes
             // 
@@ -295,73 +287,43 @@
             this.btn_SideNav_Nodes.Textcolor = System.Drawing.Color.White;
             this.btn_SideNav_Nodes.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel_SideNav
+            // btn_SideNav_Logs
             // 
-            this.panel_SideNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.panel_SideNav.Controls.Add(this.separator_SideNav);
-            this.panel_SideNav.Controls.Add(this.pb_SideMenu);
-            this.panel_SideNav.Controls.Add(this.pb_Admin);
-            this.panel_SideNav.Controls.Add(this.lbl_Admin);
-            this.panel_SideNav.Controls.Add(this.btn_SideNav_Nodes);
-            this.panel_SideNav.Controls.Add(this.btn_SideNav_Logs);
-            this.panel_SideNav.Controls.Add(this.btn_SideNav_SystemFloor);
-            this.panel_SideNav.Controls.Add(this.btn_SideNav_Logout);
-            this.bunifuTransition4.SetDecoration(this.panel_SideNav, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.panel_SideNav, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.panel_SideNav, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.panel_SideNav, BunifuAnimatorNS.DecorationType.None);
-            this.panel_SideNav.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_SideNav.Location = new System.Drawing.Point(0, 34);
-            this.panel_SideNav.Name = "panel_SideNav";
-            this.panel_SideNav.Size = new System.Drawing.Size(60, 596);
-            this.panel_SideNav.TabIndex = 4;
-            // 
-            // separator_SideNav
-            // 
-            this.separator_SideNav.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransition4.SetDecoration(this.separator_SideNav, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.separator_SideNav, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.separator_SideNav, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.separator_SideNav, BunifuAnimatorNS.DecorationType.None);
-            this.separator_SideNav.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.separator_SideNav.LineThickness = 1;
-            this.separator_SideNav.Location = new System.Drawing.Point(12, 153);
-            this.separator_SideNav.Name = "separator_SideNav";
-            this.separator_SideNav.Size = new System.Drawing.Size(231, 35);
-            this.separator_SideNav.TabIndex = 7;
-            this.separator_SideNav.Transparency = 255;
-            this.separator_SideNav.Vertical = false;
-            this.separator_SideNav.Visible = false;
-            // 
-            // pb_Admin
-            // 
-            this.pb_Admin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Admin.BackgroundImage")));
-            this.pb_Admin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuTransition3.SetDecoration(this.pb_Admin, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.pb_Admin, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pb_Admin, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pb_Admin, BunifuAnimatorNS.DecorationType.None);
-            this.pb_Admin.Location = new System.Drawing.Point(77, 31);
-            this.pb_Admin.Name = "pb_Admin";
-            this.pb_Admin.Size = new System.Drawing.Size(93, 93);
-            this.pb_Admin.TabIndex = 6;
-            this.pb_Admin.TabStop = false;
-            this.pb_Admin.Visible = false;
-            // 
-            // lbl_Admin
-            // 
-            this.lbl_Admin.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.lbl_Admin, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lbl_Admin, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.lbl_Admin, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lbl_Admin, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_Admin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Admin.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_Admin.Location = new System.Drawing.Point(77, 133);
-            this.lbl_Admin.Name = "lbl_Admin";
-            this.lbl_Admin.Size = new System.Drawing.Size(98, 16);
-            this.lbl_Admin.TabIndex = 5;
-            this.lbl_Admin.Text = "Lequin, Jerico";
+            this.btn_SideNav_Logs.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btn_SideNav_Logs.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SideNav_Logs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_SideNav_Logs.BorderRadius = 0;
+            this.btn_SideNav_Logs.ButtonText = "            Logs";
+            this.btn_SideNav_Logs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition4.SetDecoration(this.btn_SideNav_Logs, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.btn_SideNav_Logs, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.btn_SideNav_Logs, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.btn_SideNav_Logs, BunifuAnimatorNS.DecorationType.None);
+            this.btn_SideNav_Logs.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_SideNav_Logs.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_SideNav_Logs.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_SideNav_Logs.Iconimage")));
+            this.btn_SideNav_Logs.Iconimage_right = null;
+            this.btn_SideNav_Logs.Iconimage_right_Selected = null;
+            this.btn_SideNav_Logs.Iconimage_Selected = null;
+            this.btn_SideNav_Logs.IconMarginLeft = 0;
+            this.btn_SideNav_Logs.IconMarginRight = 0;
+            this.btn_SideNav_Logs.IconRightVisible = true;
+            this.btn_SideNav_Logs.IconRightZoom = 0D;
+            this.btn_SideNav_Logs.IconVisible = true;
+            this.btn_SideNav_Logs.IconZoom = 50D;
+            this.btn_SideNav_Logs.IsTab = false;
+            this.btn_SideNav_Logs.Location = new System.Drawing.Point(0, 255);
+            this.btn_SideNav_Logs.Name = "btn_SideNav_Logs";
+            this.btn_SideNav_Logs.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_SideNav_Logs.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btn_SideNav_Logs.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_SideNav_Logs.selected = false;
+            this.btn_SideNav_Logs.Size = new System.Drawing.Size(257, 60);
+            this.btn_SideNav_Logs.TabIndex = 4;
+            this.btn_SideNav_Logs.Text = "            Logs";
+            this.btn_SideNav_Logs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SideNav_Logs.Textcolor = System.Drawing.Color.White;
+            this.btn_SideNav_Logs.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_SideNav_SystemFloor
             // 
@@ -400,6 +362,46 @@
             this.btn_SideNav_SystemFloor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_SideNav_SystemFloor.Textcolor = System.Drawing.Color.White;
             this.btn_SideNav_SystemFloor.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SideNav_SystemFloor.Click += new System.EventHandler(this.btn_SideNav_SystemFloor_Click);
+            // 
+            // btn_SideNav_Logout
+            // 
+            this.btn_SideNav_Logout.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btn_SideNav_Logout.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SideNav_Logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_SideNav_Logout.BorderRadius = 0;
+            this.btn_SideNav_Logout.ButtonText = "            Logout";
+            this.btn_SideNav_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition4.SetDecoration(this.btn_SideNav_Logout, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.btn_SideNav_Logout, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.btn_SideNav_Logout, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.btn_SideNav_Logout, BunifuAnimatorNS.DecorationType.None);
+            this.btn_SideNav_Logout.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_SideNav_Logout.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_SideNav_Logout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_SideNav_Logout.Iconimage")));
+            this.btn_SideNav_Logout.Iconimage_right = null;
+            this.btn_SideNav_Logout.Iconimage_right_Selected = null;
+            this.btn_SideNav_Logout.Iconimage_Selected = null;
+            this.btn_SideNav_Logout.IconMarginLeft = 0;
+            this.btn_SideNav_Logout.IconMarginRight = 0;
+            this.btn_SideNav_Logout.IconRightVisible = true;
+            this.btn_SideNav_Logout.IconRightZoom = 0D;
+            this.btn_SideNav_Logout.IconVisible = true;
+            this.btn_SideNav_Logout.IconZoom = 45D;
+            this.btn_SideNav_Logout.IsTab = false;
+            this.btn_SideNav_Logout.Location = new System.Drawing.Point(0, 373);
+            this.btn_SideNav_Logout.Name = "btn_SideNav_Logout";
+            this.btn_SideNav_Logout.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_SideNav_Logout.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btn_SideNav_Logout.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_SideNav_Logout.selected = false;
+            this.btn_SideNav_Logout.Size = new System.Drawing.Size(257, 60);
+            this.btn_SideNav_Logout.TabIndex = 4;
+            this.btn_SideNav_Logout.Text = "            Logout";
+            this.btn_SideNav_Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SideNav_Logout.Textcolor = System.Drawing.Color.White;
+            this.btn_SideNav_Logout.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SideNav_Logout.Click += new System.EventHandler(this.btn_SideNav_Logout_Click);
             // 
             // richTxtBox_Nodes
             // 
@@ -454,44 +456,45 @@
             this.btn_OpenNodes.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OpenNodes.Click += new System.EventHandler(this.btn_OpenNodes_Click);
             // 
-            // btn_RestoreDefault
+            // btn_setStartingFloor
             // 
-            this.btn_RestoreDefault.Activecolor = System.Drawing.Color.Cyan;
-            this.btn_RestoreDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_RestoreDefault.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_RestoreDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_RestoreDefault.BorderRadius = 0;
-            this.btn_RestoreDefault.ButtonText = "Restore Default";
-            this.btn_RestoreDefault.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition4.SetDecoration(this.btn_RestoreDefault, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.btn_RestoreDefault, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.btn_RestoreDefault, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.btn_RestoreDefault, BunifuAnimatorNS.DecorationType.None);
-            this.btn_RestoreDefault.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_RestoreDefault.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_RestoreDefault.Iconimage = null;
-            this.btn_RestoreDefault.Iconimage_right = null;
-            this.btn_RestoreDefault.Iconimage_right_Selected = null;
-            this.btn_RestoreDefault.Iconimage_Selected = null;
-            this.btn_RestoreDefault.IconMarginLeft = 0;
-            this.btn_RestoreDefault.IconMarginRight = 0;
-            this.btn_RestoreDefault.IconRightVisible = true;
-            this.btn_RestoreDefault.IconRightZoom = 0D;
-            this.btn_RestoreDefault.IconVisible = true;
-            this.btn_RestoreDefault.IconZoom = 90D;
-            this.btn_RestoreDefault.IsTab = false;
-            this.btn_RestoreDefault.Location = new System.Drawing.Point(78, 578);
-            this.btn_RestoreDefault.Name = "btn_RestoreDefault";
-            this.btn_RestoreDefault.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_RestoreDefault.OnHovercolor = System.Drawing.Color.Cyan;
-            this.btn_RestoreDefault.OnHoverTextColor = System.Drawing.Color.DimGray;
-            this.btn_RestoreDefault.selected = false;
-            this.btn_RestoreDefault.Size = new System.Drawing.Size(165, 41);
-            this.btn_RestoreDefault.TabIndex = 6;
-            this.btn_RestoreDefault.Text = "Restore Default";
-            this.btn_RestoreDefault.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_RestoreDefault.Textcolor = System.Drawing.Color.White;
-            this.btn_RestoreDefault.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_setStartingFloor.Activecolor = System.Drawing.Color.Cyan;
+            this.btn_setStartingFloor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_setStartingFloor.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_setStartingFloor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_setStartingFloor.BorderRadius = 0;
+            this.btn_setStartingFloor.ButtonText = "Restore Default";
+            this.btn_setStartingFloor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition4.SetDecoration(this.btn_setStartingFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.btn_setStartingFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.btn_setStartingFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.btn_setStartingFloor, BunifuAnimatorNS.DecorationType.None);
+            this.btn_setStartingFloor.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_setStartingFloor.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_setStartingFloor.Iconimage = null;
+            this.btn_setStartingFloor.Iconimage_right = null;
+            this.btn_setStartingFloor.Iconimage_right_Selected = null;
+            this.btn_setStartingFloor.Iconimage_Selected = null;
+            this.btn_setStartingFloor.IconMarginLeft = 0;
+            this.btn_setStartingFloor.IconMarginRight = 0;
+            this.btn_setStartingFloor.IconRightVisible = true;
+            this.btn_setStartingFloor.IconRightZoom = 0D;
+            this.btn_setStartingFloor.IconVisible = true;
+            this.btn_setStartingFloor.IconZoom = 90D;
+            this.btn_setStartingFloor.IsTab = false;
+            this.btn_setStartingFloor.Location = new System.Drawing.Point(92, 577);
+            this.btn_setStartingFloor.Name = "btn_setStartingFloor";
+            this.btn_setStartingFloor.Normalcolor = System.Drawing.Color.RoyalBlue;
+            this.btn_setStartingFloor.OnHovercolor = System.Drawing.Color.Cyan;
+            this.btn_setStartingFloor.OnHoverTextColor = System.Drawing.Color.DimGray;
+            this.btn_setStartingFloor.selected = false;
+            this.btn_setStartingFloor.Size = new System.Drawing.Size(165, 41);
+            this.btn_setStartingFloor.TabIndex = 6;
+            this.btn_setStartingFloor.Text = "Restore Default";
+            this.btn_setStartingFloor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_setStartingFloor.Textcolor = System.Drawing.Color.White;
+            this.btn_setStartingFloor.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_setStartingFloor.Click += new System.EventHandler(this.btn_setStartingFloor_Click);
             // 
             // btn_SaveNodes
             // 
@@ -518,7 +521,7 @@
             this.btn_SaveNodes.IconVisible = true;
             this.btn_SaveNodes.IconZoom = 90D;
             this.btn_SaveNodes.IsTab = false;
-            this.btn_SaveNodes.Location = new System.Drawing.Point(86, 485);
+            this.btn_SaveNodes.Location = new System.Drawing.Point(86, 483);
             this.btn_SaveNodes.Name = "btn_SaveNodes";
             this.btn_SaveNodes.Normalcolor = System.Drawing.Color.RoyalBlue;
             this.btn_SaveNodes.OnHovercolor = System.Drawing.Color.Cyan;
@@ -995,7 +998,7 @@
             this.btn_SaveMap.IconVisible = true;
             this.btn_SaveMap.IconZoom = 90D;
             this.btn_SaveMap.IsTab = false;
-            this.btn_SaveMap.Location = new System.Drawing.Point(257, 485);
+            this.btn_SaveMap.Location = new System.Drawing.Point(257, 483);
             this.btn_SaveMap.Name = "btn_SaveMap";
             this.btn_SaveMap.Normalcolor = System.Drawing.Color.RoyalBlue;
             this.btn_SaveMap.OnHovercolor = System.Drawing.Color.Cyan;
@@ -1024,26 +1027,51 @@
             this.pb_VirtualMap.TabIndex = 7;
             this.pb_VirtualMap.TabStop = false;
             // 
+            // cmb_floorSelection
+            // 
+            this.cmb_floorSelection.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_floorSelection.BorderRadius = 3;
+            this.bunifuTransition3.SetDecoration(this.cmb_floorSelection, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.cmb_floorSelection, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.cmb_floorSelection, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.cmb_floorSelection, BunifuAnimatorNS.DecorationType.None);
+            this.cmb_floorSelection.DisabledColor = System.Drawing.Color.Gray;
+            this.cmb_floorSelection.ForeColor = System.Drawing.Color.White;
+            this.cmb_floorSelection.Items = new string[] {
+        "UG",
+        "3rd",
+        "5th",
+        "7th",
+        "9th"};
+            this.cmb_floorSelection.Location = new System.Drawing.Point(86, 527);
+            this.cmb_floorSelection.Margin = new System.Windows.Forms.Padding(5);
+            this.cmb_floorSelection.Name = "cmb_floorSelection";
+            this.cmb_floorSelection.NomalColor = System.Drawing.Color.RoyalBlue;
+            this.cmb_floorSelection.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.cmb_floorSelection.selectedIndex = -1;
+            this.cmb_floorSelection.Size = new System.Drawing.Size(336, 42);
+            this.cmb_floorSelection.TabIndex = 9;
+            // 
             // bunifuTransition2
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.bunifuTransition2.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 1;
-            animation3.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 2F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation3;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 1;
+            animation2.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 2F;
+            animation2.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation2;
             this.bunifuTransition2.MaxAnimationTime = 1000;
             // 
             // bunifuTransition3
@@ -1072,22 +1100,22 @@
             // 
             this.bunifuTransition4.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition4.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.bunifuTransition4.DefaultAnimation = animation2;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 1F;
+            this.bunifuTransition4.DefaultAnimation = animation3;
             this.bunifuTransition4.MaxAnimationTime = 100;
             // 
             // form_AdminDashboard
@@ -1096,9 +1124,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 630);
             this.ControlBox = false;
+            this.Controls.Add(this.cmb_floorSelection);
             this.Controls.Add(this.pb_VirtualMap);
             this.Controls.Add(this.panel_SideNav);
-            this.Controls.Add(this.btn_RestoreDefault);
+            this.Controls.Add(this.btn_setStartingFloor);
             this.Controls.Add(this.btn_SaveMap);
             this.Controls.Add(this.btn_SaveNodes);
             this.Controls.Add(this.btn_10th);
@@ -1126,13 +1155,13 @@
             this.Text = "iLocator | Admin Dashboard";
             this.Load += new System.EventHandler(this.form_AdminDashboard_Load);
             this.Click += new System.EventHandler(this.form_AdminDashboard_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).EndInit();
             this.panel_ControlBox.ResumeLayout(false);
             this.panel_ControlBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_SideMenu)).EndInit();
             this.panel_SideNav.ResumeLayout(false);
             this.panel_SideNav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_SideMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Admin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_VirtualMap)).EndInit();
             this.ResumeLayout(false);
@@ -1146,14 +1175,10 @@
         private System.Windows.Forms.PictureBox btn_Close;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition2;
-        private System.Windows.Forms.PictureBox pb_SideMenu;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_SideNav_Logout;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_SideNav_Logs;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_SideNav_Nodes;
         private System.Windows.Forms.Panel panel_SideNav;
         private System.Windows.Forms.RichTextBox richTxtBox_Nodes;
         private Bunifu.Framework.UI.BunifuFlatButton btn_OpenNodes;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_RestoreDefault;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_setStartingFloor;
         private Bunifu.Framework.UI.BunifuFlatButton btn_SaveNodes;
         private Bunifu.Framework.UI.BunifuFlatButton btn_UG;
         private Bunifu.Framework.UI.BunifuFlatButton btn_2nd;
@@ -1167,12 +1192,17 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_10th;
         private Bunifu.Framework.UI.BunifuFlatButton btn_OpenMap;
         private Bunifu.Framework.UI.BunifuFlatButton btn_SaveMap;
-        private System.Windows.Forms.PictureBox pb_Admin;
-        private Bunifu.Framework.UI.BunifuCustomLabel lbl_Admin;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition3;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition4;
         private System.Windows.Forms.PictureBox pb_VirtualMap;
         private Bunifu.Framework.UI.BunifuFlatButton btn_SideNav_SystemFloor;
         private Bunifu.Framework.UI.BunifuSeparator separator_SideNav;
+        private System.Windows.Forms.PictureBox pb_SideMenu;
+        private System.Windows.Forms.PictureBox pb_Admin;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbl_Admin;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_SideNav_Nodes;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_SideNav_Logs;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_SideNav_Logout;
+        private Bunifu.Framework.UI.BunifuDropdown cmb_floorSelection;
     }
 }

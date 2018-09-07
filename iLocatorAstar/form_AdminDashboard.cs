@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace iLocatorAstar
 {
@@ -56,6 +57,7 @@ namespace iLocatorAstar
 
         private void form_AdminDashboard_Click(object sender, EventArgs e)
         {
+
             if (panel_SideNav.Width == 250)
             {
                 panel_SideNav.Visible = false;
@@ -159,6 +161,74 @@ namespace iLocatorAstar
         {
             File.WriteAllLines(fname, richTxtBox_Nodes.Lines);
             
+        }
+
+        private void btn_SideNav_SystemFloor_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"..\..\Setup\Config.ini");
+        }
+
+        private void btn_Change_CurrentFlr_Click(object sender, EventArgs e)
+        {
+            Form_ChangeSystemFloor frm_ChangeSystemFloor = new Form_ChangeSystemFloor();
+            frm_ChangeSystemFloor.ShowDialog();
+        }
+
+        int startingNode;
+
+        private void btn_setStartingFloor_Click(object sender, EventArgs e)
+        {
+            switch (cmb_floorSelection.Text)
+            {
+                case "UG":
+                    startingNode = 1;
+                    break;
+                case "3rd Floor":
+                    startingNode = 42;
+                    break;
+                case "5th Floor":
+                    startingNode = 106;
+                    break;
+                case "7th Floor":
+                    startingNode = 145;
+                    break;
+                case "9th Floor":
+                    startingNode = 207;
+                    break;
+                default:
+                    startingNode = 0;
+                    break;
+            }
+            changeStartingFloor(startingNode);
+        }
+
+        public void changeStartingFloor(int newStartingNode)
+        {
+            string[] configInput = File.ReadAllLines(Environment.CurrentDirectory.ToString() + @"\config\config.txt");
+
+            for (int x = 0; x < configInput.Length; x++)
+            {
+                if (configInput[x] == "[Starting Point]")
+                {
+                    x++;
+
+                    string[] values = configInput[x].Split('=');
+
+                    if (values[0] == "startingNode")
+                    {
+
+                        values[1] = "" + newStartingNode;
+
+                        string newText = values[0] + "=" + values[1];
+
+                        configInput[x] = configInput[x].Replace(configInput[x], newText);
+
+                        File.WriteAllLines(Environment.CurrentDirectory.ToString() + @"\config\config.txt", configInput);
+
+                        MessageBox.Show("Starting floor successfully changed!");
+                    }
+                }
+            }
         }
     }
 }
