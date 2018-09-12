@@ -19,8 +19,6 @@ namespace iLocatorAstar
 
         private void form_Login_Load(object sender, EventArgs e)
         {
-
-
             bunifuTxtBox_Username.Text = "Username";
             bunifuTxtBox_Password.Text = "Password";
         }
@@ -60,20 +58,17 @@ namespace iLocatorAstar
         }
         private void btn_AdminLogin_Click(object sender, EventArgs e)
         {
-            if (bunifuTxtBox_Username.Text == "admin" || bunifuTxtBox_Password.Text == "admin123")
+            if (bunifuTxtBox_Username.Text == "admin" && bunifuTxtBox_Password.Text == "admin123")
             {
-
-                this.Hide();
-
                 form_AdminDashboard AdminDashBoardForm = new form_AdminDashboard();
+                AdminDashBoardForm.BringToFront();
                 AdminDashBoardForm.Show();
-
-
-          
+                this.Dispose();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Incorrect Username/Password","System", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Incorrect Username/Password", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }

@@ -162,7 +162,7 @@
             this.panel_SideNav.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_SideNav.Location = new System.Drawing.Point(0, 34);
             this.panel_SideNav.Name = "panel_SideNav";
-            this.panel_SideNav.Size = new System.Drawing.Size(221, 596);
+            this.panel_SideNav.Size = new System.Drawing.Size(60, 596);
             this.panel_SideNav.TabIndex = 4;
             // 
             // separator_SideNav
@@ -192,7 +192,7 @@
             this.bunifuTransition4.SetDecoration(this.pb_SideMenu, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pb_SideMenu, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.pb_SideMenu, BunifuAnimatorNS.DecorationType.None);
-            this.pb_SideMenu.Location = new System.Drawing.Point(178, 11);
+            this.pb_SideMenu.Location = new System.Drawing.Point(17, 11);
             this.pb_SideMenu.Name = "pb_SideMenu";
             this.pb_SideMenu.Size = new System.Drawing.Size(28, 27);
             this.pb_SideMenu.TabIndex = 3;
@@ -353,9 +353,9 @@
             this.bunifuTransition2.SetDecoration(this.panel_UniverseAdmin, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition3.SetDecoration(this.panel_UniverseAdmin, BunifuAnimatorNS.DecorationType.None);
             this.panel_UniverseAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_UniverseAdmin.Location = new System.Drawing.Point(221, 34);
+            this.panel_UniverseAdmin.Location = new System.Drawing.Point(60, 34);
             this.panel_UniverseAdmin.Name = "panel_UniverseAdmin";
-            this.panel_UniverseAdmin.Size = new System.Drawing.Size(817, 596);
+            this.panel_UniverseAdmin.Size = new System.Drawing.Size(978, 596);
             this.panel_UniverseAdmin.TabIndex = 5;
             // 
             // bunifuTransition2

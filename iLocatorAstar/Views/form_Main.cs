@@ -37,80 +37,17 @@ namespace iLocatorAstar
             // Maximized Windows when Open
             WindowState = FormWindowState.Maximized;
 
-            // Make sure Select User Form is Hide
-            Form fc = Application.OpenForms["form_SelectUser"];
-            if (fc != null)
-            {
-                fc.Hide();
-            }
-
             // Transition System
-            if (tableLayoutPanel_FloorButtons.Visible == false)
-            {
-                bunifuTransFloorButtons.ShowSync(tableLayoutPanel_FloorButtons);
-            }
-            if (lbl_SelectFloor.Visible == false || lbl_SelectDestination.Visible == false || lbl_VirtualMap.Visible == false || lbl_ShortestPath.Visible == false || lbl_EstimatedTime.Visible == false || lbl_EstimatedDistance.Visible == false)
-            {
-                bunifuTransLabels.ShowSync(lbl_SelectFloor);
-                bunifuTransLabels.ShowSync(lbl_SelectDestination);
-                bunifuTransLabels.ShowSync(lbl_VirtualMap);
-                bunifuTransLabels.ShowSync(lbl_ShortestPath);
-                bunifuTransLabels.ShowSync(lbl_EstimatedTime);
-                bunifuTransLabels.ShowSync(lbl_EstimatedDistance);
-            }
+
+            bunifuFadeTransition.ShowSync(panel_ContainerMain);
 
             LoadConfigFile();
-        }
-
-
-        public void SelectedFloor()
-        {
-            var text = File.ReadLines(Environment.CurrentDirectory.ToString() + @"..\..\..\setup\config.ini");
-
-            foreach (var item in text)
-            {
-                SystemFloor = item.ToString();
-            }
-
-            switch (SystemFloor.ToString())
-            {
-                case "UG":
-                    this.btn_UG_Click(btn_UG, EventArgs.Empty);
-                    break;
-                case "2nd":
-                    this.btn_2nd_Click(btn_2nd, EventArgs.Empty);
-                    break;
-                case "3rd":
-                    this.btn_3rd_Click(btn_3rd, EventArgs.Empty);
-                    break;
-                case "4th":
-                    this.btn_4th_Click(btn_4th, EventArgs.Empty);
-                    break;
-                case "5th":
-                    this.btn_5th_Click(btn_5th, EventArgs.Empty);
-                    break;
-                case "6th":
-                    this.btn_6th_Click(btn_6th, EventArgs.Empty);
-                    break;
-                case "7th":
-                    this.btn_7th_Click(btn_7th, EventArgs.Empty);
-                    break;
-                case "8th":
-                    this.btn_8th_Click(btn_8th, EventArgs.Empty);
-                    break;
-                case "9th":
-                    this.btn_9th_Click(btn_9th, EventArgs.Empty);
-                    break;
-                case "10th":
-                    this.btn_10th_Click(btn_10th, EventArgs.Empty);
-                    break;
-            }
         }
 
         private void LoadConfigFile()
         {
             string[] configInput = File.ReadAllLines(Environment.CurrentDirectory.ToString() + @"\config\config.txt");
-           
+
             for (int x = 0; x < configInput.Length; x++)
             {
                 if (configInput[x] == "[Starting Point]")
@@ -172,15 +109,14 @@ namespace iLocatorAstar
             // Code for changing the Selected Button Color
             this.ButtonSelected(sender);
 
-
             // Show Virtual Map
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
                 if (SystemFloor.ToString() == "UG")
                 {
-                    Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev-here.jpg");
+                    Image img = new Bitmap(Environment.CurrentDirectory + @"\Maps\1.jpg");
                     pb_VirtualMap.Image = img;
                 }
                 else
@@ -189,7 +125,7 @@ namespace iLocatorAstar
                     pb_VirtualMap.Image = img;
                 }
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
             }
 
             // Hide List of Directories in Select Destination
@@ -200,12 +136,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(0, 33);
         }
@@ -216,14 +152,14 @@ namespace iLocatorAstar
             this.ButtonSelected(sender);
 
             // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
                 Image img = Image.FromFile(@"..\..\Virtual Maps\2nd-rev.jpg");
                 pb_VirtualMap.Image = img;
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
 
             }
             HidePanels();
@@ -232,12 +168,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(32, 41);
         }
@@ -248,7 +184,7 @@ namespace iLocatorAstar
             this.ButtonSelected(sender);
 
             // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
@@ -263,7 +199,7 @@ namespace iLocatorAstar
                     pb_VirtualMap.Image = img;
                 }
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
             }
             HidePanels();
 
@@ -271,12 +207,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(40, 68);
         }
@@ -287,14 +223,14 @@ namespace iLocatorAstar
             this.ButtonSelected(sender);
 
             // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
                 Image img = Image.FromFile(@"..\..\Virtual Maps\4th-rev.jpg");
                 pb_VirtualMap.Image = img;
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
             }
 
             HidePanels();
@@ -302,12 +238,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(67, 101);
         }
@@ -318,14 +254,14 @@ namespace iLocatorAstar
             this.ButtonSelected(sender);
 
             // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
                 Image img = Image.FromFile(@"..\..\Virtual Maps\5th-rev.jpg");
                 pb_VirtualMap.Image = img;
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
             }
 
             HidePanels();
@@ -333,12 +269,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(100, 118);
         }
@@ -349,7 +285,7 @@ namespace iLocatorAstar
             this.ButtonSelected(sender);
 
             // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
@@ -357,7 +293,7 @@ namespace iLocatorAstar
                 pb_VirtualMap.Image = img;
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
 
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
 
             }
             HidePanels();
@@ -365,12 +301,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(117, 144);
         }
@@ -381,7 +317,7 @@ namespace iLocatorAstar
             this.ButtonSelected(sender);
 
             // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
@@ -397,7 +333,7 @@ namespace iLocatorAstar
                 }
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
 
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
             }
 
             HidePanels();
@@ -405,12 +341,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(143, 174);
         }
@@ -421,14 +357,14 @@ namespace iLocatorAstar
             this.ButtonSelected(sender);
 
             // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
                 Image img = Image.FromFile(@"..\..\Virtual Maps\8th-rev.jpg");
                 pb_VirtualMap.Image = img;
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
 
             }
 
@@ -437,12 +373,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(173, 206);
         }
@@ -453,14 +389,14 @@ namespace iLocatorAstar
             this.ButtonSelected(sender);
 
             // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
                 Image img = Image.FromFile(@"..\..\Virtual Maps\9th-rev.jpg");
                 pb_VirtualMap.Image = img;
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
             }
 
             HidePanels();
@@ -468,12 +404,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(205, 238);
         }
@@ -484,14 +420,14 @@ namespace iLocatorAstar
             this.ButtonSelected(sender);
 
             // Show Virtual Maps
-            bunifuTransMaps.HideSync(pb_VirtualMap);
+            bunifuLeafTransition.HideSync(pb_VirtualMap);
 
             if (pb_VirtualMap.Visible == false)
             {
                 Image img = Image.FromFile(@"..\..\Virtual Maps\10th-rev.jpg");
                 pb_VirtualMap.Image = img;
                 pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuTransMaps.ShowSync(pb_VirtualMap);
+                bunifuLeafTransition.ShowSync(pb_VirtualMap);
             }
 
             HidePanels();
@@ -499,12 +435,12 @@ namespace iLocatorAstar
             if (panel_ContainerSelectDestination.Visible == false)
             {
                 panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuTransMaps.ShowSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
                 ShowAddonButtons();
             }
             else
             {
-                bunifuTransMaps.HideSync(panel_ContainerSelectDestination);
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
             }
             showNodes(237, 259);
         }
@@ -518,10 +454,10 @@ namespace iLocatorAstar
 
         public void ShowAddonButtons()
         {
-            bunifuTransLabels.ShowSync(btn_BackToHome);
-            bunifuTransLabels.ShowSync(lbl_GoHome);
-            bunifuTransLabels.ShowSync(btn_Replay);
-            bunifuTransLabels.ShowSync(lbl_Replay);
+            bunifuFadeTransition.ShowSync(btn_BackToHome);
+            bunifuFadeTransition.ShowSync(lbl_GoHome);
+            bunifuFadeTransition.ShowSync(btn_Replay);
+            bunifuFadeTransition.ShowSync(lbl_Replay);
         }
 
         //Code for Close Application
@@ -539,8 +475,10 @@ namespace iLocatorAstar
 
         private void panel_UniverseSelectDestination_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, this.panel_UniverseSelectDestination.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+            //ControlPaint.DrawBorder(e.Graphics, this.panel_UniverseSelectDestination.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+
         }
+
 
         private void panel_TitleVirtualMap_Paint(object sender, PaintEventArgs e)
         {
@@ -1074,8 +1012,8 @@ namespace iLocatorAstar
 
             for (int i = 0; i < result.Count; i++)
             {
-                shortestPath = shortestPath + " " +result[i];
-                if (i+1 != result.Count)
+                shortestPath = shortestPath + " " + result[i];
+                if (i + 1 != result.Count)
                 {
                     shortestPath = shortestPath + " -";
                 }
@@ -1176,16 +1114,16 @@ namespace iLocatorAstar
         {
             string btnName = btn.ButtonText;
             int nodeNumber = destinations.FirstOrDefault(x => x.Value == btnName).Key;
-            endingNode = nodeNumber;        
+            endingNode = nodeNumber;
             performAStar(startingNode, nodeNumber);
             form_WelcomePage frmwelcome = new form_WelcomePage();
-            db.sp_AddUserLogs(usertype,currentFloor, btnName, DateTime.Now);
+            db.sp_AddUserLogs(usertype, currentFloor, btnName, DateTime.Now);
         }
 
         int endingNode;
         private void btn_Replay_Click(object sender, EventArgs e)
         {
-            retrace(NodesResult,endingNode);
+            retrace(NodesResult, endingNode);
         }
     }
 }

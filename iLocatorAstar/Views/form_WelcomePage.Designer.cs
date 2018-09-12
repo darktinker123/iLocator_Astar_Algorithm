@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_WelcomePage));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panel_ContainerWelcome = new System.Windows.Forms.Panel();
             this.lbl_TimeToday = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_Next = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -49,11 +48,10 @@
             this.pb_iLocatorLogo = new System.Windows.Forms.PictureBox();
             this.lbl_FormTitle = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.PictureBox();
-            this.bunifuACTTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel_SystemStatus = new System.Windows.Forms.Panel();
             this.lbl_VarSysCurrentFloor = new System.Windows.Forms.Label();
             this.lbl_SysCurrentFloor = new System.Windows.Forms.Label();
-            this.bunifuFadeTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.Time_Timer = new System.Windows.Forms.Timer(this.components);
             this.panel_ContainerWelcome.SuspendLayout();
             this.tableLayoutPanel_SocialMedia.SuspendLayout();
@@ -75,23 +73,23 @@
             this.panel_ContainerWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_ContainerWelcome.Controls.Add(this.panel_SystemStatus);
             this.panel_ContainerWelcome.Controls.Add(this.lbl_TimeToday);
             this.panel_ContainerWelcome.Controls.Add(this.btn_Next);
             this.panel_ContainerWelcome.Controls.Add(this.tableLayoutPanel_SocialMedia);
             this.panel_ContainerWelcome.Controls.Add(this.panel_LogoTitle);
-            this.bunifuFadeTransition.SetDecoration(this.panel_ContainerWelcome, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuACTTransition.SetDecoration(this.panel_ContainerWelcome, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.panel_ContainerWelcome, BunifuAnimatorNS.DecorationType.None);
             this.panel_ContainerWelcome.Location = new System.Drawing.Point(12, 53);
             this.panel_ContainerWelcome.Name = "panel_ContainerWelcome";
             this.panel_ContainerWelcome.Size = new System.Drawing.Size(812, 549);
             this.panel_ContainerWelcome.TabIndex = 0;
+            this.panel_ContainerWelcome.Visible = false;
             // 
             // lbl_TimeToday
             // 
             this.lbl_TimeToday.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_TimeToday.AutoSize = true;
-            this.bunifuACTTransition.SetDecoration(this.lbl_TimeToday, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_TimeToday, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.lbl_TimeToday, BunifuAnimatorNS.DecorationType.None);
             this.lbl_TimeToday.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TimeToday.ForeColor = System.Drawing.Color.DimGray;
             this.lbl_TimeToday.Location = new System.Drawing.Point(343, 512);
@@ -111,8 +109,7 @@
             this.btn_Next.BorderRadius = 0;
             this.btn_Next.ButtonText = "Next";
             this.btn_Next.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFadeTransition.SetDecoration(this.btn_Next, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuACTTransition.SetDecoration(this.btn_Next, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.btn_Next, BunifuAnimatorNS.DecorationType.None);
             this.btn_Next.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Next.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Next.Iconcolor = System.Drawing.Color.Transparent;
@@ -141,7 +138,6 @@
             this.btn_Next.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Next.Textcolor = System.Drawing.Color.White;
             this.btn_Next.TextFont = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Next.Visible = false;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // tableLayoutPanel_SocialMedia
@@ -158,23 +154,20 @@
             this.tableLayoutPanel_SocialMedia.Controls.Add(this.pb_gPlusIco, 1, 0);
             this.tableLayoutPanel_SocialMedia.Controls.Add(this.pb_FacebookIco, 0, 0);
             this.tableLayoutPanel_SocialMedia.Controls.Add(this.pb_Settings, 4, 0);
-            this.bunifuACTTransition.SetDecoration(this.tableLayoutPanel_SocialMedia, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.tableLayoutPanel_SocialMedia, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.tableLayoutPanel_SocialMedia, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel_SocialMedia.Location = new System.Drawing.Point(12, 496);
             this.tableLayoutPanel_SocialMedia.Name = "tableLayoutPanel_SocialMedia";
             this.tableLayoutPanel_SocialMedia.RowCount = 1;
             this.tableLayoutPanel_SocialMedia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel_SocialMedia.Size = new System.Drawing.Size(283, 42);
             this.tableLayoutPanel_SocialMedia.TabIndex = 2;
-            this.tableLayoutPanel_SocialMedia.Visible = false;
             // 
             // pb_InfoIco
             // 
             this.pb_InfoIco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_InfoIco.BackgroundImage")));
             this.pb_InfoIco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_InfoIco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuACTTransition.SetDecoration(this.pb_InfoIco, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.pb_InfoIco, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.pb_InfoIco, BunifuAnimatorNS.DecorationType.None);
             this.pb_InfoIco.Location = new System.Drawing.Point(165, 3);
             this.pb_InfoIco.Name = "pb_InfoIco";
             this.pb_InfoIco.Size = new System.Drawing.Size(44, 36);
@@ -187,8 +180,7 @@
             this.pb_TwitterIco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_TwitterIco.BackgroundImage")));
             this.pb_TwitterIco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_TwitterIco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuACTTransition.SetDecoration(this.pb_TwitterIco, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.pb_TwitterIco, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.pb_TwitterIco, BunifuAnimatorNS.DecorationType.None);
             this.pb_TwitterIco.Location = new System.Drawing.Point(111, 3);
             this.pb_TwitterIco.Name = "pb_TwitterIco";
             this.pb_TwitterIco.Size = new System.Drawing.Size(35, 36);
@@ -200,8 +192,7 @@
             // 
             this.pb_gPlusIco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_gPlusIco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuACTTransition.SetDecoration(this.pb_gPlusIco, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.pb_gPlusIco, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.pb_gPlusIco, BunifuAnimatorNS.DecorationType.None);
             this.pb_gPlusIco.Image = ((System.Drawing.Image)(resources.GetObject("pb_gPlusIco.Image")));
             this.pb_gPlusIco.Location = new System.Drawing.Point(54, 3);
             this.pb_gPlusIco.Name = "pb_gPlusIco";
@@ -215,8 +206,7 @@
             // 
             this.pb_FacebookIco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_FacebookIco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuACTTransition.SetDecoration(this.pb_FacebookIco, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.pb_FacebookIco, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.pb_FacebookIco, BunifuAnimatorNS.DecorationType.None);
             this.pb_FacebookIco.Image = ((System.Drawing.Image)(resources.GetObject("pb_FacebookIco.Image")));
             this.pb_FacebookIco.Location = new System.Drawing.Point(3, 3);
             this.pb_FacebookIco.Name = "pb_FacebookIco";
@@ -231,8 +221,7 @@
             this.pb_Settings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Settings.BackgroundImage")));
             this.pb_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_Settings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuACTTransition.SetDecoration(this.pb_Settings, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.pb_Settings, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.pb_Settings, BunifuAnimatorNS.DecorationType.None);
             this.pb_Settings.Location = new System.Drawing.Point(227, 3);
             this.pb_Settings.Name = "pb_Settings";
             this.pb_Settings.Size = new System.Drawing.Size(53, 36);
@@ -247,8 +236,7 @@
             this.panel_LogoTitle.Controls.Add(this.lbl_WelcomeDescription);
             this.panel_LogoTitle.Controls.Add(this.lbl_iLocatorWelcomePage);
             this.panel_LogoTitle.Controls.Add(this.pb_ACTIco);
-            this.bunifuFadeTransition.SetDecoration(this.panel_LogoTitle, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuACTTransition.SetDecoration(this.panel_LogoTitle, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.panel_LogoTitle, BunifuAnimatorNS.DecorationType.None);
             this.panel_LogoTitle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_LogoTitle.ForeColor = System.Drawing.Color.Transparent;
             this.panel_LogoTitle.Location = new System.Drawing.Point(90, 41);
@@ -259,8 +247,7 @@
             // lbl_WelcomeDescription
             // 
             this.lbl_WelcomeDescription.AutoSize = true;
-            this.bunifuACTTransition.SetDecoration(this.lbl_WelcomeDescription, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_WelcomeDescription, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.lbl_WelcomeDescription, BunifuAnimatorNS.DecorationType.None);
             this.lbl_WelcomeDescription.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_WelcomeDescription.ForeColor = System.Drawing.Color.DimGray;
             this.lbl_WelcomeDescription.Location = new System.Drawing.Point(145, 324);
@@ -268,13 +255,11 @@
             this.lbl_WelcomeDescription.Size = new System.Drawing.Size(397, 42);
             this.lbl_WelcomeDescription.TabIndex = 2;
             this.lbl_WelcomeDescription.Text = "Need help with directions?";
-            this.lbl_WelcomeDescription.Visible = false;
             // 
             // lbl_iLocatorWelcomePage
             // 
             this.lbl_iLocatorWelcomePage.AutoSize = true;
-            this.bunifuACTTransition.SetDecoration(this.lbl_iLocatorWelcomePage, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_iLocatorWelcomePage, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.lbl_iLocatorWelcomePage, BunifuAnimatorNS.DecorationType.None);
             this.lbl_iLocatorWelcomePage.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_iLocatorWelcomePage.ForeColor = System.Drawing.Color.Black;
             this.lbl_iLocatorWelcomePage.Location = new System.Drawing.Point(23, 267);
@@ -282,7 +267,6 @@
             this.lbl_iLocatorWelcomePage.Size = new System.Drawing.Size(616, 57);
             this.lbl_iLocatorWelcomePage.TabIndex = 1;
             this.lbl_iLocatorWelcomePage.Text = "Welcome to the iLocator!";
-            this.lbl_iLocatorWelcomePage.Visible = false;
             // 
             // pb_ACTIco
             // 
@@ -291,14 +275,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_ACTIco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_ACTIco.BackgroundImage")));
             this.pb_ACTIco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuACTTransition.SetDecoration(this.pb_ACTIco, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.pb_ACTIco, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.pb_ACTIco, BunifuAnimatorNS.DecorationType.None);
             this.pb_ACTIco.Location = new System.Drawing.Point(93, 25);
             this.pb_ACTIco.Name = "pb_ACTIco";
             this.pb_ACTIco.Size = new System.Drawing.Size(493, 234);
             this.pb_ACTIco.TabIndex = 0;
             this.pb_ACTIco.TabStop = false;
-            this.pb_ACTIco.Visible = false;
             // 
             // panel_ControlBox
             // 
@@ -306,8 +288,7 @@
             this.panel_ControlBox.Controls.Add(this.pb_iLocatorLogo);
             this.panel_ControlBox.Controls.Add(this.lbl_FormTitle);
             this.panel_ControlBox.Controls.Add(this.btn_Close);
-            this.bunifuFadeTransition.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuACTTransition.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
             this.panel_ControlBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_ControlBox.Location = new System.Drawing.Point(0, 0);
             this.panel_ControlBox.Name = "panel_ControlBox";
@@ -319,8 +300,7 @@
             this.pb_iLocatorLogo.BackColor = System.Drawing.Color.Transparent;
             this.pb_iLocatorLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_iLocatorLogo.BackgroundImage")));
             this.pb_iLocatorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuACTTransition.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.pb_iLocatorLogo, BunifuAnimatorNS.DecorationType.None);
             this.pb_iLocatorLogo.Location = new System.Drawing.Point(9, 5);
             this.pb_iLocatorLogo.Name = "pb_iLocatorLogo";
             this.pb_iLocatorLogo.Size = new System.Drawing.Size(25, 25);
@@ -330,8 +310,7 @@
             // lbl_FormTitle
             // 
             this.lbl_FormTitle.AutoSize = true;
-            this.bunifuACTTransition.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.lbl_FormTitle, BunifuAnimatorNS.DecorationType.None);
             this.lbl_FormTitle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_FormTitle.ForeColor = System.Drawing.Color.White;
             this.lbl_FormTitle.Location = new System.Drawing.Point(37, 10);
@@ -347,8 +326,7 @@
             this.btn_Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Close.BackgroundImage")));
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuACTTransition.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
             this.btn_Close.Location = new System.Drawing.Point(809, 4);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(19, 27);
@@ -356,37 +334,14 @@
             this.btn_Close.TabStop = false;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
-            // bunifuACTTransition
-            // 
-            this.bunifuACTTransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
-            this.bunifuACTTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 1F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuACTTransition.DefaultAnimation = animation1;
-            this.bunifuACTTransition.Interval = 20;
-            // 
             // panel_SystemStatus
             // 
             this.panel_SystemStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_SystemStatus.Controls.Add(this.lbl_VarSysCurrentFloor);
             this.panel_SystemStatus.Controls.Add(this.lbl_SysCurrentFloor);
-            this.bunifuFadeTransition.SetDecoration(this.panel_SystemStatus, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuACTTransition.SetDecoration(this.panel_SystemStatus, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.panel_SystemStatus, BunifuAnimatorNS.DecorationType.None);
             this.panel_SystemStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SystemStatus.Location = new System.Drawing.Point(613, 42);
+            this.panel_SystemStatus.Location = new System.Drawing.Point(606, 3);
             this.panel_SystemStatus.Name = "panel_SystemStatus";
             this.panel_SystemStatus.Size = new System.Drawing.Size(218, 61);
             this.panel_SystemStatus.TabIndex = 7;
@@ -394,8 +349,7 @@
             // lbl_VarSysCurrentFloor
             // 
             this.lbl_VarSysCurrentFloor.AutoSize = true;
-            this.bunifuACTTransition.SetDecoration(this.lbl_VarSysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_VarSysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.lbl_VarSysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
             this.lbl_VarSysCurrentFloor.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_VarSysCurrentFloor.ForeColor = System.Drawing.Color.Black;
             this.lbl_VarSysCurrentFloor.Location = new System.Drawing.Point(14, 28);
@@ -407,8 +361,7 @@
             // lbl_SysCurrentFloor
             // 
             this.lbl_SysCurrentFloor.AutoSize = true;
-            this.bunifuACTTransition.SetDecoration(this.lbl_SysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_SysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this.lbl_SysCurrentFloor, BunifuAnimatorNS.DecorationType.None);
             this.lbl_SysCurrentFloor.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SysCurrentFloor.ForeColor = System.Drawing.Color.DarkGray;
             this.lbl_SysCurrentFloor.Location = new System.Drawing.Point(14, 3);
@@ -417,26 +370,27 @@
             this.lbl_SysCurrentFloor.TabIndex = 2;
             this.lbl_SysCurrentFloor.Text = "Current Floor:";
             // 
-            // bunifuFadeTransition
+            // bunifuTransition
             // 
-            this.bunifuFadeTransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
-            this.bunifuFadeTransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.bunifuFadeTransition.DefaultAnimation = animation2;
+            this.bunifuTransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuTransition.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.bunifuTransition.DefaultAnimation = animation1;
+            this.bunifuTransition.TimeStep = 0.1F;
             // 
             // Time_Timer
             // 
@@ -449,11 +403,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 614);
-            this.Controls.Add(this.panel_SystemStatus);
             this.Controls.Add(this.panel_ControlBox);
             this.Controls.Add(this.panel_ContainerWelcome);
-            this.bunifuACTTransition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
@@ -496,8 +448,7 @@
         private System.Windows.Forms.PictureBox pb_gPlusIco;
         private System.Windows.Forms.PictureBox pb_TwitterIco;
         private System.Windows.Forms.PictureBox pb_InfoIco;
-        private BunifuAnimatorNS.BunifuTransition bunifuACTTransition;
-        private BunifuAnimatorNS.BunifuTransition bunifuFadeTransition;
+        private BunifuAnimatorNS.BunifuTransition bunifuTransition;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Next;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_TimeToday;
         private System.Windows.Forms.Timer Time_Timer;

@@ -17,11 +17,6 @@ namespace iLocatorAstar
             InitializeComponent();
         }
 
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void btn_Yes_Click(object sender, EventArgs e)
         {
             Application.Exit();
