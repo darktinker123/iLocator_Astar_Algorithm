@@ -33,7 +33,7 @@ namespace iLocatorAstar
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::iLocatorAstar.Properties.Settings.Default.dbiLocatorConnectionString, mappingSource)
+				base(global::iLocatorAstar.Properties.Settings.Default.dbiLocatorConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -70,6 +70,14 @@ namespace iLocatorAstar
 			}
 		}
 		
+		public System.Data.Linq.Table<v_userlog> v_userlogs
+		{
+			get
+			{
+				return this.GetTable<v_userlog>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_AddUserLogs")]
 		public int sp_AddUserLogs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string utype, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string start, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string dest, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> logTime)
 		{
@@ -77,11 +85,11 @@ namespace iLocatorAstar
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ViewUserLogs")]
-		public ISingleResult<sp_ViewUserLogsResult> sp_ViewUserLogs()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_SearchUserLogs")]
+		public ISingleResult<sp_SearchUserLogsResult> sp_SearchUserLogs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string searchkey)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<sp_ViewUserLogsResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), searchkey);
+			return ((ISingleResult<sp_SearchUserLogsResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -184,7 +192,8 @@ namespace iLocatorAstar
 		}
 	}
 	
-	public partial class sp_ViewUserLogsResult
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.v_userlogs")]
+	public partial class v_userlog
 	{
 		
 		private int _userLogID;
@@ -197,7 +206,105 @@ namespace iLocatorAstar
 		
 		private System.Nullable<System.DateTime> _userLogTime;
 		
-		public sp_ViewUserLogsResult()
+		public v_userlog()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userLogID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int userLogID
+		{
+			get
+			{
+				return this._userLogID;
+			}
+			set
+			{
+				if ((this._userLogID != value))
+				{
+					this._userLogID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usertype", DbType="VarChar(20)")]
+		public string usertype
+		{
+			get
+			{
+				return this._usertype;
+			}
+			set
+			{
+				if ((this._usertype != value))
+				{
+					this._usertype = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_currentLocation", DbType="VarChar(50)")]
+		public string currentLocation
+		{
+			get
+			{
+				return this._currentLocation;
+			}
+			set
+			{
+				if ((this._currentLocation != value))
+				{
+					this._currentLocation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_destination", DbType="VarChar(50)")]
+		public string destination
+		{
+			get
+			{
+				return this._destination;
+			}
+			set
+			{
+				if ((this._destination != value))
+				{
+					this._destination = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userLogTime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> userLogTime
+		{
+			get
+			{
+				return this._userLogTime;
+			}
+			set
+			{
+				if ((this._userLogTime != value))
+				{
+					this._userLogTime = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_SearchUserLogsResult
+	{
+		
+		private int _userLogID;
+		
+		private string _usertype;
+		
+		private string _currentLocation;
+		
+		private string _destination;
+		
+		private System.Nullable<System.DateTime> _userLogTime;
+		
+		public sp_SearchUserLogsResult()
 		{
 		}
 		

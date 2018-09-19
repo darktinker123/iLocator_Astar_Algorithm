@@ -20,7 +20,19 @@ namespace iLocatorAstar
             InitializeComponent();
         }
 
-        string SystemFloor = "";
+        string startingFlr = "";
+
+        //DECLARATION OF USER CONTROL
+        UC_UG usercontrolUG;
+        UC_2nd usercontrol2nd;
+        UC_3rd usercontrol3rd;
+        UC_4th usercontrol4th;
+        UC_5th usercontrol5th;
+        UC_6th usercontrol6th;
+        UC_7th usercontrol7th;
+        UC_8th usercontrol8th;
+        UC_9th usercontrol9th;
+        UC_10th usercontrol10th;
 
         ////////////////// SYSTEM UI CODES /////////////////////////////
         //////////////////// START HERE ////////////////////////////////
@@ -28,22 +40,16 @@ namespace iLocatorAstar
         public string currentFloor;
         private void form_Main_Load(object sender, EventArgs e)
         {
-            loadNodes();
+             loadNodes();
             initializeDictionary();
-
-            // Hide all Directories in Select Destition
-            HidePanels();
-
-            // Maximized Windows when Open
+            HidePanels();   //HIDE ALL DIRECTORIES
             WindowState = FormWindowState.Maximized;
-
-            // Transition System
-
             bunifuFadeTransition.ShowSync(panel_ContainerMain);
-
+            InitializeUserControl();
             LoadConfigFile();
         }
 
+        //READ CONFIG FILE
         private void LoadConfigFile()
         {
             string[] configInput = File.ReadAllLines(Environment.CurrentDirectory.ToString() + @"\config\config.txt");
@@ -82,8 +88,158 @@ namespace iLocatorAstar
 
                 }
             }
+
+            IdentifyStartingFlr(startingNode);
         }
 
+        //IDENTIFY STARTING FLOOR BASED ON CONFIG FILE
+        //SELECT BUTTON AND DISPLAY MAP UPON LOAD
+        private void IdentifyStartingFlr(int startingnode)
+        {
+            switch (startingnode)
+            {
+                case 1:
+                    startingFlr = "UG";
+                    ButtonSelected(btn_UG);
+                    LoadMap("UG");
+                    ShowUserControl(usercontrolUG);
+                    break;
+                case 42:
+                    startingFlr = "3rd";
+                    LoadMap("3rd");
+                    ShowUserControl(usercontrol3rd);
+                    break;
+                case 106:
+                    startingFlr = "5th";
+                    LoadMap("5th");
+                    ShowUserControl(usercontrol5th);
+                    break;
+                case 145:
+                    startingFlr = "7th";
+                    ButtonSelected(btn_7th);
+                    LoadMap("7th");
+                    ShowUserControl(usercontrol7th);
+                    break;
+                default:
+                    startingFlr = "9th";
+                    ButtonSelected(btn_9th);
+                    LoadMap("9th");
+                    ShowUserControl(usercontrol9th);
+                    break;
+            }
+        }
+        
+        private void InitializeUserControl()
+        {
+            usercontrolUG = new UC_UG(this);
+            usercontrol2nd = new UC_2nd(this);
+            usercontrol3rd = new UC_3rd(this);
+            usercontrol4th = new UC_4th(this);
+            usercontrol5th = new UC_5th(this);
+            usercontrol6th = new UC_6th(this);
+            usercontrol7th = new UC_7th(this);
+            usercontrol8th = new UC_8th(this);
+            usercontrol9th = new UC_9th(this);
+            usercontrol10th = new UC_10th(this);
+        }
+
+
+        Image img = null;
+        //LOADING OF MAP, ACCEPTS A STRING PARAMETER TO IDENTIFY WHICH FLOOR TO DISPLAY
+        private void LoadMap(string flr)
+        {
+            if (flr == startingFlr) //IF FLR IS THE STARTING FLR THEN LOAD MAP WITH YOU ARE HERE INDICATOR
+            {
+                switch (flr)
+                {
+                    case "UG":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\1st-rev-here.jpg");
+                        break;
+                    case "3rd":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\3rd-rev-here.jpg");
+                        break;
+                    case "7th":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\7th-rev-here.jpg");
+                        break;
+                    case "9th":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\9th-rev-here.jpg");
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            else
+            {
+                //FLR IS NOT THE STARTING FLR, LOAD NORMAL MAP
+                switch (flr)
+                {
+                    case "UG":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\1st-rev.jpg");
+                        break;
+                    case "2nd":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\2nd-rev.jpg");
+                        break;
+                    case "3rd":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\3rd-rev.jpg");
+                        break;
+                    case "4th":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\4th-rev.jpg");
+                        break;
+                    case "5th":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\5th-rev.jpg");
+                        break;
+                    case "6th":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\6th-rev.jpg");
+                        break;
+                    case "7th":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\7th-rev.jpg");
+                        break;
+                    case "8th":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\8th-rev.jpg");
+                        break;
+                    case "9th":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\9th-rev.jpg");
+                        break;
+                    default:
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\10th-rev.jpg");
+                        break;
+                }
+            }
+            pb_VirtualMap.Image = img;
+            pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
+            bunifuLeafTransition.ShowSync(pb_VirtualMap);
+
+            DisplayFlrNumber(flr);
+
+        }
+
+        //SHOWING OF USERCONTROL AND THIN BUTTONS        
+        private void ShowUserControl(UserControl uc)
+        {
+            if (panel_ContainerSelectDestination.Visible == false)
+            {
+                panel_ContainerSelectDestination.Controls.Add(uc);
+                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
+                ShowAddonButtons();
+            }
+            else
+            {
+                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
+            }
+        }
+
+        private void DisplayFlrNumber(string flrname)
+        {
+            //if (flrname=="UG")
+            //{
+            //    flrname = "Upper Ground";
+            //}
+
+            lblFloor.Text = flrname+" Floor";
+        }
+
+        //CODE FOR CHANGING THE COLOR OF SELECTED BUTTON
         private void ButtonSelected(object sender)
         {
             BunifuFlatButton selectedBtn = sender as BunifuFlatButton;
@@ -99,10 +255,10 @@ namespace iLocatorAstar
                 }
                 selectedBtn.Normalcolor = Color.Yellow;
                 selectedBtn.Textcolor = Color.Black;
-                selectedBtn.Font = new Font(selectedBtn.Font.Name, selectedBtn.Font.Size, FontStyle.Bold);
+                //selectedBtn.Font = new Font(selectedBtn.Font.Name, selectedBtn.Font.Size, FontStyle.Bold);
             }
         }
-
+      
         private void btn_UG_Click(object sender, EventArgs e)
         {
 
@@ -114,35 +270,12 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                if (SystemFloor.ToString() == "UG")
-                {
-                    Image img = new Bitmap(Environment.CurrentDirectory + @"\Maps\1.jpg");
-                    pb_VirtualMap.Image = img;
-                }
-                else
-                {
-                    Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev.jpg");
-                    pb_VirtualMap.Image = img;
-                }
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
+                LoadMap("UG");
             }
 
             // Hide List of Directories in Select Destination
             HidePanels();
-
-            UC_UG UserControl = new UC_UG(this);
-
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            ShowUserControl(usercontrolUG);
             showNodes(0, 33);
         }
 
@@ -156,25 +289,11 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\2nd-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
-
+                LoadMap("2nd");
             }
+
             HidePanels();
-
-            UC_2nd UserControl = new UC_2nd(this);
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            ShowUserControl(usercontrol2nd);
             showNodes(32, 41);
         }
 
@@ -188,32 +307,11 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                if (SystemFloor.ToString() == "3rd")
-                {
-                    Image img = Image.FromFile(@"..\..\Virtual Maps\3rd-rev-here.jpg");
-                    pb_VirtualMap.Image = img;
-                }
-                else
-                {
-                    Image img = Image.FromFile(@"..\..\Virtual Maps\3rd-rev.jpg");
-                    pb_VirtualMap.Image = img;
-                }
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
+                LoadMap("3rd");
             }
-            HidePanels();
 
-            UC_3rd UserControl = new UC_3rd(this);
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            HidePanels();
+            ShowUserControl(usercontrol3rd);
             showNodes(40, 68);
         }
 
@@ -227,24 +325,11 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\4th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
+                LoadMap("4th");
             }
 
             HidePanels();
-            UC_4th UserControl = new UC_4th(this);
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            ShowUserControl(usercontrol4th);
             showNodes(67, 101);
         }
 
@@ -258,24 +343,11 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\5th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
+                LoadMap("5th");
             }
 
             HidePanels();
-            UC_5th UserControl = new UC_5th(this);
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            ShowUserControl(usercontrol5th);
             showNodes(100, 118);
         }
 
@@ -289,25 +361,11 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\6th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
+                LoadMap("6th");
 
             }
             HidePanels();
-            UC_6th UserControl = new UC_6th(this);
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            ShowUserControl(usercontrol6th);
             showNodes(117, 144);
         }
 
@@ -321,33 +379,11 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                if (SystemFloor.ToString() == "7th")
-                {
-                    Image img = Image.FromFile(@"..\..\Virtual Maps\7th-rev-here.jpg");
-                    pb_VirtualMap.Image = img;
-                }
-                else
-                {
-                    Image img = Image.FromFile(@"..\..\Virtual Maps\7th-rev.jpg");
-                    pb_VirtualMap.Image = img;
-                }
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
+                LoadMap("7th");
             }
 
             HidePanels();
-            UC_7th UserControl = new UC_7th(this);
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            ShowUserControl(usercontrol7th);
             showNodes(143, 174);
         }
 
@@ -361,25 +397,12 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\8th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
+                LoadMap("8th");
 
             }
 
             HidePanels();
-            UC_8th UserControl = new UC_8th(this);
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            ShowUserControl(usercontrol8th);
             showNodes(173, 206);
         }
 
@@ -393,24 +416,11 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\9th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
+                LoadMap("9th");
             }
 
             HidePanels();
-            UC_9th UserControl = new UC_9th(this);
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            ShowUserControl(usercontrol9th);
             showNodes(205, 238);
         }
 
@@ -424,24 +434,11 @@ namespace iLocatorAstar
 
             if (pb_VirtualMap.Visible == false)
             {
-                Image img = Image.FromFile(@"..\..\Virtual Maps\10th-rev.jpg");
-                pb_VirtualMap.Image = img;
-                pb_VirtualMap.SizeMode = PictureBoxSizeMode.Zoom;
-                bunifuLeafTransition.ShowSync(pb_VirtualMap);
+                LoadMap("10th");
             }
 
             HidePanels();
-            UC_10th UserControl = new UC_10th(this);
-            if (panel_ContainerSelectDestination.Visible == false)
-            {
-                panel_ContainerSelectDestination.Controls.Add(UserControl);
-                bunifuLeafTransition.ShowSync(panel_ContainerSelectDestination);
-                ShowAddonButtons();
-            }
-            else
-            {
-                bunifuLeafTransition.HideSync(panel_ContainerSelectDestination);
-            }
+            ShowUserControl(usercontrol10th);
             showNodes(237, 259);
         }
 
@@ -459,14 +456,7 @@ namespace iLocatorAstar
             bunifuFadeTransition.ShowSync(btn_Replay);
             bunifuFadeTransition.ShowSync(lbl_Replay);
         }
-
-        //Code for Close Application
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            System_Message _MessegeSystem = new System_Message();
-            _MessegeSystem.ShowDialog();
-        }
-
+        
         // Fix for Double Thick line in Panel
         private void panel_ContainerFloorSelector_Paint(object sender, PaintEventArgs e)
         {
@@ -478,8 +468,7 @@ namespace iLocatorAstar
             //ControlPaint.DrawBorder(e.Graphics, this.panel_UniverseSelectDestination.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
 
         }
-
-
+        
         private void panel_TitleVirtualMap_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.panel_TitleVirtualMap.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);

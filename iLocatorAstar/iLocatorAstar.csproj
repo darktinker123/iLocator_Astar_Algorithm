@@ -55,6 +55,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="dbiLocatorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbiLocatorDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\AStar.cs" />
     <Compile Include="UC_Admin_Dashboard.cs">
       <SubType>UserControl</SubType>
@@ -258,6 +263,17 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="dbiLocatorDataSet.xsc">
+      <DependentUpon>dbiLocatorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbiLocatorDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbiLocatorDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbiLocatorDataSet.xss">
+      <DependentUpon>dbiLocatorDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

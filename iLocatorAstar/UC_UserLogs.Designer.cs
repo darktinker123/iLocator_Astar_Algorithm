@@ -28,73 +28,287 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGrid_UserLogs = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_UserLogs)).BeginInit();
+            this.dgv_UserLogs = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.userLogIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usertypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currentLocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destinationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userLogTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vuserlogsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbiLocatorDataSet = new iLocatorAstar.dbiLocatorDataSet();
+            this.v_userlogsTableAdapter = new iLocatorAstar.dbiLocatorDataSetTableAdapters.v_userlogsTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblOverallTotalEntries = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalStudent = new System.Windows.Forms.Label();
+            this.lblTotalParent = new System.Windows.Forms.Label();
+            this.lblTotalAlumni = new System.Windows.Forms.Label();
+            this.lblTotalGuest = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_UserLogs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vuserlogsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbiLocatorDataSet)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGrid_UserLogs
+            // dgv_UserLogs
             // 
-            this.dataGrid_UserLogs.AllowUserToAddRows = false;
-            this.dataGrid_UserLogs.AllowUserToDeleteRows = false;
-            this.dataGrid_UserLogs.AllowUserToResizeColumns = false;
-            this.dataGrid_UserLogs.AllowUserToResizeRows = false;
+            this.dgv_UserLogs.AllowUserToAddRows = false;
+            this.dgv_UserLogs.AllowUserToDeleteRows = false;
+            this.dgv_UserLogs.AllowUserToResizeColumns = false;
+            this.dgv_UserLogs.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGrid_UserLogs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGrid_UserLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGrid_UserLogs.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGrid_UserLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGrid_UserLogs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_UserLogs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_UserLogs.AutoGenerateColumns = false;
+            this.dgv_UserLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_UserLogs.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_UserLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_UserLogs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_UserLogs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGrid_UserLogs.ColumnHeadersHeight = 50;
-            this.dataGrid_UserLogs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid_UserLogs.DoubleBuffered = true;
-            this.dataGrid_UserLogs.EnableHeadersVisualStyles = false;
-            this.dataGrid_UserLogs.HeaderBgColor = System.Drawing.Color.Blue;
-            this.dataGrid_UserLogs.HeaderForeColor = System.Drawing.Color.White;
-            this.dataGrid_UserLogs.Location = new System.Drawing.Point(0, 0);
-            this.dataGrid_UserLogs.Name = "dataGrid_UserLogs";
-            this.dataGrid_UserLogs.ReadOnly = true;
+            this.dgv_UserLogs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_UserLogs.ColumnHeadersHeight = 50;
+            this.dgv_UserLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userLogIDDataGridViewTextBoxColumn,
+            this.usertypeDataGridViewTextBoxColumn,
+            this.currentLocationDataGridViewTextBoxColumn,
+            this.destinationDataGridViewTextBoxColumn,
+            this.userLogTimeDataGridViewTextBoxColumn});
+            this.dgv_UserLogs.DataSource = this.vuserlogsBindingSource;
+            this.dgv_UserLogs.DoubleBuffered = true;
+            this.dgv_UserLogs.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv_UserLogs.EnableHeadersVisualStyles = false;
+            this.dgv_UserLogs.HeaderBgColor = System.Drawing.Color.SkyBlue;
+            this.dgv_UserLogs.HeaderForeColor = System.Drawing.Color.Black;
+            this.dgv_UserLogs.Location = new System.Drawing.Point(429, 83);
+            this.dgv_UserLogs.Margin = new System.Windows.Forms.Padding(5);
+            this.dgv_UserLogs.MultiSelect = false;
+            this.dgv_UserLogs.Name = "dgv_UserLogs";
+            this.dgv_UserLogs.ReadOnly = true;
+            this.dgv_UserLogs.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_UserLogs.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGrid_UserLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_UserLogs.ShowCellErrors = false;
-            this.dataGrid_UserLogs.ShowCellToolTips = false;
-            this.dataGrid_UserLogs.ShowEditingIcon = false;
-            this.dataGrid_UserLogs.ShowRowErrors = false;
-            this.dataGrid_UserLogs.Size = new System.Drawing.Size(662, 449);
-            this.dataGrid_UserLogs.TabIndex = 0;
+            this.dgv_UserLogs.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_UserLogs.RowHeadersVisible = false;
+            this.dgv_UserLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_UserLogs.ShowCellErrors = false;
+            this.dgv_UserLogs.ShowCellToolTips = false;
+            this.dgv_UserLogs.ShowEditingIcon = false;
+            this.dgv_UserLogs.ShowRowErrors = false;
+            this.dgv_UserLogs.Size = new System.Drawing.Size(852, 596);
+            this.dgv_UserLogs.TabIndex = 0;
+            // 
+            // userLogIDDataGridViewTextBoxColumn
+            // 
+            this.userLogIDDataGridViewTextBoxColumn.DataPropertyName = "userLogID";
+            this.userLogIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.userLogIDDataGridViewTextBoxColumn.Name = "userLogIDDataGridViewTextBoxColumn";
+            this.userLogIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usertypeDataGridViewTextBoxColumn
+            // 
+            this.usertypeDataGridViewTextBoxColumn.DataPropertyName = "usertype";
+            this.usertypeDataGridViewTextBoxColumn.HeaderText = "user type";
+            this.usertypeDataGridViewTextBoxColumn.Name = "usertypeDataGridViewTextBoxColumn";
+            this.usertypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // currentLocationDataGridViewTextBoxColumn
+            // 
+            this.currentLocationDataGridViewTextBoxColumn.DataPropertyName = "currentLocation";
+            this.currentLocationDataGridViewTextBoxColumn.HeaderText = "starting point";
+            this.currentLocationDataGridViewTextBoxColumn.Name = "currentLocationDataGridViewTextBoxColumn";
+            this.currentLocationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // destinationDataGridViewTextBoxColumn
+            // 
+            this.destinationDataGridViewTextBoxColumn.DataPropertyName = "destination";
+            this.destinationDataGridViewTextBoxColumn.HeaderText = "destination";
+            this.destinationDataGridViewTextBoxColumn.Name = "destinationDataGridViewTextBoxColumn";
+            this.destinationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userLogTimeDataGridViewTextBoxColumn
+            // 
+            this.userLogTimeDataGridViewTextBoxColumn.DataPropertyName = "userLogTime";
+            this.userLogTimeDataGridViewTextBoxColumn.HeaderText = "user log time";
+            this.userLogTimeDataGridViewTextBoxColumn.Name = "userLogTimeDataGridViewTextBoxColumn";
+            this.userLogTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vuserlogsBindingSource
+            // 
+            this.vuserlogsBindingSource.DataMember = "v_userlogs";
+            this.vuserlogsBindingSource.DataSource = this.dbiLocatorDataSet;
+            // 
+            // dbiLocatorDataSet
+            // 
+            this.dbiLocatorDataSet.DataSetName = "dbiLocatorDataSet";
+            this.dbiLocatorDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // v_userlogsTableAdapter
+            // 
+            this.v_userlogsTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(564, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Search:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(653, 33);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(541, 31);
+            this.txtSearch.TabIndex = 3;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblTotalGuest);
+            this.groupBox1.Controls.Add(this.lblTotalAlumni);
+            this.groupBox1.Controls.Add(this.lblTotalParent);
+            this.groupBox1.Controls.Add(this.lblTotalStudent);
+            this.groupBox1.Controls.Add(this.lblOverallTotalEntries);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(34, 198);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(365, 181);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            // 
+            // lblOverallTotalEntries
+            // 
+            this.lblOverallTotalEntries.AutoSize = true;
+            this.lblOverallTotalEntries.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOverallTotalEntries.Location = new System.Drawing.Point(138, 27);
+            this.lblOverallTotalEntries.Name = "lblOverallTotalEntries";
+            this.lblOverallTotalEntries.Size = new System.Drawing.Size(83, 24);
+            this.lblOverallTotalEntries.TabIndex = 12;
+            this.lblOverallTotalEntries.Text = "0 entries";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(54, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 24);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Total of:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 177);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(224, 29);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Summary of user logs:";
+            // 
+            // lblTotalStudent
+            // 
+            this.lblTotalStudent.AutoSize = true;
+            this.lblTotalStudent.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalStudent.Location = new System.Drawing.Point(129, 60);
+            this.lblTotalStudent.Name = "lblTotalStudent";
+            this.lblTotalStudent.Size = new System.Drawing.Size(90, 24);
+            this.lblTotalStudent.TabIndex = 13;
+            this.lblTotalStudent.Text = "0 student";
+            // 
+            // lblTotalParent
+            // 
+            this.lblTotalParent.AutoSize = true;
+            this.lblTotalParent.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalParent.Location = new System.Drawing.Point(129, 132);
+            this.lblTotalParent.Name = "lblTotalParent";
+            this.lblTotalParent.Size = new System.Drawing.Size(81, 24);
+            this.lblTotalParent.TabIndex = 14;
+            this.lblTotalParent.Text = "0 parent";
+            // 
+            // lblTotalAlumni
+            // 
+            this.lblTotalAlumni.AutoSize = true;
+            this.lblTotalAlumni.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAlumni.Location = new System.Drawing.Point(129, 108);
+            this.lblTotalAlumni.Name = "lblTotalAlumni";
+            this.lblTotalAlumni.Size = new System.Drawing.Size(83, 24);
+            this.lblTotalAlumni.TabIndex = 15;
+            this.lblTotalAlumni.Text = "0 alumni";
+            // 
+            // lblTotalGuest
+            // 
+            this.lblTotalGuest.AutoSize = true;
+            this.lblTotalGuest.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalGuest.Location = new System.Drawing.Point(129, 84);
+            this.lblTotalGuest.Name = "lblTotalGuest";
+            this.lblTotalGuest.Size = new System.Drawing.Size(70, 24);
+            this.lblTotalGuest.TabIndex = 16;
+            this.lblTotalGuest.Text = "0 guest";
             // 
             // UC_UserLogs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGrid_UserLogs);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.dgv_UserLogs);
+            this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UC_UserLogs";
-            this.Size = new System.Drawing.Size(662, 449);
+            this.Size = new System.Drawing.Size(1309, 720);
             this.Load += new System.EventHandler(this.UC_UserLogs_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_UserLogs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_UserLogs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vuserlogsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbiLocatorDataSet)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dataGrid_UserLogs;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_UserLogs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userLogIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usertypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currentLocationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userLogTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource vuserlogsBindingSource;
+        private dbiLocatorDataSet dbiLocatorDataSet;
+        private dbiLocatorDataSetTableAdapters.v_userlogsTableAdapter v_userlogsTableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblOverallTotalEntries;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTotalStudent;
+        private System.Windows.Forms.Label lblTotalGuest;
+        private System.Windows.Forms.Label lblTotalAlumni;
+        private System.Windows.Forms.Label lblTotalParent;
     }
 }

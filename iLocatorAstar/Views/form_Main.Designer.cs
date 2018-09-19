@@ -34,14 +34,15 @@
             BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_TitleVirtualMap = new System.Windows.Forms.Panel();
+            this.lblFloor = new System.Windows.Forms.Label();
             this.lbl_VirtualMap = new System.Windows.Forms.Label();
             this.panel_DetailsSelectedDestination = new System.Windows.Forms.Panel();
-            this.lbl_shortestPathDisplay = new System.Windows.Forms.Label();
-            this.lbl_Replay = new System.Windows.Forms.Label();
             this.btn_Replay = new System.Windows.Forms.PictureBox();
+            this.lbl_shortestPathDisplay = new System.Windows.Forms.Label();
             this.lbl_GoHome = new System.Windows.Forms.Label();
             this.btn_BackToHome = new System.Windows.Forms.PictureBox();
             this.lbl_EstimatedDistance = new System.Windows.Forms.Label();
+            this.lbl_Replay = new System.Windows.Forms.Label();
             this.lbl_EstimatedTime = new System.Windows.Forms.Label();
             this.lbl_ShortestPath = new System.Windows.Forms.Label();
             this.panel_UniverseSelectDestination = new System.Windows.Forms.Panel();
@@ -94,6 +95,7 @@
             // panel_TitleVirtualMap
             // 
             this.panel_TitleVirtualMap.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_TitleVirtualMap.Controls.Add(this.lblFloor);
             this.panel_TitleVirtualMap.Controls.Add(this.lbl_VirtualMap);
             this.bunifuFadeTransition.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.bunifuLeafTransition.SetDecoration(this.panel_TitleVirtualMap, BunifuAnimatorNS.DecorationType.None);
@@ -104,19 +106,32 @@
             this.panel_TitleVirtualMap.TabIndex = 7;
             this.panel_TitleVirtualMap.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_TitleVirtualMap_Paint);
             // 
+            // lblFloor
+            // 
+            this.lblFloor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFloor.AutoSize = true;
+            this.bunifuLeafTransition.SetDecoration(this.lblFloor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFadeTransition.SetDecoration(this.lblFloor, BunifuAnimatorNS.DecorationType.None);
+            this.lblFloor.Font = new System.Drawing.Font("Century Gothic", 26F, System.Drawing.FontStyle.Bold);
+            this.lblFloor.ForeColor = System.Drawing.Color.DimGray;
+            this.lblFloor.Location = new System.Drawing.Point(54, 6);
+            this.lblFloor.Name = "lblFloor";
+            this.lblFloor.Size = new System.Drawing.Size(0, 41);
+            this.lblFloor.TabIndex = 5;
+            // 
             // lbl_VirtualMap
             // 
             this.lbl_VirtualMap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_VirtualMap.AutoSize = true;
             this.bunifuLeafTransition.SetDecoration(this.lbl_VirtualMap, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_VirtualMap, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_VirtualMap.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_VirtualMap.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_VirtualMap.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_VirtualMap.Location = new System.Drawing.Point(243, 16);
+            this.lbl_VirtualMap.Location = new System.Drawing.Point(420, 11);
             this.lbl_VirtualMap.Name = "lbl_VirtualMap";
-            this.lbl_VirtualMap.Size = new System.Drawing.Size(98, 19);
+            this.lbl_VirtualMap.Size = new System.Drawing.Size(143, 29);
             this.lbl_VirtualMap.TabIndex = 4;
-            this.lbl_VirtualMap.Text = "Virtual Map";
+            this.lbl_VirtualMap.Text = "(Virtual Map)";
             // 
             // panel_DetailsSelectedDestination
             // 
@@ -137,33 +152,6 @@
             this.panel_DetailsSelectedDestination.TabIndex = 8;
             this.panel_DetailsSelectedDestination.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_DetailsSelectedDestination_Paint);
             // 
-            // lbl_shortestPathDisplay
-            // 
-            this.lbl_shortestPathDisplay.AutoSize = true;
-            this.bunifuLeafTransition.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_shortestPathDisplay.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_shortestPathDisplay.Location = new System.Drawing.Point(206, 25);
-            this.lbl_shortestPathDisplay.Name = "lbl_shortestPathDisplay";
-            this.lbl_shortestPathDisplay.Size = new System.Drawing.Size(0, 24);
-            this.lbl_shortestPathDisplay.TabIndex = 9;
-            this.lbl_shortestPathDisplay.Visible = false;
-            // 
-            // lbl_Replay
-            // 
-            this.lbl_Replay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Replay.AutoSize = true;
-            this.bunifuLeafTransition.SetDecoration(this.lbl_Replay, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_Replay, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_Replay.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Replay.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_Replay.Location = new System.Drawing.Point(445, 89);
-            this.lbl_Replay.Name = "lbl_Replay";
-            this.lbl_Replay.Size = new System.Drawing.Size(63, 21);
-            this.lbl_Replay.TabIndex = 8;
-            this.lbl_Replay.Text = "Replay";
-            this.lbl_Replay.Visible = false;
-            // 
             // btn_Replay
             // 
             this.btn_Replay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -179,6 +167,18 @@
             this.btn_Replay.TabStop = false;
             this.btn_Replay.Visible = false;
             this.btn_Replay.Click += new System.EventHandler(this.btn_Replay_Click);
+            // 
+            // lbl_shortestPathDisplay
+            // 
+            this.lbl_shortestPathDisplay.AutoSize = true;
+            this.bunifuLeafTransition.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFadeTransition.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_shortestPathDisplay.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_shortestPathDisplay.Location = new System.Drawing.Point(206, 25);
+            this.lbl_shortestPathDisplay.Name = "lbl_shortestPathDisplay";
+            this.lbl_shortestPathDisplay.Size = new System.Drawing.Size(0, 24);
+            this.lbl_shortestPathDisplay.TabIndex = 9;
+            this.lbl_shortestPathDisplay.Visible = false;
             // 
             // lbl_GoHome
             // 
@@ -222,6 +222,21 @@
             this.lbl_EstimatedDistance.Size = new System.Drawing.Size(179, 24);
             this.lbl_EstimatedDistance.TabIndex = 6;
             this.lbl_EstimatedDistance.Text = "Estimated Distance: ";
+            // 
+            // lbl_Replay
+            // 
+            this.lbl_Replay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Replay.AutoSize = true;
+            this.bunifuLeafTransition.SetDecoration(this.lbl_Replay, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFadeTransition.SetDecoration(this.lbl_Replay, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_Replay.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Replay.ForeColor = System.Drawing.Color.DimGray;
+            this.lbl_Replay.Location = new System.Drawing.Point(445, 89);
+            this.lbl_Replay.Name = "lbl_Replay";
+            this.lbl_Replay.Size = new System.Drawing.Size(63, 21);
+            this.lbl_Replay.TabIndex = 8;
+            this.lbl_Replay.Text = "Replay";
+            this.lbl_Replay.Visible = false;
             // 
             // lbl_EstimatedTime
             // 
@@ -290,11 +305,11 @@
             this.lbl_SelectDestination.AutoSize = true;
             this.bunifuLeafTransition.SetDecoration(this.lbl_SelectDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_SelectDestination, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_SelectDestination.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_SelectDestination.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Italic);
             this.lbl_SelectDestination.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_SelectDestination.Location = new System.Drawing.Point(89, 16);
+            this.lbl_SelectDestination.Location = new System.Drawing.Point(68, 13);
             this.lbl_SelectDestination.Name = "lbl_SelectDestination";
-            this.lbl_SelectDestination.Size = new System.Drawing.Size(143, 19);
+            this.lbl_SelectDestination.Size = new System.Drawing.Size(184, 29);
             this.lbl_SelectDestination.TabIndex = 4;
             this.lbl_SelectDestination.Text = "Select Destination";
             // 
@@ -785,11 +800,11 @@
             this.lbl_SelectFloor.AutoSize = true;
             this.bunifuLeafTransition.SetDecoration(this.lbl_SelectFloor, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_SelectFloor, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_SelectFloor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SelectFloor.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Italic);
             this.lbl_SelectFloor.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_SelectFloor.Location = new System.Drawing.Point(36, 16);
+            this.lbl_SelectFloor.Location = new System.Drawing.Point(26, 13);
             this.lbl_SelectFloor.Name = "lbl_SelectFloor";
-            this.lbl_SelectFloor.Size = new System.Drawing.Size(96, 19);
+            this.lbl_SelectFloor.Size = new System.Drawing.Size(124, 29);
             this.lbl_SelectFloor.TabIndex = 4;
             this.lbl_SelectFloor.Text = "Select Floor";
             // 
@@ -971,5 +986,6 @@
         private System.Windows.Forms.PictureBox pb_iLocatorLogo;
         private System.Windows.Forms.Label lbl_FormTitle;
         private BunifuAnimatorNS.BunifuTransition bunifuFadeTransition;
+        private System.Windows.Forms.Label lblFloor;
     }
 }

@@ -37,7 +37,6 @@
             this.lbl_FormTitle = new System.Windows.Forms.Label();
             this.panel_ControlBox = new System.Windows.Forms.Panel();
             this.pb_iLocatorLogo = new System.Windows.Forms.PictureBox();
-            this.btn_Close = new System.Windows.Forms.PictureBox();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel_SideNav = new System.Windows.Forms.Panel();
             this.separator_SideNav = new Bunifu.Framework.UI.BunifuSeparator();
@@ -53,7 +52,6 @@
             this.bunifuTransition4 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel_ControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
             this.panel_SideNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SideMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Admin)).BeginInit();
@@ -79,7 +77,6 @@
             this.panel_ControlBox.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel_ControlBox.Controls.Add(this.pb_iLocatorLogo);
             this.panel_ControlBox.Controls.Add(this.lbl_FormTitle);
-            this.panel_ControlBox.Controls.Add(this.btn_Close);
             this.bunifuTransition4.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.panel_ControlBox, BunifuAnimatorNS.DecorationType.None);
@@ -104,24 +101,6 @@
             this.pb_iLocatorLogo.Size = new System.Drawing.Size(25, 25);
             this.pb_iLocatorLogo.TabIndex = 3;
             this.pb_iLocatorLogo.TabStop = false;
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Close.BackgroundImage")));
-            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition3.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.btn_Close, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Close.Location = new System.Drawing.Point(1011, 4);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(19, 27);
-            this.btn_Close.TabIndex = 2;
-            this.btn_Close.TabStop = false;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // bunifuTransition1
             // 
@@ -447,7 +426,6 @@
             this.panel_ControlBox.ResumeLayout(false);
             this.panel_ControlBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_iLocatorLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
             this.panel_SideNav.ResumeLayout(false);
             this.panel_SideNav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SideMenu)).EndInit();
@@ -460,7 +438,6 @@
         private System.Windows.Forms.PictureBox pb_iLocatorLogo;
         private System.Windows.Forms.Label lbl_FormTitle;
         private System.Windows.Forms.Panel panel_ControlBox;
-        private System.Windows.Forms.PictureBox btn_Close;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition2;
         private System.Windows.Forms.PictureBox pb_SideMenu;

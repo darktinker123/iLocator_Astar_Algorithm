@@ -17,23 +17,11 @@ namespace iLocatorAstar
         {
             InitializeComponent();
         }
-
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            System_Message MsgForm = new System_Message();
-            MsgForm.ShowDialog();
-        }
-
+        
         private void form_AdminDashboard_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-
-            //Form fc = Application.OpenForms["form_Main"];
-
-            //if (fc == null)
-            //{
-            //    fc.Hide();
-            //}
+            DefaultPage();
         }
 
         private void pb_SideMenu_Click(object sender, EventArgs e)
@@ -92,6 +80,11 @@ namespace iLocatorAstar
         }
 
         private void btn_SideNav_Home_Click(object sender, EventArgs e)
+        {
+            DefaultPage();
+        }
+
+        private void DefaultPage()
         {
             panel_UniverseAdmin.Controls.Clear();
 
