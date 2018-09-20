@@ -29,20 +29,14 @@ namespace iLocatorAstar
             if (panel_SideNav.Width == 60)
             {
                 panel_SideNav.Visible = false;
-                pb_Admin.Visible = false;
-                lbl_Admin.Visible = false;
                 separator_SideNav.Visible = false;
                 panel_SideNav.Width = 250;
                 bunifuTransition1.ShowSync(panel_SideNav);
-                bunifuTransition3.ShowSync(pb_Admin);
-                bunifuTransition4.ShowSync(lbl_Admin);
                 bunifuTransition4.ShowSync(separator_SideNav);
             }
             else
             {
                 panel_SideNav.Visible = false;
-                lbl_Admin.Visible = false;
-                pb_Admin.Visible = false;
                 separator_SideNav.Visible = false;
                 panel_SideNav.Width = 60;
                 bunifuTransition2.ShowSync(panel_SideNav);
@@ -54,8 +48,6 @@ namespace iLocatorAstar
             if (panel_SideNav.Width == 250)
             {
                 panel_SideNav.Visible = false;
-                lbl_Admin.Visible = false;
-                pb_Admin.Visible = false;
                 separator_SideNav.Visible = false;
                 panel_SideNav.Width = 60;
                 bunifuTransition2.ShowSync(panel_SideNav);

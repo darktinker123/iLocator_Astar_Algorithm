@@ -25,9 +25,22 @@
     <Parameter Name="logTime" Type="System.DateTime" DbType="DateTime" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.sp_SearchUserLogs" Method="sp_SearchUserLogs">
-    <Parameter Name="searchkey" Type="System.String" DbType="VarChar(100)" />
-    <ElementType Name="sp_SearchUserLogsResult">
+  <Function Name="dbo.sp_ViewSummaryByUserType" Method="sp_ViewSummaryByUserType">
+    <Parameter Name="year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="month" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usertype" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="sp_ViewSummaryByUserTypeResult">
+      <Column Name="userLogID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="usertype" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="currentLocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="destination" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="userLogTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_ViewSummaryAll" Method="sp_ViewSummaryAll">
+    <Parameter Name="year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="month" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_ViewSummaryAllResult">
       <Column Name="userLogID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="usertype" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="currentLocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />

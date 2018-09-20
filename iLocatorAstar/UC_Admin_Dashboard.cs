@@ -82,19 +82,19 @@ namespace iLocatorAstar
             switch (cmb_floorSelection.Text)
             {
                 case "UG":
-                    img = Image.FromFile(@"..\..\Virtual Maps\1st-rev-here.jpg");
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\1st-rev-here.jpg");
                     break;
                 case "3rd":
-                    img = Image.FromFile(@"..\..\Virtual Maps\3rd-rev-here.jpg");
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\3rd-rev-here.jpg");
                     break;
                 case "5th":
-                    img = Image.FromFile(@"..\..\Virtual Maps\5th-rev.jpg");
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\5th-rev-here.jpg");
                     break;
                 case "7th":
-                    img = Image.FromFile(@"..\..\Virtual Maps\7th-rev-here.jpg");
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\7th-rev-here.jpg");
                     break;
                 default:
-                    img = Image.FromFile(@"..\..\Virtual Maps\9th-rev-here.jpg");
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\9th-rev-here.jpg");
                     break;
             }
 

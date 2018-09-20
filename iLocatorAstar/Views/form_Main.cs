@@ -92,6 +92,20 @@ namespace iLocatorAstar
             IdentifyStartingFlr(startingNode);
         }
 
+        private void InitializeUserControl()
+        {
+            usercontrolUG = new UC_UG(this);
+            usercontrol2nd = new UC_2nd(this);
+            usercontrol3rd = new UC_3rd(this);
+            usercontrol4th = new UC_4th(this);
+            usercontrol5th = new UC_5th(this);
+            usercontrol6th = new UC_6th(this);
+            usercontrol7th = new UC_7th(this);
+            usercontrol8th = new UC_8th(this);
+            usercontrol9th = new UC_9th(this);
+            usercontrol10th = new UC_10th(this);
+        }
+
         //IDENTIFY STARTING FLOOR BASED ON CONFIG FILE
         //SELECT BUTTON AND DISPLAY MAP UPON LOAD
         private void IdentifyStartingFlr(int startingnode)
@@ -128,23 +142,20 @@ namespace iLocatorAstar
                     break;
             }
         }
-        
-        private void InitializeUserControl()
-        {
-            usercontrolUG = new UC_UG(this);
-            usercontrol2nd = new UC_2nd(this);
-            usercontrol3rd = new UC_3rd(this);
-            usercontrol4th = new UC_4th(this);
-            usercontrol5th = new UC_5th(this);
-            usercontrol6th = new UC_6th(this);
-            usercontrol7th = new UC_7th(this);
-            usercontrol8th = new UC_8th(this);
-            usercontrol9th = new UC_9th(this);
-            usercontrol10th = new UC_10th(this);
-        }
-
+       
 
         Image img = null;
+        Image mapUG = Image.FromFile(@"..\..\bin\debug\Maps\1st-rev.jpg");
+        Image map2nd = Image.FromFile(@"..\..\bin\debug\Maps\2nd-rev.jpg");
+        Image map3rd = Image.FromFile(@"..\..\bin\debug\Maps\3rd-rev.jpg");
+        Image map4th = Image.FromFile(@"..\..\bin\debug\Maps\4th-rev.jpg");
+        Image map5th = Image.FromFile(@"..\..\bin\debug\Maps\5th-rev.jpg");
+        Image map6th = Image.FromFile(@"..\..\bin\debug\Maps\6th-rev.jpg");
+        Image map7th = Image.FromFile(@"..\..\bin\debug\Maps\7th-rev.jpg");
+        Image map8th = Image.FromFile(@"..\..\bin\debug\Maps\8th-rev.jpg");
+        Image map9th = Image.FromFile(@"..\..\bin\debug\Maps\9th-rev.jpg");
+        Image map10th = Image.FromFile(@"..\..\bin\debug\Maps\10th-rev.jpg");
+
         //LOADING OF MAP, ACCEPTS A STRING PARAMETER TO IDENTIFY WHICH FLOOR TO DISPLAY
         private void LoadMap(string flr)
         {
@@ -153,18 +164,19 @@ namespace iLocatorAstar
                 switch (flr)
                 {
                     case "UG":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\1st-rev-here.jpg");
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\1st-rev-here.jpg");;
                         break;
                     case "3rd":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\3rd-rev-here.jpg");
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\3rd-rev-here.jpg");;
+                        break;
+                    case "5th":
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\5th-rev-here.jpg");;
                         break;
                     case "7th":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\7th-rev-here.jpg");
-                        break;
-                    case "9th":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\9th-rev-here.jpg");
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\7th-rev-here.jpg");;
                         break;
                     default:
+                        img = Image.FromFile(@"..\..\bin\debug\Maps\9th-rev-here.jpg");;
                         break;
                 }
             }
@@ -175,34 +187,34 @@ namespace iLocatorAstar
                 switch (flr)
                 {
                     case "UG":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\1st-rev.jpg");
+                        img = mapUG;
                         break;
                     case "2nd":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\2nd-rev.jpg");
+                        img = map2nd;
                         break;
                     case "3rd":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\3rd-rev.jpg");
+                        img = map3rd;
                         break;
                     case "4th":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\4th-rev.jpg");
+                        img = map4th;
                         break;
                     case "5th":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\5th-rev.jpg");
+                        img = map5th;
                         break;
                     case "6th":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\6th-rev.jpg");
+                        img = map6th;
                         break;
                     case "7th":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\7th-rev.jpg");
+                        img = map7th;
                         break;
                     case "8th":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\8th-rev.jpg");
+                        img = map8th;
                         break;
                     case "9th":
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\9th-rev.jpg");
+                        img = map9th;
                         break;
                     default:
-                        img = Image.FromFile(@"..\..\bin\debug\Maps\10th-rev.jpg");
+                        img = map10th;
                         break;
                 }
             }
@@ -437,7 +449,7 @@ namespace iLocatorAstar
                 LoadMap("10th");
             }
 
-            HidePanels();
+            HidePanels(); 
             ShowUserControl(usercontrol10th);
             showNodes(237, 259);
         }
@@ -797,7 +809,6 @@ namespace iLocatorAstar
         public void retrace(List<int> result, int destinationNode)
         {
             bool isStairs = false;
-            lbl_ShortestPath.Text = "Shortest Path:";
             cummulativeDistance = 0;
             pb_VirtualMap.Refresh();
             isTracingGoal = true;
@@ -815,7 +826,7 @@ namespace iLocatorAstar
                     onEighth = false;
                     onNinth = false;
                     onTenth = false;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\1.jpg");
+                    pb_VirtualMap.Image = mapUG;
                     Application.DoEvents();
                     Thread.Sleep(500);
 
@@ -832,7 +843,7 @@ namespace iLocatorAstar
                     onEighth = false;
                     onNinth = false;
                     onTenth = false;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\2.jpg");
+                    pb_VirtualMap.Image = map2nd;
                     Application.DoEvents();
                     Thread.Sleep(500);
                 }
@@ -848,7 +859,7 @@ namespace iLocatorAstar
                     onEighth = false;
                     onNinth = false;
                     onTenth = false;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\3.jpg");
+                    pb_VirtualMap.Image = map3rd; 
                     Application.DoEvents();
                     Thread.Sleep(500);
                 }
@@ -864,7 +875,7 @@ namespace iLocatorAstar
                     onEighth = false;
                     onNinth = false;
                     onTenth = false;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\4.jpg");
+                    pb_VirtualMap.Image = map4th;
                     Application.DoEvents();
                     Thread.Sleep(500);
                 }
@@ -880,7 +891,7 @@ namespace iLocatorAstar
                     onEighth = false;
                     onNinth = false;
                     onTenth = false;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\5.jpg");
+                    pb_VirtualMap.Image = map5th;
                     Application.DoEvents();
                     Thread.Sleep(500);
                 }
@@ -896,7 +907,7 @@ namespace iLocatorAstar
                     onEighth = false;
                     onNinth = false;
                     onTenth = false;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\6.jpg");
+                    pb_VirtualMap.Image = map6th;
                     Application.DoEvents();
                     Thread.Sleep(500);
                 }
@@ -912,7 +923,7 @@ namespace iLocatorAstar
                     onEighth = false;
                     onNinth = false;
                     onTenth = false;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\7.jpg");
+                    pb_VirtualMap.Image = map7th;
                     Application.DoEvents();
                     Thread.Sleep(500);
                 }
@@ -928,7 +939,7 @@ namespace iLocatorAstar
                     onEighth = true;
                     onNinth = false;
                     onTenth = false;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\8.jpg");
+                    pb_VirtualMap.Image = map8th;
                     Application.DoEvents();
                     Thread.Sleep(500);
                 }
@@ -944,7 +955,7 @@ namespace iLocatorAstar
                     onEighth = false;
                     onNinth = true;
                     onTenth = false;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\9.jpg");
+                    pb_VirtualMap.Image = map9th;
                     Application.DoEvents();
                     Thread.Sleep(500);
                 }
@@ -960,7 +971,7 @@ namespace iLocatorAstar
                     onEighth = false;
                     onNinth = false;
                     onTenth = true;
-                    pb_VirtualMap.Image = new Bitmap(Environment.CurrentDirectory + @"\Maps\10.jpg");
+                    pb_VirtualMap.Image = map10th;
                     Application.DoEvents();
                     Thread.Sleep(500);
                 }
@@ -997,8 +1008,6 @@ namespace iLocatorAstar
             lbl_EstimatedDistance.Text = "Estimated Distance: " + estimatedDistance + " Meters";
             lbl_EstimatedTime.Text = "Estimated Time: " + tsMinutes + " Minutes and " + tsSeconds + " Seconds";
 
-            shortestPath = lbl_ShortestPath.Text;
-
             for (int i = 0; i < result.Count; i++)
             {
                 shortestPath = shortestPath + " " + result[i];
@@ -1007,8 +1016,6 @@ namespace iLocatorAstar
                     shortestPath = shortestPath + " -";
                 }
             }
-
-            lbl_ShortestPath.Text = shortestPath;
 
             resetFloorsBool();
         }
@@ -1076,36 +1083,16 @@ namespace iLocatorAstar
             }
         }
 
-        //METHOD FOR SELECTING LOCATIONS (CLICKING OF THIN BUTTONS)
-        /* public void thinButtonClick(BunifuThinButton2 btn)
-         {
-             string btnName = btn.ButtonText;
-
-             string nodenumber = "";
-             for (int x = 1; x < btnName.Length; x++)
-             {
-                 if (btnName[x] != ')')
-                 {
-                     nodenumber += btnName[x].ToString();
-                 }
-
-                 else
-                 {
-                     break;
-                 }
-             }
-
-             performAStar(startingNode, int.Parse(nodenumber));
-         }*/
         public string usertype = "";
         DataClasses1DataContext db = new DataClasses1DataContext();
+
+        //METHOD FOR SELECTING LOCATIONS (CLICKING OF THIN BUTTONS)        
         public void thinButtonClick(BunifuThinButton2 btn)
         {
             string btnName = btn.ButtonText;
             int nodeNumber = destinations.FirstOrDefault(x => x.Value == btnName).Key;
             endingNode = nodeNumber;
             performAStar(startingNode, nodeNumber);
-            form_WelcomePage frmwelcome = new form_WelcomePage();
             db.sp_AddUserLogs(usertype, currentFloor, btnName, DateTime.Now);
         }
 
@@ -1114,5 +1101,11 @@ namespace iLocatorAstar
         {
             retrace(NodesResult, endingNode);
         }
+
+        private void pb_VirtualMap_BackgroundImageChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

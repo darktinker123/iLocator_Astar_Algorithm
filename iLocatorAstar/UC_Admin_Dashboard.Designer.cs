@@ -60,7 +60,7 @@
             // 
             // btn_setStartingFloor
             // 
-            this.btn_setStartingFloor.Activecolor = System.Drawing.Color.Cyan;
+            this.btn_setStartingFloor.Activecolor = System.Drawing.Color.SkyBlue;
             this.btn_setStartingFloor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_setStartingFloor.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_setStartingFloor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -82,7 +82,7 @@
             this.btn_setStartingFloor.IconZoom = 90D;
             this.btn_setStartingFloor.IsTab = false;
             this.btn_setStartingFloor.Location = new System.Drawing.Point(174, 368);
-            this.btn_setStartingFloor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_setStartingFloor.Margin = new System.Windows.Forms.Padding(4);
             this.btn_setStartingFloor.Name = "btn_setStartingFloor";
             this.btn_setStartingFloor.Normalcolor = System.Drawing.Color.RoyalBlue;
             this.btn_setStartingFloor.OnHovercolor = System.Drawing.Color.SkyBlue;

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_8th));
             this.grpBox_8thFloor = new System.Windows.Forms.GroupBox();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton261 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton271 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton272 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -46,7 +47,6 @@
             this.bunifuThinButton283 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton284 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton286 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.grpBox_8thFloor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,32 @@
             this.grpBox_8thFloor.TabStop = false;
             this.grpBox_8thFloor.Text = "8th Floor Destination";
             // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Room 814";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 5;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(157, 262);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(130, 35);
+            this.bunifuThinButton21.TabIndex = 1;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.ButtonClick);
+            // 
             // bunifuThinButton261
             // 
             this.bunifuThinButton261.ActiveBorderThickness = 1;
@@ -86,9 +112,9 @@
             this.bunifuThinButton261.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton261.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton261.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton261.BackgroundImage")));
-            this.bunifuThinButton261.ButtonText = "College of Arts Sciences and Pedagogy";
+            this.bunifuThinButton261.ButtonText = "CASP Office";
             this.bunifuThinButton261.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton261.Font = new System.Drawing.Font("Century Gothic", 8F);
+            this.bunifuThinButton261.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.bunifuThinButton261.ForeColor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton261.IdleBorderThickness = 1;
             this.bunifuThinButton261.IdleCornerRadius = 5;
@@ -98,7 +124,7 @@
             this.bunifuThinButton261.Location = new System.Drawing.Point(17, 15);
             this.bunifuThinButton261.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton261.Name = "bunifuThinButton261";
-            this.bunifuThinButton261.Size = new System.Drawing.Size(274, 35);
+            this.bunifuThinButton261.Size = new System.Drawing.Size(274, 34);
             this.bunifuThinButton261.TabIndex = 0;
             this.bunifuThinButton261.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton261.Click += new System.EventHandler(this.ButtonClick);
@@ -121,7 +147,7 @@
             this.bunifuThinButton271.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton271.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton271.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton271.Location = new System.Drawing.Point(92, 297);
+            this.bunifuThinButton271.Location = new System.Drawing.Point(92, 296);
             this.bunifuThinButton271.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton271.Name = "bunifuThinButton271";
             this.bunifuThinButton271.Size = new System.Drawing.Size(130, 35);
@@ -147,7 +173,7 @@
             this.bunifuThinButton272.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton272.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton272.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton272.Location = new System.Drawing.Point(157, 233);
+            this.bunifuThinButton272.Location = new System.Drawing.Point(157, 232);
             this.bunifuThinButton272.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton272.Name = "bunifuThinButton272";
             this.bunifuThinButton272.Size = new System.Drawing.Size(130, 35);
@@ -173,7 +199,7 @@
             this.bunifuThinButton273.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton273.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton273.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton273.Location = new System.Drawing.Point(157, 202);
+            this.bunifuThinButton273.Location = new System.Drawing.Point(157, 201);
             this.bunifuThinButton273.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton273.Name = "bunifuThinButton273";
             this.bunifuThinButton273.Size = new System.Drawing.Size(130, 35);
@@ -199,7 +225,7 @@
             this.bunifuThinButton274.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton274.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton274.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton274.Location = new System.Drawing.Point(157, 142);
+            this.bunifuThinButton274.Location = new System.Drawing.Point(157, 141);
             this.bunifuThinButton274.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton274.Name = "bunifuThinButton274";
             this.bunifuThinButton274.Size = new System.Drawing.Size(130, 35);
@@ -225,7 +251,7 @@
             this.bunifuThinButton275.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton275.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton275.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton275.Location = new System.Drawing.Point(157, 172);
+            this.bunifuThinButton275.Location = new System.Drawing.Point(157, 171);
             this.bunifuThinButton275.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton275.Name = "bunifuThinButton275";
             this.bunifuThinButton275.Size = new System.Drawing.Size(130, 35);
@@ -251,7 +277,7 @@
             this.bunifuThinButton276.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton276.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton276.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton276.Location = new System.Drawing.Point(157, 111);
+            this.bunifuThinButton276.Location = new System.Drawing.Point(157, 110);
             this.bunifuThinButton276.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton276.Name = "bunifuThinButton276";
             this.bunifuThinButton276.Size = new System.Drawing.Size(130, 35);
@@ -277,7 +303,7 @@
             this.bunifuThinButton277.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton277.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton277.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton277.Location = new System.Drawing.Point(157, 79);
+            this.bunifuThinButton277.Location = new System.Drawing.Point(157, 78);
             this.bunifuThinButton277.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton277.Name = "bunifuThinButton277";
             this.bunifuThinButton277.Size = new System.Drawing.Size(130, 35);
@@ -303,7 +329,7 @@
             this.bunifuThinButton278.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton278.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton278.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton278.Location = new System.Drawing.Point(18, 264);
+            this.bunifuThinButton278.Location = new System.Drawing.Point(18, 263);
             this.bunifuThinButton278.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton278.Name = "bunifuThinButton278";
             this.bunifuThinButton278.Size = new System.Drawing.Size(130, 35);
@@ -329,7 +355,7 @@
             this.bunifuThinButton279.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton279.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton279.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton279.Location = new System.Drawing.Point(18, 232);
+            this.bunifuThinButton279.Location = new System.Drawing.Point(18, 231);
             this.bunifuThinButton279.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton279.Name = "bunifuThinButton279";
             this.bunifuThinButton279.Size = new System.Drawing.Size(130, 35);
@@ -355,7 +381,7 @@
             this.bunifuThinButton280.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton280.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton280.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton280.Location = new System.Drawing.Point(17, 202);
+            this.bunifuThinButton280.Location = new System.Drawing.Point(17, 201);
             this.bunifuThinButton280.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton280.Name = "bunifuThinButton280";
             this.bunifuThinButton280.Size = new System.Drawing.Size(130, 35);
@@ -381,7 +407,7 @@
             this.bunifuThinButton281.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton281.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton281.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton281.Location = new System.Drawing.Point(17, 172);
+            this.bunifuThinButton281.Location = new System.Drawing.Point(17, 171);
             this.bunifuThinButton281.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton281.Name = "bunifuThinButton281";
             this.bunifuThinButton281.Size = new System.Drawing.Size(130, 35);
@@ -407,7 +433,7 @@
             this.bunifuThinButton282.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton282.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton282.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton282.Location = new System.Drawing.Point(17, 142);
+            this.bunifuThinButton282.Location = new System.Drawing.Point(17, 141);
             this.bunifuThinButton282.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton282.Name = "bunifuThinButton282";
             this.bunifuThinButton282.Size = new System.Drawing.Size(130, 35);
@@ -433,7 +459,7 @@
             this.bunifuThinButton283.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton283.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton283.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton283.Location = new System.Drawing.Point(17, 111);
+            this.bunifuThinButton283.Location = new System.Drawing.Point(17, 110);
             this.bunifuThinButton283.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton283.Name = "bunifuThinButton283";
             this.bunifuThinButton283.Size = new System.Drawing.Size(130, 35);
@@ -459,7 +485,7 @@
             this.bunifuThinButton284.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton284.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton284.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton284.Location = new System.Drawing.Point(17, 79);
+            this.bunifuThinButton284.Location = new System.Drawing.Point(17, 78);
             this.bunifuThinButton284.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton284.Name = "bunifuThinButton284";
             this.bunifuThinButton284.Size = new System.Drawing.Size(130, 35);
@@ -485,38 +511,13 @@
             this.bunifuThinButton286.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton286.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton286.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton286.Location = new System.Drawing.Point(17, 47);
+            this.bunifuThinButton286.Location = new System.Drawing.Point(17, 46);
             this.bunifuThinButton286.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton286.Name = "bunifuThinButton286";
             this.bunifuThinButton286.Size = new System.Drawing.Size(274, 35);
             this.bunifuThinButton286.TabIndex = 0;
             this.bunifuThinButton286.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton286.Click += new System.EventHandler(this.ButtonClick);
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Room 814";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 5;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(157, 263);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(130, 35);
-            this.bunifuThinButton21.TabIndex = 1;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UC_8th
             // 

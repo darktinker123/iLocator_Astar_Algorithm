@@ -85,11 +85,18 @@ namespace iLocatorAstar
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_SearchUserLogs")]
-		public ISingleResult<sp_SearchUserLogsResult> sp_SearchUserLogs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string searchkey)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ViewSummaryByUserType")]
+		public ISingleResult<sp_ViewSummaryByUserTypeResult> sp_ViewSummaryByUserType([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> month, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string usertype)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), searchkey);
-			return ((ISingleResult<sp_SearchUserLogsResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), year, month, usertype);
+			return ((ISingleResult<sp_ViewSummaryByUserTypeResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ViewSummaryAll")]
+		public ISingleResult<sp_ViewSummaryAllResult> sp_ViewSummaryAll([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> month)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), year, month);
+			return ((ISingleResult<sp_ViewSummaryAllResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -291,7 +298,7 @@ namespace iLocatorAstar
 		}
 	}
 	
-	public partial class sp_SearchUserLogsResult
+	public partial class sp_ViewSummaryByUserTypeResult
 	{
 		
 		private int _userLogID;
@@ -304,7 +311,105 @@ namespace iLocatorAstar
 		
 		private System.Nullable<System.DateTime> _userLogTime;
 		
-		public sp_SearchUserLogsResult()
+		public sp_ViewSummaryByUserTypeResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userLogID", DbType="Int NOT NULL")]
+		public int userLogID
+		{
+			get
+			{
+				return this._userLogID;
+			}
+			set
+			{
+				if ((this._userLogID != value))
+				{
+					this._userLogID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usertype", DbType="VarChar(20)")]
+		public string usertype
+		{
+			get
+			{
+				return this._usertype;
+			}
+			set
+			{
+				if ((this._usertype != value))
+				{
+					this._usertype = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_currentLocation", DbType="VarChar(50)")]
+		public string currentLocation
+		{
+			get
+			{
+				return this._currentLocation;
+			}
+			set
+			{
+				if ((this._currentLocation != value))
+				{
+					this._currentLocation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_destination", DbType="VarChar(50)")]
+		public string destination
+		{
+			get
+			{
+				return this._destination;
+			}
+			set
+			{
+				if ((this._destination != value))
+				{
+					this._destination = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userLogTime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> userLogTime
+		{
+			get
+			{
+				return this._userLogTime;
+			}
+			set
+			{
+				if ((this._userLogTime != value))
+				{
+					this._userLogTime = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_ViewSummaryAllResult
+	{
+		
+		private int _userLogID;
+		
+		private string _usertype;
+		
+		private string _currentLocation;
+		
+		private string _destination;
+		
+		private System.Nullable<System.DateTime> _userLogTime;
+		
+		public sp_ViewSummaryAllResult()
 		{
 		}
 		

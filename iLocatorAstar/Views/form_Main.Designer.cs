@@ -29,22 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main));
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_TitleVirtualMap = new System.Windows.Forms.Panel();
             this.lblFloor = new System.Windows.Forms.Label();
             this.lbl_VirtualMap = new System.Windows.Forms.Label();
             this.panel_DetailsSelectedDestination = new System.Windows.Forms.Panel();
             this.btn_Replay = new System.Windows.Forms.PictureBox();
-            this.lbl_shortestPathDisplay = new System.Windows.Forms.Label();
             this.lbl_GoHome = new System.Windows.Forms.Label();
             this.btn_BackToHome = new System.Windows.Forms.PictureBox();
             this.lbl_EstimatedDistance = new System.Windows.Forms.Label();
             this.lbl_Replay = new System.Windows.Forms.Label();
             this.lbl_EstimatedTime = new System.Windows.Forms.Label();
-            this.lbl_ShortestPath = new System.Windows.Forms.Label();
             this.panel_UniverseSelectDestination = new System.Windows.Forms.Panel();
             this.panel_ContainerSelectDestination = new System.Windows.Forms.Panel();
             this.panel_TitleSelectDestination = new System.Windows.Forms.Panel();
@@ -136,13 +134,11 @@
             // panel_DetailsSelectedDestination
             // 
             this.panel_DetailsSelectedDestination.Controls.Add(this.btn_Replay);
-            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_shortestPathDisplay);
             this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_GoHome);
             this.panel_DetailsSelectedDestination.Controls.Add(this.btn_BackToHome);
             this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_EstimatedDistance);
             this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_Replay);
             this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_EstimatedTime);
-            this.panel_DetailsSelectedDestination.Controls.Add(this.lbl_ShortestPath);
             this.bunifuFadeTransition.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
             this.bunifuLeafTransition.SetDecoration(this.panel_DetailsSelectedDestination, BunifuAnimatorNS.DecorationType.None);
             this.panel_DetailsSelectedDestination.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -167,18 +163,6 @@
             this.btn_Replay.TabStop = false;
             this.btn_Replay.Visible = false;
             this.btn_Replay.Click += new System.EventHandler(this.btn_Replay_Click);
-            // 
-            // lbl_shortestPathDisplay
-            // 
-            this.lbl_shortestPathDisplay.AutoSize = true;
-            this.bunifuLeafTransition.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_shortestPathDisplay, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_shortestPathDisplay.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_shortestPathDisplay.Location = new System.Drawing.Point(206, 25);
-            this.lbl_shortestPathDisplay.Name = "lbl_shortestPathDisplay";
-            this.lbl_shortestPathDisplay.Size = new System.Drawing.Size(0, 24);
-            this.lbl_shortestPathDisplay.TabIndex = 9;
-            this.lbl_shortestPathDisplay.Visible = false;
             // 
             // lbl_GoHome
             // 
@@ -217,7 +201,7 @@
             this.bunifuLeafTransition.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_EstimatedDistance, BunifuAnimatorNS.DecorationType.None);
             this.lbl_EstimatedDistance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EstimatedDistance.Location = new System.Drawing.Point(27, 72);
+            this.lbl_EstimatedDistance.Location = new System.Drawing.Point(21, 62);
             this.lbl_EstimatedDistance.Name = "lbl_EstimatedDistance";
             this.lbl_EstimatedDistance.Size = new System.Drawing.Size(179, 24);
             this.lbl_EstimatedDistance.TabIndex = 6;
@@ -244,23 +228,11 @@
             this.bunifuLeafTransition.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFadeTransition.SetDecoration(this.lbl_EstimatedTime, BunifuAnimatorNS.DecorationType.None);
             this.lbl_EstimatedTime.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EstimatedTime.Location = new System.Drawing.Point(27, 47);
+            this.lbl_EstimatedTime.Location = new System.Drawing.Point(21, 37);
             this.lbl_EstimatedTime.Name = "lbl_EstimatedTime";
             this.lbl_EstimatedTime.Size = new System.Drawing.Size(144, 24);
             this.lbl_EstimatedTime.TabIndex = 6;
             this.lbl_EstimatedTime.Text = "Estimated Time:";
-            // 
-            // lbl_ShortestPath
-            // 
-            this.lbl_ShortestPath.AutoSize = true;
-            this.bunifuLeafTransition.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFadeTransition.SetDecoration(this.lbl_ShortestPath, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_ShortestPath.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ShortestPath.Location = new System.Drawing.Point(27, 23);
-            this.lbl_ShortestPath.Name = "lbl_ShortestPath";
-            this.lbl_ShortestPath.Size = new System.Drawing.Size(128, 24);
-            this.lbl_ShortestPath.TabIndex = 6;
-            this.lbl_ShortestPath.Text = "Shortest Path:";
             // 
             // panel_UniverseSelectDestination
             // 
@@ -339,6 +311,7 @@
             this.pb_VirtualMap.TabIndex = 0;
             this.pb_VirtualMap.TabStop = false;
             this.pb_VirtualMap.Visible = false;
+            this.pb_VirtualMap.BackgroundImageChanged += new System.EventHandler(this.pb_VirtualMap_BackgroundImageChanged);
             this.pb_VirtualMap.Paint += new System.Windows.Forms.PaintEventHandler(this.pb_VirtualMap_Paint);
             // 
             // panel_ContainerFloorSelector
@@ -868,44 +841,44 @@
             // 
             this.bunifuLeafTransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuLeafTransition.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 1F;
-            this.bunifuLeafTransition.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.bunifuLeafTransition.DefaultAnimation = animation1;
             this.bunifuLeafTransition.TimeStep = 0.1F;
             // 
             // bunifuFadeTransition
             // 
             this.bunifuFadeTransition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuFadeTransition.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.bunifuFadeTransition.DefaultAnimation = animation4;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.bunifuFadeTransition.DefaultAnimation = animation2;
             this.bunifuFadeTransition.TimeStep = 0.1F;
             // 
             // form_Main
@@ -974,14 +947,12 @@
         private System.Windows.Forms.Panel panel_TitleVirtualMap;
         private System.Windows.Forms.Label lbl_VirtualMap;
         private System.Windows.Forms.Panel panel_DetailsSelectedDestination;
-        private System.Windows.Forms.Label lbl_shortestPathDisplay;
         private System.Windows.Forms.Label lbl_Replay;
         private System.Windows.Forms.PictureBox btn_Replay;
         private System.Windows.Forms.Label lbl_GoHome;
         private System.Windows.Forms.PictureBox btn_BackToHome;
         private System.Windows.Forms.Label lbl_EstimatedDistance;
         private System.Windows.Forms.Label lbl_EstimatedTime;
-        private System.Windows.Forms.Label lbl_ShortestPath;
         private System.Windows.Forms.Panel panel_ControlBox;
         private System.Windows.Forms.PictureBox pb_iLocatorLogo;
         private System.Windows.Forms.Label lbl_FormTitle;
