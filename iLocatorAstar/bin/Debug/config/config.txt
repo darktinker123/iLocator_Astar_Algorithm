@@ -1,2 +1,2 @@
 [Starting Point]
-startingNode=1
+startingNode=42

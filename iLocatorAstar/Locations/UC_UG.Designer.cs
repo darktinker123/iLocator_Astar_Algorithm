@@ -32,18 +32,20 @@
             this.btn_UG_3DLab = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_SWS = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_SDO = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_UG_SchoolClinic = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_Rm104 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_Rm103 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_Rm102 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_Rm101 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_UG_RecordsRoom = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_MacLab = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_MaleCR = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_FemaleCR = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_UG_EERoom = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_UG_AcerLab = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_UG_AcerLab = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_UG_RecordsRoom = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_UG_SchoolClinic = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             this.btn_UG_3DLab.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_3DLab.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_3DLab.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_3DLab.Location = new System.Drawing.Point(15, 20);
+            this.btn_UG_3DLab.Location = new System.Drawing.Point(15, 108);
             this.btn_UG_3DLab.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_3DLab.Name = "btn_UG_3DLab";
             this.btn_UG_3DLab.Size = new System.Drawing.Size(274, 35);
@@ -91,7 +93,7 @@
             this.btn_UG_SWS.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_SWS.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_SWS.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_SWS.Location = new System.Drawing.Point(15, 436);
+            this.btn_UG_SWS.Location = new System.Drawing.Point(15, 139);
             this.btn_UG_SWS.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_SWS.Name = "btn_UG_SWS";
             this.btn_UG_SWS.Size = new System.Drawing.Size(274, 35);
@@ -117,39 +119,13 @@
             this.btn_UG_SDO.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_SDO.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_SDO.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_SDO.Location = new System.Drawing.Point(15, 405);
+            this.btn_UG_SDO.Location = new System.Drawing.Point(15, 170);
             this.btn_UG_SDO.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_SDO.Name = "btn_UG_SDO";
             this.btn_UG_SDO.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_SDO.TabIndex = 3;
             this.btn_UG_SDO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_UG_SDO.Click += new System.EventHandler(this.buttonClick);
-            // 
-            // btn_UG_SchoolClinic
-            // 
-            this.btn_UG_SchoolClinic.ActiveBorderThickness = 1;
-            this.btn_UG_SchoolClinic.ActiveCornerRadius = 20;
-            this.btn_UG_SchoolClinic.ActiveFillColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_SchoolClinic.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_UG_SchoolClinic.ActiveLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_SchoolClinic.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_UG_SchoolClinic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_UG_SchoolClinic.BackgroundImage")));
-            this.btn_UG_SchoolClinic.ButtonText = "School Clinic";
-            this.btn_UG_SchoolClinic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_UG_SchoolClinic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UG_SchoolClinic.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_SchoolClinic.IdleBorderThickness = 1;
-            this.btn_UG_SchoolClinic.IdleCornerRadius = 5;
-            this.btn_UG_SchoolClinic.IdleFillColor = System.Drawing.Color.White;
-            this.btn_UG_SchoolClinic.IdleForecolor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_SchoolClinic.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_SchoolClinic.Location = new System.Drawing.Point(15, 374);
-            this.btn_UG_SchoolClinic.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_UG_SchoolClinic.Name = "btn_UG_SchoolClinic";
-            this.btn_UG_SchoolClinic.Size = new System.Drawing.Size(274, 35);
-            this.btn_UG_SchoolClinic.TabIndex = 4;
-            this.btn_UG_SchoolClinic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_UG_SchoolClinic.Click += new System.EventHandler(this.buttonClick);
             // 
             // btn_UG_Rm104
             // 
@@ -169,7 +145,7 @@
             this.btn_UG_Rm104.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_Rm104.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_Rm104.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_Rm104.Location = new System.Drawing.Point(15, 343);
+            this.btn_UG_Rm104.Location = new System.Drawing.Point(15, 418);
             this.btn_UG_Rm104.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_Rm104.Name = "btn_UG_Rm104";
             this.btn_UG_Rm104.Size = new System.Drawing.Size(274, 35);
@@ -195,7 +171,7 @@
             this.btn_UG_Rm103.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_Rm103.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_Rm103.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_Rm103.Location = new System.Drawing.Point(15, 311);
+            this.btn_UG_Rm103.Location = new System.Drawing.Point(15, 386);
             this.btn_UG_Rm103.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_Rm103.Name = "btn_UG_Rm103";
             this.btn_UG_Rm103.Size = new System.Drawing.Size(274, 35);
@@ -221,7 +197,7 @@
             this.btn_UG_Rm102.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_Rm102.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_Rm102.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_Rm102.Location = new System.Drawing.Point(15, 279);
+            this.btn_UG_Rm102.Location = new System.Drawing.Point(15, 354);
             this.btn_UG_Rm102.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_Rm102.Name = "btn_UG_Rm102";
             this.btn_UG_Rm102.Size = new System.Drawing.Size(274, 35);
@@ -247,39 +223,13 @@
             this.btn_UG_Rm101.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_Rm101.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_Rm101.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_Rm101.Location = new System.Drawing.Point(15, 247);
+            this.btn_UG_Rm101.Location = new System.Drawing.Point(15, 322);
             this.btn_UG_Rm101.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_Rm101.Name = "btn_UG_Rm101";
             this.btn_UG_Rm101.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_Rm101.TabIndex = 8;
             this.btn_UG_Rm101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_UG_Rm101.Click += new System.EventHandler(this.buttonClick);
-            // 
-            // btn_UG_RecordsRoom
-            // 
-            this.btn_UG_RecordsRoom.ActiveBorderThickness = 1;
-            this.btn_UG_RecordsRoom.ActiveCornerRadius = 20;
-            this.btn_UG_RecordsRoom.ActiveFillColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_RecordsRoom.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_UG_RecordsRoom.ActiveLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_RecordsRoom.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_UG_RecordsRoom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_UG_RecordsRoom.BackgroundImage")));
-            this.btn_UG_RecordsRoom.ButtonText = "Records Room";
-            this.btn_UG_RecordsRoom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_UG_RecordsRoom.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UG_RecordsRoom.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_RecordsRoom.IdleBorderThickness = 1;
-            this.btn_UG_RecordsRoom.IdleCornerRadius = 5;
-            this.btn_UG_RecordsRoom.IdleFillColor = System.Drawing.Color.White;
-            this.btn_UG_RecordsRoom.IdleForecolor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_RecordsRoom.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_RecordsRoom.Location = new System.Drawing.Point(15, 215);
-            this.btn_UG_RecordsRoom.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_UG_RecordsRoom.Name = "btn_UG_RecordsRoom";
-            this.btn_UG_RecordsRoom.Size = new System.Drawing.Size(274, 35);
-            this.btn_UG_RecordsRoom.TabIndex = 9;
-            this.btn_UG_RecordsRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_UG_RecordsRoom.Click += new System.EventHandler(this.buttonClick);
             // 
             // btn_UG_MacLab
             // 
@@ -299,7 +249,7 @@
             this.btn_UG_MacLab.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_MacLab.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_MacLab.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_MacLab.Location = new System.Drawing.Point(15, 184);
+            this.btn_UG_MacLab.Location = new System.Drawing.Point(15, 231);
             this.btn_UG_MacLab.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_MacLab.Name = "btn_UG_MacLab";
             this.btn_UG_MacLab.Size = new System.Drawing.Size(274, 35);
@@ -325,7 +275,7 @@
             this.btn_UG_MaleCR.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_MaleCR.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_MaleCR.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_MaleCR.Location = new System.Drawing.Point(15, 151);
+            this.btn_UG_MaleCR.Location = new System.Drawing.Point(15, 18);
             this.btn_UG_MaleCR.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_MaleCR.Name = "btn_UG_MaleCR";
             this.btn_UG_MaleCR.Size = new System.Drawing.Size(274, 35);
@@ -351,7 +301,7 @@
             this.btn_UG_FemaleCR.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_FemaleCR.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_FemaleCR.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_FemaleCR.Location = new System.Drawing.Point(15, 119);
+            this.btn_UG_FemaleCR.Location = new System.Drawing.Point(15, 48);
             this.btn_UG_FemaleCR.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_FemaleCR.Name = "btn_UG_FemaleCR";
             this.btn_UG_FemaleCR.Size = new System.Drawing.Size(274, 35);
@@ -377,13 +327,91 @@
             this.btn_UG_EERoom.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_EERoom.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_EERoom.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_EERoom.Location = new System.Drawing.Point(15, 87);
+            this.btn_UG_EERoom.Location = new System.Drawing.Point(15, 478);
             this.btn_UG_EERoom.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_EERoom.Name = "btn_UG_EERoom";
             this.btn_UG_EERoom.Size = new System.Drawing.Size(274, 35);
             this.btn_UG_EERoom.TabIndex = 14;
             this.btn_UG_EERoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_UG_EERoom.Click += new System.EventHandler(this.buttonClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.bunifuThinButton22);
+            this.groupBox1.Controls.Add(this.bunifuThinButton21);
+            this.groupBox1.Controls.Add(this.btn_UG_AcerLab);
+            this.groupBox1.Controls.Add(this.btn_UG_RecordsRoom);
+            this.groupBox1.Controls.Add(this.btn_UG_SchoolClinic);
+            this.groupBox1.Controls.Add(this.btn_UG_3DLab);
+            this.groupBox1.Controls.Add(this.btn_UG_SWS);
+            this.groupBox1.Controls.Add(this.btn_UG_SDO);
+            this.groupBox1.Controls.Add(this.btn_UG_EERoom);
+            this.groupBox1.Controls.Add(this.btn_UG_Rm104);
+            this.groupBox1.Controls.Add(this.btn_UG_FemaleCR);
+            this.groupBox1.Controls.Add(this.btn_UG_Rm103);
+            this.groupBox1.Controls.Add(this.btn_UG_MaleCR);
+            this.groupBox1.Controls.Add(this.btn_UG_Rm102);
+            this.groupBox1.Controls.Add(this.btn_UG_MacLab);
+            this.groupBox1.Controls.Add(this.btn_UG_Rm101);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(306, 572);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "1st Floor Directions";
+            // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Information Desk";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 5;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(16, 78);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(274, 35);
+            this.bunifuThinButton22.TabIndex = 21;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.buttonClick);
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Research Office";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 5;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(16, 200);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(274, 35);
+            this.bunifuThinButton21.TabIndex = 20;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.buttonClick);
             // 
             // btn_UG_AcerLab
             // 
@@ -403,37 +431,64 @@
             this.btn_UG_AcerLab.IdleFillColor = System.Drawing.Color.White;
             this.btn_UG_AcerLab.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btn_UG_AcerLab.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UG_AcerLab.Location = new System.Drawing.Point(15, 53);
+            this.btn_UG_AcerLab.Location = new System.Drawing.Point(16, 262);
             this.btn_UG_AcerLab.Margin = new System.Windows.Forms.Padding(5);
             this.btn_UG_AcerLab.Name = "btn_UG_AcerLab";
             this.btn_UG_AcerLab.Size = new System.Drawing.Size(274, 35);
-            this.btn_UG_AcerLab.TabIndex = 16;
+            this.btn_UG_AcerLab.TabIndex = 19;
             this.btn_UG_AcerLab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_UG_AcerLab.Click += new System.EventHandler(this.buttonClick);
             // 
-            // groupBox1
+            // btn_UG_RecordsRoom
             // 
-            this.groupBox1.Controls.Add(this.btn_UG_3DLab);
-            this.groupBox1.Controls.Add(this.btn_UG_SWS);
-            this.groupBox1.Controls.Add(this.btn_UG_AcerLab);
-            this.groupBox1.Controls.Add(this.btn_UG_SDO);
-            this.groupBox1.Controls.Add(this.btn_UG_SchoolClinic);
-            this.groupBox1.Controls.Add(this.btn_UG_EERoom);
-            this.groupBox1.Controls.Add(this.btn_UG_Rm104);
-            this.groupBox1.Controls.Add(this.btn_UG_FemaleCR);
-            this.groupBox1.Controls.Add(this.btn_UG_Rm103);
-            this.groupBox1.Controls.Add(this.btn_UG_MaleCR);
-            this.groupBox1.Controls.Add(this.btn_UG_Rm102);
-            this.groupBox1.Controls.Add(this.btn_UG_MacLab);
-            this.groupBox1.Controls.Add(this.btn_UG_Rm101);
-            this.groupBox1.Controls.Add(this.btn_UG_RecordsRoom);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(306, 572);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "1st Floor Directions";
+            this.btn_UG_RecordsRoom.ActiveBorderThickness = 1;
+            this.btn_UG_RecordsRoom.ActiveCornerRadius = 20;
+            this.btn_UG_RecordsRoom.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_RecordsRoom.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_UG_RecordsRoom.ActiveLineColor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_RecordsRoom.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_UG_RecordsRoom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_UG_RecordsRoom.BackgroundImage")));
+            this.btn_UG_RecordsRoom.ButtonText = "Records Room";
+            this.btn_UG_RecordsRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_UG_RecordsRoom.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_UG_RecordsRoom.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_RecordsRoom.IdleBorderThickness = 1;
+            this.btn_UG_RecordsRoom.IdleCornerRadius = 5;
+            this.btn_UG_RecordsRoom.IdleFillColor = System.Drawing.Color.White;
+            this.btn_UG_RecordsRoom.IdleForecolor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_RecordsRoom.IdleLineColor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_RecordsRoom.Location = new System.Drawing.Point(16, 448);
+            this.btn_UG_RecordsRoom.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_UG_RecordsRoom.Name = "btn_UG_RecordsRoom";
+            this.btn_UG_RecordsRoom.Size = new System.Drawing.Size(274, 35);
+            this.btn_UG_RecordsRoom.TabIndex = 18;
+            this.btn_UG_RecordsRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_UG_SchoolClinic
+            // 
+            this.btn_UG_SchoolClinic.ActiveBorderThickness = 1;
+            this.btn_UG_SchoolClinic.ActiveCornerRadius = 20;
+            this.btn_UG_SchoolClinic.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_SchoolClinic.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_UG_SchoolClinic.ActiveLineColor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_SchoolClinic.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_UG_SchoolClinic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_UG_SchoolClinic.BackgroundImage")));
+            this.btn_UG_SchoolClinic.ButtonText = "School Clinic";
+            this.btn_UG_SchoolClinic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_UG_SchoolClinic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_UG_SchoolClinic.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_SchoolClinic.IdleBorderThickness = 1;
+            this.btn_UG_SchoolClinic.IdleCornerRadius = 5;
+            this.btn_UG_SchoolClinic.IdleFillColor = System.Drawing.Color.White;
+            this.btn_UG_SchoolClinic.IdleForecolor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_SchoolClinic.IdleLineColor = System.Drawing.Color.RoyalBlue;
+            this.btn_UG_SchoolClinic.Location = new System.Drawing.Point(16, 293);
+            this.btn_UG_SchoolClinic.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_UG_SchoolClinic.Name = "btn_UG_SchoolClinic";
+            this.btn_UG_SchoolClinic.Size = new System.Drawing.Size(274, 35);
+            this.btn_UG_SchoolClinic.TabIndex = 17;
+            this.btn_UG_SchoolClinic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_UG_SchoolClinic.Click += new System.EventHandler(this.buttonClick);
             // 
             // UC_UG
             // 
@@ -452,17 +507,19 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_3DLab;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_SWS;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_SDO;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_SchoolClinic;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_Rm104;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_Rm103;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_Rm102;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_Rm101;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_RecordsRoom;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_MacLab;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_MaleCR;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_FemaleCR;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_EERoom;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_AcerLab;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_AcerLab;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_RecordsRoom;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_UG_SchoolClinic;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
     }
 }

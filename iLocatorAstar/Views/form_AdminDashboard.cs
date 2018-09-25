@@ -17,23 +17,11 @@ namespace iLocatorAstar
         {
             InitializeComponent();
         }
-
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            System_Message MsgForm = new System_Message();
-            MsgForm.ShowDialog();
-        }
-
+        
         private void form_AdminDashboard_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-
-            //Form fc = Application.OpenForms["form_Main"];
-
-            //if (fc == null)
-            //{
-            //    fc.Hide();
-            //}
+            DefaultPage();
         }
 
         private void pb_SideMenu_Click(object sender, EventArgs e)
@@ -41,20 +29,14 @@ namespace iLocatorAstar
             if (panel_SideNav.Width == 60)
             {
                 panel_SideNav.Visible = false;
-                pb_Admin.Visible = false;
-                lbl_Admin.Visible = false;
                 separator_SideNav.Visible = false;
                 panel_SideNav.Width = 250;
                 bunifuTransition1.ShowSync(panel_SideNav);
-                bunifuTransition3.ShowSync(pb_Admin);
-                bunifuTransition4.ShowSync(lbl_Admin);
                 bunifuTransition4.ShowSync(separator_SideNav);
             }
             else
             {
                 panel_SideNav.Visible = false;
-                lbl_Admin.Visible = false;
-                pb_Admin.Visible = false;
                 separator_SideNav.Visible = false;
                 panel_SideNav.Width = 60;
                 bunifuTransition2.ShowSync(panel_SideNav);
@@ -66,8 +48,6 @@ namespace iLocatorAstar
             if (panel_SideNav.Width == 250)
             {
                 panel_SideNav.Visible = false;
-                lbl_Admin.Visible = false;
-                pb_Admin.Visible = false;
                 separator_SideNav.Visible = false;
                 panel_SideNav.Width = 60;
                 bunifuTransition2.ShowSync(panel_SideNav);
@@ -92,6 +72,11 @@ namespace iLocatorAstar
         }
 
         private void btn_SideNav_Home_Click(object sender, EventArgs e)
+        {
+            DefaultPage();
+        }
+
+        private void DefaultPage()
         {
             panel_UniverseAdmin.Controls.Clear();
 

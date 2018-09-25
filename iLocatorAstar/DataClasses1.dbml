@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbiLocator" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=dbiLocator;Integrated Security=True" SettingsObjectName="iLocatorAstar.Properties.Settings" SettingsPropertyName="dbiLocatorConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=dbiLocator;Integrated Security=True" SettingsObjectName="iLocatorAstar.Properties.Settings" SettingsPropertyName="dbiLocatorConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tblUserLogs" Member="tblUserLogs">
     <Type Name="tblUserLog">
+      <Column Name="userLogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usertype" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="currentLocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="destination" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="userLogTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_userlogs" Member="v_userlogs">
+    <Type Name="v_userlog">
       <Column Name="userLogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="usertype" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="currentLocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -16,8 +25,22 @@
     <Parameter Name="logTime" Type="System.DateTime" DbType="DateTime" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.sp_ViewUserLogs" Method="sp_ViewUserLogs">
-    <ElementType Name="sp_ViewUserLogsResult">
+  <Function Name="dbo.sp_ViewSummaryByUserType" Method="sp_ViewSummaryByUserType">
+    <Parameter Name="year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="month" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usertype" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="sp_ViewSummaryByUserTypeResult">
+      <Column Name="userLogID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="usertype" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="currentLocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="destination" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="userLogTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_ViewSummaryAll" Method="sp_ViewSummaryAll">
+    <Parameter Name="year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="month" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_ViewSummaryAllResult">
       <Column Name="userLogID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="usertype" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="currentLocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />

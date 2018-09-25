@@ -18,96 +18,6 @@ namespace iLocatorAstar
             InitializeComponent();
         }
 
-        public string fname;
-
-        private void btn_OpenNodes_Click(object sender, EventArgs e)
-        {
-
-            OpenFileDialog op = new OpenFileDialog();
-            if (op.ShowDialog() == DialogResult.OK)
-            {
-                richTxtBox_Nodes.Text = File.ReadAllText(op.FileName);
-            }
-            fname = op.FileName;
-        }
-
-        private void btn_SaveNodes_Click(object sender, EventArgs e)
-        {
-            File.WriteAllLines(fname, richTxtBox_Nodes.Lines);
-
-        }
-
-        private void btn_UG_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\1st-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_2nd_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\2nd-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_3rd_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\3rd-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_4th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\4th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_5th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\5th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_6th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\6th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_7th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\7th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_8th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\8th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_9th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\9th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_10th_Click(object sender, EventArgs e)
-        {
-            Image img = Image.FromFile(@"..\..\Virtual Maps\10th-rev.jpg");
-            pb_VirtualMap.Image = img;
-            pb_VirtualMap.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-
         int startingNode;
 
         private void btn_setStartingFloor_Click(object sender, EventArgs e)
@@ -133,6 +43,7 @@ namespace iLocatorAstar
                     startingNode = 0;
                     break;
             }
+
             changeStartingFloor(startingNode);
         }
 
@@ -163,6 +74,31 @@ namespace iLocatorAstar
                     }
                 }
             }
+        }
+
+        private void cmb_floorSelection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Image img = null;
+            switch (cmb_floorSelection.Text)
+            {
+                case "UG":
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\1st-rev-here.jpg");
+                    break;
+                case "3rd":
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\3rd-rev-here.jpg");
+                    break;
+                case "5th":
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\5th-rev-here.jpg");
+                    break;
+                case "7th":
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\7th-rev-here.jpg");
+                    break;
+                default:
+                    img = Image.FromFile(@"..\..\bin\debug\Maps\9th-rev-here.jpg");
+                    break;
+            }
+
+            pb_VirtualMap.Image = img;
         }
 
     }
