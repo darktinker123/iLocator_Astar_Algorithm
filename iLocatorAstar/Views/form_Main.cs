@@ -40,7 +40,7 @@ namespace iLocatorAstar
         public string currentFloor;
         private void form_Main_Load(object sender, EventArgs e)
         {
-             loadNodes();
+            loadNodes();
             initializeDictionary();
             HidePanels();   //HIDE ALL DIRECTORIES
             WindowState = FormWindowState.Maximized;
@@ -120,11 +120,13 @@ namespace iLocatorAstar
                     break;
                 case 42:
                     startingFlr = "3rd";
+                    ButtonSelected(btn_3rd);
                     LoadMap("3rd");
                     ShowUserControl(usercontrol3rd);
                     break;
                 case 106:
                     startingFlr = "5th";
+                    ButtonSelected(btn_5th);
                     LoadMap("5th");
                     ShowUserControl(usercontrol5th);
                     break;
@@ -701,7 +703,7 @@ namespace iLocatorAstar
             destinations.Add(249, "Male CR (10th Floor)");
             destinations.Add(250, "Female CR (10th Floor)");
             destinations.Add(252, "Stage");
-            destinations.Add(254, "P.E. & NSTP Office");
+            destinations.Add(254, "P.E. and NSTP Office");
             destinations.Add(256, "Technical Area");
             destinations.Add(258, "Receiving Room");
         }
